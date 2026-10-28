@@ -1,0 +1,3025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Master's & European Scholarship Strategic Hub (2027/28 Intake)</title>
+<style>
+    :root {
+        --primary: #1a365d;
+        --primary-light: #2b6cb0;
+        --secondary: #2c5282;
+        --accent: #d69e2e;
+        --accent-light: #fefcbf;
+        --bg: #f7fafc;
+        --card-bg: #ffffff;
+        --text-main: #2d3748;
+        --text-muted: #718096;
+        --border: #e2e8f0;
+        --success-bg: #c6f6d5;
+        --success-text: #22543d;
+        --warning-bg: #feebc8;
+        --warning-text: #744210;
+        --purple-bg: #e9d8fd;
+        --purple-text: #44337a;
+        --blue-bg: #ebf8ff;
+        --blue-text: #2b6cb0;
+        --danger-bg: #fed7d7;
+        --danger-text: #9b2c2c;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: var(--bg);
+        color: var(--text-main);
+        margin: 0;
+        padding: 0;
+        font-size: 9.5pt;
+        line-height: 1.45;
+    }
+
+    header {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1a365d 100%);
+        color: #ffffff;
+        padding: 24px 32px 20px 32px;
+        border-bottom: 3px solid var(--accent);
+    }
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .header-title h1 {
+        margin: 0 0 6px 0;
+        font-size: 19pt;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+    }
+    .header-title p {
+        margin: 0;
+        color: #cbd5e1;
+        font-size: 10pt;
+    }
+
+    .candidate-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+        align-items: center;
+    }
+    .pill {
+        background: rgba(255,255,255,0.12);
+        backdrop-filter: blur(4px);
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 8pt;
+        font-weight: 500;
+        color: #f1f5f9;
+        border: 1px solid rgba(255,255,255,0.18);
+    }
+    .pill-accent {
+        background: rgba(214, 158, 46, 0.25);
+        border-color: var(--accent);
+        color: #fef08a;
+        font-weight: 700;
+    }
+
+    /* Pipeline Action Bar in Header */
+    .header-action-bar {
+        margin-top: 16px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .header-pipeline-counters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+    }
+    .counter-chip {
+        padding: 4px 10px;
+        border-radius: 14px;
+        font-size: 8pt;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.15);
+    }
+    .counter-chip span.num {
+        background: rgba(255,255,255,0.25);
+        padding: 1px 6px;
+        border-radius: 10px;
+        font-size: 7.5pt;
+    }
+
+    .header-btn-group {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    .hdr-btn {
+        background: rgba(255,255,255,0.15);
+        border: 1px solid rgba(255,255,255,0.25);
+        color: #ffffff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 8pt;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .hdr-btn:hover {
+        background: rgba(255,255,255,0.25);
+        border-color: rgba(255,255,255,0.4);
+        transform: translateY(-1px);
+    }
+    .hdr-btn-primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #1a202c;
+        font-weight: 700;
+    }
+    .hdr-btn-primary:hover {
+        background: #ecc94b;
+    }
+
+    .kpi-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+        margin-top: 14px;
+    }
+    .kpi-card {
+        background: rgba(255,255,255,0.07);
+        border: 1px solid rgba(255,255,255,0.12);
+        padding: 10px 14px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    .kpi-num {
+        font-size: 15pt;
+        font-weight: 800;
+        line-height: 1.1;
+    }
+    .kpi-label {
+        font-size: 7.5pt;
+        color: #cbd5e1;
+        margin-top: 2px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+
+    /* Nav Bar */
+    .nav-container {
+        background: #ffffff;
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+    .nav-tabs {
+        display: flex;
+        overflow-x: auto;
+        padding: 0 32px;
+        gap: 4px;
+    }
+    .nav-tab {
+        padding: 14px 18px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 9pt;
+        color: var(--text-muted);
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .nav-tab:hover {
+        color: var(--primary);
+        background: #f8fafc;
+    }
+    .nav-tab.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+        font-weight: 700;
+        background: #f1f5f9;
+    }
+    .nav-badge {
+        background: #edf2f7;
+        color: #4a5568;
+        padding: 2px 7px;
+        border-radius: 12px;
+        font-size: 7.5pt;
+        font-weight: 700;
+    }
+    .nav-tab.active .nav-badge {
+        background: var(--primary);
+        color: #ffffff;
+    }
+
+    .container {
+        padding: 24px 32px;
+        max-width: 1720px;
+        margin: 0 auto;
+    }
+
+    /* Filters Hub */
+    .filter-hub {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border);
+    }
+    .filter-presets {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+        padding-bottom: 14px;
+        border-bottom: 1px dashed var(--border);
+    }
+    .preset-btn {
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 8pt;
+        font-weight: 600;
+        color: var(--text-main);
+        cursor: pointer;
+        transition: all 0.15s ease;
+    }
+    .preset-btn:hover {
+        background: #e2e8f0;
+        border-color: #cbd5e1;
+    }
+    .preset-btn.active {
+        background: var(--primary);
+        color: #ffffff;
+        border-color: var(--primary);
+    }
+    .preset-btn-accent {
+        background: #ecfdf5;
+        border-color: #a7f3d0;
+        color: #065f46;
+        font-weight: 700;
+    }
+    .preset-btn-accent:hover {
+        background: #d1fae5;
+    }
+    .preset-btn-accent.active {
+        background: #059669;
+        border-color: #059669;
+        color: #ffffff;
+    }
+
+    .filter-inputs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+    }
+    .filter-group label {
+        display: block;
+        font-size: 7.5pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 4px;
+        letter-spacing: 0.5px;
+    }
+    .filter-group input, .filter-group select {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 8.5pt;
+        color: var(--text-main);
+        background: #ffffff;
+        outline: none;
+        transition: border 0.15s ease;
+    }
+    .filter-group input:focus, .filter-group select:focus {
+        border-color: var(--primary-light);
+        box-shadow: 0 0 0 2px rgba(43, 108, 176, 0.15);
+    }
+
+    /* Program Cards Grid */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+        gap: 18px;
+    }
+    .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        cursor: pointer;
+    }
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px -2px rgba(0,0,0,0.08);
+        border-color: #cbd5e0;
+    }
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        gap: 8px;
+    }
+    .card-title h3 {
+        margin: 0;
+        font-size: 11pt;
+        font-weight: 700;
+        color: var(--primary);
+        line-height: 1.3;
+    }
+    .card-title .uni-name {
+        font-size: 8.5pt;
+        color: var(--text-muted);
+        font-weight: 600;
+        margin-top: 2px;
+    }
+    .card-rank {
+        background: var(--accent-light);
+        color: #744210;
+        font-size: 7.5pt;
+        font-weight: 800;
+        padding: 3px 8px;
+        border-radius: 6px;
+        border: 1px solid rgba(214, 158, 46, 0.4);
+        white-space: nowrap;
+    }
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin: 10px 0;
+    }
+    .tag {
+        font-size: 7pt;
+        font-weight: 700;
+        padding: 3px 7px;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+    .tag-free { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+    .tag-nominal { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .tag-paid { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+    .tag-zero-cost { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
+    .tag-status-open { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .tag-status-urgent { background: #ffe4e6; color: #9f1239; border: 1px solid #fecdd3; }
+    .tag-status-upcoming { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
+    .tag-disc { background: #f1f5f9; color: #475569; }
+
+    /* Effort & Reward Tags */
+    .tag-quick-win { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .tag-moderate { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
+    .tag-heavyweight { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .tag-reward { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+
+    .card-meta {
+        font-size: 8.5pt;
+        margin: 10px 0;
+        background: #f8fafc;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #edf2f7;
+    }
+    .meta-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+    }
+    .meta-row:last-child { margin-bottom: 0; }
+    .meta-label { color: var(--text-muted); font-size: 7.5pt; }
+    .meta-val { font-weight: 600; text-align: right; }
+
+    .card-verdict {
+        font-size: 8pt;
+        font-weight: 600;
+        color: var(--primary);
+        background: #ebf8ff;
+        padding: 8px 10px;
+        border-radius: 6px;
+        margin-top: 10px;
+        border-left: 3px solid var(--primary-light);
+    }
+    .prob-indicator {
+        display: inline-block;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 7.5pt;
+    }
+    .prob-high { background: var(--success-bg); color: var(--success-text); }
+    .prob-medium { background: var(--warning-bg); color: var(--warning-text); }
+    .prob-low { background: var(--danger-bg); color: var(--danger-text); }
+
+    /* Tables */
+    .table-container {
+        background: #ffffff;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        overflow-x: auto;
+        margin-bottom: 30px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 8.5pt;
+    }
+    th {
+        background: #f8fafc;
+        color: var(--primary);
+        font-weight: 700;
+        padding: 12px 14px;
+        border-bottom: 2px solid var(--border);
+        font-size: 8pt;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+    td {
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: middle;
+    }
+    tr:hover td {
+        background: #f8fafc;
+        cursor: pointer;
+    }
+    .rank-cell {
+        font-weight: 800;
+        color: #744210;
+        background: var(--accent-light);
+        text-align: center;
+        width: 45px;
+    }
+
+    /* Modal */
+    .modal-overlay {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(4px);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 20px;
+    }
+    .modal-content {
+        background: #ffffff;
+        border-radius: 14px;
+        max-width: 880px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--border);
+        position: relative;
+    }
+    .modal-header {
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+        color: #ffffff;
+        padding: 20px 24px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .modal-header h2 {
+        margin: 0;
+        font-size: 13pt;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    .modal-close {
+        background: rgba(255,255,255,0.2);
+        border: none;
+        color: #ffffff;
+        font-size: 14pt;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.15s ease;
+    }
+    .modal-close:hover { background: rgba(255,255,255,0.35); }
+    .modal-body {
+        padding: 24px;
+    }
+    .dossier-section {
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border);
+    }
+    .dossier-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .dossier-section h4 {
+        margin: 0 0 8px 0;
+        color: var(--primary);
+        font-size: 9.5pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .dossier-section p {
+        margin: 0;
+        font-size: 9pt;
+        color: #4a5568;
+        line-height: 1.55;
+    }
+
+    /* Kanban Pipeline Styles */
+    .pipeline-header {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 18px 24px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .pipeline-summary {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+    }
+    .pipeline-stat-pill {
+        padding: 6px 12px;
+        border-radius: 16px;
+        font-size: 8.5pt;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid;
+    }
+    .pipeline-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .btn-action {
+        background: #ffffff;
+        border: 1px solid var(--border);
+        padding: 7px 12px;
+        border-radius: 6px;
+        font-size: 8pt;
+        font-weight: 600;
+        color: var(--text-main);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.15s ease;
+    }
+    .btn-action:hover {
+        background: #f8fafc;
+        border-color: var(--primary-light);
+        color: var(--primary);
+        transform: translateY(-1px);
+    }
+    .btn-action-primary {
+        background: var(--primary);
+        color: #ffffff;
+        border-color: var(--primary);
+    }
+    .btn-action-primary:hover {
+        background: var(--primary-light);
+        color: #ffffff;
+    }
+
+    .kanban-board {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(300px, 1fr));
+        gap: 16px;
+        overflow-x: auto;
+        padding-bottom: 24px;
+        align-items: flex-start;
+    }
+    .kanban-col {
+        background: #f8fafc;
+        border-radius: 10px;
+        border: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        min-height: 600px;
+    }
+    .kanban-col-header {
+        padding: 14px 16px;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        font-size: 9pt;
+        border-bottom: 2px solid;
+    }
+    .kanban-col-count {
+        background: rgba(0,0,0,0.08);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 8pt;
+        font-weight: 800;
+    }
+    .kanban-cards-container {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex: 1;
+        min-height: 250px;
+        transition: background 0.15s ease;
+    }
+    .kanban-dropzone-active {
+        background: #ebf8ff;
+        border: 2px dashed #3182ce;
+        border-radius: 8px;
+    }
+    .kanban-card {
+        background: #ffffff;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        padding: 14px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        cursor: grab;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        user-select: none;
+    }
+    .kanban-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        border-color: #cbd5e0;
+    }
+    .kanban-card.dragging {
+        opacity: 0.4;
+        cursor: grabbing;
+    }
+    .kanban-empty {
+        text-align: center;
+        color: #a0aec0;
+        font-size: 8.5pt;
+        padding: 40px 10px;
+        font-style: italic;
+    }
+
+    /* Stage selector dropdown */
+    .stage-select {
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 8pt;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        background-color: #ffffff;
+        cursor: pointer;
+        color: var(--text-main);
+    }
+    .stage-select:focus {
+        outline: none;
+        border-color: var(--primary-light);
+    }
+
+    /* Interactive Document Checklist Styles */
+    .checklist-card {
+        background: #ffffff;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px;
+        margin-top: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .checklist-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .checklist-progress-bar-wrap {
+        height: 8px;
+        background: #edf2f7;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 14px;
+    }
+    .checklist-progress-fill {
+        height: 100%;
+        background: #38a169;
+        transition: width 0.3s ease;
+    }
+    .checklist-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .checklist-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 8px 10px;
+        border-radius: 6px;
+        background: #f8fafc;
+        border: 1px solid #edf2f7;
+        cursor: pointer;
+        transition: background 0.15s ease, border-color 0.15s ease;
+        user-select: none;
+    }
+    .checklist-item:hover {
+        background: #edf2f7;
+    }
+    .checklist-item.checked {
+        background: #f0fff4;
+        border-color: #bbf7d0;
+    }
+    .checklist-item.checked span.item-text {
+        text-decoration: line-through;
+        color: #718096;
+    }
+    .checklist-item input[type="checkbox"] {
+        width: 17px;
+        height: 17px;
+        margin-top: 2px;
+        accent-color: #16a34a;
+        cursor: pointer;
+    }
+
+    /* SOP Generator Box Styles */
+    .sop-box {
+        margin-top: 14px;
+        padding: 16px;
+        background: #0f172a;
+        color: #e2e8f0;
+        border-radius: 10px;
+        border: 1px solid #334155;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+    }
+    .sop-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+    }
+    .sop-p-box {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 6px;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+    }
+    .sop-p-box:last-child { margin-bottom: 0; }
+    .sop-p-title {
+        color: #facc15;
+        font-weight: 700;
+        font-size: 8pt;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+    }
+    .sop-p-content {
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: #cbd5e1;
+        margin: 0;
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    @media (max-width: 900px) {
+        .filter-inputs-grid { grid-template-columns: 1fr; }
+        .grid { grid-template-columns: 1fr; }
+        header { padding: 18px 20px; }
+        .container { padding: 16px 20px; }
+        .kanban-board { grid-template-columns: repeat(5, 290px); }
+    }
+</style>
+    <script src="data.js" onerror="window.__dataLoadError = true;"></script>
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+        <div class="header-title">
+            <h1>Global Master's & European Scholarship Strategic Hub</h1>
+            <p>Unified Academic Data Architecture, Kanban Pipeline Tracker, AI SOP Generator & $0 Net Cost Matrix (2027/28 Intake)</p>
+        </div>
+    </div>
+
+    <div class="candidate-pills">
+        <div class="pill pill-accent">🎯 Candidate Profile</div>
+        <div class="pill">🇵🇰 Pakistani National (Fresh Graduate / &lt;2 yrs exp)</div>
+        <div class="pill">📜 Primary: BA Islamic Studies (GPA: 3.7 / 4.0)</div>
+        <div class="pill">⚖️ Secondary: 2-Year Associate Degree in Arts (PPE: Politics, Philosophy, Economics)</div>
+        <div class="pill">🗣️ Languages: IELTS 7.5 Academic (CEFR C1) | Classical & Modern Arabic & Persian</div>
+        <div class="pill">🎯 Target: Resulting Out-of-Pocket Tuition & Living Cost = $0</div>
+    </div>
+
+    <!-- Pipeline Quick Tracker Action Bar -->
+    <div class="header-action-bar">
+        <div class="header-pipeline-counters">
+            <span style="font-size: 8pt; font-weight: 700; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.5px;">Live Application Pipeline:</span>
+            <div class="counter-chip" style="color: #93c5fd; border-color: rgba(147, 197, 253, 0.3);">
+                📌 Interested <span class="num" id="hdr-cnt-interested">27</span>
+            </div>
+            <div class="counter-chip" style="color: #fbd38d; border-color: rgba(251, 211, 141, 0.3);">
+                📝 Preparing <span class="num" id="hdr-cnt-preparing">0</span>
+            </div>
+            <div class="counter-chip" style="color: #d6bcfa; border-color: rgba(214, 188, 250, 0.3);">
+                🚀 Applied <span class="num" id="hdr-cnt-applied">0</span>
+            </div>
+            <div class="counter-chip" style="color: #99f6e4; border-color: rgba(153, 246, 228, 0.3);">
+                ⏳ Under Review <span class="num" id="hdr-cnt-review">0</span>
+            </div>
+            <div class="counter-chip" style="color: #86efac; border-color: rgba(134, 239, 172, 0.3);">
+                🏆 Offers <span class="num" id="hdr-cnt-offer">0</span>
+            </div>
+        </div>
+
+        <div class="header-btn-group">
+            <button class="hdr-btn" onclick="exportDashboardState()" title="Export pipeline progress and document checklists as JSON">
+                💾 Export State (JSON)
+            </button>
+            <button class="hdr-btn" onclick="triggerImportState()" title="Import saved pipeline progress and document checklists">
+                📂 Import Backup
+            </button>
+            <input type="file" id="stateImportInput" accept=".json,application/json" onchange="handleBackupImport(event)" style="display:none;">
+            <button class="hdr-btn" onclick="resetPipeline()" title="Reset all pipeline tracking to default state" style="color: #fca5a5;">
+                🔄 Reset
+            </button>
+        </div>
+    </div>
+
+    <div class="kpi-strip">
+        <div class="kpi-card">
+            <div class="kpi-num" id="kpi-total">27</div>
+            <div class="kpi-label">Master's Programs</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-num" style="color: #68d391;" id="kpi-open">13</div>
+            <div class="kpi-label">🟢 Open Now (Active)</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-num" style="color: #fc8181;" id="kpi-urgent">4</div>
+            <div class="kpi-label">🚨 Closing Soon (&lt;45 Days)</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-num" style="color: #f6e05e;" id="kpi-upcoming">10</div>
+            <div class="kpi-label">⏳ Upcoming (Opens Soon)</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-num" style="color: #4fd1c5;" id="kpi-free">11</div>
+            <div class="kpi-label">🎟️ Free Tickets (£0 / €0)</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-num" style="color: #63b3ed;" id="kpi-zero">25</div>
+            <div class="kpi-label">🎯 $0 Net Cost Target</div>
+        </div>
+    </div>
+</header>
+
+<div class="nav-container">
+    <div class="nav-tabs">
+        <div class="nav-tab active" data-tab="global" onclick="switchMainTab('global')">
+            🌍 Global Master Directory <span class="nav-badge" id="global-nav-count">27</span>
+        </div>
+        <div class="nav-tab" data-tab="pipeline" onclick="switchMainTab('pipeline')">
+            📋 Pipeline Tracker <span class="nav-badge" id="pipeline-nav-count">27</span>
+        </div>
+        <div class="nav-tab" data-tab="uk" onclick="switchMainTab('uk')">
+            🇬🇧 UK Decision Center <span class="nav-badge">7</span>
+        </div>
+        <div class="nav-tab" data-tab="italy" onclick="switchMainTab('italy')">
+            🇮🇹 Italy Tuition-Free Center <span class="nav-badge">4</span>
+        </div>
+        <div class="nav-tab" data-tab="central" onclick="switchMainTab('central')">
+            🏛️ Central Europe Hub <span class="nav-badge">4</span>
+        </div>
+        <div class="nav-tab" data-tab="nordics" onclick="switchMainTab('nordics')">
+            ❄️ Nordic Hub <span class="nav-badge">4</span>
+        </div>
+        <div class="nav-tab" data-tab="west" onclick="switchMainTab('west')">
+            🏰 Western Europe Hub <span class="nav-badge">4</span>
+        </div>
+        <div class="nav-tab" data-tab="emjm" onclick="switchMainTab('emjm')">
+            🇪🇺 Erasmus Mundus (EMJM) <span class="nav-badge">4</span>
+        </div>
+        <div class="nav-tab" data-tab="roadmap" onclick="switchMainTab('roadmap')">
+            🗺️ Master Roadmap & Calendar
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- TAB 1: GLOBAL MASTER DIRECTORY -->
+    <div id="tab-global" class="tab-content active">
+        <div class="filter-hub">
+            <div class="filter-presets">
+                <span style="font-size: 8pt; font-weight: 700; color: var(--text-muted); align-self: center; margin-right: 4px;">⚡ STRATEGIC PRESETS:</span>
+                <button class="preset-btn active" onclick="setPresetFilter('all', this)">All Programs (27)</button>
+                <button class="preset-btn preset-btn-accent" onclick="setPresetFilter('quick-wins', this)">⚡ Quick Wins (Low Effort / High Reward) (11)</button>
+                <button class="preset-btn" style="border-color: #fca5a5; color: #991b1b; background: #fff1f2;" onclick="setPresetFilter('prestige', this)">🏆 Prestige Heavyweights (8)</button>
+                <button class="preset-btn" onclick="setPresetFilter('open-now', this)">🟢 Open Portals Now (13)</button>
+                <button class="preset-btn" onclick="setPresetFilter('closing-soon', this)">🚨 Closing Soon / Urgent (4)</button>
+                <button class="preset-btn" onclick="setPresetFilter('free-ticket', this)">🎟️ £0 / €0 Free Tickets (11)</button>
+                <button class="preset-btn" onclick="setPresetFilter('zero-cost', this)">🎯 $0 Net Cost Guarantee (25)</button>
+                <button class="preset-btn" onclick="setPresetFilter('high-prob', this)">🔥 High Win Probability (11)</button>
+                <button class="preset-btn" onclick="setPresetFilter('islamic-studies', this)">📜 Core Islamic Studies (7)</button>
+                <button class="preset-btn" onclick="setPresetFilter('philosophy-ppe', this)">⚖️ Philosophy & PPE (6)</button>
+            </div>
+
+            <div class="filter-inputs-grid">
+                <div class="filter-group">
+                    <label>🔍 Search Directory</label>
+                    <input type="text" id="searchInput" placeholder="University, degree, scholarship, country..." oninput="filterPrograms()">
+                </div>
+                <div class="filter-group">
+                    <label>⚡ Effort vs. Reward Tier</label>
+                    <select id="effortFilter" onchange="filterPrograms()">
+                        <option value="all">All Effort Tiers</option>
+                        <option value="quick-wins">⚡ Quick Wins (Level 1–2 / High Full-Ride)</option>
+                        <option value="moderate">⚖️ Moderate Effort (Level 3)</option>
+                        <option value="heavyweight">🏆 Prestige Heavyweights (Level 4–5)</option>
+                        <option value="1">Level 1: Minimal Effort (£0/€0 Free Portals)</option>
+                        <option value="2">Level 2: Low Effort (Dual Portal / 1 Sample)</option>
+                        <option value="3">Level 3: Moderate (€100 Fee / EMJM)</option>
+                        <option value="4">Level 4: High Effort (15-20p Sample)</option>
+                        <option value="5">Level 5: Maximum Effort (Oxford/Cambridge/ScPo)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>⏳ Live Portal Status</label>
+                    <select id="statusFilter" onchange="filterPrograms()">
+                        <option value="all">All Portal Statuses</option>
+                        <option value="Open Now">🟢 Open Now</option>
+                        <option value="Upcoming">⏳ Upcoming (Opens Soon)</option>
+                        <option value="Closing Soon">🚨 Closing Soon (&lt;45 Days)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>🎟️ Application Fee Tier</label>
+                    <select id="feeFilter" onchange="filterPrograms()">
+                        <option value="all">All Fee Categories</option>
+                        <option value="free">🎟️ £0 / €0 Free Ticket</option>
+                        <option value="nominal">⚡ Nominal Portal Fee (&le;€30)</option>
+                        <option value="paid">💼 Standard App Fee (&gt;€30)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>🎓 Discipline Track</label>
+                    <select id="discFilter" onchange="filterPrograms()">
+                        <option value="all">All Disciplines</option>
+                        <option value="Islamic Studies">Islamic Studies / Muslim Cultures</option>
+                        <option value="Philosophy">Philosophy & Epistemology</option>
+                        <option value="International Relations">International Relations & Security</option>
+                        <option value="Middle East">Middle Eastern Studies</option>
+                        <option value="History">History & Global Cultures</option>
+                        <option value="Public Policy">Public Policy & Development</option>
+                    </select>
+                </div>
+            </div>
+
+            <div style="margin-top: 14px; font-size: 8pt; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
+                <div>Showing <strong id="displayedCount" style="color: var(--primary);">27</strong> of 27 verified programs</div>
+                <div style="font-style: italic;">Click any card to open the complete Level 3 strategic dossier, AI SOP blueprint & document checklist</div>
+            </div>
+        </div>
+
+        <div class="grid" id="programGrid">
+            <!-- Rendered by JS -->
+        </div>
+    </div>
+
+    <!-- TAB 2: INTERACTIVE KANBAN APPLICATION PIPELINE TRACKER -->
+    <div id="tab-pipeline" class="tab-content">
+        <div class="pipeline-header">
+            <div class="pipeline-summary">
+                <div class="pipeline-stat-pill" style="background: #ebf8ff; color: #2b6cb0; border-color: #bee3f8;">
+                    📌 Interested: <strong id="kanban-cnt-interested">27</strong>
+                </div>
+                <div class="pipeline-stat-pill" style="background: #feebc8; color: #c05621; border-color: #fbd38d;">
+                    📝 Preparing Docs: <strong id="kanban-cnt-preparing">0</strong>
+                </div>
+                <div class="pipeline-stat-pill" style="background: #e9d8fd; color: #6b46c1; border-color: #d6bcfa;">
+                    🚀 Applied: <strong id="kanban-cnt-applied">0</strong>
+                </div>
+                <div class="pipeline-stat-pill" style="background: #e6fffa; color: #234e52; border-color: #b2f5ea;">
+                    ⏳ Under Review: <strong id="kanban-cnt-review">0</strong>
+                </div>
+                <div class="pipeline-stat-pill" style="background: #c6f6d5; color: #22543d; border-color: #9ae6b4;">
+                    🏆 Offers: <strong id="kanban-cnt-offer">0</strong>
+                </div>
+            </div>
+
+            <div class="pipeline-actions">
+                <button class="btn-action" onclick="exportDashboardState()">
+                    💾 Export State (JSON)
+                </button>
+                <button class="btn-action" onclick="triggerImportState()">
+                    📂 Import Backup
+                </button>
+                <button class="btn-action" onclick="resetPipeline()" style="color: #e53e3e;">
+                    🔄 Reset Pipeline
+                </button>
+            </div>
+        </div>
+
+        <!-- Kanban Board Columns -->
+        <div class="kanban-board" id="kanbanBoard">
+            <!-- 5 Columns generated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- TAB 3: UK DECISION CENTER -->
+    <div id="tab-uk" class="tab-content">
+        <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
+            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🇬🇧 United Kingdom Strategic Decision Matrix & Commonwealth Quotas</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Ranked 1 through 7 for Pakistani candidate with Islamic Studies 3.7 GPA + PPE. Strictly calibrated to £0 fee free lottery tickets, dedicated quota seats, and $0 net cost targets.</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">Rank</th>
+                        <th>Institution & Program</th>
+                        <th>Effort / Reward</th>
+                        <th>Pipeline Stage</th>
+                        <th>Total Tuition Fee (Int'l)</th>
+                        <th>Application Fee & Status</th>
+                        <th>Net Financial Risk</th>
+                        <th>Portal Status & Dates</th>
+                        <th>Win Probability</th>
+                        <th>Bottom-Line Strategic Verdict</th>
+                    </tr>
+                </thead>
+                <tbody id="ukTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 4: ITALY TUITION-FREE CENTER -->
+    <div id="tab-italy" class="tab-content">
+        <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
+            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🇮🇹 Italy Public University Zero-Tuition & DSU Regional Grant Center</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">100% Free Application Portals (€0 fees), €0 Tuition via ISEE Parificato, plus €8,500/year Cash Living Stipend & Free Canteen.</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Institution & Program</th>
+                        <th>Effort / Reward</th>
+                        <th>Pipeline Stage</th>
+                        <th>Total Tuition Fee (Int'l)</th>
+                        <th>Application Fee & Portal</th>
+                        <th>Net Financial Risk</th>
+                        <th>Portal Status & Dates</th>
+                        <th>Win Probability</th>
+                        <th>Bottom-Line Strategic Verdict</th>
+                    </tr>
+                </thead>
+                <tbody id="italyTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 5: CENTRAL EUROPE HUB -->
+    <div id="tab-central" class="tab-content">
+        <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
+            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🏛️ Central Europe Hub (Austria & Hungary Stipendium)</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Fully funded humanities programs: CEU Vienna Master's Excellence (€0 net cost + €1,000/mo stipend) and Hungary Stipendium via HEC Pakistan (Free tuition, housing, medical, HUF 43,700/mo).</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Institution & Program</th>
+                        <th>Effort / Reward</th>
+                        <th>Pipeline Stage</th>
+                        <th>Total Tuition Fee (Int'l)</th>
+                        <th>Application Fee & Portal</th>
+                        <th>Net Financial Risk</th>
+                        <th>Portal Status & Dates</th>
+                        <th>Win Probability</th>
+                        <th>Bottom-Line Strategic Verdict</th>
+                    </tr>
+                </thead>
+                <tbody id="centralTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 6: NORDIC HUB -->
+    <div id="tab-nordics" class="tab-content">
+        <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
+            <h3 style="margin: 0 0 6px 0; color: var(--primary);">❄️ Nordic Hub (Finland & Sweden) + Belgium Master Mind</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">100% Tuition Fee Waivers via Studyinfo.fi (Helsinki, Tampere), Lund Global Scholarship (900 SEK fee), and Belgium Master Mind (€10,000 grant + €131 fee limit).</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Institution & Program</th>
+                        <th>Effort / Reward</th>
+                        <th>Pipeline Stage</th>
+                        <th>Total Tuition Fee (Int'l)</th>
+                        <th>Application Fee & Portal</th>
+                        <th>Net Financial Risk</th>
+                        <th>Portal Status & Dates</th>
+                        <th>Win Probability</th>
+                        <th>Bottom-Line Strategic Verdict</th>
+                    </tr>
+                </thead>
+                <tbody id="nordicsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 7: WESTERN EUROPE HUB -->
+    <div id="tab-west" class="tab-content">
+        <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
+            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🏰 Western Europe Hub (France, Netherlands & Belgium)</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Sciences Po Émile Boutmy (€14,720/yr), Leiden LExS (€15,000), Radboud RSP (100% tuition waiver + €11,500 living), and Ghent Master Mind.</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Institution & Program</th>
+                        <th>Effort / Reward</th>
+                        <th>Pipeline Stage</th>
+                        <th>Total Tuition Fee (Int'l)</th>
+                        <th>Application Fee & Portal</th>
+                        <th>Net Financial Risk</th>
+                        <th>Portal Status & Dates</th>
+                        <th>Win Probability</th>
+                        <th>Bottom-Line Strategic Verdict</th>
+                    </tr>
+                </thead>
+                <tbody id="westTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 8: ERASMUS MUNDUS -->
+    <div id="tab-emjm" class="tab-content">
+        <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
+            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🇪🇺 Erasmus Mundus Joint Masters (EMJM) Consortia</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">The Gold Standard: €0 Application Fees, 100% Full Tuition Coverage, Full Health Insurance, and €1,400/month Tax-Free Living Allowance (€33,600 over 2 years).</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Consortium & Lead University</th>
+                        <th>Effort / Reward</th>
+                        <th>Pipeline Stage</th>
+                        <th>Total Tuition Fee (Int'l)</th>
+                        <th>Application Fee & Portal</th>
+                        <th>Net Financial Risk</th>
+                        <th>Portal Status & Dates</th>
+                        <th>Win Probability</th>
+                        <th>Bottom-Line Strategic Verdict</th>
+                    </tr>
+                </thead>
+                <tbody id="emjmTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 9: MASTER ROADMAP -->
+    <div id="tab-roadmap" class="tab-content">
+        <div style="background: #ffffff; border-radius: 12px; border: 1px solid var(--border); padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+            <h3 style="color: var(--primary); margin: 0 0 12px 0;">🗺️ Chronological Application Roadmap (2026 &ndash; 2027 Calendar)</h3>
+            <p style="color: var(--text-muted); font-size: 8.5pt; margin-bottom: 20px;">Synchronized execution plan for Pakistani applicants. Submit applications strictly within optimal windows.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+                <div style="background: #fff1f2; border: 1px solid #fecdd3; border-radius: 8px; padding: 16px;">
+                    <h4 style="margin: 0 0 6px 0; color: #9f1239;">🚨 Phase 1: URGENT / CLOSING SOON (Nov &ndash; Dec 2026)</h4>
+                    <p style="font-size: 8pt; color: #881337; margin: 0 0 10px 0;">Cutoffs within the next 30&ndash;45 days. Prioritize these immediate submissions:</p>
+                    <ul style="font-size: 8pt; color: #4c0519; padding-left: 18px; margin: 0; line-height: 1.6;">
+                        <li><strong>Nov 30, 2026:</strong> Sciences Po Paris (Émile Boutmy Scholarship cutoff)</li>
+                        <li><strong>Dec 01, 2026:</strong> Sciences Po International Admissions priority window</li>
+                        <li><strong>Dec 18, 2026:</strong> UK Commonwealth Shared Scholarship EAS portal deadline (SOAS, Edinburgh, Exeter, Birmingham)</li>
+                        <li><strong>Jan 06, 2027:</strong> University of Oxford (OCIS cutoff & academic writing samples)</li>
+                    </ul>
+                </div>
+
+                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px;">
+                    <h4 style="margin: 0 0 6px 0; color: #1e40af;">🟢 Phase 2: ACTIVE PEAK WINDOW (Jan 2027)</h4>
+                    <p style="font-size: 8pt; color: #1e3a8a; margin: 0 0 10px 0;">Submit all active portals before mid-January cutoffs:</p>
+                    <ul style="font-size: 8pt; color: #172554; padding-left: 18px; margin: 0; line-height: 1.6;">
+                        <li><strong>Jan 07, 2027:</strong> University of Cambridge (CIS / Cambridge Trust funding cutoff)</li>
+                        <li><strong>Jan 15, 2027:</strong> Central European University Vienna (Master's Excellence Full Scholarship)</li>
+                        <li><strong>Jan 15, 2027:</strong> University of Helsinki & Tampere University (Studyinfo.fi waivers)</li>
+                        <li><strong>Jan 15, 2027:</strong> Lund University & Swedish National Admissions (Universityadmissions.se)</li>
+                        <li><strong>Jan 15, 2027:</strong> Stipendium Hungaricum (ELTE & Corvinus via HEC Portal 1 & DreamApply Portal 2)</li>
+                        <li><strong>Jan 15, 2027:</strong> Erasmus Mundus Consortium Portals (IMSISS, Mundus MAPP, EPS, HIPS)</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px;">
+                    <h4 style="margin: 0 0 6px 0; color: #166534;">⏳ Phase 3: UPCOMING HIGH-PROBABILITY PORTALS (Feb &ndash; Apr 2027)</h4>
+                    <p style="font-size: 8pt; color: #14532d; margin: 0 0 10px 0;">Italian €0 Fee Portals, Belgium Master Mind, and Netherlands RSP:</p>
+                    <ul style="font-size: 8pt; color: #052e16; padding-left: 18px; margin: 0; line-height: 1.6;">
+                        <li><strong>Feb 01, 2027:</strong> Leiden University (LExS) & Radboud University (RSP)</li>
+                        <li><strong>Feb 15, 2027:</strong> KU Leuven & Ghent University (Belgium Master Mind endorsements)</li>
+                        <li><strong>Mar 01, 2027:</strong> Sapienza Rome (€0 fee pre-selection portal)</li>
+                        <li><strong>Mar 01, 2027:</strong> Ca' Foscari University of Venice (€0 fee pre-evaluation)</li>
+                        <li><strong>Mar 15, 2027:</strong> University of Milan (€0 fee admission portal)</li>
+                        <li><strong>Jul &ndash; Aug 2027:</strong> Italian DSU Regional Scholarship Filings (ER.GO, DiSCo, ESU Venezia)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- LEVEL 3 DRILL-DOWN DOSSIER, AI SOP BLUEPRINT & DOCUMENT CHECKLIST MODAL -->
+<div class="modal-overlay" id="detailModal" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div>
+                <h2 id="modalTitle">Program Title</h2>
+                <div id="modalSub" style="font-size: 8.5pt; color: #94a3b8; margin-top: 3px;">Full Strategic Dossier & Requirements</div>
+            </div>
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body" id="modalBody">
+            <!-- Injected by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<script>
+// Pipeline Stages Definition
+const STAGES = [
+    { id: 'interested', label: '1. Interested / Shortlisted', icon: '📌', color: '#2b6cb0', bg: '#ebf8ff', border: '#bee3f8' },
+    { id: 'preparing',  label: '2. Preparing Documents',     icon: '📝', color: '#c05621', bg: '#feebc8', border: '#fbd38d' },
+    { id: 'applied',    label: '3. Applied / Submitted',        icon: '🚀', color: '#6b46c1', bg: '#e9d8fd', border: '#d6bcfa' },
+    { id: 'review',     label: '4. Under Review',               icon: '⏳', color: '#234e52', bg: '#e6fffa', border: '#b2f5ea' },
+    { id: 'offer',      label: '5. Offer Received 🎉',          icon: '🏆', color: '#22543d', bg: '#c6f6d5', border: '#9ae6b4' }
+];
+
+// LocalStorage Keys
+const KANBAN_STORAGE_KEY = 'kanban_state';
+const CHECKLIST_STORAGE_KEY = 'checklist_state';
+const NOTES_STORAGE_KEY = 'notes_state';
+
+// Global Filter State
+let currentFilter = {
+    search: '',
+    discipline: 'all',
+    feeCategory: 'all',
+    status: 'all',
+    effort: 'all',
+    preset: 'all'
+};
+
+// =============================================================
+// 1. CENTRAL APPLICATION STATE STORE (Single Source of Truth)
+// =============================================================
+const AppStore = {
+    // In-memory state tracking user mutations keyed by program semantic slugs
+    pipeline: {},   // e.g., { "uk-soas-middle-east": "applied" }
+    checklists: {}, // e.g., { "uk-soas-middle-east": { 0: true, 1: true } }
+    notes: {},      // e.g., { "uk-soas-middle-east": "Discussed with department chair..." }
+
+    // Initialize and hydrate store on page load
+    init() {
+        this.hydrate();
+    },
+
+    // Hydrate store from localStorage with fallback sanitization for invalid/old keys
+    hydrate() {
+        try {
+            // 1. Hydrate and sanitize pipeline state
+            const rawKanban = localStorage.getItem(KANBAN_STORAGE_KEY);
+            if (rawKanban) {
+                const parsed = JSON.parse(rawKanban);
+                const sanitizedPipeline = {};
+                for (const key in parsed) {
+                    // Fallback sanitization: reject legacy numeric keys or non-string keys
+                    if (key && typeof key === 'string' && !/^\d+$/.test(key)) {
+                        sanitizedPipeline[key] = parsed[key];
+                    }
+                }
+                this.pipeline = sanitizedPipeline;
+                localStorage.setItem(KANBAN_STORAGE_KEY, JSON.stringify(this.pipeline));
+            } else {
+                this.pipeline = {};
+            }
+
+            // 2. Hydrate and sanitize checklists
+            const rawChecklist = localStorage.getItem(CHECKLIST_STORAGE_KEY);
+            if (rawChecklist) {
+                const parsed = JSON.parse(rawChecklist);
+                const sanitizedChecklist = {};
+                for (const key in parsed) {
+                    if (key && typeof key === 'string' && !/^\d+$/.test(key)) {
+                        sanitizedChecklist[key] = parsed[key];
+                    }
+                }
+                this.checklists = sanitizedChecklist;
+                localStorage.setItem(CHECKLIST_STORAGE_KEY, JSON.stringify(this.checklists));
+            } else {
+                this.checklists = {};
+            }
+
+            // 3. Hydrate notes
+            const rawNotes = localStorage.getItem(NOTES_STORAGE_KEY);
+            if (rawNotes) {
+                const parsed = JSON.parse(rawNotes);
+                const sanitizedNotes = {};
+                for (const key in parsed) {
+                    if (key && typeof key === 'string' && !/^\d+$/.test(key)) {
+                        sanitizedNotes[key] = parsed[key];
+                    }
+                }
+                this.notes = sanitizedNotes;
+                localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(this.notes));
+            } else {
+                this.notes = {};
+            }
+        } catch (e) {
+            console.warn('[AppStore] Corrupted localStorage state detected. Resetting to clean state.', e);
+            this.pipeline = {};
+            this.checklists = {};
+            this.notes = {};
+            localStorage.removeItem(KANBAN_STORAGE_KEY);
+            localStorage.removeItem(CHECKLIST_STORAGE_KEY);
+            localStorage.removeItem(NOTES_STORAGE_KEY);
+        }
+    },
+
+    // Retrieve stage for a given program slug (defaults to 'interested')
+    getStage(slug) {
+        return this.pipeline[slug] || 'interested';
+    },
+
+    // =============================================================
+    // 2. REACTIVE DISPATCHER (Pub/Sub)
+    // =============================================================
+    updateStage(slug, newStage) {
+        if (!slug || !newStage) return;
+
+        // Ensure target stage is valid
+        const validStages = ['interested', 'preparing', 'applied', 'review', 'offer'];
+        if (!validStages.includes(newStage)) {
+            console.warn(`[AppStore] Unrecognized stage identifier: ${newStage}`);
+            return;
+        }
+
+        // a) Update in-memory state
+        this.pipeline[slug] = newStage;
+
+        // b) Persist changes to localStorage
+        try {
+            localStorage.setItem(KANBAN_STORAGE_KEY, JSON.stringify(this.pipeline));
+        } catch (e) {
+            console.error('[AppStore] Failed to persist pipeline state to localStorage', e);
+        }
+
+        // c) Dispatch window event for instant view synchronization
+        window.dispatchEvent(new CustomEvent('program-state-changed', {
+            detail: { slug, newStage }
+        }));
+    },
+
+    // Checklist accessors
+    getChecklist(slug) {
+        return this.checklists[slug] || {};
+    },
+
+    toggleChecklist(slug, docIdx) {
+        if (!slug) return;
+        if (!this.checklists[slug]) this.checklists[slug] = {};
+        this.checklists[slug][docIdx] = !this.checklists[slug][docIdx];
+
+        try {
+            localStorage.setItem(CHECKLIST_STORAGE_KEY, JSON.stringify(this.checklists));
+        } catch (e) {
+            console.error('[AppStore] Failed to persist checklist state', e);
+        }
+
+        window.dispatchEvent(new CustomEvent('program-checklist-changed', {
+            detail: { slug, docIdx, checked: this.checklists[slug][docIdx] }
+        }));
+    },
+
+    // Notes accessors
+    getNote(slug) {
+        return this.notes[slug] || '';
+    },
+
+    setNote(slug, text) {
+        if (!slug) return;
+        this.notes[slug] = text;
+        try {
+            localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(this.notes));
+        } catch (e) {
+            console.error('[AppStore] Failed to persist note', e);
+        }
+    },
+
+    resetAll() {
+        this.pipeline = {};
+        this.checklists = {};
+        this.notes = {};
+        localStorage.removeItem(KANBAN_STORAGE_KEY);
+        localStorage.removeItem(CHECKLIST_STORAGE_KEY);
+        localStorage.removeItem(NOTES_STORAGE_KEY);
+    }
+};
+
+// Backward-compatibility bridges
+function sanitizeAndMigrateStorage() {
+    AppStore.hydrate();
+}
+
+function getPipelineState() {
+    return AppStore.pipeline;
+}
+
+function savePipelineState(state) {
+    AppStore.pipeline = state;
+    try {
+        localStorage.setItem(KANBAN_STORAGE_KEY, JSON.stringify(AppStore.pipeline));
+    } catch(e) {
+        console.error('Error saving pipeline state', e);
+    }
+}
+
+function getProgramStage(progId) {
+    return AppStore.getStage(progId);
+}
+
+function setProgramStage(progId, stageId) {
+    AppStore.updateStage(progId, stageId);
+}
+
+function moveStageRel(progId, delta) {
+    const curStage = AppStore.getStage(progId);
+    const curIdx = STAGES.findIndex(s => s.id === curStage);
+    if (curIdx === -1) return;
+    const newIdx = curIdx + delta;
+    if (newIdx >= 0 && newIdx < STAGES.length) {
+        AppStore.updateStage(progId, STAGES[newIdx].id);
+    }
+}
+
+function getChecklistState() {
+    return AppStore.checklists;
+}
+
+function saveChecklistState(state) {
+    AppStore.checklists = state;
+    try {
+        localStorage.setItem(CHECKLIST_STORAGE_KEY, JSON.stringify(AppStore.checklists));
+    } catch(e) {
+        console.error('Error saving checklist state', e);
+    }
+}
+
+function getProgramChecklistProgress(progId) {
+    const p = getScholarshipPrograms().find(item => item.id === progId);
+    const list = (p && p.checklist) || (window.programChecklists && window.programChecklists[progId]) || [];
+    if (list.length === 0) return { done: 0, total: 0, percent: 0 };
+    const progChecks = AppStore.getChecklist(progId);
+    let done = 0;
+    list.forEach((_, idx) => {
+        if (progChecks[idx]) done++;
+    });
+    const percent = Math.round((done / list.length) * 100);
+    return { done, total: list.length, percent };
+}
+
+function toggleDocumentCheck(progId, docIdx) {
+    AppStore.toggleChecklist(progId, docIdx);
+}
+
+function resetPipeline() {
+    if (confirm('Are you sure you want to reset all pipeline stages and document checklists to defaults?')) {
+        AppStore.resetAll();
+        refreshAllViews();
+        alert('Pipeline tracker reset to defaults.');
+    }
+}
+
+// Export / Import
+function exportDashboardState() {
+    const data = {
+        version: '2027.4',
+        exportedAt: new Date().toISOString(),
+        candidate: 'Pakistani National (Islamic Studies 3.7 GPA + PPE)',
+        pipeline: AppStore.pipeline,
+        checklists: AppStore.checklists,
+        notes: AppStore.notes,
+        // Backward-compatibility keys:
+        pipelineState: AppStore.pipeline,
+        checklistState: AppStore.checklists,
+        notesState: AppStore.notes
+    };
+    const jsonStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
+    const downloadAnchor = document.createElement('a');
+    downloadAnchor.setAttribute("href", jsonStr);
+    downloadAnchor.setAttribute("download", `scholarship_tracker_backup_${new Date().toISOString().split('T')[0]}.json`);
+    document.body.appendChild(downloadAnchor);
+    downloadAnchor.click();
+    downloadAnchor.remove();
+}
+
+// =============================================================
+// GLOBAL NAMESPACE ACCESSOR (window.ScholarshipHub.programs)
+// =============================================================
+function getScholarshipPrograms() {
+    if (window.ScholarshipHub && Array.isArray(window.ScholarshipHub.programs)) {
+        return window.ScholarshipHub.programs;
+    }
+    if (window.programsData && Array.isArray(window.programsData)) {
+        return window.programsData;
+    }
+    return [];
+}
+
+// =============================================================
+// TASK 3: FAULT-TOLERANT JSON BACKUP IMPORTER & VALIDATOR
+// =============================================================
+function triggerImportState() {
+    const input = document.getElementById('stateImportInput');
+    if (input) input.click();
+}
+
+function showImportNotification(msg, type = 'info') {
+    const existing = document.getElementById('hub-toast-notification');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.id = 'hub-toast-notification';
+    const isError = type === 'error';
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 10000;
+        background: ${isError ? '#fff5f5' : '#f0fff4'};
+        color: ${isError ? '#9b2c2c' : '#22543d'};
+        border: 2px solid ${isError ? '#feb2b2' : '#9ae6b4'};
+        padding: 14px 20px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 9.5pt;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 480px;
+        animation: fadeInSlide 0.3s ease;
+    `;
+    toast.innerHTML = `<span>${msg}</span><button onclick="this.parentElement.remove()" style="background:none;border:none;font-size:14pt;cursor:pointer;color:inherit;margin-left:auto;line-height:1;">&times;</button>`;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        if (toast && toast.parentElement) toast.remove();
+    }, 6000);
+}
+
+function handleBackupImport(event) {
+    const file = event.target && event.target.files && event.target.files[0];
+    if (!file) return;
+
+    const resetInput = () => { if (event.target) event.target.value = ''; };
+
+    // 1. Basic format check
+    if (!file.name.toLowerCase().endsWith('.json') && file.type && !file.type.includes('json')) {
+        showImportNotification('❌ Invalid File Format: Please select a valid JSON backup file (*.json).', 'error');
+        resetInput();
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onerror = function() {
+        showImportNotification('❌ Disk Read Error: Unable to read file from local disk.', 'error');
+        resetInput();
+    };
+
+    reader.onload = function(e) {
+        try {
+            const rawText = e.target.result;
+            if (!rawText || !rawText.trim()) {
+                throw new Error('The selected backup file is empty (0 bytes).');
+            }
+
+            let parsed;
+            try {
+                parsed = JSON.parse(rawText);
+            } catch (jsonErr) {
+                throw new Error('Corrupted JSON syntax: Unable to parse file as valid JSON.');
+            }
+
+            // 2. Must be a plain object (not an Array or primitive)
+            if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+                throw new Error('Invalid Schema: Backup payload must be a JSON object.');
+            }
+
+            // 3. Confirm required keys (supporting canonical & legacy names)
+            const rawPipeline = parsed.pipeline || parsed.pipelineState;
+            const rawChecklists = parsed.checklists || parsed.checklistState;
+            const rawNotes = parsed.notes || parsed.notesState || {};
+
+            if (!rawPipeline || typeof rawPipeline !== 'object' || Array.isArray(rawPipeline)) {
+                throw new Error('Missing Required Key: Backup must contain a valid "pipeline" object mapping program slugs to stages.');
+            }
+
+            if (!rawChecklists || typeof rawChecklists !== 'object' || Array.isArray(rawChecklists)) {
+                throw new Error('Missing Required Key: Backup must contain a valid "checklists" object mapping program slugs to document statuses.');
+            }
+
+            // 4. Schema validation: Verify slugs and stage values
+            const validStages = ['interested', 'preparing', 'applied', 'review', 'offer'];
+            const sanitizedPipeline = {};
+            const sanitizedChecklists = {};
+            const sanitizedNotes = {};
+
+            let validSlugCount = 0;
+
+            for (const slug in rawPipeline) {
+                if (typeof slug !== 'string' || !slug.trim() || /^\d+$/.test(slug)) {
+                    continue; // Skip legacy numeric or non-string keys
+                }
+                const stage = rawPipeline[slug];
+                if (typeof stage === 'string' && validStages.includes(stage)) {
+                    sanitizedPipeline[slug] = stage;
+                    validSlugCount++;
+                }
+            }
+
+            if (validSlugCount === 0 && Object.keys(rawPipeline).length > 0) {
+                throw new Error('Incompatible Payload: No valid program semantic slugs or recognizable stages found in backup.');
+            }
+
+            for (const slug in rawChecklists) {
+                if (typeof slug === 'string' && !/^\d+$/.test(slug) && typeof rawChecklists[slug] === 'object' && rawChecklists[slug] !== null) {
+                    sanitizedChecklists[slug] = rawChecklists[slug];
+                }
+            }
+
+            if (typeof rawNotes === 'object' && rawNotes !== null) {
+                for (const slug in rawNotes) {
+                    if (typeof slug === 'string' && !/^\d+$/.test(slug) && typeof rawNotes[slug] === 'string') {
+                        sanitizedNotes[slug] = rawNotes[slug];
+                    }
+                }
+            }
+
+            // SUCCESS FLOW: Apply validated state to in-memory AppStore & localStorage
+            AppStore.pipeline = sanitizedPipeline;
+            AppStore.checklists = sanitizedChecklists;
+            AppStore.notes = sanitizedNotes;
+
+            localStorage.setItem(KANBAN_STORAGE_KEY, JSON.stringify(AppStore.pipeline));
+            localStorage.setItem(CHECKLIST_STORAGE_KEY, JSON.stringify(AppStore.checklists));
+            localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(AppStore.notes));
+
+            // Refresh all UI views
+            refreshAllViews();
+
+            // Display success notification
+            showImportNotification(`🎉 Backup Restored Successfully! Loaded ${validSlugCount} program pipeline state(s).`, 'success');
+
+        } catch (validationErr) {
+            // Error Handling: Catch gracefully, display message, DO NOT alter localStorage state
+            console.error('[Backup Importer Error]', validationErr);
+            showImportNotification(`❌ Backup Import Failed: ${validationErr.message}`, 'error');
+        } finally {
+            resetInput();
+        }
+    };
+
+    reader.readAsText(file);
+}
+
+function importDashboardState(event) {
+    handleBackupImport(event);
+}
+
+// =============================================================
+// 3. AUTOMATIC VIEW SYNCHRONIZATION (Pub/Sub Event Listeners)
+// =============================================================
+window.addEventListener('program-state-changed', (e) => {
+    const { slug, newStage } = e.detail;
+    if (!slug || !newStage) return;
+
+    const stageObj = STAGES.find(s => s.id === newStage) || {
+        id: newStage,
+        label: newStage,
+        icon: '📌',
+        color: '#2b6cb0',
+        bg: '#ebf8ff',
+        border: '#bee3f8'
+    };
+
+    // 1. CARD VIEW: Instantly update stage select dropdown and badge
+    const cardEl = document.querySelector(`.card[data-program-id="${slug}"]`);
+    if (cardEl) {
+        const cardSelect = cardEl.querySelector('.stage-select');
+        if (cardSelect && cardSelect.value !== newStage) {
+            cardSelect.value = newStage;
+        }
+        const cardBadge = cardEl.querySelector('.card-stage-badge');
+        if (cardBadge) {
+            cardBadge.innerHTML = `${stageObj.icon} ${stageObj.label.split('.')[1] || stageObj.label}`;
+            cardBadge.style.background = stageObj.bg;
+            cardBadge.style.color = stageObj.color;
+            cardBadge.style.borderColor = stageObj.border;
+        }
+    }
+
+    // 2. REGIONAL TABLE VIEW: Instantly update table rows' inline stage selector
+    const tableRows = document.querySelectorAll(`tr[data-program-id="${slug}"]`);
+    tableRows.forEach(row => {
+        const tableSelect = row.querySelector('.stage-select');
+        if (tableSelect && tableSelect.value !== newStage) {
+            tableSelect.value = newStage;
+        }
+    });
+
+    // 3. KANBAN BOARD: Move card DOM node to matching column container and sync buttons
+    const kanbanCard = document.querySelector(`.kanban-card[data-program-id="${slug}"]`);
+    const targetCol = document.getElementById(`col-${newStage}`);
+
+    if (kanbanCard && targetCol) {
+        const sourceCol = kanbanCard.parentElement;
+
+        // Synchronize selector inside the Kanban card itself
+        const kSelect = kanbanCard.querySelector('.stage-select');
+        if (kSelect && kSelect.value !== newStage) {
+            kSelect.value = newStage;
+        }
+
+        // Synchronize arrow navigation buttons (◀ / ▶)
+        const stageIdx = STAGES.findIndex(s => s.id === newStage);
+        const actionBtns = kanbanCard.querySelectorAll('button.btn-action');
+        if (actionBtns.length >= 2) {
+            const leftBtn = actionBtns[0];
+            const rightBtn = actionBtns[1];
+
+            if (stageIdx === 0) {
+                leftBtn.disabled = true;
+                leftBtn.style.opacity = '0.3';
+                leftBtn.style.cursor = 'not-allowed';
+            } else {
+                leftBtn.disabled = false;
+                leftBtn.style.opacity = '1';
+                leftBtn.style.cursor = 'pointer';
+            }
+
+            if (stageIdx === STAGES.length - 1) {
+                rightBtn.disabled = true;
+                rightBtn.style.opacity = '0.3';
+                rightBtn.style.cursor = 'not-allowed';
+            } else {
+                rightBtn.disabled = false;
+                rightBtn.style.opacity = '1';
+                rightBtn.style.cursor = 'pointer';
+            }
+        }
+
+        // Relocate card node in DOM if moving to a different column container
+        if (sourceCol !== targetCol) {
+            // Remove empty placeholder from target column if present
+            const targetEmpty = targetCol.querySelector('.kanban-empty');
+            if (targetEmpty) targetEmpty.remove();
+
+            // Append card node to destination column
+            targetCol.appendChild(kanbanCard);
+
+            // If source column is now empty, re-inject placeholder
+            if (sourceCol && sourceCol.querySelectorAll('.kanban-card').length === 0) {
+                sourceCol.innerHTML = `<div class="kanban-empty">No applications in this stage.<br><span style="font-size: 7.5pt; color: #cbd5e1;">Drag cards here or use stage selector</span></div>`;
+            }
+        }
+    }
+
+    // 4. MODAL VIEW: If modal for this slug is currently open, update badge and select immediately
+    if (typeof activeModalProgId !== 'undefined' && activeModalProgId === slug) {
+        const modalSelect = document.querySelector('#modalBody .stage-select');
+        if (modalSelect && modalSelect.value !== newStage) {
+            modalSelect.value = newStage;
+        }
+        const modalBadge = document.getElementById('modalStageBadge');
+        if (modalBadge) {
+            modalBadge.innerHTML = `${stageObj.icon} ${stageObj.label}`;
+            modalBadge.style.background = stageObj.bg;
+            modalBadge.style.color = stageObj.color;
+            modalBadge.style.borderColor = stageObj.border;
+        }
+    }
+
+    // 5. UPDATE ALL KPI COUNTERS (Header and Kanban Column Counters)
+    updatePipelineCounters();
+});
+
+window.addEventListener('program-checklist-changed', (e) => {
+    const { slug } = e.detail;
+    if (!slug) return;
+
+    // Refresh modal checklist if open
+    if (typeof activeModalProgId !== 'undefined' && activeModalProgId === slug) {
+        renderModalChecklist(slug);
+    }
+
+    // Refresh document progress indicator on card
+    const progProgress = getProgramChecklistProgress(slug);
+    const card = document.querySelector(`.card[data-program-id="${slug}"]`);
+    if (card) {
+        const docBadge = card.querySelector('.card-doc-progress');
+        if (docBadge) {
+            docBadge.innerHTML = `📋 Docs: ${progProgress.done}/${progProgress.total} (${progProgress.percent}%)`;
+            docBadge.style.color = progProgress.percent === 100 ? '#15803d' : '#2b6cb0';
+        }
+    }
+
+    // Refresh document progress inside Kanban card
+    const kanbanCard = document.querySelector(`.kanban-card[data-program-id="${slug}"]`);
+    if (kanbanCard) {
+        const kDocText = kanbanCard.querySelector('.kanban-doc-text');
+        if (kDocText) {
+            kDocText.innerText = `${progProgress.done}/${progProgress.total} (${progProgress.percent}%)`;
+            kDocText.style.color = progProgress.percent === 100 ? '#15803d' : '#2b6cb0';
+        }
+        const kDocBar = kanbanCard.querySelector('.kanban-doc-bar');
+        if (kDocBar) {
+            kDocBar.style.width = `${progProgress.percent}%`;
+            kDocBar.style.background = progProgress.percent === 100 ? '#22c55e' : '#3182ce';
+        }
+    }
+});
+
+// DRAG AND DROP HANDLERS FOR KANBAN
+// -------------------------------------------------------------
+let draggedProgId = null;
+
+function handleDragStart(e, progId) {
+    draggedProgId = progId;
+    e.dataTransfer.setData('text/plain', progId);
+    e.dataTransfer.effectAllowed = 'move';
+}
+
+function handleDragOver(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    const container = e.currentTarget;
+    container.classList.add('kanban-dropzone-active');
+}
+
+function handleDragLeave(e) {
+    e.currentTarget.classList.remove('kanban-dropzone-active');
+}
+
+function handleDrop(e, targetStageId) {
+    e.preventDefault();
+    e.currentTarget.classList.remove('kanban-dropzone-active');
+    const progId = e.dataTransfer.getData('text/plain') || draggedProgId;
+    if (progId && targetStageId) {
+        AppStore.updateStage(progId, targetStageId);
+    }
+}
+
+// -------------------------------------------------------------
+// REFRESH & RENDER CONTROLLERS
+// -------------------------------------------------------------
+function refreshAllViews() {
+    updatePipelineCounters();
+    renderKanbanBoard();
+    renderProgramGrid(getFilteredData());
+    renderUkTable();
+    renderItalyTable();
+    renderCentralTable();
+    renderNordicsTable();
+    renderWestTable();
+    renderEmjmTable();
+}
+
+function updatePipelineCounters() {
+    const state = getPipelineState();
+    const counts = {
+        interested: 0,
+        preparing: 0,
+        applied: 0,
+        review: 0,
+        offer: 0
+    };
+
+    getScholarshipPrograms().forEach(p => {
+        const stage = state[p.id] || 'interested';
+        if (counts[stage] !== undefined) counts[stage]++;
+    });
+
+    // Update Header counters
+    document.getElementById('hdr-cnt-interested').innerText = counts.interested;
+    document.getElementById('hdr-cnt-preparing').innerText = counts.preparing;
+    document.getElementById('hdr-cnt-applied').innerText = counts.applied;
+    document.getElementById('hdr-cnt-review').innerText = counts.review;
+    document.getElementById('hdr-cnt-offer').innerText = counts.offer;
+
+    // Update Kanban counters if tab loaded
+    const elInt = document.getElementById('kanban-cnt-interested');
+    if (elInt) elInt.innerText = counts.interested;
+    const elPrep = document.getElementById('kanban-cnt-preparing');
+    if (elPrep) elPrep.innerText = counts.preparing;
+    const elApp = document.getElementById('kanban-cnt-applied');
+    if (elApp) elApp.innerText = counts.applied;
+    const elRev = document.getElementById('kanban-cnt-review');
+    if (elRev) elRev.innerText = counts.review;
+    const elOff = document.getElementById('kanban-cnt-offer');
+    if (elOff) elOff.innerText = counts.offer;
+
+    document.getElementById('pipeline-nav-count').innerText = getScholarshipPrograms().length;
+
+    // Dynamically compute Top Header Portal KPIs from real-time timestamps
+    let openCount = 0;
+    let urgentCount = 0;
+    let upcomingCount = 0;
+    let freeCount = 0;
+    let zeroCostCount = 0;
+
+    getScholarshipPrograms().forEach(p => {
+        const st = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        if (st.label === "Open Now") openCount++;
+        else if (st.label === "Closing Soon") urgentCount++;
+        else if (st.label === "Upcoming") upcomingCount++;
+
+        if (p.isFreeTicket) freeCount++;
+        if (p.netCost && p.netCost.includes('$0')) zeroCostCount++;
+    });
+
+    const elKpiOpen = document.getElementById('kpi-open');
+    if (elKpiOpen) elKpiOpen.innerText = openCount;
+
+    const elKpiUrgent = document.getElementById('kpi-urgent');
+    if (elKpiUrgent) elKpiUrgent.innerText = urgentCount;
+
+    const elKpiUpcoming = document.getElementById('kpi-upcoming');
+    if (elKpiUpcoming) elKpiUpcoming.innerText = upcomingCount;
+
+    const elKpiFree = document.getElementById('kpi-free');
+    if (elKpiFree) elKpiFree.innerText = freeCount;
+
+    const elKpiZero = document.getElementById('kpi-zero');
+    if (elKpiZero) elKpiZero.innerText = zeroCostCount;
+}
+
+// -------------------------------------------------------------
+// REAL-TIME DYNAMIC STATUS & COUNTDOWN ENGINE
+// -------------------------------------------------------------
+function calculatePortalStatus(openDateStr, deadlineDateStr) {
+    if (!openDateStr || !deadlineDateStr) {
+        return {
+            label: "Upcoming",
+            badgeClass: "badge-upcoming",
+            icon: "⏳",
+            daysRemaining: null,
+            isOpen: false,
+            text: "Upcoming",
+            badgeHtml: `<span class="tag tag-status-upcoming">⏳ Upcoming</span>`
+        };
+    }
+
+    const now = new Date();
+    // Normalize to UTC midnight to avoid DST / timezone off-by-one errors
+    const todayUtc = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+
+    const [oYear, oMonth, oDay] = openDateStr.split('-').map(Number);
+    const openDateUtc = Date.UTC(oYear, oMonth - 1, oDay);
+
+    const [dYear, dMonth, dDay] = deadlineDateStr.split('-').map(Number);
+    const deadlineDateUtc = Date.UTC(dYear, dMonth - 1, dDay);
+
+    const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+    // Case 1: Current Date < Open Date (Portal not yet opened)
+    if (todayUtc < openDateUtc) {
+        const daysUntilOpen = Math.round((openDateUtc - todayUtc) / MS_PER_DAY);
+        const opensText = daysUntilOpen === 1 ? 'Opens tomorrow' : `Opens in ${daysUntilOpen}d`;
+        return {
+            label: "Upcoming",
+            badgeClass: "badge-upcoming",
+            icon: "⏳",
+            daysRemaining: null,
+            daysUntilOpen: daysUntilOpen,
+            isOpen: false,
+            text: opensText,
+            badgeHtml: `<span class="tag tag-status-upcoming" title="Portal opens on ${openDateStr} (${daysUntilOpen} days from today)">⏳ ${opensText}</span>`
+        };
+    }
+
+    // Case 2: Current Date >= Open Date AND Current Date <= Deadline Date (Portal is Active)
+    if (todayUtc <= deadlineDateUtc) {
+        const daysRemaining = Math.max(0, Math.round((deadlineDateUtc - todayUtc) / MS_PER_DAY));
+
+        if (daysRemaining <= 30) {
+            const urgentText = daysRemaining === 0 ? 'Closes today!' : `${daysRemaining}d left`;
+            return {
+                label: "Closing Soon",
+                badgeClass: "badge-urgent",
+                icon: "🚨",
+                daysRemaining: daysRemaining,
+                isOpen: true,
+                text: urgentText,
+                badgeHtml: `<span class="tag tag-status-urgent" title="Urgent scholarship cutoff on ${deadlineDateStr} (${daysRemaining} days remaining)">🚨 Closing Soon (${urgentText})</span>`
+            };
+        } else {
+            const openText = `${daysRemaining}d left`;
+            return {
+                label: "Open Now",
+                badgeClass: "badge-open",
+                icon: "🟢",
+                daysRemaining: daysRemaining,
+                isOpen: true,
+                text: openText,
+                badgeHtml: `<span class="tag tag-status-open" title="Portal currently active! Cutoff on ${deadlineDateStr} (${daysRemaining} days remaining)">🟢 Open Now (${openText})</span>`
+            };
+        }
+    }
+
+    // Case 3: Current Date > Deadline Date (Portal Closed)
+    const daysSinceClosed = Math.round((todayUtc - deadlineDateUtc) / MS_PER_DAY);
+    return {
+        label: "Closed",
+        badgeClass: "badge-closed",
+        icon: "❌",
+        daysRemaining: 0,
+        isOpen: false,
+        text: `Closed ${daysSinceClosed}d ago`,
+        badgeHtml: `<span class="tag tag-paid" style="background:#f1f5f9; color:#64748b; border:1px solid #cbd5e1;" title="Application window closed on ${deadlineDateStr}">❌ Closed (${deadlineDateStr})</span>`
+    };
+}
+
+function getStatusBadge(openDateStr, deadlineDateStr) {
+    const status = calculatePortalStatus(openDateStr, deadlineDateStr);
+    return status.badgeHtml;
+}
+
+function getEffortBadge(score, tag) {
+    if (score <= 2) {
+        return `<span class="tag tag-quick-win" title="Effort: Level ${score} / 5 (${tag})">⚡ L${score} Quick Win</span>`;
+    } else if (score >= 4) {
+        return `<span class="tag tag-heavyweight" title="Effort: Level ${score} / 5 (${tag})">🏆 L${score} Heavyweight</span>`;
+    } else {
+        return `<span class="tag tag-moderate" title="Effort: Level ${score} / 5 (${tag})">⚖️ L${score} Moderate</span>`;
+    }
+}
+
+// -------------------------------------------------------------
+// RENDER KANBAN BOARD
+// -------------------------------------------------------------
+function renderKanbanBoard() {
+    const board = document.getElementById('kanbanBoard');
+    if (!board) return;
+    board.innerHTML = '';
+
+    const state = getPipelineState();
+
+    STAGES.forEach((stage, sIdx) => {
+        const col = document.createElement('div');
+        col.className = 'kanban-col';
+
+        const stageProgs = getScholarshipPrograms().filter(p => (state[p.id] || 'interested') === stage.id);
+
+        col.innerHTML = `
+            <div class="kanban-col-header" style="background: ${stage.bg}; color: ${stage.color}; border-bottom-color: ${stage.border};">
+                <div>${stage.icon} ${stage.label}</div>
+                <div class="kanban-col-count" id="kanban-cnt-${stage.id}" style="background: rgba(0,0,0,0.06); color: ${stage.color};">${stageProgs.length}</div>
+            </div>
+            <div class="kanban-cards-container" 
+                 id="col-${stage.id}" 
+                 ondragover="handleDragOver(event)" 
+                 ondragleave="handleDragLeave(event)" 
+                 ondrop="handleDrop(event, '${stage.id}')">
+            </div>
+        `;
+
+        board.appendChild(col);
+
+        const cardsContainer = col.querySelector(`#col-${stage.id}`);
+
+        if (stageProgs.length === 0) {
+            cardsContainer.innerHTML = `<div class="kanban-empty">No applications in this stage.<br><span style="font-size: 7.5pt; color: #cbd5e1;">Drag cards here or use stage selector</span></div>`;
+        } else {
+            stageProgs.forEach(p => {
+                const progProgress = getProgramChecklistProgress(p.id);
+                const currentStage = AppStore.getStage(p.id);
+        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+                const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+                let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+                let feeTagHtml = p.isFreeTicket 
+                    ? `<span class="tag tag-free">🎟️ ${p.appFeeText}</span>`
+                    : (p.feeCategory === 'nominal' ? `<span class="tag tag-nominal">⚡ ${p.appFeeText}</span>` : `<span class="tag tag-paid">💼 ${p.appFeeText}</span>`);
+
+                const cardEl = document.createElement('div');
+                cardEl.className = 'kanban-card';
+                cardEl.setAttribute('data-program-id', p.id);
+                cardEl.draggable = true;
+                cardEl.ondragstart = (e) => handleDragStart(e, p.id);
+
+                cardEl.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 4px;">
+                        <span class="tag tag-disc" style="font-size: 7.5pt; font-weight: 700;">${p.rank ? `#${p.rank} UK` : p.region}</span>
+                        ${statusBadge}
+                    </div>
+                    <div style="font-weight: 700; font-size: 9pt; color: var(--primary); line-height: 1.25;">
+                        ${p.uni}
+                    </div>
+                    <div style="font-size: 8pt; color: #4a5568; line-height: 1.3;">
+                        ${p.prog}
+                    </div>
+                    <div style="font-size: 7.5pt; color: #166534; font-weight: 700; margin-top: 2px;">
+                        💰 ${p.totalTuitionFee}
+                    </div>
+                    <div style="display: flex; gap: 4px; flex-wrap: wrap; margin-top: 2px;">
+                        ${effortBadge}
+                        ${feeTagHtml}
+                    </div>
+
+                    <!-- Document Progress -->
+                    <div style="background: #f1f5f9; border-radius: 6px; padding: 6px 8px; margin-top: 4px; border: 1px solid #e2e8f0; cursor: pointer;" onclick="openModal('${p.id}')" title="Click to view strategic dossier & SOP blueprint">
+                        <div style="display: flex; justify-content: space-between; font-size: 7.5pt; font-weight: 600; color: #4a5568; margin-bottom: 3px;">
+                            <span>📋 Documents</span>
+                            <span class="kanban-doc-text" style="color: ${progProgress.percent === 100 ? '#15803d' : '#2b6cb0'}; font-weight: 700;">${progProgress.done}/${progProgress.total} (${progProgress.percent}%)</span>
+                        </div>
+                        <div style="height: 5px; background: #cbd5e0; border-radius: 3px; overflow: hidden;">
+                            <div class="kanban-doc-bar" style="height: 100%; width: ${progProgress.percent}%; background: ${progProgress.percent === 100 ? '#22c55e' : '#3182ce'};"></div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; gap: 4px;">
+                        <button class="btn-action" style="padding: 3px 6px; font-size: 7.5pt;" onclick="moveStageRel('${p.id}', -1)" title="Move left" ${sIdx === 0 ? 'disabled style="opacity:0.3;cursor:not-allowed;"' : ''}>◀</button>
+                        <select class="stage-select" data-program-id="${p.id}" style="font-size: 7.5pt; padding: 3px 4px; flex: 1;" onchange="AppStore.updateStage('${p.id}', this.value)">
+                            ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                        </select>
+                        <button class="btn-action" style="padding: 3px 6px; font-size: 7.5pt;" onclick="moveStageRel('${p.id}', 1)" title="Move right" ${sIdx === STAGES.length - 1 ? 'disabled style="opacity:0.3;cursor:not-allowed;"' : ''}>▶</button>
+                        <button class="btn-action btn-action-primary" style="padding: 3px 7px; font-size: 7.5pt;" onclick="openModal('${p.id}')">Dossier</button>
+                    </div>
+                `;
+
+                cardsContainer.appendChild(cardEl);
+            });
+        }
+    });
+}
+
+// -------------------------------------------------------------
+// RENDER LEVEL 1 PROGRAM GRID
+// -------------------------------------------------------------
+function renderProgramGrid(data) {
+    const grid = document.getElementById('programGrid');
+    grid.innerHTML = '';
+    document.getElementById('displayedCount').innerText = data.length;
+    document.getElementById('global-nav-count').innerText = getScholarshipPrograms().length;
+
+    if (data.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #a0aec0; font-size: 11pt;">No programs match the selected filter criteria. Try resetting filters.</div>';
+        return;
+    }
+
+    const state = getPipelineState();
+
+    data.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.setAttribute('data-program-id', p.id);
+        card.onclick = () => openModal(p.id);
+
+        const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+        let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+
+        let feeTagHtml = p.isFreeTicket 
+            ? `<span class="tag tag-free">🎟️ ${p.appFeeText}</span>`
+            : (p.feeCategory === 'nominal' ? `<span class="tag tag-nominal">⚡ ${p.appFeeText}</span>` : `<span class="tag tag-paid">💼 ${p.appFeeText}</span>`);
+
+        let zeroCostTag = p.netCost.includes('$0') 
+            ? `<span class="tag tag-zero-cost">🎯 $0 Net Cost Target</span>`
+            : `<span class="tag tag-paid">${p.netCost}</span>`;
+
+        let rankBadge = p.rank ? `<div class="card-rank">#${p.rank} UK</div>` : '';
+
+        let probClass = 'prob-medium';
+        if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
+        if (p.probabilityScore.toLowerCase().includes('low')) probClass = 'prob-low';
+
+        const progProgress = getProgramChecklistProgress(p.id);
+        const currentStage = AppStore.getStage(p.id);
+        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+        card.innerHTML = `
+            <div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3>${p.uni}</h3>
+                        <div class="uni-name">${p.prog}</div>
+                    </div>
+                    ${rankBadge}
+                </div>
+
+                <div class="tags-container">
+                    ${statusBadge}
+                    ${effortBadge}
+                    ${feeTagHtml}
+                    ${zeroCostTag}
+                    <span class="tag tag-disc">${p.discipline}</span>
+                    <span class="tag tag-disc">📍 ${p.country} &bull; ${p.region}</span>
+                </div>
+
+                <div class="card-meta">
+                    <div class="meta-row">
+                        <span class="meta-label">💰 Full Tuition Fee:</span>
+                        <span class="meta-val" style="color: #166534;">${p.totalTuitionFee}</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">⚡ Effort Rating:</span>
+                        <span class="meta-val">Level ${p.effortScore} / 5 (${p.effortTag.split('(')[0].trim()})</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🎟️ Application Fee:</span>
+                        <span class="meta-val">${p.feeRaw} (${p.portalName})</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">⏳ Scholarship Cutoff:</span>
+                        <span class="meta-val" style="color: #9b2c2c;">${p.deadlineDate}</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🏆 Dedicated Quotas:</span>
+                        <span class="meta-val">${p.quotas}</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">🎯 Win Probability:</span>
+                        <span class="meta-val"><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></span>
+                    </div>
+                </div>
+
+                <div class="card-verdict">
+                    "${p.shortVerdict}"
+                </div>
+            </div>
+
+            <!-- Pipeline Stage & Document Checklist Footer -->
+            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 6px;" onclick="event.stopPropagation();">
+                    <span style="font-size: 7.5pt; font-weight: 700; color: #4a5568;">Pipeline:</span>
+                    <span class="card-stage-badge tag" style="background: ${currentStageObj.bg}; color: ${currentStageObj.color}; border: 1px solid ${currentStageObj.border}; font-size: 7.5pt; font-weight: 700;">
+                        ${currentStageObj.icon} ${currentStageObj.label.split('.')[1] || currentStageObj.label}
+                    </span>
+                    <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
+                        ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                    </select>
+                </div>
+                <div class="card-doc-progress" style="font-size: 7.5pt; font-weight: 700; color: ${progProgress.percent === 100 ? '#15803d' : '#2b6cb0'};" title="Document readiness">
+                    📋 Docs: ${progProgress.done}/${progProgress.total} (${progProgress.percent}%)
+                </div>
+            </div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
+// -------------------------------------------------------------
+// RENDER REGIONAL TABLES (WITH EFFORT & PIPELINE SELECTORS)
+// -------------------------------------------------------------
+function renderUkTable() {
+    const tbody = document.getElementById('ukTableBody');
+    tbody.innerHTML = '';
+    const ukProgs = getScholarshipPrograms().filter(p => p.region === 'UK').sort((a,b) => a.rank - b.rank);
+    const state = getPipelineState();
+
+    ukProgs.forEach(p => {
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-program-id', p.id);
+        tr.onclick = () => openModal(p.id);
+
+        const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+        let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+        let feeDisplay = p.isFreeTicket 
+            ? `<strong style="color: #276749;">£0 Free Ticket</strong><br><small style="color: #718096;">${p.portalName}</small>`
+            : `<strong style="color: #9b2c2c;">${p.feeRaw}</strong><br><small style="color: #718096;">${p.portalName}</small>`;
+
+        let probClass = 'prob-medium';
+        if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
+        if (p.probabilityScore.toLowerCase().includes('low')) probClass = 'prob-low';
+
+        const currentStage = AppStore.getStage(p.id);
+        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+        tr.innerHTML = `
+            <td class="rank-cell">#${p.rank}</td>
+            <td>
+                <strong>${p.uni}</strong><br>
+                <small style="color: #4a5568;">${p.prog}</small>
+            </td>
+            <td>${effortBadge}</td>
+            <td onclick="event.stopPropagation();">
+                <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
+                    ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                </select>
+            </td>
+            <td><strong style="color: #1a365d; font-size: 9pt;">${p.totalTuitionFee}</strong></td>
+            <td>${feeDisplay}</td>
+            <td><span class="tag tag-zero-cost">${p.netCost}</span></td>
+            <td>${statusBadge}<br><small style="color: #718096; font-size: 7.5pt;">Cutoff: ${p.deadlineDate}</small></td>
+            <td><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></td>
+            <td style="font-size: 8pt; color: #2c5282;">${p.shortVerdict}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function renderItalyTable() {
+    const tbody = document.getElementById('italyTableBody');
+    tbody.innerHTML = '';
+    const progs = getScholarshipPrograms().filter(p => p.region === 'Italy');
+    const state = getPipelineState();
+
+    progs.forEach(p => {
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-program-id', p.id);
+        tr.onclick = () => openModal(p.id);
+
+        const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+        let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+        let probClass = 'prob-medium';
+        if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
+
+        const currentStage = AppStore.getStage(p.id);
+        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+        tr.innerHTML = `
+            <td>
+                <strong>${p.uni}</strong><br>
+                <small style="color: #4a5568;">${p.prog}</small>
+            </td>
+            <td>${effortBadge}</td>
+            <td onclick="event.stopPropagation();">
+                <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
+                    ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                </select>
+            </td>
+            <td><strong style="color: #1a365d; font-size: 9pt;">${p.totalTuitionFee}</strong></td>
+            <td><strong style="color: #276749;">${p.feeRaw}</strong><br><small style="color: #718096;">${p.portalName}</small></td>
+            <td><span class="tag tag-zero-cost">${p.netCost}</span></td>
+            <td>${statusBadge}<br><small style="color: #718096; font-size: 7.5pt;">Cutoff: ${p.deadlineDate}</small></td>
+            <td><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></td>
+            <td style="font-size: 8pt; color: #2c5282;">${p.shortVerdict}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function renderCentralTable() {
+    const tbody = document.getElementById('centralTableBody');
+    tbody.innerHTML = '';
+    const progs = getScholarshipPrograms().filter(p => p.region === 'Central Europe');
+    const state = getPipelineState();
+
+    progs.forEach(p => {
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-program-id', p.id);
+        tr.onclick = () => openModal(p.id);
+
+        const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+        let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+        let probClass = 'prob-medium';
+        if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
+
+        const currentStage = AppStore.getStage(p.id);
+        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+        tr.innerHTML = `
+            <td>
+                <strong>${p.uni}</strong><br>
+                <small style="color: #4a5568;">${p.prog}</small>
+            </td>
+            <td>${effortBadge}</td>
+            <td onclick="event.stopPropagation();">
+                <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
+                    ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                </select>
+            </td>
+            <td><strong style="color: #1a365d; font-size: 9pt;">${p.totalTuitionFee}</strong></td>
+            <td><strong style="color: #276749;">${p.feeRaw}</strong><br><small style="color: #718096;">${p.portalName}</small></td>
+            <td><span class="tag tag-zero-cost">${p.netCost}</span></td>
+            <td>${statusBadge}<br><small style="color: #718096; font-size: 7.5pt;">Cutoff: ${p.deadlineDate}</small></td>
+            <td><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></td>
+            <td style="font-size: 8pt; color: #2c5282;">${p.shortVerdict}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function renderNordicsTable() {
+    const tbody = document.getElementById('nordicsTableBody');
+    tbody.innerHTML = '';
+    const progs = getScholarshipPrograms().filter(p => p.region === 'Nordics & Belgium');
+    const state = getPipelineState();
+
+    progs.forEach(p => {
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-program-id', p.id);
+        tr.onclick = () => openModal(p.id);
+
+        const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+        let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+        let probClass = 'prob-medium';
+        if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
+
+        const currentStage = AppStore.getStage(p.id);
+        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+        tr.innerHTML = `
+            <td>
+                <strong>${p.uni}</strong><br>
+                <small style="color: #4a5568;">${p.prog}</small>
+            </td>
+            <td>${effortBadge}</td>
+            <td onclick="event.stopPropagation();">
+                <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
+                    ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                </select>
+            </td>
+            <td><strong style="color: #1a365d; font-size: 9pt;">${p.totalTuitionFee}</strong></td>
+            <td><strong style="color: #9b2c2c;">${p.feeRaw}</strong><br><small style="color: #718096;">${p.portalName}</small></td>
+            <td><span class="tag tag-zero-cost">${p.netCost}</span></td>
+            <td>${statusBadge}<br><small style="color: #718096; font-size: 7.5pt;">Cutoff: ${p.deadlineDate}</small></td>
+            <td><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></td>
+            <td style="font-size: 8pt; color: #2c5282;">${p.shortVerdict}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function renderWestTable() {
+    const tbody = document.getElementById('westTableBody');
+    tbody.innerHTML = '';
+    const progs = getScholarshipPrograms().filter(p => p.region === 'Western Europe');
+    const state = getPipelineState();
+
+    progs.forEach(p => {
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-program-id', p.id);
+        tr.onclick = () => openModal(p.id);
+
+        const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+        let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+        let probClass = 'prob-medium';
+        if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
+
+        const currentStage = AppStore.getStage(p.id);
+        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+        tr.innerHTML = `
+            <td>
+                <strong>${p.uni}</strong><br>
+                <small style="color: #4a5568;">${p.prog}</small>
+            </td>
+            <td>${effortBadge}</td>
+            <td onclick="event.stopPropagation();">
+                <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
+                    ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                </select>
+            </td>
+            <td><strong style="color: #1a365d; font-size: 9pt;">${p.totalTuitionFee}</strong></td>
+            <td><strong style="color: #9b2c2c;">${p.feeRaw}</strong><br><small style="color: #718096;">${p.portalName}</small></td>
+            <td><span class="tag tag-zero-cost">${p.netCost}</span></td>
+            <td>${statusBadge}<br><small style="color: #718096; font-size: 7.5pt;">Cutoff: ${p.deadlineDate}</small></td>
+            <td><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></td>
+            <td style="font-size: 8pt; color: #2c5282;">${p.shortVerdict}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function renderEmjmTable() {
+    const tbody = document.getElementById('emjmTableBody');
+    tbody.innerHTML = '';
+    const progs = getScholarshipPrograms().filter(p => p.region === 'Erasmus Mundus');
+    const state = getPipelineState();
+
+    progs.forEach(p => {
+        const tr = document.createElement('tr');
+        tr.setAttribute('data-program-id', p.id);
+        tr.onclick = () => openModal(p.id);
+
+        const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+        let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+        let probClass = 'prob-medium';
+        if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
+
+        const currentStage = AppStore.getStage(p.id);
+        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+        tr.innerHTML = `
+            <td>
+                <strong>${p.uni}</strong><br>
+                <small style="color: #4a5568;">${p.prog}</small>
+            </td>
+            <td>${effortBadge}</td>
+            <td onclick="event.stopPropagation();">
+                <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
+                    ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                </select>
+            </td>
+            <td><strong style="color: #1a365d; font-size: 9pt;">${p.totalTuitionFee}</strong></td>
+            <td><strong style="color: #276749;">${p.feeRaw}</strong><br><small style="color: #718096;">${p.portalName}</small></td>
+            <td><span class="tag tag-zero-cost">${p.netCost}</span></td>
+            <td>${statusBadge}<br><small style="color: #718096; font-size: 7.5pt;">Cutoff: ${p.deadlineDate}</small></td>
+            <td><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></td>
+            <td style="font-size: 8pt; color: #2c5282;">${p.shortVerdict}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+// -------------------------------------------------------------
+// FILTER CONTROLLERS
+// -------------------------------------------------------------
+function getFilteredData() {
+    return getScholarshipPrograms().filter(p => {
+        const matchesSearch = !currentFilter.search || 
+            p.uni.toLowerCase().includes(currentFilter.search) ||
+            p.prog.toLowerCase().includes(currentFilter.search) ||
+            p.primaryScholarship.toLowerCase().includes(currentFilter.search) ||
+            p.country.toLowerCase().includes(currentFilter.search) ||
+            p.region.toLowerCase().includes(currentFilter.search);
+
+        const matchesDiscipline = currentFilter.discipline === 'all' || 
+            p.discipline.toLowerCase().includes(currentFilter.discipline.toLowerCase());
+
+        const matchesFee = currentFilter.feeCategory === 'all' || 
+            (currentFilter.feeCategory === 'free' && p.isFreeTicket) ||
+            (currentFilter.feeCategory === 'nominal' && p.feeCategory === 'nominal') ||
+            (currentFilter.feeCategory === 'paid' && p.feeCategory === 'paid');
+
+        const pStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        const matchesStatus = currentFilter.status === 'all' || 
+            pStatus.label === currentFilter.status ||
+            (currentFilter.status === 'Open Now' && pStatus.isOpen);
+
+        let matchesEffort = true;
+        if (currentFilter.effort === 'quick-wins') {
+            matchesEffort = p.effortScore <= 2;
+        } else if (currentFilter.effort === 'moderate') {
+            matchesEffort = p.effortScore === 3;
+        } else if (currentFilter.effort === 'heavyweight') {
+            matchesEffort = p.effortScore >= 4;
+        } else if (currentFilter.effort !== 'all') {
+            matchesEffort = p.effortScore === parseInt(currentFilter.effort);
+        }
+
+        let matchesPreset = true;
+        if (currentFilter.preset === 'quick-wins') {
+            matchesPreset = p.effortScore <= 2;
+        } else if (currentFilter.preset === 'prestige') {
+            matchesPreset = p.effortScore >= 4;
+        } else if (currentFilter.preset === 'open-now') {
+            matchesPreset = p.portalStatus === 'Open Now';
+        } else if (currentFilter.preset === 'closing-soon') {
+            matchesPreset = p.portalStatus === 'Closing Soon';
+        } else if (currentFilter.preset === 'free-ticket') {
+            matchesPreset = p.isFreeTicket;
+        } else if (currentFilter.preset === 'zero-cost') {
+            matchesPreset = p.netCost.includes('$0');
+        } else if (currentFilter.preset === 'high-prob') {
+            matchesPreset = p.probabilityScore.toLowerCase().includes('high');
+        } else if (currentFilter.preset === 'islamic-studies') {
+            matchesPreset = p.discipline.includes('Islamic') || p.discipline.includes('Muslim');
+        } else if (currentFilter.preset === 'philosophy-ppe') {
+            matchesPreset = p.discipline.includes('Philosophy') || p.discipline.includes('Politics') || p.discipline.includes('Policy');
+        }
+
+        return matchesSearch && matchesDiscipline && matchesFee && matchesStatus && matchesEffort && matchesPreset;
+    });
+}
+
+function setPresetFilter(presetKey, btnElement) {
+    document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+    btnElement.classList.add('active');
+    currentFilter.preset = presetKey;
+    renderProgramGrid(getFilteredData());
+}
+
+function filterPrograms() {
+    currentFilter.search = document.getElementById('searchInput').value.toLowerCase().trim();
+    currentFilter.discipline = document.getElementById('discFilter').value;
+    currentFilter.feeCategory = document.getElementById('feeFilter').value;
+    currentFilter.status = document.getElementById('statusFilter').value;
+    currentFilter.effort = document.getElementById('effortFilter').value;
+    renderProgramGrid(getFilteredData());
+}
+
+function switchMainTab(tabKey) {
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+    const tabId = 'tab-' + tabKey;
+    const activeContent = document.getElementById(tabId);
+    if (activeContent) {
+        activeContent.classList.add('active');
+    }
+
+    const navTab = document.querySelector(`.nav-tab[data-tab="${tabKey}"]`);
+    if (navTab) {
+        navTab.classList.add('active');
+    }
+
+    if (tabKey === 'pipeline') {
+        renderKanbanBoard();
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// -------------------------------------------------------------
+// LEVEL 3 MODAL, AI SOP BLUEPRINT & DOCUMENT CHECKLIST
+// -------------------------------------------------------------
+let activeModalProgId = null;
+
+function renderModalChecklist(progId) {
+    const p = getScholarshipPrograms().find(item => item.id === progId);
+    const list = (p && p.checklist) || (window.programChecklists && window.programChecklists[progId]) || [];
+    const state = getChecklistState();
+    const progChecks = state[progId] || {};
+    const progress = getProgramChecklistProgress(progId);
+
+    const checklistContainer = document.getElementById('modalChecklistWrap');
+    if (!checklistContainer) return;
+
+    let itemsHtml = list.map((itemText, idx) => {
+        const isChecked = !!progChecks[idx];
+        return `
+            <div class="checklist-item ${isChecked ? 'checked' : ''}" data-program-id="${progId}" data-doc-index="${idx}" onclick="toggleDocumentCheck('${progId}', ${idx})">
+                <input type="checkbox" ${isChecked ? 'checked' : ''} data-program-id="${progId}" data-doc-index="${idx}" onclick="event.stopPropagation(); toggleDocumentCheck('${progId}', ${idx});">
+                <span class="item-text" style="font-size: 8.5pt; line-height: 1.4;">${itemText}</span>
+            </div>
+        `;
+    }).join('');
+
+    checklistContainer.innerHTML = `
+        <div class="checklist-card">
+            <div class="checklist-top">
+                <div style="font-weight: 700; font-size: 9pt; color: var(--primary);">
+                    📋 Required Application Dossier (Pakistani 3.7 GPA Profile Calibration)
+                </div>
+                <div style="font-size: 8pt; font-weight: 700; color: ${progress.percent === 100 ? '#15803d' : '#2b6cb0'};">
+                    ${progress.done} / ${progress.total} Documents Ready (${progress.percent}%)
+                </div>
+            </div>
+            <div class="checklist-progress-bar-wrap">
+                <div class="checklist-progress-fill" style="width: ${progress.percent}%; background: ${progress.percent === 100 ? '#22c55e' : '#3182ce'};"></div>
+            </div>
+            <div class="checklist-list">
+                ${itemsHtml}
+            </div>
+        </div>
+    `;
+}
+
+function toggleSopBlueprint(progId) {
+    const box = document.getElementById('sopBlueprintBox');
+    if (!box) return;
+
+    if (box.style.display === 'block') {
+        box.style.display = 'none';
+        return;
+    }
+
+    const p = getScholarshipPrograms().find(item => item.id === progId);
+    const sop = (p && p.sopBlueprint) || (window.sopBlueprints && window.sopBlueprints[progId]);
+    if (!sop) {
+        alert('SOP blueprint for this program is being prepared.');
+        return;
+    }
+
+    const contentDiv = document.getElementById('sopBlueprintText');
+    const rawTextarea = document.getElementById('sopBlueprintRaw');
+
+    contentDiv.innerHTML = `
+        <div class="sop-p-box">
+            <div class="sop-p-title">Paragraph 1: Academic Hook & Interdisciplinary Synthesis (Islamic Epistemology + PPE)</div>
+            <p class="sop-p-content">${sop.p1_hook}</p>
+        </div>
+        <div class="sop-p-box">
+            <div class="sop-p-title">Paragraph 2: Institutional Synergy & Faculty/Archival Alignment</div>
+            <p class="sop-p-content">${sop.p2_synergy}</p>
+        </div>
+        <div class="sop-p-box">
+            <div class="sop-p-title">Paragraph 3: Methodological Contribution & Primary Text Research</div>
+            <p class="sop-p-content">${sop.p3_research}</p>
+        </div>
+        <div class="sop-p-box">
+            <div class="sop-p-title">Paragraph 4: Post-Graduate Career Trajectory & Regional Impact</div>
+            <p class="sop-p-content">${sop.p4_impact}</p>
+        </div>
+    `;
+
+    const fullPlainText = `STATEMENT OF PURPOSE / MOTIVATION LETTER BLUEPRINT
+Program: ${sop.title}
+Candidate Calibration: Pakistani National | BA Islamic Studies (GPA: 3.7 / 4.0) | Associate Degree in PPE | Arabic & Persian Fluency | IELTS 7.5
+
+PARAGRAPH 1: ACADEMIC HOOK & SYNTHESIS (ISLAMIC EPISTEMOLOGY + PPE)
+${sop.p1_hook}
+
+PARAGRAPH 2: PROGRAM-SPECIFIC SYNERGY & FACULTY ALIGNMENT
+${sop.p2_synergy}
+
+PARAGRAPH 3: RESEARCH FOCUS & METHODOLOGICAL CONTRIBUTION
+${sop.p3_research}
+
+PARAGRAPH 4: POST-GRADUATE CAREER IMPACT & REGIONAL CONTRIBUTION
+${sop.p4_impact}
+`;
+
+    rawTextarea.value = fullPlainText;
+    box.style.display = 'block';
+}
+
+function copySopBlueprint() {
+    const rawTextarea = document.getElementById('sopBlueprintRaw');
+    if (!rawTextarea) return;
+
+    navigator.clipboard.writeText(rawTextarea.value).then(() => {
+        alert('📋 Bespoke 4-Paragraph SOP Blueprint copied to clipboard successfully!');
+    }).catch(err => {
+        rawTextarea.select();
+        document.execCommand('copy');
+        alert('📋 Bespoke 4-Paragraph SOP Blueprint copied to clipboard!');
+    });
+}
+
+function openModal(progId) {
+    activeModalProgId = progId;
+    const p = getScholarshipPrograms().find(item => item.id === progId);
+    if (!p) return;
+
+    document.getElementById('modalTitle').innerHTML = `${p.uni} &bull; ${p.prog}`;
+
+    const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+        let statusBadge = dynStatus.badgeHtml;
+    let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+    let feeStatusTag = p.isFreeTicket 
+        ? `<span class="tag tag-free">🎟️ ${p.feeTag}</span>`
+        : (p.feeCategory === 'nominal' ? `<span class="tag tag-nominal">⚡ ${p.feeTag}</span>` : `<span class="tag tag-paid">💼 ${p.feeTag}</span>`);
+
+    let rankHtml = p.rank ? `<p><strong>Strategic Portfolio Rank:</strong> #${p.rank} (United Kingdom)</p>` : '';
+
+    const currentStage = AppStore.getStage(p.id);
+    const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+
+    const body = document.getElementById('modalBody');
+    body.innerHTML = `
+        <div style="margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+            ${statusBadge}
+            ${effortBadge}
+            ${feeStatusTag}
+            <span class="tag tag-zero-cost">${p.netCost}</span>
+            <span class="tag tag-disc">${p.discipline}</span>
+            <span class="tag tag-disc">📍 ${p.country} &bull; ${p.region}</span>
+            
+            <span id="modalStageBadge" class="tag" style="background: ${currentStageObj.bg}; color: ${currentStageObj.color}; border: 1px solid ${currentStageObj.border}; font-weight: 700;">
+                ${currentStageObj.icon} ${currentStageObj.label}
+            </span>
+            <div style="margin-left: auto; display: flex; align-items: center; gap: 6px;">
+                <span style="font-size: 8pt; font-weight: 700; color: #4a5568;">Pipeline:</span>
+                <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value);">
+                    ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label}</option>`).join('')}
+                </select>
+            </div>
+        </div>
+
+        ${rankHtml}
+
+        <div class="dossier-section" style="background: #f8fafc; padding: 14px; border-radius: 8px; border-left: 4px solid var(--primary);">
+            <h4>⏳ Live Intake Calendar & Non-EU Applicant Deadlines</h4>
+            <p><strong>Portal Status:</strong> <strong>${dynStatus.icon} ${dynStatus.label}</strong> (${dynStatus.text})</p>
+            <p><strong>Portal Opening Date:</strong> <strong>${p.portalOpenDate}</strong></p>
+            <p><strong>Official Scholarship Cutoff:</strong> <strong style="color: ${dynStatus.daysRemaining !== null && dynStatus.daysRemaining <= 30 ? '#9b2c2c' : '#1e3a8a'};">${p.deadlineDate} (${dynStatus.daysRemaining !== null ? dynStatus.daysRemaining + ' days remaining' : dynStatus.text})</strong></p>
+            <p><strong>General Admissions Timeline:</strong> ${p.deadlines}</p>
+        </div>
+
+        <div class="dossier-section">
+            <h4>1. Application Fee, Portal & Non-EU Fee-Waiver Policy</h4>
+            <p><strong>Exact Application Fee:</strong> ${p.feeRaw}</p>
+            <p><strong>Application Portal:</strong> ${p.portalName}</p>
+            <p><strong>Fee Verification & Waiver Rules:</strong> ${p.portalNote}</p>
+        </div>
+
+        <div class="dossier-section">
+            <h4>2. Strategic Fit & Pitch (Islamic Studies + PPE + Languages)</h4>
+            <p>${p.strategicFit}</p>
+
+            <!-- 1-Click AI SOP Blueprint Generator -->
+            <div style="margin-top: 14px; padding: 16px; background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%); border: 1px solid #cbd5e1; border-radius: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <strong style="color: var(--primary); font-size: 9.5pt; display: flex; align-items: center; gap: 6px;">
+                            ✨ 1-Click AI Statement of Purpose & Pitch Blueprint
+                        </strong>
+                        <div style="font-size: 8pt; color: #64748b; margin-top: 2px;">
+                            Auto-calibrated to: Islamic Studies 3.7 GPA &bull; Associate Degree in PPE &bull; Classical/Modern Arabic & Persian
+                        </div>
+                    </div>
+                    <button class="btn-action" style="background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #ffffff; border: none; font-weight: 700; padding: 8px 14px; box-shadow: 0 2px 4px rgba(37,99,235,0.25); border-radius: 6px;" onclick="toggleSopBlueprint('${p.id}')">
+                        ✨ Generate SOP Outline & Pitch Blueprint
+                    </button>
+                </div>
+
+                <div id="sopBlueprintBox" class="sop-box" style="display: none;">
+                    <div class="sop-header">
+                        <div>
+                            <span style="font-weight: 700; color: #facc15; font-size: 9pt;">📄 Bespoke 4-Paragraph SOP Blueprint</span>
+                            <div style="font-size: 7.5pt; color: #94a3b8;">Click below to copy full structured text into your word processor</div>
+                        </div>
+                        <button class="btn-action" onclick="copySopBlueprint()" style="background: #1e293b; color: #93c5fd; border: 1px solid #475569; font-size: 7.5pt; padding: 5px 12px; font-weight: 700;">
+                            📋 Copy Blueprint
+                        </button>
+                    </div>
+                    <div id="sopBlueprintText"></div>
+                    <textarea id="sopBlueprintRaw" style="display:none;"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="dossier-section" style="background: #f0fdf4; padding: 14px; border-radius: 8px; border-left: 4px solid #16a34a;">
+            <h4>3. Financial Breakdown & Gross International Tuition</h4>
+            <p>💰 <strong>Full Gross International Tuition:</strong> <strong style="color: #166534; font-size: 10pt;">${p.totalTuitionFee}</strong></p>
+            <p>🎓 <strong>Primary Scholarship Coverage:</strong> <strong>${p.primaryScholarship}</strong> &mdash; ${p.scholarshipVal}</p>
+            <p>🛡️ <strong>Secondary Layers & Stacking:</strong> ${p.secondaryScholarships}</p>
+            <p>⚖️ <strong>Exclusivity & Rules:</strong> ${p.exclusivity}</p>
+            <p style="margin-top: 8px;"><strong style="color: #15803d; font-size: 10pt;">Final Net Cost Verdict:</strong> <span style="font-weight: 800; color: #15803d;">${p.netVerdict}</span></p>
+        </div>
+
+        <div class="dossier-section">
+            <h4>4. Competitiveness, Real Seat Quotas & Probability</h4>
+            <p><strong>Dedicated Seat Quotas:</strong> ${p.quotas}</p>
+            <p><strong>Probability Score:</strong> <strong style="color: var(--primary);">${p.probabilityScore}</strong></p>
+            <p><strong>Admission vs Scholarship Odds:</strong> ${p.admissionVsSchol}</p>
+            <p><strong>Primary Vulnerability / Key Risk Factor:</strong> ${p.keyRisk}</p>
+        </div>
+
+        <div class="dossier-section">
+            <h4>5. Academic Prerequisites & Tailored Document Checklist</h4>
+            <p><strong>Prerequisites:</strong> ${p.prerequisites}</p>
+            <p style="margin-top: 4px;"><strong>Automatic Consideration Check:</strong> ${p.automaticCheck}</p>
+            
+            <div id="modalChecklistWrap" style="margin-top: 14px;">
+                <!-- Document checklist rendered by renderModalChecklist -->
+            </div>
+        </div>
+
+        <div class="dossier-section">
+            <h4>6. Official Verified Direct Links</h4>
+            <p>
+                🔗 <strong>Degree Programme Portal:</strong> <a href="${p.linkProg}" target="_blank" rel="noopener noreferrer">${p.linkProg}</a><br>
+                🔗 <strong>Scholarship & Financial Aid Registry:</strong> <a href="${p.linkSchol}" target="_blank" rel="noopener noreferrer">${p.linkSchol}</a>
+            </p>
+        </div>
+
+        <div class="dossier-section">
+            <h4>7. Final Strategic Bottom-Line Verdict</h4>
+            <p style="font-weight: 600; color: var(--primary); font-size: 10pt; background: #ebf8ff; padding: 12px; border-radius: 6px; border-left: 4px solid var(--primary);">
+                "${p.shortVerdict}"
+            </p>
+        </div>
+    `;
+
+    renderModalChecklist(progId);
+    document.getElementById('detailModal').style.display = 'flex';
+}
+
+function closeModal() {
+    activeModalProgId = null;
+    document.getElementById('detailModal').style.display = 'none';
+}
+
+function closeModalOnOverlay(e) {
+    if (e.target.id === 'detailModal') {
+        closeModal();
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
+
+// =============================================================
+// TASK 1: OFFLINE FILE PROTOCOL SAFETY & INITIALIZATION
+// =============================================================
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Validate encapsulated ScholarshipHub data loaded locally via file:///
+    const programs = getScholarshipPrograms();
+
+    if (window.__dataLoadError || !programs || programs.length === 0) {
+        showDataMissingNotice();
+        return;
+    }
+
+    // 2. Initialize Central AppStore (hydrate & sanitize storage)
+    AppStore.init();
+
+    // 3. Hydrate all UI views
+    refreshAllViews();
+});
+
+function showDataMissingNotice() {
+    const container = document.querySelector('.container') || document.body;
+    container.innerHTML = `
+        <div style="max-width: 680px; margin: 60px auto; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 14px; padding: 36px 32px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            <div style="font-size: 42pt; margin-bottom: 12px;">📁</div>
+            <h2 style="color: #1a365d; margin: 0 0 10px 0; font-size: 16pt; font-weight: 800;">Offline Local Data Missing: data.js</h2>
+            <p style="color: #4a5568; font-size: 9.5pt; line-height: 1.6; margin-bottom: 22px;">
+                The user interface loaded successfully, but it cannot access the local data file <code style="background: #edf2f7; color: #2b6cb0; padding: 2px 6px; border-radius: 4px; font-weight: 700;">data.js</code> or the <code style="background: #edf2f7; color: #2b6cb0; padding: 2px 6px; border-radius: 4px; font-weight: 700;">window.ScholarshipHub.programs</code> dataset is empty.
+            </p>
+            <div style="background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 18px; text-align: left; font-size: 8.5pt; color: #4a5568; margin-bottom: 24px; line-height: 1.6;">
+                <div style="font-weight: 700; color: #d69e2e; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;">Offline file:/// Double-Click Checklist:</div>
+                1. Ensure <code style="color: #2b6cb0; font-weight: 600;">data.js</code> is stored in the <strong>exact same folder</strong> as <code style="color: #2b6cb0; font-weight: 600;">index.html</code>.<br>
+                2. Both files must remain together on your local hard drive when opened via standard double-click.<br>
+                3. Ensure <code style="color: #2b6cb0; font-weight: 600;">data.js</code> exports the frozen namespace: <code style="color: #2b6cb0; font-weight: 600;">window.ScholarshipHub = Object.freeze({...});</code>.<br>
+                4. Compatible with all modern desktop browsers (Edge, Chrome, Firefox, Safari, Brave) without any web server or Node.js runtime required.
+            </div>
+            <button onclick="location.reload()" style="background: #1a365d; color: #ffffff; border: none; padding: 11px 26px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 9pt; transition: background 0.2s;">
+                🔄 Reload Dashboard
+            </button>
+        </div>
+    `;
+}
+</script>
+
+</body>
+</html>
