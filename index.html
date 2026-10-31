@@ -906,7 +906,7 @@
 
     <div class="kpi-strip">
         <div class="kpi-card">
-            <div class="kpi-num" id="kpi-total">42</div>
+            <div class="kpi-num" id="kpi-total">45</div>
             <div class="kpi-label">Master's Programs</div>
         </div>
         <div class="kpi-card">
@@ -935,10 +935,10 @@
 <div class="nav-container">
     <div class="nav-tabs">
         <div class="nav-tab active" data-tab="global" onclick="switchMainTab('global')">
-            🌍 Global Master Directory <span class="nav-badge" id="global-nav-count">42</span>
+            🌍 Global Master Directory <span class="nav-badge" id="global-nav-count">45</span>
         </div>
         <div class="nav-tab" data-tab="pipeline" onclick="switchMainTab('pipeline')">
-            📋 Pipeline Tracker <span class="nav-badge" id="pipeline-nav-count">42</span>
+            📋 Pipeline Tracker <span class="nav-badge" id="pipeline-nav-count">45</span>
         </div>
         <div class="nav-tab" data-tab="china" onclick="switchMainTab('china')">
             🇨🇳 China Strategic Hub <span class="nav-badge" id="china-nav-count">15</span>
@@ -956,7 +956,7 @@
             ❄️ Nordic Hub <span class="nav-badge">4</span>
         </div>
         <div class="nav-tab" data-tab="west" onclick="switchMainTab('west')">
-            🏰 Western Europe Hub <span class="nav-badge">4</span>
+            🏰 Western Europe Hub <span class="nav-badge" id="west-nav-count">7</span>
         </div>
         <div class="nav-tab" data-tab="emjm" onclick="switchMainTab('emjm')">
             🇪🇺 Erasmus Mundus (EMJM) <span class="nav-badge">4</span>
@@ -974,7 +974,7 @@
         <div class="filter-hub">
             <div class="filter-presets">
                 <span style="font-size: 8pt; font-weight: 700; color: var(--text-muted); align-self: center; margin-right: 4px;">⚡ STRATEGIC PRESETS:</span>
-                <button class="preset-btn active" onclick="setPresetFilter('all', this)">All Programs (27)</button>
+                <button class="preset-btn active" onclick="setPresetFilter('all', this)">All Programs (45)</button>
                 <button class="preset-btn preset-btn-accent" onclick="setPresetFilter('quick-wins', this)">⚡ Quick Wins (Low Effort / High Reward) (11)</button>
                 <button class="preset-btn" style="border-color: #fca5a5; color: #991b1b; background: #fff1f2;" onclick="setPresetFilter('prestige', this)">🏆 Prestige Heavyweights (8)</button>
                 <button class="preset-btn" onclick="setPresetFilter('open-now', this)">🟢 Open Portals Now (13)</button>
@@ -1039,7 +1039,7 @@
             </div>
 
             <div style="margin-top: 14px; font-size: 8pt; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
-                <div>Showing <strong id="displayedCount" style="color: var(--primary);">27</strong> of 27 verified programs</div>
+                <div>Showing <strong id="displayedCount" style="color: var(--primary);">45</strong> of 45 verified programs</div>
                 <div style="font-style: italic;">Click any card to open the complete Level 3 strategic dossier, AI SOP blueprint & document checklist</div>
             </div>
         </div>
@@ -1225,8 +1225,8 @@
     <!-- TAB 7: WESTERN EUROPE HUB -->
     <div id="tab-west" class="tab-content">
         <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
-            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🏰 Western Europe Hub (France, Netherlands & Belgium)</h3>
-            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Sciences Po Émile Boutmy (€14,720/yr), Leiden LExS (€15,000), Radboud RSP (100% tuition waiver + €11,500 living), and Ghent Master Mind.</p>
+            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🏰 Western Europe Hub (France, Netherlands, Belgium & Luxembourg)</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Sciences Po Émile Boutmy (€14,720/yr), University of Luxembourg Guillaume Dupaix (€11,526/yr + housing), Leiden LExS (€15,000), Radboud RSP, and Ghent Master Mind.</p>
         </div>
         <div class="table-container">
             <table>
@@ -2066,6 +2066,12 @@ function updatePipelineCounters() {
 
     const elChinaNav = document.getElementById('china-nav-count');
     if (elChinaNav) elChinaNav.innerText = progsList.filter(p => p.region === 'China').length;
+
+    const elWestNav = document.getElementById('west-nav-count');
+    if (elWestNav) elWestNav.innerText = progsList.filter(p => p.region === 'Western Europe').length;
+
+    const elPipelineNav = document.getElementById('pipeline-nav-count');
+    if (elPipelineNav) elPipelineNav.innerText = progsList.length;
 }
 
 // -------------------------------------------------------------
