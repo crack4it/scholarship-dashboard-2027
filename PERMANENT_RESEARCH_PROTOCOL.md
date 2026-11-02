@@ -72,14 +72,15 @@ For every single program added to the live platform (`data.js` and modal popup),
 
 ---
 
-## 4. Multi-Step Sequential Search Protocol (The Cadence Mandate)
+## 4. Multi-Step Sequential Search Protocol (The 6-Step Cadence Mandate)
 Whenever auditing ANY country or region:
 * **Strict 1-Step-Per-Response Rule:** Each major step must be executed in its own dedicated turn. Never collapse multiple steps into a single reply.
   - **Step 1:** Exhaustive Regional University & Faculty Landscape Sweep (Broad sweep across all Humanities, Social Sciences, Theology, and Philosophy; zero premature filtering; capturing every program matching even 1%).
   - **Step 2:** Deep Prerequisite & Language Timing Verification (Checking internal vs. external tests, application vs. enrollment deadlines, and curriculum matching).
-  - **Step 3:** Admission Quota & Financial Reality Audit (Tuition fees, scholarship funding layers, living stipend vs. blocked account mechanics, open vs. restricted quotas).
+  - **Step 3:** Admission Quota & Financial Reality Audit (Tuition fees, scholarship funding layers, living stipend vs. blocked account mechanics, open vs. restricted quotas, direct vs. HEC gatekeepers).
   - **Step 4:** Synthesis, Categorization & Strategy Review (Flagging open questions/dilemmas for user input).
-  - **Step 5:** Final Master Report Delivery & Comprehensive Database/Website Integration (Updating `data.js`, HTML files, running headless verification, and deploying).
+  - **Step 5:** Rigorous Cross-Verification & Quality Assurance Audit (Rechecking all collected data: stress-testing for hallucinations, verifying primary source links, catching missing or out-of-date details, cross-checking anomalies before anything touches code).
+  - **Step 6:** Final Master Report Delivery & Comprehensive Website/Database Integration (Populating `data.js`, updating HTML dashboards, running headless Edge verification, and deploying live to GitHub Pages).
 
 ---
 
