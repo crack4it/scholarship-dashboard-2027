@@ -1231,15 +1231,30 @@
             <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
                 <div>
                     <h3 style="margin: 0 0 6px 0; color: #1e3a8a; font-size: 13pt;">🇩🇪 Germany Special Edition (Sommersemester 2027 / April Intake)</h3>
-                    <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Exhaustive 21-Program Directory: 100% English medium & bilingual tracks, €0 Tuition Fee across 15 states (Baden-Württemberg €1,500/sem statutory fee flagged), Direct €0 Portals (Free Lottery Tickets) vs. Uni-Assist, Zulassungsfrei guaranteed admissions, and full 18-Month Job Search Visa statutory rights under § 20 AufenthG.</p>
+                    <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Exhaustive 36-Program Directory across Germany with dedicated <strong>Top 10 Prestige Universities Section (19 Programs)</strong>. Covers 100% English medium & bilingual tracks, €0 Tuition Fee across 15 federal states (Baden-Württemberg €1,500/sem statutory fee flagged), Direct €0 Portals (Free Lottery Tickets) vs. Uni-Assist, Zulassungsfrei guaranteed admissions, and full 18-Month Job Search Visa statutory rights under § 20 AufenthG.</p>
                 </div>
-                <div style="display: flex; gap: 8px;">
-                    <span class="badge" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 4px 10px; font-weight: 700; border-radius: 6px; font-size: 8pt;">🎟️ 12 Direct €0 Portals</span>
-                    <span class="badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 4px 10px; font-weight: 700; border-radius: 6px; font-size: 8pt;">🏛️ 17 Zero-Tuition Unis</span>
-                    <span class="badge" style="background: #fefce8; color: #854d0e; border: 1px solid #fef08a; padding: 4px 10px; font-weight: 700; border-radius: 6px; font-size: 8pt;">⚖️ 6 Zulassungsfrei</span>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="badge" style="background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; padding: 4px 10px; font-weight: 700; border-radius: 6px; font-size: 8pt;">🏆 19 Top 10 Prestige Unis</span>
+                    <span class="badge" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 4px 10px; font-weight: 700; border-radius: 6px; font-size: 8pt;">🎟️ 21 Direct €0 Portals</span>
+                    <span class="badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 4px 10px; font-weight: 700; border-radius: 6px; font-size: 8pt;">🏛️ 30 Zero-Tuition Unis</span>
+                    <span class="badge" style="background: #fefce8; color: #854d0e; border: 1px solid #fef08a; padding: 4px 10px; font-weight: 700; border-radius: 6px; font-size: 8pt;">⚖️ 10 Zulassungsfrei</span>
                 </div>
             </div>
         </div>
+
+        <!-- SUB-SECTION FILTER CONTROLS FOR GERMANY -->
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; background: #f8fafc; padding: 10px 14px; border-radius: 8px; border: 1px solid #e2e8f0; align-items: center;">
+            <span style="font-size: 8.5pt; font-weight: 700; color: #334155; margin-right: 4px;">🔍 Filter German Programs:</span>
+            <button class="de-filter-btn active" style="padding: 5px 12px; font-size: 8pt; border-radius: 6px; border: 1px solid #cbd5e1; background: #1e3a8a; color: #ffffff; cursor: pointer; font-weight: 600;" onclick="filterGermanyTable('all', this)">All Germany SoSe (36)</button>
+            <button class="de-filter-btn" style="padding: 5px 12px; font-size: 8pt; border-radius: 6px; border: 1px solid #f59e0b; background: #fef3c7; color: #92400e; cursor: pointer; font-weight: 700;" onclick="filterGermanyTable('top10', this)">🏆 Top 10 Prestige Unis (19)</button>
+            <button class="de-filter-btn" style="padding: 5px 12px; font-size: 8pt; border-radius: 6px; border: 1px solid #10b981; background: #ffffff; color: #065f46; cursor: pointer; font-weight: 600;" onclick="filterGermanyTable('free-ticket', this)">🎟️ Direct €0 Portals (21)</button>
+            <button class="de-filter-btn" style="padding: 5px 12px; font-size: 8pt; border-radius: 6px; border: 1px solid #3b82f6; background: #ffffff; color: #1e40af; cursor: pointer; font-weight: 600;" onclick="filterGermanyTable('zero-tuition', this)">🏛️ €0 Tuition Only (30)</button>
+            <button class="de-filter-btn" style="padding: 5px 12px; font-size: 8pt; border-radius: 6px; border: 1px solid #14b8a6; background: #ffffff; color: #0f766e; cursor: pointer; font-weight: 600;" onclick="filterGermanyTable('tier1', this)">🟢 Tier 1: 100% English & €0 Fee</button>
+            <button class="de-filter-btn" style="padding: 5px 12px; font-size: 8pt; border-radius: 6px; border: 1px solid #eab308; background: #ffffff; color: #854d0e; cursor: pointer; font-weight: 600;" onclick="filterGermanyTable('tier2', this)">🟡 Tier 2: 100% English (€1,500 State Fee)</button>
+            <button class="de-filter-btn" style="padding: 5px 12px; font-size: 8pt; border-radius: 6px; border: 1px solid #6366f1; background: #ffffff; color: #3730a3; cursor: pointer; font-weight: 600;" onclick="filterGermanyTable('tier3', this)">🔵 Tier 3: Language at Enrollment</button>
+            <button class="de-filter-btn" style="padding: 5px 12px; font-size: 8pt; border-radius: 6px; border: 1px solid #a855f7; background: #ffffff; color: #6b21a8; cursor: pointer; font-weight: 600;" onclick="filterGermanyTable('tier4', this)">🟣 Tier 4: Direct Academic Matches</button>
+        </div>
+
         <div class="table-container">
             <table>
                 <thead>
@@ -2536,11 +2551,44 @@ function renderUkTable() {
     });
 }
 
+let currentGermanyFilter = 'all';
+
+function filterGermanyTable(filterType, btnElement) {
+    document.querySelectorAll('.de-filter-btn').forEach(b => {
+        b.style.background = '#ffffff';
+        b.style.color = '#334155';
+        b.classList.remove('active');
+    });
+    if (btnElement) {
+        btnElement.classList.add('active');
+        btnElement.style.background = filterType === 'top10' ? '#fef3c7' : '#1e3a8a';
+        btnElement.style.color = filterType === 'top10' ? '#92400e' : '#ffffff';
+    }
+    currentGermanyFilter = filterType;
+    renderGermanyTable();
+}
+
 function renderGermanyTable() {
     const tbody = document.getElementById('germanyTableBody');
     if (!tbody) return;
     tbody.innerHTML = '';
-    const progs = getScholarshipPrograms().filter(p => p.country === 'Germany' || p.region === 'Germany');
+    let progs = getScholarshipPrograms().filter(p => p.country === 'Germany' || p.region === 'Germany');
+
+    if (currentGermanyFilter === 'top10') {
+        progs = progs.filter(p => p.isTop10 === true);
+    } else if (currentGermanyFilter === 'free-ticket') {
+        progs = progs.filter(p => p.isFreeTicket);
+    } else if (currentGermanyFilter === 'zero-tuition') {
+        progs = progs.filter(p => (p.totalTuitionFee || '').includes('€0.00'));
+    } else if (currentGermanyFilter === 'tier1') {
+        progs = progs.filter(p => (p.tierTag || '').includes('Tier 1'));
+    } else if (currentGermanyFilter === 'tier2') {
+        progs = progs.filter(p => (p.tierTag || '').includes('Tier 2'));
+    } else if (currentGermanyFilter === 'tier3') {
+        progs = progs.filter(p => (p.tierTag || '').includes('Tier 3'));
+    } else if (currentGermanyFilter === 'tier4') {
+        progs = progs.filter(p => (p.tierTag || '').includes('Tier 4'));
+    }
 
     progs.forEach(p => {
         const tr = document.createElement('tr');
@@ -2554,11 +2602,14 @@ function renderGermanyTable() {
         if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
 
         const currentStage = AppStore.getStage(p.id);
+        const top10Badge = p.isTop10 ? '<span style="background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; padding: 2px 6px; border-radius: 4px; font-size: 7pt; font-weight: 700; margin-left: 6px;">🏆 TOP 10 PRESTIGE</span>' : '';
+        const tierBadge = p.tierTag ? `<span class="tag" style="background: #f1f5f9; color: #334155; font-size: 7pt; display: inline-block; margin-top: 3px; border: 1px solid #cbd5e1;">${p.tierTag}</span>` : '';
 
         tr.innerHTML = `
             <td>
-                <strong>${p.uni}</strong><br>
-                <small style="color: #4a5568;">${p.prog}</small>
+                <strong>${p.uni}</strong>${top10Badge}<br>
+                <small style="color: #4a5568; font-weight: 600;">${p.prog}</small><br>
+                ${tierBadge}
             </td>
             <td>${effortBadge}</td>
             <td onclick="event.stopPropagation();">
@@ -2842,6 +2893,8 @@ function getFilteredData() {
             matchesPreset = p.discipline.includes('Islamic') || p.discipline.includes('Muslim');
         } else if (currentFilter.preset === 'philosophy-ppe') {
             matchesPreset = p.discipline.includes('Philosophy') || p.discipline.includes('Politics') || p.discipline.includes('Policy');
+        } else if (currentFilter.preset === 'top10-germany') {
+            matchesPreset = (p.region === 'Germany' || p.country === 'Germany') && p.isTop10 === true;
         } else if (currentFilter.preset === 'germany') {
             matchesPreset = p.region === 'Germany' || p.country === 'Germany';
         } else if (currentFilter.preset === 'china') {
