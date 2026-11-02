@@ -847,6 +847,53 @@
         .container { padding: 16px 20px; }
         .kanban-board { grid-template-columns: repeat(5, 290px); }
     }
+
+    /* UK SCHOLARSHIPS & FORENSIC AUDIT STYLES */
+    .schol-pill {
+        display: inline-block;
+        padding: 2px 7px;
+        margin: 2px 3px 2px 0;
+        font-size: 7.5pt;
+        font-weight: 700;
+        border-radius: 10px;
+        background: #eff6ff;
+        color: #1d4ed8;
+        border: 1px solid #bfdbfe;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        line-height: 1.3;
+    }
+    .schol-pill:hover {
+        background: #1d4ed8;
+        color: #ffffff;
+        border-color: #1d4ed8;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(29, 78, 216, 0.25);
+    }
+    .schol-deep-card {
+        background: #ffffff;
+        border: 1px solid #bbf7d0;
+        border-radius: 8px;
+        padding: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+    .schol-deep-card:hover {
+        border-color: #3b82f6;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    }
+    .uk-filter-btn {
+        transition: all 0.2s ease;
+    }
+    .uk-filter-btn:hover {
+        background: #f1f5f9;
+    }
+    .uk-filter-btn.active {
+        background: #1e3a8a !important;
+        color: #ffffff !important;
+        border-color: #1e3a8a !important;
+    }
+    
 </style>
     <script src="data.js" onerror="window.__dataLoadError = true;"></script>
 </head>
@@ -944,7 +991,7 @@
             🇨🇳 China Strategic Hub <span class="nav-badge" id="china-nav-count">15</span>
         </div>
         <div class="nav-tab" data-tab="uk" onclick="switchMainTab('uk')">
-            🇬🇧 UK Decision Center <span class="nav-badge">7</span>
+            🇬🇧 UK Decision Center <span class="nav-badge" id="uk-nav-count">16</span>
         </div>
         <div class="nav-tab" data-tab="italy" onclick="switchMainTab('italy')">
             🇮🇹 Italy Tuition-Free Center <span class="nav-badge">4</span>
@@ -1122,16 +1169,85 @@
 
     <!-- TAB 3: UK DECISION CENTER -->
     <div id="tab-uk" class="tab-content">
-        <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
-            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🇬🇧 United Kingdom Strategic Decision Matrix & Commonwealth Quotas</h3>
-            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Ranked 1 through 7 for Pakistani candidate with Islamic Studies 3.7 GPA + PPE. Strictly calibrated to £0 fee free lottery tickets, dedicated quota seats, and $0 net cost targets.</p>
+        <!-- UK STRATEGIC INTELLIGENCE & SCHOLARSHIP HUB -->
+        <div style="margin-bottom: 16px; background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                <div>
+                    <h3 style="margin: 0 0 4px 0; color: var(--primary); font-size: 14pt;">🇬🇧 United Kingdom Postgraduate Funding Architecture & Strategic Hub</h3>
+                    <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">
+                        Comprehensive 16-Program Portfolio for Pakistani National (Islamic Studies 3.7 GPA + PPE + Arabic/Persian primary sources). Calibrated to University Endowments, £0 Free Tickets, and Zero-HAT Commonwealth Shared Tracks.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="tag" style="background: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; font-weight: 700; padding: 5px 10px;">16 Target Master's</span>
+                    <span class="tag" style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; font-weight: 700; padding: 5px 10px;">11 Zero-Fee Portals (£0)</span>
+                    <span class="tag" style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; font-weight: 700; padding: 5px 10px;">5 Oxbridge Moonshots</span>
+                    <span class="tag" style="background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; font-weight: 700; padding: 5px 10px;">3 Commonwealth Shared (Zero-HAT)</span>
+                </div>
+            </div>
+
+            <!-- EXECUTIVE STRATEGIC BLUEPRINT ACCORDION (4 CORE PILLARS) -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 14px;">
+                <!-- PILLAR 1: CHEVENING TRAP -->
+                <div style="background: #fff1f2; border: 1px solid #fecdd3; border-radius: 8px; padding: 12px;">
+                    <strong style="color: #9f1239; font-size: 8.5pt; display: flex; align-items: center; gap: 6px;">
+                        ⚠️ Pillar 1: The Chevening Work-Experience Trap
+                    </strong>
+                    <p style="font-size: 7.5pt; color: #881337; margin: 4px 0 0 0; line-height: 1.45;">
+                        Chevening mandates 2,800+ hours of verifiable post-graduation employment. Fresh graduates (&lt;2 yrs exp) face automated rejection. Pivot 100% of effort to <strong>University Endowments & Commonwealth Shared</strong> where academic merit (3.7 GPA) rules.
+                    </p>
+                </div>
+
+                <!-- PILLAR 2: OXBRIDGE GOLDEN TICKETS -->
+                <div style="background: #fefce8; border: 1px solid #fef08a; border-radius: 8px; padding: 12px;">
+                    <strong style="color: #854d0e; font-size: 8.5pt; display: flex; align-items: center; gap: 6px;">
+                        🏆 Pillar 2: Oxbridge Dual-Track Golden Tickets
+                    </strong>
+                    <p style="font-size: 7.5pt; color: #713f12; margin: 4px 0 0 0; line-height: 1.45;">
+                        Oxford (£75) & Cambridge (£85) exclude Pakistan from fee waivers. However, paying this one-off fee unlocks <strong>OPP (Malala & Sir Anwar Pervez), Vicky Noon, Clarendon & Gates</strong> (£55k+ full-rides) without work experience barriers.
+                    </p>
+                </div>
+
+                <!-- PILLAR 3: COMMONWEALTH SHARED BYPASS -->
+                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px;">
+                    <strong style="color: #1e40af; font-size: 8.5pt; display: flex; align-items: center; gap: 6px;">
+                        🎟️ Pillar 3: Commonwealth Shared Zero-HAT Bypass
+                    </strong>
+                    <p style="font-size: 7.5pt; color: #1e3a8a; margin: 4px 0 0 0; line-height: 1.45;">
+                        Unlike General Commonwealth which requires HEC Pakistan's domestic HAT exam, the <strong>Shared track is a direct university-CSC nomination</strong>. 100% tuition + £1,347/mo (£1,652 London) + flights + visa. Direct merit pathway.
+                    </p>
+                </div>
+
+                <!-- PILLAR 4: £0 ZERO-FEE PORTALS -->
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px;">
+                    <strong style="color: #166534; font-size: 8.5pt; display: flex; align-items: center; gap: 6px;">
+                        🏛️ Pillar 4: £0 Free Application Portals
+                    </strong>
+                    <p style="font-size: 7.5pt; color: #14532d; margin: 4px 0 0 0; line-height: 1.45;">
+                        11 of 16 targets charge <strong>£0 application fees</strong>: SOAS, Edinburgh, Exeter, Birmingham, and AKU-ISMC. Submitting these applications carries zero financial risk, giving multiple high-probability shots at institutional endowments.
+                    </p>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE TIER FILTER BAR -->
+            <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #f1f5f9; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                <span style="font-size: 8pt; font-weight: 700; color: #475569;">Strategic Filter:</span>
+                <button type="button" class="uk-filter-btn active" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #cbd5e1; background: #1e3a8a; color: #ffffff; cursor: pointer; font-weight: 700;" onclick="filterUkTable('all', this)">All UK Targets (16)</button>
+                <button type="button" class="uk-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #fde68a; background: #fef3c7; color: #92400e; cursor: pointer; font-weight: 700;" onclick="filterUkTable('oxbridge', this)">🏆 Oxbridge Golden Tickets (5)</button>
+                <button type="button" class="uk-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #c7d2fe; background: #e0e7ff; color: #3730a3; cursor: pointer; font-weight: 700;" onclick="filterUkTable('css', this)">🎟️ Commonwealth Shared Tracks (3)</button>
+                <button type="button" class="uk-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #bbf7d0; background: #dcfce7; color: #166534; cursor: pointer; font-weight: 700;" onclick="filterUkTable('free', this)">🏛️ £0 Free Portals (11)</button>
+                <button type="button" class="uk-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; font-weight: 600;" onclick="filterUkTable('islamic', this)">🕌 Islamic & Middle East Core (8)</button>
+                <button type="button" class="uk-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; font-weight: 600;" onclick="filterUkTable('ppe', this)">⚖️ Philosophy, PPE & Governance (8)</button>
+            </div>
         </div>
+
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
                         <th style="text-align: center;">Rank</th>
                         <th>Institution & Program</th>
+                        <th>Potential Scholarships & Endowments</th>
                         <th>Effort / Reward</th>
                         <th>Pipeline Stage</th>
                         <th>Total Tuition Fee (Int'l)</th>
@@ -2127,6 +2243,9 @@ function updatePipelineCounters() {
     const elWestNav = document.getElementById('west-nav-count');
     if (elWestNav) elWestNav.innerText = progsList.filter(p => p.region === 'Western Europe').length;
 
+    const elUkNav = document.getElementById('uk-nav-count');
+    if (elUkNav) elUkNav.innerText = progsList.filter(p => p.region === 'UK' || p.country === 'United Kingdom').length;
+
     const elPipelineNav = document.getElementById('pipeline-nav-count');
     if (elPipelineNav) elPipelineNav.innerText = progsList.length;
 }
@@ -2503,11 +2622,83 @@ function renderChinaTable() {
 // -------------------------------------------------------------
 // RENDER REGIONAL TABLES (WITH EFFORT & PIPELINE SELECTORS)
 // -------------------------------------------------------------
+let currentUkFilter = 'all';
+
+function filterUkTable(filterType, btnElement) {
+    currentUkFilter = filterType;
+    if (btnElement && btnElement.parentElement) {
+        const btns = btnElement.parentElement.querySelectorAll('.uk-filter-btn');
+        btns.forEach(b => {
+            b.classList.remove('active');
+            b.style.background = '#ffffff';
+            b.style.color = '#334155';
+            b.style.borderColor = '#cbd5e1';
+            b.style.fontWeight = '600';
+        });
+        btnElement.classList.add('active');
+        btnElement.style.background = '#1e3a8a';
+        btnElement.style.color = '#ffffff';
+        btnElement.style.borderColor = '#1e3a8a';
+        btnElement.style.fontWeight = '700';
+    }
+    renderUkTable();
+}
+
+function openModalWithScholarship(progId, scholarshipName) {
+    openModal(progId);
+    setTimeout(() => {
+        const modalBody = document.getElementById('modalBody');
+        if (!modalBody) return;
+        const cards = modalBody.querySelectorAll('.schol-deep-card');
+        cards.forEach(c => {
+            if (c.innerText.toLowerCase().includes(scholarshipName.toLowerCase())) {
+                c.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                c.style.borderColor = '#2563eb';
+                c.style.boxShadow = '0 0 0 3px rgba(37,99,235,0.35)';
+                c.style.background = '#eff6ff';
+                setTimeout(() => {
+                    c.style.borderColor = '#bbf7d0';
+                    c.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+                    c.style.background = '#ffffff';
+                }, 3000);
+            }
+        });
+    }, 200);
+}
+
+function toggleScholDetail(detailId, btn) {
+    const el = document.getElementById(detailId);
+    if (!el) return;
+    if (el.style.display === 'none') {
+        el.style.display = 'block';
+        if (btn) btn.innerText = '▲ Hide Audit';
+    } else {
+        el.style.display = 'none';
+        if (btn) btn.innerText = '🔍 View 6-Parameter Audit';
+    }
+}
+
 function renderUkTable() {
     const tbody = document.getElementById('ukTableBody');
+    if (!tbody) return;
     tbody.innerHTML = '';
-    const ukProgs = getScholarshipPrograms().filter(p => p.region === 'UK').sort((a,b) => a.rank - b.rank);
-    const state = getPipelineState();
+    
+    let ukProgs = getScholarshipPrograms().filter(p => p.region === 'UK' || p.country === 'United Kingdom');
+    
+    // Apply strategic filter
+    if (currentUkFilter === 'oxbridge') {
+        ukProgs = ukProgs.filter(p => p.uni.includes('Oxford') || p.uni.includes('Cambridge'));
+    } else if (currentUkFilter === 'css') {
+        ukProgs = ukProgs.filter(p => p.id.includes('css') || p.prog.includes('CSS') || (p.primaryScholarship && p.primaryScholarship.includes('Commonwealth Shared')));
+    } else if (currentUkFilter === 'free') {
+        ukProgs = ukProgs.filter(p => p.isFreeTicket === true);
+    } else if (currentUkFilter === 'islamic') {
+        ukProgs = ukProgs.filter(p => p.discipline.includes('Islamic') || p.discipline.includes('Middle East') || p.discipline.includes('Semitics') || p.discipline.includes('Jewish') || p.discipline.includes('Muslim'));
+    } else if (currentUkFilter === 'ppe') {
+        ukProgs = ukProgs.filter(p => p.discipline.includes('Philosophy') || p.discipline.includes('Diplomacy') || p.discipline.includes('Governance') || p.discipline.includes('Politics') || p.discipline.includes('Conflict'));
+    }
+
+    ukProgs.sort((a,b) => (a.rank || 99) - (b.rank || 99));
 
     ukProgs.forEach(p => {
         const tr = document.createElement('tr');
@@ -2528,11 +2719,39 @@ function renderUkTable() {
         const currentStage = AppStore.getStage(p.id);
         const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
 
+        // Tier badge
+        let tierBadge = '';
+        if (p.uni.includes('Oxford') || p.uni.includes('Cambridge')) {
+            tierBadge = `<span class="tag" style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; font-size: 6.5pt; font-weight: 700; margin-bottom: 3px; display: inline-block;">🏆 Oxbridge Golden Ticket</span><br>`;
+        } else if (p.id.includes('css') || (p.primaryScholarship && p.primaryScholarship.includes('Commonwealth Shared'))) {
+            tierBadge = `<span class="tag" style="background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; font-size: 6.5pt; font-weight: 700; margin-bottom: 3px; display: inline-block;">🎟️ Commonwealth Shared (Zero-HAT)</span><br>`;
+        } else if (p.isFreeTicket) {
+            tierBadge = `<span class="tag" style="background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; font-size: 6.5pt; font-weight: 700; margin-bottom: 3px; display: inline-block;">🏛️ £0 Free Portal</span><br>`;
+        }
+
+        // Potential scholarships clickable pills
+        let scholPillsHtml = '';
+        if (p.scholarships && p.scholarships.length > 0) {
+            scholPillsHtml = p.scholarships.map(s => `
+                <span class="schol-pill" onclick="event.stopPropagation(); openModalWithScholarship('${p.id}', '${s.name.replace(/'/g, "\'")}');" title="Click to view full 6-parameter scholarship audit">
+                    ✨ ${s.shortBadge || s.name}
+                </span>
+            `).join('');
+        } else {
+            scholPillsHtml = `<span style="font-size: 7.5pt; color: #475569;">${p.primaryScholarship || 'Standard Merit'}</span>`;
+        }
+
         tr.innerHTML = `
             <td class="rank-cell">#${p.rank}</td>
             <td>
+                ${tierBadge}
                 <strong>${p.uni}</strong><br>
                 <small style="color: #4a5568;">${p.prog}</small>
+            </td>
+            <td>
+                <div style="max-width: 250px;">
+                    ${scholPillsHtml}
+                </div>
             </td>
             <td>${effortBadge}</td>
             <td onclick="event.stopPropagation();">
@@ -3153,13 +3372,76 @@ function openModal(progId) {
             </div>
         </div>
 
+                <!-- SECTION 3: FINANCIAL BREAKDOWN & FORENSIC SCHOLARSHIP CARDS -->
         <div class="dossier-section" style="background: #f0fdf4; padding: 14px; border-radius: 8px; border-left: 4px solid #16a34a;">
-            <h4>3. Financial Breakdown & Gross International Tuition</h4>
+            <h4>3. Financial Breakdown & Forensic Scholarship Explorer</h4>
             <p>💰 <strong>Full Gross International Tuition:</strong> <strong style="color: #166534; font-size: 10pt;">${p.totalTuitionFee}</strong></p>
-            <p>🎓 <strong>Primary Scholarship Coverage:</strong> <strong>${p.primaryScholarship}</strong> &mdash; ${p.scholarshipVal}</p>
-            <p>🛡️ <strong>Secondary Layers & Stacking:</strong> ${p.secondaryScholarships}</p>
+            <p>🏆 <strong>Primary Scholarship Coverage:</strong> <strong>${p.primaryScholarship}</strong> &mdash; ${p.scholarshipVal}</p>
+            <p>📜 <strong>Secondary Layers & Stacking:</strong> ${p.secondaryScholarships}</p>
             <p>⚖️ <strong>Exclusivity & Rules:</strong> ${p.exclusivity}</p>
             <p style="margin-top: 8px;"><strong style="color: #15803d; font-size: 10pt;">Final Net Cost Verdict:</strong> <span style="font-weight: 800; color: #15803d;">${p.netVerdict}</span></p>
+
+            ${(p.scholarships && p.scholarships.length > 0) ? `
+                <div style="margin-top: 16px;">
+                    <div style="font-weight: 700; color: #166534; font-size: 9.5pt; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+                        <span>🏛️ Potential Scholarships, Endowments & Funding Tracks (${p.scholarships.length})</span>
+                        <span style="font-size: 7.5pt; font-weight: normal; color: #4b5563;">Audited across all 6 Mandatory Parameters</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        ${p.scholarships.map((s, sIdx) => `
+                            <div class="schol-deep-card" id="schol-card-${p.id}-${sIdx}" style="background: #ffffff; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid #f0fdf4; padding-bottom: 8px; margin-bottom: 8px;">
+                                    <div>
+                                        <strong style="color: #166534; font-size: 9.5pt;">${s.name}</strong>
+                                        <div style="margin-top: 3px; display: flex; gap: 4px; flex-wrap: wrap;">
+                                            <span class="tag" style="background: #dcfce7; color: #14532d; font-size: 7pt; font-weight: 700;">${s.coverageType}</span>
+                                            <span class="tag" style="background: #eff6ff; color: #1e40af; font-size: 7pt; font-weight: 700;">${s.shortBadge}</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-action" style="background: #f0fdf4; color: #15803d; border: 1px solid #86efac; font-size: 7.5pt; padding: 4px 10px; font-weight: 700; border-radius: 4px;" onclick="toggleScholDetail('schol-detail-${p.id}-${sIdx}', this)">
+                                        ▲ Hide Audit
+                                    </button>
+                                </div>
+
+                                <!-- Always-visible Highlights -->
+                                <div style="font-size: 8pt; color: #1f2937; line-height: 1.5; margin-bottom: 6px;">
+                                    <strong>💰 Direct Coverage:</strong> ${s.coverage}
+                                </div>
+
+                                <!-- 6-Parameter Forensic Deep-Dive Grid -->
+                                <div id="schol-detail-${p.id}-${sIdx}" class="schol-audit-grid" style="display: block; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #e2e8f0; font-size: 8pt;">
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px;">
+                                        <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border-left: 3px solid #3b82f6;">
+                                            <strong style="color: #1e3a8a;">1. Total Coverage & Living Grant:</strong>
+                                            <div style="color: #334155; margin-top: 2px;">${s.coverage}</div>
+                                        </div>
+                                        <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border-left: 3px solid #6366f1;">
+                                            <strong style="color: #312e81;">2. Quotas (Total vs Field/Pakistan):</strong>
+                                            <div style="color: #334155; margin-top: 2px;">Global: <strong>${s.quotaGlobal}</strong> | Field/PK: <strong>${s.quotaField}</strong></div>
+                                        </div>
+                                        <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border-left: 3px solid #10b981;">
+                                            <strong style="color: #065f46;">3. Funding Guarantee Status:</strong>
+                                            <div style="color: #334155; margin-top: 2px;">${s.guaranteed}</div>
+                                        </div>
+                                        <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border-left: 3px solid #f59e0b;">
+                                            <strong style="color: #92400e;">4. Application Modality & Deadlines:</strong>
+                                            <div style="color: #334155; margin-top: 2px;">${s.applicationModality}</div>
+                                        </div>
+                                        <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border-left: 3px solid #8b5cf6;">
+                                            <strong style="color: #5b21b6;">5. Stacking & Exclusivity Rules:</strong>
+                                            <div style="color: #334155; margin-top: 2px;">${s.stacking}</div>
+                                        </div>
+                                        <div style="background: #f8fafc; padding: 8px; border-radius: 6px; border-left: 3px solid #ef4444;">
+                                            <strong style="color: #991b1b;">6. Restrictive Eligibility Criteria:</strong>
+                                            <div style="color: #334155; margin-top: 2px;">${s.criteria}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            ` : ''}
         </div>
 
         <div class="dossier-section">
