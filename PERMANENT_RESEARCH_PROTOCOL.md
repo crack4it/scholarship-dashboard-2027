@@ -32,35 +32,28 @@ The candidate's field is **NOT** narrowly limited to Islamic or religious studie
 
 ---
 
-## 2. The 7-Parameter Scholarship & Financial Dossier Protocol
-Because the vast majority of global jurisdictions (United Kingdom, United States, Canada, Australia, China, Hungary, Turkey, Netherlands, France, Switzerland, etc.) **do NOT offer free tuition by default like German public universities**, every program must be rigorously audited against our **Mandatory 7-Parameter Scholarship Protocol**:
+## 2. The Mandatory Scholarship & Endowment Deep-Audit Parameters
+Because the vast majority of global jurisdictions (United Kingdom, United States, Canada, Australia, China, Hungary, Turkey, Netherlands, France, Switzerland, etc.) **do NOT offer free tuition by default like German public universities**, every scholarship and endowment mechanism must be forensically audited against these **6 Mandatory Scholarship Parameters**:
 
-1. **Exact Admission Application Fees & Fee Waivers:**
-   - Exact fee in local currency, USD, and GBP.
-   - Specific fee-waiver policies for Pakistani passport holders or low-income applicants.
-   - Classification: `🎟️ Free Lottery Ticket ($0 / £0 / €0)` | `⚡ Nominal Fee (≤$35)` | `💼 Paid Fee (>$35)`.
-2. **Total Gross International Tuition Fees (Full Degree Sticker Price):**
-   - Exact international tuition for the full 1- or 2-year duration (e.g., £28,000–£45,000 in the UK, $30,000–$60,000 in North America).
-3. **Net Out-of-Pocket Financial Risk & Scholarship Stacking Architecture:**
-   - **Layer 1 (Primary Government / Bilateral Full-Rides):** Chevening, Commonwealth, Stipendium Hungaricum, CSC Category A, Turkiye Burslari, MEXT, Fulbright, DAAD.
-   - **Layer 2 (Institutional & Faculty Excellence Awards):** Vice-Chancellor's awards, Departmental tuition waivers, Graduate teaching/research assistantships.
-   - **Layer 3 (Need-Based Regional Grants):** e.g., Italy DSU/ER.GO (€0 tuition + living stipend + free housing/meals).
-   - **Exclusivity & Stacking Rules:** Which awards can be combined and which are mutually exclusive.
-   - **Target Verdict:** `$0 Net Cost Target` (Full tuition covered + living stipend + health insurance).
-4. **Real-Time Portal Timelines, Calendar & Active Status:**
-   - Portal opening date, priority scholarship cut-off, and final international deadline.
-   - Dynamic Status: `🟢 Open Now` | `🚨 Closing Soon (<45 Days)` | `⏳ Upcoming`.
-5. **Seat Quotas, Bilateral Agreements & Allocation Mechanics:**
-   - Exact international seat quotas, country-specific bilateral quotas (e.g., HEC Pakistan allocations for Hungary/China), and selection ratios.
-6. **Admission vs. Scholarship Probability Score:**
-   - Separate realistic assessment of gaining admission vs. winning competitive funding:
-     `HIGH (>40%)` | `MEDIUM (15–40%)` | `LOW (<15%)`.
-7. **Bottom-Line Strategic Verdict:**
-   - 1-sentence bottom-line strategic value proposition.
+1. **Total Annual Scholarship Quotas (Global vs. University-Wide):**
+   - Exact number of total awards given annually by the university, trust, or government body.
+2. **Field-Specific Quotas (Humanities, Social Sciences, Religious Studies & Theology):**
+   - Exactly how many scholarships are allocated to, or won by, candidates in Humanities, Social Sciences, Religious Studies, and Theology.
+3. **Admission-to-Funding Guarantee Ratio (Is it 100% Guaranteed?):**
+   - **Guaranteed with Admission:** Every admitted student automatically receives a full/partial scholarship or need-based funding package.
+   - **Competitive Disconnected Pool:** Admission is granted independently; holding an offer does NOT guarantee funding (candidate must compete in a separate or secondary scholarship selection round).
+4. **Application Modality (Automatic vs. Separate Application):**
+   - **Automatic Consideration:** Evaluated directly via the course admission application (e.g., ticking a checkbox before the funding deadline).
+   - **Separate Application Required:** Mandates a dedicated external portal, additional scholarship essays, separate references, or independent financial aid questionnaires (e.g., OPP portal, Commonwealth CSC portal, WHT questionnaire).
+5. **Stacking & Exclusivity Architecture (Can You Combine Awards?):**
+   - **Strictly Exclusive:** Cannot be held alongside any other major award; full tuition/stipend grants must be surrendered if another scholarship is won.
+   - **Stackable / Combinable:** Can be merged with departmental tuition waivers, university hardship grants, or research assistantships to bridge funding gaps.
+6. **Specific Restrictive Criteria & Obligations:**
+   - Specific legal, regional, or demographic caveats (e.g., strictly reserved for Pakistani citizens residing in Pakistan; mandatory clause requiring no prior foreign degrees; mandatory requirement to return to Pakistan post-graduation; minimum work experience hurdles).
 
 ---
 
-## 3. Mandatory 7-Section Drill-Down Dossier Schema
+## 3. The 7-Parameter Program Dossier Standard
 For every single program added to the live platform (`data.js` and modal popup), the following 7 un-truncated dossier sections are required:
 * **Section 1: Application Fee, Portal & Non-EU Fee-Waiver Policy** (Exact costs, direct link, step-by-step waiver path).
 * **Section 2: Strategic Fit & 1-Click AI SOP Blueprint** (4 structured paragraphs: Academic Hook/PPE Synthesis, Institutional/Faculty Synergy, Methodological Contribution, Career/Regional Impact).
