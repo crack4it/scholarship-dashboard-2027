@@ -105,9 +105,15 @@ Every discovered program must be audited against these 5 standardized dimensions
    - *Restricted Quota / NC / Fixed Non-EU Cap* (Competitive selection).
 3. **Cash-to-Departure (CTD) & Economic Reality:**
    - Full-ride stipend vs. Zero tuition with visa Blocked Account (*Sperrkonto*) vs. Regional need-based living grants (e.g., Italy DSU).
-4. **Application Friction Index (AFI):**
-   - Direct digital upload (€0) vs. Central processing (Uni-Assist) vs. Certified paper courier.
-5. **Advantage Calibration:**
+4. **Application Friction & Extra Attestation Gatekeeper:**
+   - Standard baseline (`Original Degree ➔ HEC Attestation ➔ MOFA Legalization`) is assumed normal.
+   - **Flag ONLY if a university requires MORE THAN HEC + MOFA at the time of application:**
+     - E.g., Mandatory CIMEA Statement of Comparability, foreign embassy consular legalization before admission, or physical hardcopy paper courier dispatch to the university before the portal deadline.
+     - *(Note: Post-admission visa queues and embassy interview appointments are excluded from the program search phase and handled during visa execution).*
+5. **Application Route (Direct vs. HEC National Gatekeeper):**
+   - **Direct University Route:** Application submitted directly to the university's online portal.
+   - **Domestic National Gatekeeper Track:** Bilateral scholarship (e.g., Stipendium Hungaricum, CSC Category A) that requires applying through the **HEC Pakistan Portal and sitting for the HEC HAT test** for national nomination.
+6. **Advantage Calibration:**
    - 🟣 **Core Unfair Advantage:** Programs where classical Arabic/Persian literacy + PPE frameworks + IELTS 7.5 C1 give top 1% positioning.
    - 🔵 **Interdisciplinary & Adjacent:** Programs across broader Humanities, Philosophy, History, Politics, and Social Sciences.
 
