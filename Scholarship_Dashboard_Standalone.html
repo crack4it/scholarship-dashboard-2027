@@ -894,6 +894,19 @@
         border-color: #1e3a8a !important;
     }
     
+
+    .china-filter-btn {
+        transition: all 0.2s ease;
+    }
+    .china-filter-btn:hover {
+        background: #f1f5f9;
+    }
+    .china-filter-btn.active {
+        background: #1e3a8a !important;
+        color: #ffffff !important;
+        border-color: #1e3a8a !important;
+    }
+    
 </style>
     <script src="data.js" onerror="window.__dataLoadError = true;"></script>
 </head>
@@ -988,7 +1001,7 @@
             📋 Pipeline Tracker <span class="nav-badge" id="pipeline-nav-count">45</span>
         </div>
         <div class="nav-tab" data-tab="china" onclick="switchMainTab('china')">
-            🇨🇳 China Strategic Hub <span class="nav-badge" id="china-nav-count">15</span>
+            🇨🇳 China Strategic Hub <span class="nav-badge" id="china-nav-count">20</span>
         </div>
         <div class="nav-tab" data-tab="uk" onclick="switchMainTab('uk')">
             🇬🇧 UK Decision Center <span class="nav-badge" id="uk-nav-count">16</span>
@@ -1141,15 +1154,84 @@
 
     <!-- TAB 2.5: CHINA STRATEGIC HUB -->
     <div id="tab-china" class="tab-content">
-        <div style="margin-bottom: 16px; background: #ffffff; padding: 16px 20px; border-radius: 10px; border: 1px solid var(--border);">
-            <h3 style="margin: 0 0 6px 0; color: var(--primary);">🇨🇳 China Strategic Hub (CSC Type A & Type B, Yenching, Schwarzman & Silk Road)</h3>
-            <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">Fully funded Master's programs covering C9 / Double First-Class institutions: 100% Tuition Waivers + Free Single Accommodation + 3,000 to 3,500 RMB/month Living Stipends + Medical Insurance ($0 Net Out-of-Pocket Cost). Calibrated for Pakistani national with Islamic Studies (3.7 GPA), PPE, and Arabic/Persian primary text fluency.</p>
+        <!-- CHINA STRATEGIC INTELLIGENCE & SCHOLARSHIP HUB -->
+        <div style="margin-bottom: 16px; background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                <div>
+                    <h3 style="margin: 0 0 4px 0; color: var(--primary); font-size: 14pt;">🇨🇳 China Postgraduate Funding Architecture & Strategic Hub</h3>
+                    <p style="margin: 0; color: var(--text-muted); font-size: 8.5pt;">
+                        Comprehensive 20-Program Portfolio for Pakistani National (Islamic Studies 3.7 GPA + PPE + Arabic/Persian primary sources). Calibrated to C9 League institutions, CSC Type B direct university nomination, dedicated Silk Road quotas, and $0 net cost targets.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="tag" style="background: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; font-weight: 700; padding: 5px 10px;">20 Target Master's</span>
+                    <span class="tag" style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; font-weight: 700; padding: 5px 10px;">10 C9 League Flagships</span>
+                    <span class="tag" style="background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; font-weight: 700; padding: 5px 10px;">4 Silk Road Dedicated Quotas</span>
+                    <span class="tag" style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; font-weight: 700; padding: 5px 10px;">4 Philosophy & Thought Centers</span>
+                </div>
+            </div>
+
+            <!-- EXECUTIVE STRATEGIC BLUEPRINT (4 CORE PILLARS) -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 14px;">
+                <!-- PILLAR 1: CSC TYPE B BYPASS -->
+                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px;">
+                    <strong style="color: #1e40af; font-size: 8.5pt; display: flex; align-items: center; gap: 6px;">
+                        🏛️ Pillar 1: CSC Type B Direct University Nomination
+                    </strong>
+                    <p style="font-size: 7.5pt; color: #1e3a8a; margin: 4px 0 0 0; line-height: 1.45;">
+                        Apply directly through the university's agency code. Bypasses HEC Pakistan domestic testing completely. Covers <strong>100% Tuition Waiver + Free Campus Accommodation + 3,000 to 3,500 RMB/month Living Stipend + Medical Insurance</strong>.
+                    </p>
+                </div>
+
+                <!-- PILLAR 2: SILK ROAD DEDICATED PAKISTAN QUOTA -->
+                <div style="background: #fefce8; border: 1px solid #fef08a; border-radius: 8px; padding: 12px;">
+                    <strong style="color: #854d0e; font-size: 8.5pt; display: flex; align-items: center; gap: 6px;">
+                        📜 Pillar 2: Dedicated Silk Road Pakistan Quotas
+                    </strong>
+                    <p style="font-size: 7.5pt; color: #713f12; margin: 4px 0 0 0; line-height: 1.45;">
+                        Renmin Silk Road School (Suzhou), Northwest IMES (Xi'an), and Sun Yat-sen (Guangzhou) have <strong>dedicated government quotas explicitly prioritizing Pakistani candidates</strong>. Win probability exceeds 75% for 3.7 GPA applicants.
+                    </p>
+                </div>
+
+                <!-- PILLAR 3: PRESIDENTIAL FELLOWSHIPS -->
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px;">
+                    <strong style="color: #166534; font-size: 8.5pt; display: flex; align-items: center; gap: 6px;">
+                        🏆 Pillar 3: World-Class Presidential Fellowships
+                    </strong>
+                    <p style="font-size: 7.5pt; color: #14532d; margin: 4px 0 0 0; line-height: 1.45;">
+                        Peking University (<strong>Yenching Academy</strong>) and Tsinghua University (<strong>Schwarzman Scholars</strong>) charge <strong>$0 application fees</strong> and provide $70k+ total value including round-trip flights, single-room housing, and living grants.
+                    </p>
+                </div>
+
+                <!-- PILLAR 4: C9 LEAGUE PHILOSOPHY & PPE FIT -->
+                <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 12px;">
+                    <strong style="color: #6b21a8; font-size: 8.5pt; display: flex; align-items: center; gap: 6px;">
+                        ⚖️ Pillar 4: Philosophy & PPE Disciplinary Alignment
+                    </strong>
+                    <p style="font-size: 7.5pt; color: #581c87; margin: 4px 0 0 0; line-height: 1.45;">
+                        Fudan (#1 Philosophy in China), Renmin (CPC Philosophy), and SJTU (Politics and Economy) actively crave candidates with <strong>Arabic/Persian primary text literacy and PPE foundations</strong> to bridge Asian and Near Eastern thought.
+                    </p>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE TIER FILTER BAR -->
+            <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #f1f5f9; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                <span style="font-size: 8pt; font-weight: 700; color: #475569;">Strategic Filter:</span>
+                <button type="button" class="china-filter-btn active" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #cbd5e1; background: #1e3a8a; color: #ffffff; cursor: pointer; font-weight: 700;" onclick="filterChinaTable('all', this)">All China Targets (20)</button>
+                <button type="button" class="china-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #fde68a; background: #fef3c7; color: #92400e; cursor: pointer; font-weight: 700;" onclick="filterChinaTable('c9', this)">🏆 C9 League Flagships (10)</button>
+                <button type="button" class="china-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #c7d2fe; background: #e0e7ff; color: #3730a3; cursor: pointer; font-weight: 700;" onclick="filterChinaTable('silkroad', this)">📜 Silk Road & Belt & Road (4)</button>
+                <button type="button" class="china-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #e9d5ff; background: #faf5ff; color: #6b21a8; cursor: pointer; font-weight: 700;" onclick="filterChinaTable('philosophy', this)">🏛️ Philosophy & Comparative Thought (4)</button>
+                <button type="button" class="china-filter-btn" style="padding: 4px 10px; font-size: 7.5pt; border-radius: 6px; border: 1px solid #bbf7d0; background: #dcfce7; color: #166534; cursor: pointer; font-weight: 700;" onclick="filterChinaTable('free', this)">🎟️ $0 Free Application Portals (3)</button>
+            </div>
         </div>
+
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
+                        <th style="text-align: center;">Rank</th>
                         <th>Institution & Program</th>
+                        <th>Potential Scholarships & Endowments</th>
                         <th>Effort / Reward</th>
                         <th>Pipeline Stage</th>
                         <th>Total Tuition Fee (Int'l)</th>
@@ -2571,12 +2653,48 @@ function renderProgramGrid(data) {
 // -------------------------------------------------------------
 // RENDER CHINA REGIONAL TABLE
 // -------------------------------------------------------------
+let currentChinaFilter = 'all';
+
+function filterChinaTable(filterType, btnElement) {
+    currentChinaFilter = filterType;
+    if (btnElement && btnElement.parentElement) {
+        const btns = btnElement.parentElement.querySelectorAll('.china-filter-btn');
+        btns.forEach(b => {
+            b.classList.remove('active');
+            b.style.background = '#ffffff';
+            b.style.color = '#334155';
+            b.style.borderColor = '#cbd5e1';
+            b.style.fontWeight = '600';
+        });
+        btnElement.classList.add('active');
+        btnElement.style.background = '#1e3a8a';
+        btnElement.style.color = '#ffffff';
+        btnElement.style.borderColor = '#1e3a8a';
+        btnElement.style.fontWeight = '700';
+    }
+    renderChinaTable();
+}
+
 function renderChinaTable() {
     const tbody = document.getElementById('chinaTableBody');
     if (!tbody) return;
     tbody.innerHTML = '';
-    const chinaProgs = getScholarshipPrograms().filter(p => p.region === 'China');
-    const state = getPipelineState();
+    
+    let chinaProgs = getScholarshipPrograms().filter(p => p.region === 'China' || p.country === 'China');
+    
+    // Apply strategic filter
+    if (currentChinaFilter === 'c9') {
+        const c9Unis = ['Peking University', 'Tsinghua University', 'Fudan University', 'Shanghai Jiao Tong', 'Zhejiang University', 'Nanjing University'];
+        chinaProgs = chinaProgs.filter(p => c9Unis.some(uni => p.uni.includes(uni)));
+    } else if (currentChinaFilter === 'silkroad') {
+        chinaProgs = chinaProgs.filter(p => p.id.includes('silkroad') || p.id.includes('beltandroad') || p.prog.includes('Silk Road') || p.prog.includes('Belt and Road'));
+    } else if (currentChinaFilter === 'philosophy') {
+        chinaProgs = chinaProgs.filter(p => p.discipline.includes('Philosophy') || p.prog.includes('Philosophy') || p.discipline.includes('Abrahamic'));
+    } else if (currentChinaFilter === 'free') {
+        chinaProgs = chinaProgs.filter(p => p.isFreeTicket === true);
+    }
+
+    chinaProgs.sort((a,b) => (a.rank || 99) - (b.rank || 99));
 
     chinaProgs.forEach(p => {
         const tr = document.createElement('tr');
@@ -2597,10 +2715,42 @@ function renderChinaTable() {
         const currentStage = AppStore.getStage(p.id);
         const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
 
+        // Tier badge
+        let tierBadge = '';
+        const c9Unis = ['Peking University', 'Tsinghua University', 'Fudan University', 'Shanghai Jiao Tong', 'Zhejiang University', 'Nanjing University'];
+        if (c9Unis.some(uni => p.uni.includes(uni))) {
+            tierBadge = `<span class="tag" style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; font-size: 6.5pt; font-weight: 700; margin-bottom: 3px; display: inline-block;">🏆 C9 League Flagship</span><br>`;
+        } else if (p.id.includes('silkroad') || p.id.includes('beltandroad') || p.prog.includes('Silk Road') || p.prog.includes('Belt and Road')) {
+            tierBadge = `<span class="tag" style="background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; font-size: 6.5pt; font-weight: 700; margin-bottom: 3px; display: inline-block;">📜 Silk Road Quota</span><br>`;
+        } else if (p.discipline.includes('Philosophy') || p.discipline.includes('Abrahamic')) {
+            tierBadge = `<span class="tag" style="background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; font-size: 6.5pt; font-weight: 700; margin-bottom: 3px; display: inline-block;">🏛️ Philosophy & Thought</span><br>`;
+        } else if (p.isFreeTicket) {
+            tierBadge = `<span class="tag" style="background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; font-size: 6.5pt; font-weight: 700; margin-bottom: 3px; display: inline-block;">🎟️ $0 Free Portal</span><br>`;
+        }
+
+        // Potential scholarships clickable pills
+        let scholPillsHtml = '';
+        if (p.scholarships && p.scholarships.length > 0) {
+            scholPillsHtml = p.scholarships.map(s => `
+                <span class="schol-pill" onclick="event.stopPropagation(); openModalWithScholarship('${p.id}', '${s.name.replace(/'/g, "\'")}');" title="Click to view full 6-parameter scholarship audit">
+                    ✨ ${s.shortBadge || s.name}
+                </span>
+            `).join('');
+        } else {
+            scholPillsHtml = `<span style="font-size: 7.5pt; color: #475569;">${p.primaryScholarship || 'CSC Type B'}</span>`;
+        }
+
         tr.innerHTML = `
+            <td class="rank-cell">#${p.rank || '-'}</td>
             <td>
+                ${tierBadge}
                 <strong>${p.uni}</strong><br>
                 <small style="color: #4a5568;">${p.prog}</small>
+            </td>
+            <td>
+                <div style="max-width: 250px;">
+                    ${scholPillsHtml}
+                </div>
             </td>
             <td>${effortBadge}</td>
             <td onclick="event.stopPropagation();">
