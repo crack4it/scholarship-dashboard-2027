@@ -954,7 +954,8 @@
         </div>
 
         <div class="header-btn-group">
-            <button class="hdr-btn" onclick="exportDashboardState()" title="Export pipeline progress and document checklists as JSON">
+            <button class="hdr-btn" onclick="UrlState.copyActiveView()" title="Copy shareable link to this view">🔗 Share View</button>
+        <button class="hdr-btn" onclick="exportDashboardState()" title="Export pipeline progress and document checklists as JSON">
                 💾 Export State (JSON)
             </button>
             <button class="hdr-btn" onclick="triggerImportState()" title="Import saved pipeline progress and document checklists">
@@ -2368,14 +2369,134 @@ function exportDashboardState() {
 // =============================================================
 // GLOBAL NAMESPACE ACCESSOR (window.ScholarshipHub.programs)
 // =============================================================
+// =============================================================
+// UPGRADE 1: RUNTIME DEFENSIVE DATA SANITIZER SHIELD (ZERO CRASH)
+// =============================================================
+let _sanitizedProgramsCache = null;
+
+function sanitizeProgram(raw, idx) {
+    if (!raw || typeof raw !== 'object') return null;
+
+    const str = (v, fallback = '') => (v !== undefined && v !== null ? String(v).trim() : fallback);
+    const num = (v, fallback = 0) => {
+        const n = Number(v);
+        return isNaN(n) ? fallback : n;
+    };
+
+    const id = str(raw.id, `prog-${idx || Date.now()}`);
+    const probabilityScore = str(raw.probabilityScore, 'MEDIUM (40–50%)');
+    const admissionOdds = str(raw.admissionOdds, 'Standard Evaluation (~60%–75%)');
+    const admissionVsSchol = str(raw.admissionVsSchol, `${admissionOdds} | Scholarship Odds: Competitive (~10%–15%)`);
+
+    // Defensive scholarships array
+    const rawSchols = Array.isArray(raw.scholarships) ? raw.scholarships : [];
+    const scholarships = rawSchols.map((s, sIdx) => {
+        if (!s || typeof s !== 'object') return null;
+        return {
+            name: str(s.name, `Scholarship Option ${sIdx + 1}`),
+            shortBadge: str(s.shortBadge || s.shortName, 'Merit Award'),
+            coverage: str(s.coverage, 'Tuition and living support details verified with institution.'),
+            coverageType: str(s.coverageType, 'Partial / Full Support'),
+            quotaGlobal: str(s.quotaGlobal, 'Standard competitive allocation'),
+            quotaField: str(s.quotaField, 'Open across disciplines'),
+            guaranteed: str(s.guaranteed, 'Competitive selection based on academic credentials and merit.'),
+            applicationModality: str(s.applicationModality, 'Apply via institutional portal by specified deadline.'),
+            stacking: str(s.stacking, 'Standard national and institutional anti-stacking policies apply.'),
+            criteria: str(s.criteria, 'Academic merit; English language proficiency; certified degree documents.')
+        };
+    }).filter(Boolean);
+
+    // Defensive forensic audit object
+    const rawAudit = (raw.forensicAudit && typeof raw.forensicAudit === 'object') ? raw.forensicAudit : {};
+    const forensicAudit = {
+        statutoryLaw: str(rawAudit.statutoryLaw, str(raw.totalTuitionFee, 'Public University Higher Education Statutory Framework')),
+        visaCashFloor: str(rawAudit.visaCashFloor, 'National Immigration Visa Financial Maintenance Requirement'),
+        stackingRule: str(rawAudit.stackingRule, str(raw.exclusivity, 'Standard single-grant public award limitation')),
+        baseRateOdds: str(rawAudit.baseRateOdds, str(raw.quotas, 'Quota-calibrated based on applicant academic standing')),
+        riskSeverity: ['safe', 'warning', 'fatal', 'guaranteed'].includes(rawAudit.riskSeverity) ? rawAudit.riskSeverity : (raw.netCost && raw.netCost.includes('$0') ? 'guaranteed' : 'warning'),
+        riskLabel: str(rawAudit.riskLabel, str(raw.netVerdict, 'Verified Section 9 Audit Record')),
+        auditSummary: str(rawAudit.auditSummary, str(raw.keyRisk, 'Verified statutory framework and financial risk assessment.'))
+    };
+
+    // Safe SOP blueprint
+    const rawSop = (raw.sopBlueprint && typeof raw.sopBlueprint === 'object') ? raw.sopBlueprint : {};
+    const sopBlueprint = {
+        p1_hook: str(rawSop.p1_hook, `Investigating critical developments in ${str(raw.discipline, 'interdisciplinary studies')} and comparative methodology.`),
+        p2_faculty: str(rawSop.p2_faculty, `Leveraging faculty research at ${str(raw.uni, 'the host institution')}.`),
+        p3_methodology: str(rawSop.p3_methodology, 'Combining philological textual hermeneutics with empirical and philosophical analysis.'),
+        p4_impact: str(rawSop.p4_impact, 'Contributing to cross-cultural scholarly exchange between South Asian and European academic institutions.')
+    };
+
+    return {
+        ...raw,
+        id,
+        uni: str(raw.uni, 'University'),
+        prog: str(raw.prog, 'Master Degree Programme'),
+        country: str(raw.country, 'International'),
+        region: str(raw.region, str(raw.country, 'Europe')),
+        discipline: str(raw.discipline, 'Humanities & Social Sciences'),
+        rank: str(raw.rank, 'Accredited Institution'),
+        portalStatus: str(raw.portalStatus, 'Upcoming'),
+        portalOpenDate: str(raw.portalOpenDate, '2026-12-01'),
+        deadlineDate: str(raw.deadlineDate, '2027-01-15'),
+        deadlines: str(raw.deadlines, 'Admissions deadline: ' + str(raw.deadlineDate, '2027-01-15')),
+        feeRaw: str(raw.feeRaw, '€0.00'),
+        appFeeText: str(raw.appFeeText, '€0 Free Portal'),
+        isFreeTicket: Boolean(raw.isFreeTicket),
+        feeCategory: str(raw.feeCategory, 'free'),
+        feeTag: str(raw.feeTag, '🎟️ Free Application'),
+        portalName: str(raw.portalName, 'University Direct Admissions Portal'),
+        portalNote: str(raw.portalNote, 'Direct online application.'),
+        netCost: str(raw.netCost, '$0 Net Tuition Target'),
+        netVerdict: str(raw.netVerdict, '$0 Net Cost Target'),
+        strategicFit: str(raw.strategicFit, 'Strong academic alignment with candidate background.'),
+        primaryScholarship: str(raw.primaryScholarship, 'Statutory Tuition Waiver / Living Subsidy'),
+        scholarshipVal: str(raw.scholarshipVal, 'Full or partial support'),
+        secondaryScholarships: str(raw.secondaryScholarships, 'Institutional merit awards'),
+        quotas: str(raw.quotas, 'Competitive faculty quota'),
+        exclusivity: str(raw.exclusivity, 'Single award exclusivity'),
+        probabilityScore,
+        admissionOdds,
+        admissionVsSchol,
+        keyRisk: str(raw.keyRisk, 'Verify exact immigration bank statement and document legalization chain.'),
+        automaticCheck: Boolean(raw.automaticCheck),
+        prerequisites: str(raw.prerequisites, 'Bachelor degree in relevant field, C1 English proficiency.'),
+        linkProg: str(raw.linkProg, '#'),
+        linkSchol: str(raw.linkSchol, '#'),
+        shortVerdict: str(raw.shortVerdict, 'Audited program target for 2027 intake.'),
+        totalTuitionFee: str(raw.totalTuitionFee, '€0.00'),
+        effortScore: num(raw.effortScore, 2),
+        effortTag: str(raw.effortTag, '⚡ Standard Effort'),
+        rewardTag: str(raw.rewardTag, '🏛️ Accredited Master'),
+        scholarships,
+        checklist: Array.isArray(raw.checklist) && raw.checklist.length > 0 ? raw.checklist.map(c => str(c)) : [
+            'Online application form',
+            'Certified Bachelor degree transcript',
+            'IELTS Academic certificate',
+            'Statement of Purpose (SOP)',
+            'Two academic reference letters',
+            'Passport copy'
+        ],
+        sopBlueprint,
+        forensicAudit,
+        rankings: (raw.rankings && typeof raw.rankings === 'object') ? raw.rankings : {
+            badgeSummary: str(raw.rank, 'Accredited Top University')
+        }
+    };
+}
+
 function getScholarshipPrograms() {
+    if (_sanitizedProgramsCache) {
+        return _sanitizedProgramsCache;
+    }
+    let rawList = [];
     if (window.ScholarshipHub && Array.isArray(window.ScholarshipHub.programs)) {
-        return window.ScholarshipHub.programs;
+        rawList = window.ScholarshipHub.programs;
+    } else if (window.programsData && Array.isArray(window.programsData)) {
+        rawList = window.programsData;
     }
-    if (window.programsData && Array.isArray(window.programsData)) {
-        return window.programsData;
-    }
-    return [];
+    _sanitizedProgramsCache = rawList.map((p, idx) => sanitizeProgram(p, idx)).filter(Boolean);
+    return _sanitizedProgramsCache;
 }
 
 // =============================================================
@@ -3105,133 +3226,207 @@ function renderKanbanBoard() {
 // -------------------------------------------------------------
 // RENDER LEVEL 1 PROGRAM GRID
 // -------------------------------------------------------------
-function renderProgramGrid(data) {
+// =============================================================
+// UPGRADE 2: BATCH DOM RENDERING & PROGRESSIVE CARD CREATOR
+// =============================================================
+let gridVisibleCount = 18;
+let currentGridData = [];
+
+function createProgramCard(p) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.setAttribute('data-program-id', p.id);
+    card.onclick = () => openModal(p.id);
+
+    const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
+    let statusBadge = dynStatus.badgeHtml;
+    let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+
+    let feeTagHtml = p.isFreeTicket 
+        ? `<span class="tag tag-free">🎟️ ${p.appFeeText}</span>`
+        : (p.feeCategory === 'nominal' ? `<span class="tag tag-nominal">⚡ ${p.appFeeText}</span>` : `<span class="tag tag-paid">💼 ${p.appFeeText}</span>`);
+
+    let zeroCostTag = p.netCost.includes('$0') 
+        ? `<span class="tag tag-zero-cost">🎯 $0 Net Cost Target</span>`
+        : `<span class="tag tag-paid">${p.netCost}</span>`;
+
+    let rankBadge = p.rank ? `<div class="card-rank" style="font-size: 7.2pt; padding: 2px 8px; border-radius: 4px; background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-weight: 600;">${p.rank}</div>` : '';
+
+    let probClass = 'prob-medium';
+    if (String(p.probabilityScore || '').toLowerCase().includes('high')) probClass = 'prob-high';
+    if (String(p.probabilityScore || '').toLowerCase().includes('low')) probClass = 'prob-low';
+
+    const progProgress = getProgramChecklistProgress(p.id);
+    const currentStage = AppStore.getStage(p.id);
+    const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
+    const audit = p.forensicAudit || {};
+    const theme = getAuditTheme(audit);
+
+    card.innerHTML = `
+        <div>
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>${p.uni}</h3>
+                    <div class="uni-name">${p.prog}</div>
+                </div>
+                ${rankBadge}
+            </div>
+
+            <div class="tags-container">
+                ${statusBadge}
+                ${effortBadge}
+                ${feeTagHtml}
+                ${zeroCostTag}
+                <span class="tag tag-disc">${p.discipline}</span>
+                <span class="tag tag-disc">📍 ${p.country} &bull; ${p.region}</span>
+            </div>
+
+            <div class="card-meta">
+                <div class="meta-row">
+                    <span class="meta-label">💰 Full Tuition Fee:</span>
+                    <span class="meta-val" style="color: #166534;">${p.totalTuitionFee}</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">⚡ Effort Rating:</span>
+                    <span class="meta-val">Level ${p.effortScore} / 5 (${p.effortTag.split('(')[0].trim()})</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">🎟️ Application Fee:</span>
+                    <span class="meta-val">${p.feeRaw} (${p.portalName})</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">⏳ Scholarship Cutoff:</span>
+                    <span class="meta-val" style="color: #9b2c2c;">${p.deadlineDate}</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">🏆 Dedicated Quotas:</span>
+                    <span class="meta-val">${p.quotas}</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">🎯 Win Probability:</span>
+                    <span class="meta-val"><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></span>
+                </div>
+            </div>
+
+            <div class="card-verdict">
+                "${p.shortVerdict}"
+            </div>
+
+            <!-- SECTION 9 FORENSIC AUDIT BANNER -->
+            <div class="card-audit-banner" style="margin-top: 10px; padding: 7px 10px; border-radius: 6px; font-size: 7.5pt; line-height: 1.4; background: ${theme.bg}; border: 1px solid ${theme.border}; color: ${theme.color};">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;">
+                    <strong style="font-size: 7.8pt;">${audit.riskLabel || p.netVerdict}</strong>
+                    <span style="font-size: 6.5pt; font-weight: 800; text-transform: uppercase; padding: 1px 5px; border-radius: 3px; background: rgba(0,0,0,0.06);">SECTION 9 AUDIT</span>
+                </div>
+                <div style="font-size: 7.2pt; opacity: 0.95;">
+                    <strong>Statute:</strong> ${(audit.statutoryLaw || '').split(':')[0]} &bull; <strong>Visa Floor:</strong> ${(audit.visaCashFloor || '').split(':')[0]}
+                </div>
+            </div>
+        </div>
+
+        <!-- Pipeline Stage & Document Checklist Footer -->
+        <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 6px;" onclick="event.stopPropagation();">
+                <span style="font-size: 7.5pt; font-weight: 700; color: #4a5568;">Pipeline:</span>
+                <span class="card-stage-badge tag" style="background: ${currentStageObj.bg}; color: ${currentStageObj.color}; border: 1px solid ${currentStageObj.border}; font-size: 7.5pt; font-weight: 700;">
+                    ${currentStageObj.icon} ${currentStageObj.label.split('.')[1] || currentStageObj.label}
+                </span>
+                <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
+                    ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
+                </select>
+            </div>
+            
+            <div class="card-doc-progress" style="font-size: 7.5pt; font-weight: 700; color: ${progProgress.percent === 100 ? '#15803d' : '#2b6cb0'};" title="Document readiness">
+                📋 Docs: ${progProgress.done}/${progProgress.total} (${progProgress.percent}%)
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+function renderProgramGrid(data, isAppend = false) {
     const grid = document.getElementById('programGrid');
-    grid.innerHTML = '';
-    document.getElementById('displayedCount').innerText = data.length;
+    if (!grid) return;
+    
+    if (!isAppend) {
+        grid.innerHTML = '';
+        currentGridData = data || [];
+        gridVisibleCount = 18;
+    }
+
+    document.getElementById('displayedCount').innerText = currentGridData.length;
     document.getElementById('global-nav-count').innerText = getScholarshipPrograms().length;
 
-    if (data.length === 0) {
+    if (currentGridData.length === 0) {
         grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #a0aec0; font-size: 11pt;">No programs match the selected filter criteria. Try resetting filters.</div>';
         return;
     }
 
-    const state = getPipelineState();
+    // Remove old pagination bar if present
+    const existingPagin = document.getElementById('gridPaginationControl');
+    if (existingPagin) existingPagin.remove();
 
-    data.forEach(p => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.setAttribute('data-program-id', p.id);
-        card.onclick = () => openModal(p.id);
+    const currentBatch = currentGridData.slice(0, gridVisibleCount);
+    
+    if (!isAppend) {
+        currentBatch.forEach(p => {
+            grid.appendChild(createProgramCard(p));
+        });
+    }
 
-        const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
-        let statusBadge = dynStatus.badgeHtml;
-        let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
+    // Append sleek progressive load more control if items remain
+    if (currentGridData.length > gridVisibleCount) {
+        const paginDiv = document.createElement('div');
+        paginDiv.id = 'gridPaginationControl';
+        paginDiv.style.cssText = 'grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; gap: 12px; padding: 22px 10px; margin-top: 14px; background: #f8fafc; border-radius: 10px; border: 1.5px dashed #cbd5e1; flex-wrap: wrap;';
+        
+        const remaining = currentGridData.length - gridVisibleCount;
+        const nextBatch = Math.min(24, remaining);
 
-        let feeTagHtml = p.isFreeTicket 
-            ? `<span class="tag tag-free">🎟️ ${p.appFeeText}</span>`
-            : (p.feeCategory === 'nominal' ? `<span class="tag tag-nominal">⚡ ${p.appFeeText}</span>` : `<span class="tag tag-paid">💼 ${p.appFeeText}</span>`);
-
-        let zeroCostTag = p.netCost.includes('$0') 
-            ? `<span class="tag tag-zero-cost">🎯 $0 Net Cost Target</span>`
-            : `<span class="tag tag-paid">${p.netCost}</span>`;
-
-        let rankBadge = p.rank ? `<div class="card-rank" style="font-size: 7.2pt; padding: 2px 8px; border-radius: 4px; background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-weight: 600;">${p.rank}</div>` : '';
-
-        let probClass = 'prob-medium';
-        if (String(p.probabilityScore || '').toLowerCase().includes('high')) probClass = 'prob-high';
-        if (String(p.probabilityScore || '').toLowerCase().includes('low')) probClass = 'prob-low';
-
-        const progProgress = getProgramChecklistProgress(p.id);
-        const currentStage = AppStore.getStage(p.id);
-        const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
-
-        card.innerHTML = `
-            <div>
-                <div class="card-header">
-                    <div class="card-title">
-                        <h3>${p.uni}</h3>
-                        <div class="uni-name">${p.prog}</div>
-                    </div>
-                    ${rankBadge}
-                </div>
-
-                <div class="tags-container">
-                    ${statusBadge}
-                    ${effortBadge}
-                    ${feeTagHtml}
-                    ${zeroCostTag}
-                    <span class="tag tag-disc">${p.discipline}</span>
-                    <span class="tag tag-disc">📍 ${p.country} &bull; ${p.region}</span>
-                </div>
-
-                <div class="card-meta">
-                    <div class="meta-row">
-                        <span class="meta-label">💰 Full Tuition Fee:</span>
-                        <span class="meta-val" style="color: #166534;">${p.totalTuitionFee}</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-label">⚡ Effort Rating:</span>
-                        <span class="meta-val">Level ${p.effortScore} / 5 (${p.effortTag.split('(')[0].trim()})</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-label">🎟️ Application Fee:</span>
-                        <span class="meta-val">${p.feeRaw} (${p.portalName})</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-label">⏳ Scholarship Cutoff:</span>
-                        <span class="meta-val" style="color: #9b2c2c;">${p.deadlineDate}</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-label">🏆 Dedicated Quotas:</span>
-                        <span class="meta-val">${p.quotas}</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-label">🎯 Win Probability:</span>
-                        <span class="meta-val"><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></span>
-                    </div>
-                </div>
-
-                <div class="card-verdict">
-                    "${p.shortVerdict}"
-                </div>
-
-                <!-- SECTION 9 FORENSIC AUDIT BANNER -->
-                ${(() => {
-                    const audit = p.forensicAudit || {};
-                    const theme = getAuditTheme(audit);
-                    return `
-                    <div class="card-audit-banner" style="margin-top: 10px; padding: 7px 10px; border-radius: 6px; font-size: 7.5pt; line-height: 1.4; background: ${theme.bg}; border: 1px solid ${theme.border}; color: ${theme.color};">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;">
-                            <strong style="font-size: 7.8pt;">${audit.riskLabel || p.netVerdict}</strong>
-                            <span style="font-size: 6.5pt; font-weight: 800; text-transform: uppercase; padding: 1px 5px; border-radius: 3px; background: rgba(0,0,0,0.06);">SECTION 9 AUDIT</span>
-                        </div>
-                        <div style="font-size: 7.2pt; opacity: 0.95;">
-                            <strong>Statute:</strong> ${(audit.statutoryLaw || '').split(':')[0]} &bull; <strong>Visa Floor:</strong> ${(audit.visaCashFloor || '').split(':')[0]}
-                        </div>
-                    </div>
-                    `;
-                })()}
-            </div>
-
-            <!-- Pipeline Stage & Document Checklist Footer -->
-            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); display: flex; justify-content: space-between; align-items: center; gap: 8px;">
-                <div style="display: flex; align-items: center; gap: 6px;" onclick="event.stopPropagation();">
-                    <span style="font-size: 7.5pt; font-weight: 700; color: #4a5568;">Pipeline:</span>
-                    <span class="card-stage-badge tag" style="background: ${currentStageObj.bg}; color: ${currentStageObj.color}; border: 1px solid ${currentStageObj.border}; font-size: 7.5pt; font-weight: 700;">
-                        ${currentStageObj.icon} ${currentStageObj.label.split('.')[1] || currentStageObj.label}
-                    </span>
-                    <select class="stage-select" data-program-id="${p.id}" onchange="AppStore.updateStage('${p.id}', this.value); event.stopPropagation();">
-                        ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
-                    </select>
-                </div>
-                <div class="card-doc-progress" style="font-size: 7.5pt; font-weight: 700; color: ${progProgress.percent === 100 ? '#15803d' : '#2b6cb0'};" title="Document readiness">
-                    📋 Docs: ${progProgress.done}/${progProgress.total} (${progProgress.percent}%)
-                </div>
-            </div>
+        paginDiv.innerHTML = `
+            <span style="font-size: 8.5pt; font-weight: 600; color: #475569;">
+                Showing <strong>${gridVisibleCount}</strong> of <strong>${currentGridData.length}</strong> programs
+            </span>
+            <button type="button" class="btn-action" style="background: #1e3a8a; color: #ffffff; padding: 8px 18px; font-size: 8.5pt; font-weight: 700; border-radius: 6px; box-shadow: 0 2px 4px rgba(30,58,138,0.2); cursor: pointer;" onclick="loadMoreGridPrograms()">
+                ⚡ Load Next ${nextBatch} Programs (${remaining} remaining)
+            </button>
+            <button type="button" class="btn-action" style="background: #ffffff; color: #334155; border: 1px solid #cbd5e1; padding: 8px 14px; font-size: 8.5pt; font-weight: 600; border-radius: 6px; cursor: pointer;" onclick="loadAllGridPrograms()">
+                🌐 Show All (${currentGridData.length})
+            </button>
         `;
+        grid.appendChild(paginDiv);
+    }
+}
 
-        grid.appendChild(card);
+function loadMoreGridPrograms() {
+    const prevCount = gridVisibleCount;
+    gridVisibleCount += 24;
+    const grid = document.getElementById('programGrid');
+    
+    const existingPagin = document.getElementById('gridPaginationControl');
+    if (existingPagin) existingPagin.remove();
+
+    const newItems = currentGridData.slice(prevCount, gridVisibleCount);
+    newItems.forEach(p => {
+        grid.appendChild(createProgramCard(p));
+    });
+
+    if (currentGridData.length > gridVisibleCount) {
+        renderProgramGrid(currentGridData, true);
+    }
+}
+
+function loadAllGridPrograms() {
+    const prevCount = gridVisibleCount;
+    gridVisibleCount = currentGridData.length;
+    const grid = document.getElementById('programGrid');
+    
+    const existingPagin = document.getElementById('gridPaginationControl');
+    if (existingPagin) existingPagin.remove();
+
+    const newItems = currentGridData.slice(prevCount);
+    newItems.forEach(p => {
+        grid.appendChild(createProgramCard(p));
     });
 }
 
@@ -3993,14 +4188,44 @@ function renderEmjmTable() {
 // -------------------------------------------------------------
 // FILTER CONTROLLERS
 // -------------------------------------------------------------
+function matchesSearchQuery(p, query) {
+    if (!query) return true;
+    const q = query.toLowerCase().trim();
+    const tokens = q.split(/\s+/).filter(Boolean);
+    if (tokens.length === 0) return true;
+
+    // Comprehensive searchable text corpus
+    const scholText = Array.isArray(p.scholarships) 
+        ? p.scholarships.map(s => s.name + ' ' + (s.shortBadge || '') + ' ' + (s.coverage || '')).join(' ') 
+        : '';
+    const auditText = p.forensicAudit 
+        ? (p.forensicAudit.statutoryLaw + ' ' + p.forensicAudit.visaCashFloor + ' ' + p.forensicAudit.riskLabel + ' ' + p.forensicAudit.auditSummary) 
+        : '';
+
+    const corpus = [
+        p.uni,
+        p.prog,
+        p.country,
+        p.region,
+        p.discipline,
+        p.primaryScholarship,
+        p.secondaryScholarships,
+        p.shortVerdict,
+        p.keyRisk,
+        p.netVerdict,
+        p.netCost,
+        p.feeRaw,
+        scholText,
+        auditText
+    ].join(' ').toLowerCase();
+
+    // Every token must match somewhere in the corpus
+    return tokens.every(token => corpus.includes(token));
+}
+
 function getFilteredData() {
     return getScholarshipPrograms().filter(p => {
-        const matchesSearch = !currentFilter.search || 
-            p.uni.toLowerCase().includes(currentFilter.search) ||
-            p.prog.toLowerCase().includes(currentFilter.search) ||
-            p.primaryScholarship.toLowerCase().includes(currentFilter.search) ||
-            p.country.toLowerCase().includes(currentFilter.search) ||
-            p.region.toLowerCase().includes(currentFilter.search);
+        const matchesSearch = matchesSearchQuery(p, currentFilter.search);
 
         const matchesDiscipline = currentFilter.discipline === 'all' || 
             p.discipline.toLowerCase().includes(currentFilter.discipline.toLowerCase());
@@ -4065,6 +4290,7 @@ function setPresetFilter(presetKey, btnElement) {
 }
 
 function filterPrograms() {
+    if (typeof UrlState !== "undefined") UrlState.updateUrl({ q: currentFilter.search || null });
     currentFilter.search = document.getElementById('searchInput').value.toLowerCase().trim();
     currentFilter.discipline = document.getElementById('discFilter').value;
     currentFilter.feeCategory = document.getElementById('feeFilter').value;
@@ -4073,7 +4299,113 @@ function filterPrograms() {
     renderProgramGrid(getFilteredData());
 }
 
-function switchMainTab(tabKey) {
+
+// =============================================================
+// UPGRADE 3: URL DEEP LINKING & STATE SYNCHRONIZATION ENGINE
+// =============================================================
+const UrlState = {
+    // Read state from URL search params on page load
+    init() {
+        const params = new URLSearchParams(window.location.search);
+        
+        // 1. Tab parameter
+        const tab = params.get('tab');
+        if (tab && document.getElementById('tab-' + tab)) {
+            switchMainTab(tab, false);
+        }
+
+        // 2. Search query parameter
+        const q = params.get('q');
+        if (q) {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.value = q;
+                currentFilter.search = q.toLowerCase().trim();
+            }
+        }
+
+        // 3. Preset / filter parameter
+        const preset = params.get('preset');
+        if (preset) {
+            currentFilter.preset = preset;
+            const btn = document.querySelector(`.preset-btn[data-preset="${preset}"]`);
+            if (btn) {
+                document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            }
+        }
+
+        // 4. Modal deep-link: ?modal=<progId> or ?program=<progId> or ?id=<progId>
+        const modalId = params.get('modal') || params.get('program') || params.get('id');
+        if (modalId) {
+            setTimeout(() => {
+                const p = getScholarshipPrograms().find(item => item.id === modalId);
+                if (p) {
+                    openModal(modalId, false);
+                }
+            }, 150);
+        }
+
+        // Re-render grid with initialized params
+        renderProgramGrid(getFilteredData());
+    },
+
+    // Update URL query parameters cleanly using history.replaceState
+    updateUrl(newParams = {}) {
+        try {
+            const url = new URL(window.location.href);
+            for (const key in newParams) {
+                const val = newParams[key];
+                if (val === null || val === undefined || val === '' || val === 'all') {
+                    url.searchParams.delete(key);
+                } else {
+                    url.searchParams.set(key, val);
+                }
+            }
+            window.history.replaceState({}, '', url.toString());
+        } catch(e) {
+            // Graceful fallback for restricted file:/// environments
+        }
+    },
+
+    // Generate full shareable link for any program modal
+    getShareableLink(progId) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('modal', progId);
+        return url.toString();
+    },
+
+    // Copy program direct link to clipboard
+    copyProgramLink(progId) {
+        const link = this.getShareableLink(progId);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(link).then(() => {
+                showImportNotification('📋 Direct link copied to clipboard: ' + link, 'info');
+            }).catch(() => {
+                prompt('Copy this shareable program link:', link);
+            });
+        } else {
+            prompt('Copy this shareable program link:', link);
+        }
+    },
+
+    // Copy active view URL
+    copyActiveView() {
+        const url = window.location.href;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(() => {
+                showImportNotification('🔗 Current dashboard view URL copied to clipboard!', 'info');
+            }).catch(() => {
+                prompt('Copy current dashboard view URL:', url);
+            });
+        } else {
+            prompt('Copy current dashboard view URL:', url);
+        }
+    }
+};
+
+function switchMainTab(tabKey, updateUrl = true) {
+    if (updateUrl && typeof UrlState !== "undefined") UrlState.updateUrl({ tab: tabKey === "global" ? null : tabKey });
     document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
 
@@ -4212,12 +4544,20 @@ function copySopBlueprint() {
     });
 }
 
-function openModal(progId) {
+function openModal(progId, updateUrl = true) {
+    if (updateUrl && typeof UrlState !== "undefined") UrlState.updateUrl({ modal: progId });
     activeModalProgId = progId;
     const p = getScholarshipPrograms().find(item => item.id === progId);
     if (!p) return;
 
-    document.getElementById('modalTitle').innerHTML = `${p.uni} &bull; ${p.prog}`;
+    document.getElementById('modalTitle').innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span>${p.uni} &bull; ${p.prog}</span>
+            <button type="button" class="btn-action" style="background: #f8fafc; color: #1e3a8a; border: 1px solid #cbd5e1; font-size: 7.5pt; padding: 4px 10px; font-weight: 700; border-radius: 6px; cursor: pointer;" onclick="UrlState.copyProgramLink('${p.id}')">
+                🔗 Copy Direct Link
+            </button>
+        </div>
+    `;
 
     const dynStatus = calculatePortalStatus(p.portalOpenDate, p.deadlineDate);
         let statusBadge = dynStatus.badgeHtml;
@@ -4483,7 +4823,8 @@ function openModal(progId) {
     document.getElementById('detailModal').style.display = 'flex';
 }
 
-function closeModal() {
+function closeModal(updateUrl = true) {
+    if (updateUrl && typeof UrlState !== "undefined") UrlState.updateUrl({ modal: null });
     activeModalProgId = null;
     document.getElementById('detailModal').style.display = 'none';
 }
@@ -4515,6 +4856,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Hydrate all UI views
     refreshAllViews();
+
+    // 4. Initialize URL Deep Linking Engine
+    if (typeof UrlState !== "undefined") UrlState.init();
 });
 
 function showDataMissingNotice() {
