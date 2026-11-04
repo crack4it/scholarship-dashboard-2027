@@ -11,7 +11,7 @@ The candidate's field is **NOT** narrowly limited to Islamic or religious studie
 ```
                        ┌────────────────────────────────────────────────────────┐
                        │   THE UNIVERSAL ACADEMIC UMBRELLA (Never Exclude)     │
-                       └──────────────────────────────────┬─────────────────────┘
+                       └──────────────────┬─────────────────────┘
          ┌─────────────────────────┬──────────────────────┴──────────────────┬────────────────────────┐
          ▼                         ▼                                         ▼                        ▼
 ┌──────────────────┐     ┌──────────────────┐                      ┌──────────────────┐     ┌──────────────────┐
@@ -119,7 +119,6 @@ For every target intake cycle, maintain a balanced 10-application portfolio:
 2. **5 "High-Probability Strongholds" (Zero Tuition / High Acceptance / Core Advantage Fit):** Direct departmental alignment with proven high acceptance rates.
 3. **2 "Guaranteed Safety Nets" (Open Admission / *Zulassungsfrei*):** Uncapped programs where an offer is mathematically guaranteed so the candidate is never left without an offer.
 
-
 ---
 
 ## 8. The Universal Multi-Ranker & Discipline Authority Standard (QS, THE, National & Subject)
@@ -182,3 +181,96 @@ This rule is universal and permanent. It applies to:
 * **🇮🇹 Italy (42 Programs):** QS Global + THE Global + CENSIS Annual Ranking + QS Subject Rank (Classics, History, Philosophy, Law).
 * **❄️ Nordics & Belgium (4 Programs):** QS Global + THE Global + Nordic Research Council rankings.
 * **🇪🇺 Erasmus Mundus (4 Programs):** Composite Consortium Rankings across European partner institutions.
+
+### D. Institutional Deduplication & Verified Ranking Cache Mandate (Zero-Redundancy Standard)
+To maximize research efficiency, prevent contradictory data drift, and eliminate redundant search overhead:
+1. **Never Re-Search an Audited University:** If an institution already has verified Quad-Metric rankings in our authoritative database (`data.js`) or audited institutional cache, **DO NOT re-search or re-query it**. Reuse the established institutional metrics (`tier`, `qsGlobal`, `theGlobal`, `national`, `subjectRank`, and `badgeSummary`) directly.
+2. **Single-Search Per Unique University (Multi-Program Propagation):** When evaluating an institution that hosts multiple programs (e.g. Freie Universität Berlin, Ruhr-Universität Bochum, Georg-August-Universität Göttingen, Heidelberg University, Universität Bayreuth), collect and verify the institutional Quad-Metric rankings **EXACTLY ONCE**. Propagate those verified metrics across all associated programs.
+3. **Delta-Only Research in Step 5:** In Step 5 QA audits, only execute web searches for institutions that are **brand-new** to the platform.
+
+---
+
+## 9. The Forensic Legal & Financial Audit Protocol (The Ruthless Auditor Standard)
+
+### A. The Core Mandate: Separation of Discovery vs. Audit Mindset
+To ensure strategic thoroughness while preventing dangerous optimism bias, all research workflows must strictly separate into two distinct operational mindsets:
+* **Phase 1: Data Discovery & Landscape Sweep (Steps 1 to 4):**
+  - Solution-oriented, comprehensive, and broad-spectrum. Uncover every possible pathway, funding scheme, institutional track, and deferral mechanism without premature rejection.
+* **Phase 2: Final Legal, Financial & Quality Audit (Step 5 & Strategic Advisories):**
+  - **Switch 100% to an Adversarial, Ruthless Auditor Mindset.**
+  - **Zero Optimism Bias:** Stop trying to "make scenarios work" or rationalize weak workarounds. Stress-test every finding against the harshest legal, financial, and immigration realities.
+  - **Zero People-Pleasing:** Never tell the user what sounds encouraging. If an option carries high financial risk, low odds, statutory traps, or immigration roadblocks, deliver the unvarnished truth plainly and uncompromisingly.
+
+---
+
+### B. The 8 Reinforced Audit Rules
+
+#### 1. The Statutory Sub-Track Isolation Mandate
+* *Never apply the general charter of a parent funding body to an international, foreign-funded, or special sub-programme without independently retrieving and auditing that specific sub-track's regulations.*
+* Parent-level restrictions (such as *Bildungsinländer* status or pre-commencement application bars) must never be assumed to apply to international tracks unless explicitly cross-cited in that track's official guidelines.
+
+#### 2. Field-Specific Quota & Base-Rate Grounded Probability
+* *Probability estimates must never be based purely on profile strength or academic GPA.*
+* For every scholarship, the audit must investigate and cite:
+  1. The **total number of awards available overall**.
+  2. The **specific allocation/quota designated for that particular academic field, department, or country of origin**.
+  3. The **estimated size and caliber of the competing applicant pool**.
+* Only after these numerical realities are established may an honest, mathematically sound probability rating be assigned. If a foundation only awards 15–20 scholarships globally across all fields, field-specific odds must reflect that intense statistical reality.
+
+#### 3. Precise Stacking, Cap, and Compatibility Audit
+* *Do not make blanket assumptions that scholarships are mutually exclusive or stackable.*
+* For every identified scholarship, the audit must explicitly examine:
+  1. **Combination Legality:** Does its charter allow co-funding with other grants?
+  2. **Financial Caps:** Is there an allowable monthly or annual threshold (e.g., German *StipG § 4* permitting other grants only if under €30/month, or foundations allowing up to €300/month or specific research travel subsidies)?
+  3. **Type Compatibility:** Can specific categories be paired (e.g., an institutional tuition waiver paired with a living-expense grant, or private foundation prizes paired with travel allowances)?
+  4. **Reporting Requirements:** Is the student legally obligated to disclose secondary income/stipends, and does disclosure trigger an automatic clawback or reduction?
+
+#### 4. Real-Time Calendar Anchoring & Active Window Mandate
+* Every application deadline, portal opening, and decision milestone must be mathematically calculated against the exact current system date (`current local time`).
+* The audit output must explicitly display:  
+  `[Current Date: YYYY-MM-DD] vs. [Deadline: YYYY-MM-DD] -> Status: [OPEN (X days remaining) / CLOSED]`.  
+* No deadline may ever be evaluated or categorized in the abstract.
+
+#### 5. Immigration Law Pre-Condition Mandate (The "Visa Floor" Rule)
+* Academic roadmaps must never be presented in isolation from national immigration law (e.g., § 16b *AufenthG* for Germany, UK CAS maintenance requirements).
+* The audit must explicitly separate:
+  1. **Upfront Statutory Visa Requirement:** Mandatory liquid funds required at embassy filing (e.g., the €11,904 German blocked account).
+  2. **Scholarship Disbursement Timeline:** When cash actually hits the student's account in-country.
+* A prospective scholarship can **never** be treated as satisfying the visa funding requirement unless the formal award guarantee letter is physically in hand *prior* to the visa appointment.
+
+#### 6. Semester-Stage & Cohort Eligibility Audit (The STIBET Rule)
+* University-level grants, bridging assistance, and emergency funds must be audited for specific semester-stage requirements (*Fachsemester-Voraussetzungen*).
+* Emergency, bridging, or completion grants must not be cited as a safety net for incoming Semester 1 students unless the institutional International Office guidelines explicitly open that grant to first-semester foreign arrivals.
+
+#### 7. Intake Decree & Language Track Verification
+* Every program audit must verify:
+  1. **Official Intake Decree (*Zulassungsordnung / Prüfungsordnung*):** Does the law permit Summer entry (*Studienbeginn zum Sommer- und Wintersemester*) or strictly Winter only (*nur zum Wintersemester*)?
+  2. **Curricular Language Composition:** Is the degree 100% English-medium, bilingual, or German with English electives? Any aggregator discrepancy must be flagged as an unverified academic risk until confirmed against the official module handbook (*Modulhandbuch*).
+
+#### 8. Single Point of Failure (SPOF) & "Plan B" Survival Audit
+* Every strategic roadmap must identify single points of failure across the candidate's critical path.
+* The audit must explicitly answer: **"If the applicant wins €0 in scholarships, can they legally and financially survive this program?"** It must state the exact upfront cash floor required (e.g., the €11,904 blocked account + health insurance + semester contributions).
+
+---
+
+### C. Operational Safeguards & Verification Standards
+
+#### 1. The Primary Source Hierarchy Mandate (The "Anti-Aggregator" Rule)
+* **Tier 1 (Authoritative):** Official university statutes (*Prüfungsordnung*, *Zulassungsordnung*), official foundation portals (`.de` domain of the foundation itself), and federal statutes (*StipG*, *AufenthG*). Only Tier 1 sources may be cited as legal fact.
+* **Tier 2 (Secondary / Aggregators):** DAAD search engine, Study-in-Germany portals. Useful *only* for discovering leads in Phase 1.
+* **The Rule:** No final audit claim in Phase 2 may rely solely on a Tier-2 aggregator. If a primary statute cannot be located, the item must be stamped: `[UNVERIFIED - SECONDARY SOURCE ONLY: REQUIRES DIRECT CONFIRMATION]`.
+
+#### 2. Mandatory Citation & Fact-Type Labeling (Fact vs. Inference)
+Every specific date, euro figure, quota, or legal restriction must be strictly classified:
+1. `[STATUTORY FACT]`: Directly cited from an official law, statute, or foundation page with URL/statute name.
+2. `[ESTIMATE / INFERRED]`: Any timeline, probability, or procedure derived from standard practice rather than explicitly written in law. It must never masquerade as an official regulation.
+
+#### 3. The Pre-Flight "Red Team" Checklist (A 5-Point Gate)
+Before outputting any Step 5 QA audit or high-stakes strategic dossier, the system must verify:
+* [ ] **Real-Time Date Check:** *Is today's date checked mathematically against every deadline?*
+* [ ] **Visa Floor Check:** *Is the upfront visa maintenance requirement (§ 16b AufenthG / blocked account) explicitly accounted for before scholarship payouts?*
+* [ ] **Anti-Stacking & Cap Check:** *Are co-funding caps, mutual exclusivity, and double-funding laws verified individually for every grant?*
+* [ ] **Quota-Grounded Odds:** *Are win probabilities derived from actual field-specific award quotas rather than general GPA optimism?*
+* [ ] **Sub-Track Isolation:** *Are national and international rules clearly separated without cross-contamination?*
+
+
