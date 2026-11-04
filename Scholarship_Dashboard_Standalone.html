@@ -911,7 +911,7 @@
     }
     
 </style>
-    <script src="data.js?v=2027.3" onerror="window.__dataLoadError = true;"></script>
+    <script src="data.js?v=2027.4" onerror="window.__dataLoadError = true;"></script>
 </head>
 <body>
 
@@ -1402,7 +1402,19 @@
                 </div>
             </div>
         </div>
-        <div class="table-container">
+        
+            <!-- ITALY SUB-FILTER CONTROLS -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 10px 0; align-items: center;">
+                <span style="font-size: 8pt; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">Filter Italy:</span>
+                <button class="it-filter-btn active" onclick="filterItalyTable('all', this)" style="padding: 4px 10px; font-size: 7.5pt; font-weight: 700; border-radius: 6px; border: 1px solid #1e3a8a; background: #1e3a8a; color: #ffffff; cursor: pointer; transition: all 0.2s;">All Italy (42)</button>
+                <button class="it-filter-btn" onclick="filterItalyTable('dsu-toscana-ergo', this)" style="padding: 4px 10px; font-size: 7.5pt; font-weight: 600; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.2s;">🏆 DSU Toscana & ER.GO (100% Cash Guarantee) (10)</button>
+                <button class="it-filter-btn" onclick="filterItalyTable('tier1', this)" style="padding: 4px 10px; font-size: 7.5pt; font-weight: 600; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.2s;">👑 Tier 1 Flagships (8)</button>
+                <button class="it-filter-btn" onclick="filterItalyTable('rome-milan', this)" style="padding: 4px 10px; font-size: 7.5pt; font-weight: 600; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.2s;">🏛️ Rome & Milan Metros (8)</button>
+                <button class="it-filter-btn" onclick="filterItalyTable('mediterranean', this)" style="padding: 4px 10px; font-size: 7.5pt; font-weight: 600; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.2s;">🕌 Mediterranean & Arabic Sources (8)</button>
+                <button class="it-filter-btn" onclick="filterItalyTable('ppe-philosophy', this)" style="padding: 4px 10px; font-size: 7.5pt; font-weight: 600; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.2s;">⚖️ Philosophy & PPE Flagships (8)</button>
+                <button class="it-filter-btn" onclick="filterItalyTable('free-ticket', this)" style="padding: 4px 10px; font-size: 7.5pt; font-weight: 600; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #334155; cursor: pointer; transition: all 0.2s;">🎟️ €0 Free Portals (14)</button>
+            </div>
+<div class="table-container">
             <table>
                 <thead>
                     <tr>
@@ -3214,10 +3226,46 @@ function renderGermanyTable() {
     });
 }
 
+
+let currentItalyFilter = 'all';
+
+function filterItalyTable(filterType, btnEl) {
+    currentItalyFilter = filterType;
+    document.querySelectorAll('.it-filter-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = '#ffffff';
+        b.style.color = '#334155';
+        b.style.borderColor = '#cbd5e1';
+    });
+    if (btnEl) {
+        btnEl.classList.add('active');
+        btnEl.style.background = '#1e3a8a';
+        btnEl.style.color = '#ffffff';
+        btnEl.style.borderColor = '#1e3a8a';
+    }
+    renderItalyTable();
+}
+
 function renderItalyTable() {
     const tbody = document.getElementById('italyTableBody');
+    if (!tbody) return;
     tbody.innerHTML = '';
-    const progs = getScholarshipPrograms().filter(p => p.region === 'Italy');
+    let progs = getScholarshipPrograms().filter(p => p.region === 'Italy' || p.country === 'Italy');
+
+    if (currentItalyFilter === 'dsu-toscana-ergo') {
+        progs = progs.filter(p => (p.primaryScholarship && (p.primaryScholarship.includes('Toscana') || p.primaryScholarship.includes('ER.GO'))));
+    } else if (currentItalyFilter === 'rome-milan') {
+        progs = progs.filter(p => (p.uni && (p.uni.includes('Milan') || p.uni.includes('Sapienza') || p.uni.includes('Roma') || p.uni.includes('Tor Vergata'))));
+    } else if (currentItalyFilter === 'mediterranean') {
+        progs = progs.filter(p => (p.discipline && p.discipline.includes('Mediterranean')));
+    } else if (currentItalyFilter === 'ppe-philosophy') {
+        progs = progs.filter(p => (p.discipline && (p.discipline.includes('Philosophy') || p.discipline.includes('PPE'))));
+    } else if (currentItalyFilter === 'tier1') {
+        progs = progs.filter(p => (p.rank && p.rank.includes('Tier 1')));
+    } else if (currentItalyFilter === 'free-ticket') {
+        progs = progs.filter(p => p.isFreeTicket === true);
+    }
+
     const state = getPipelineState();
 
     progs.forEach(p => {
@@ -3229,15 +3277,37 @@ function renderItalyTable() {
         let statusBadge = dynStatus.badgeHtml;
         let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
         let probClass = 'prob-medium';
-        if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
+        if (p.probabilityScore && p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
 
         const currentStage = AppStore.getStage(p.id);
         const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
 
+        // Format scholarship pill
+        let scholPillHtml = '';
+        if (p.primaryScholarship) {
+            const shortScholName = p.primaryScholarship.split(' ')[0] + ' ' + (p.primaryScholarship.split(' ')[1] || 'DSU');
+            scholPillHtml = `
+                <div style="margin-top: 5px;">
+                    <button class="schol-pill" onclick="openScholarshipModal('${p.id}'); event.stopPropagation();" style="display: inline-flex; align-items: center; gap: 4px; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; border-radius: 9999px; padding: 2px 8px; font-size: 7.2pt; font-weight: 700; cursor: pointer; text-decoration: none;">
+                        <span>🎓 ${shortScholName}</span>
+                        <span style="font-size: 8.5pt;">›</span>
+                    </button>
+                </div>`;
+        }
+
+        // Format fee badge
+        let feeBadgeHtml = p.isFreeTicket 
+            ? `<strong style="color: #166534; font-size: 9pt;">€0 (Free Ticket)</strong>` 
+            : `<strong style="color: #1e3a8a; font-size: 9pt;">${p.appFeeText || ('€' + p.feeRaw)}</strong>`;
+
         tr.innerHTML = `
             <td>
-                <strong>${p.uni}</strong><br>
-                <small style="color: #4a5568;">${p.prog}</small>
+                <div style="font-weight: 700; color: #0f172a; font-size: 9.5pt;">${p.uni}</div>
+                <div style="color: #475569; font-size: 8.5pt; margin-top: 2px;">${p.prog}</div>
+                <div style="display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px;">
+                    <span class="badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 7.2pt; font-weight: 600; padding: 2px 6px; border-radius: 4px;">${p.rank}</span>
+                    ${p.isFreeTicket ? '<span class="badge" style="background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; font-size: 7.2pt; font-weight: 700; padding: 2px 6px; border-radius: 4px;">🎟️ €0 Free Portal</span>' : ''}
+                </div>
             </td>
             <td>${effortBadge}</td>
             <td onclick="event.stopPropagation();">
@@ -3245,8 +3315,14 @@ function renderItalyTable() {
                     ${STAGES.map(s => `<option value="${s.id}" ${currentStage === s.id ? 'selected' : ''}>${s.icon} ${s.label.split('.')[1] || s.label}</option>`).join('')}
                 </select>
             </td>
-            <td><strong style="color: #1a365d; font-size: 9pt;">${p.totalTuitionFee}</strong></td>
-            <td><strong style="color: #276749;">${p.feeRaw}</strong><br><small style="color: #718096;">${p.portalName}</small></td>
+            <td>
+                <strong style="color: #1a365d; font-size: 9pt;">${p.totalTuitionFee}</strong>
+                ${scholPillHtml}
+            </td>
+            <td>
+                ${feeBadgeHtml}
+                <br><small style="color: #64748b; font-size: 7.5pt;">${p.portalName}</small>
+            </td>
             <td><span class="tag tag-zero-cost">${p.netCost}</span></td>
             <td>${statusBadge}<br><small style="color: #718096; font-size: 7.5pt;">Cutoff: ${p.deadlineDate}</small></td>
             <td><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></td>
@@ -3722,7 +3798,24 @@ function openModal(progId) {
         ? `<span class="tag tag-free">🎟️ ${p.feeTag}</span>`
         : (p.feeCategory === 'nominal' ? `<span class="tag tag-nominal">⚡ ${p.feeTag}</span>` : `<span class="tag tag-paid">💼 ${p.feeTag}</span>`);
 
-    let rankHtml = p.rank ? `<p><strong>Strategic Portfolio Rank:</strong> #${p.rank} (United Kingdom)</p>` : '';
+    let rankHtml = '';
+    if (p.rankings) {
+        rankHtml = `
+        <div style="margin-bottom: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+                <div style="font-weight: 700; color: #1e3a8a; font-size: 9.5pt;">🏛️ Institutional Standing & Multi-Ranker Audit</div>
+                <span class="badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-weight: 700; font-size: 8pt; padding: 2px 8px; border-radius: 4px;">${p.rankings.badgeSummary || p.rank}</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 8pt; color: #334155;">
+                <div><strong>🌍 QS Global:</strong> ${p.rankings.qsGlobal || 'N/A'}</div>
+                <div><strong>⏱️ Times Higher Ed (THE):</strong> ${p.rankings.theGlobal || 'N/A'}</div>
+                <div><strong>🇮🇹 Domestic Standing:</strong> ${p.rankings.nationalRank || 'N/A'}</div>
+                <div><strong>📚 Discipline Standing:</strong> ${p.rankings.subjectRank || 'N/A'}</div>
+            </div>
+        </div>`;
+    } else if (p.rank) {
+        rankHtml = `<p style="font-size: 8.5pt; color: #1e3a8a; margin: 4px 0 12px 0;"><strong>🏛️ Institutional Standing:</strong> ${p.rank}</p>`;
+    }
 
     const currentStage = AppStore.getStage(p.id);
     const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];

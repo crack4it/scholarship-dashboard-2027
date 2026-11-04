@@ -118,3 +118,67 @@ For every target intake cycle, maintain a balanced 10-application portfolio:
 1. **3 "Golden Tickets" (Ultra-High Reward, Full Stipend):** Full rides (e.g., Chevening, Oxford/Cambridge, Stipendium Hungaricum, CSC Category A).
 2. **5 "High-Probability Strongholds" (Zero Tuition / High Acceptance / Core Advantage Fit):** Direct departmental alignment with proven high acceptance rates.
 3. **2 "Guaranteed Safety Nets" (Open Admission / *Zulassungsfrei*):** Uncapped programs where an offer is mathematically guaranteed so the candidate is never left without an offer.
+
+
+---
+
+## 8. The Universal Multi-Ranker & Discipline Authority Standard (QS, THE, National & Subject)
+
+### A. The Core Principle: Bypassing the STEM/Medical Ranking Distortion
+General institutional university rankings (such as overall QS World University Rankings or Times Higher Education World University Rankings) allocate up to 50% of their scoring weights to laboratory hard sciences, medical schools, engineering research income, and patent commercialization. Consequently, world-leading faculties in Philosophy, History, Area Studies, and Social Sciences are often ranked lower in general institutional league tables than mid-tier technical colleges.
+
+To provide an uncompromised, authentic, and multidimensional assessment of institutional quality, **every single university across all regional hubs (UK, China, Germany, Central Europe, Western Europe, Italy, Nordics, and Erasmus Mundus)** must be evaluated against the **Tri-Ranker + Discipline Authority Standard**:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                   THE TRI-RANKER & DISCIPLINE AUTHORITY ARCHITECTURE                   │
+├──────────────────────────┬─────────────────────────────┬───────────────────────────────┤
+│ RANKING SYSTEM           │ WHAT IT EVALUATES           │ APPLICATION FOR HUMANITIES/PPE│
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ 1. QS World Rankings     │ • Overall Global Rank       │ Global employer recognition;  │
+│    (Quacquarelli Symonds)│ • QS by Subject:            │ Points-based immigration      │
+│                          │   Arts & Humanities /       │ schemes (e.g. UK HPI visa);   │
+│                          │   Social Sciences & Mgt.    │ Academic reputation surveys.  │
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ 2. Times Higher Education│ • Overall World Rank        │ Research quality, citation    │
+│    (THE World Rankings)  │ • THE by Subject:           │ impact, and international     │
+│                          │   Arts & Humanities /       │ teaching environment standards│
+│                          │   Social Sciences           │ across peer faculties.        │
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ 3. National Official     │ Domestic League Tables:     │ Measures domestic employer    │
+│    Benchmarks            │ • Italy: CENSIS             │ prestige, regional funding,   │
+│                          │ • Germany: CHE Excellence   │ and actual institutional      │
+│                          │ • UK: Complete / Guardian   │ standing in the host country. │
+│                          │ • China: C9 / Double First  │                               │
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ 4. Discipline & Archive  │ • Specialized Manuscript    │ Critical for non-STEM and     │
+│    Authority Flag        │   Traditions / UNESCO       │ specialized institutions      │
+│                          │ • Dedicated Oriental /      │ (e.g. Naples L'Orientale,     │
+│                          │   Area Studies Faculties    │ Perugia Foreigners, SOAS).    │
+└──────────────────────────┴─────────────────────────────┴───────────────────────────────┘
+```
+
+### B. Mandatory Structured Data Schema
+In `data.js`, every program entry must encode both backward-compatible summary strings and structured ranking metadata:
+
+```javascript
+ranking: {
+  qsGlobal: "#132",
+  theGlobal: "#181",
+  national: "Top 3 Italy (CENSIS Mega)",
+  subjectRank: "QS #1 World in Classics & Ancient History | Top 50 Arts & Humanities",
+  theSubject: "THE Top 100 Arts & Humanities",
+  badgeSummary: "QS #132 • THE #181 • 🏆 #1 World Classics • 🇮🇹 Top 3 CENSIS"
+}
+```
+
+### C. Universal Global Scope
+This rule is universal and permanent. It applies to:
+* **🇬🇧 United Kingdom (16 Programs):** QS Global + THE Global + REF (Research Excellence Framework) + Guardian/Complete Subject Rankings.
+* **🇨🇳 China (20 Programs):** QS Global + THE Global + C9 League / Double First-Class Category A Status.
+* **🇩🇪 Germany (36 Programs):** QS Global + THE Global + CHE Ranking (Excellence / *Spitzengruppe*).
+* **🏛️ Central Europe (52 Programs):** QS Global + THE Global + National Ministry Benchmarks (Hungary, Austria, Switzerland).
+* **🇫🇷 Western Europe (9 Programs):** QS Global + THE Global + *Grandes Écoles* / French National Research Rankings.
+* **🇮🇹 Italy (42 Programs):** QS Global + THE Global + CENSIS Annual Ranking + QS Subject Rank (Classics, History, Philosophy, Law).
+* **❄️ Nordics & Belgium (4 Programs):** QS Global + THE Global + Nordic Research Council rankings.
+* **🇪🇺 Erasmus Mundus (4 Programs):** Composite Consortium Rankings across European partner institutions.
