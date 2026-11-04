@@ -10,16 +10,16 @@
  * - Languages: IELTS Academic 7.5 (CEFR C1) | Classical & Modern Arabic & Persian Primary Source Literacy | German A2
  * 
  * COMPLETE GLOBAL PORTFOLIO (183 PROGRAMS ACROSS 8 REGIONAL HUBS):
- * - 🇬🇧 United Kingdom Hub: 16 Programs
- * - 🇨🇳 China C9 & Silk Road Hub: 20 Programs
- * - 🇩🇪 Germany DAAD & Public Hub: 36 Programs
- * - 🏛️ Central Europe Hub (Hungary 🇭🇺, Austria 🇦🇹, Switzerland 🇨🇭): 52 Programs
- * - 🇫🇷 Western Europe Hub: 9 Programs
+ * - 🇬🇧 United Kingdom Hub: 16 Programs (Audited with Quad-Rankings)
+ * - 🇨🇳 China C9 & Silk Road Hub: 20 Programs (Audited with Quad-Rankings)
+ * - 🇩🇪 Germany DAAD & Public Hub: 36 Programs (Audited with Quad-Rankings)
+ * - 🏛️ Central Europe Hub (Hungary 🇭🇺, Austria 🇦🇹, Switzerland 🇨🇭): 52 Programs (Audited with Quad-Rankings)
+ * - 🇫🇷 Western Europe Hub: 9 Programs (Audited with Quad-Rankings)
  * - 🇮🇹 Italy DSU & Public University Hub: 42 Programs (Audited with Quad-Rankings)
- * - ❄️ Nordics & Belgium Hub: 4 Programs
- * - 🇪🇺 Erasmus Mundus (EMJM): 4 Programs
+ * - ❄️ Nordics & Belgium Hub: 4 Programs (Audited with Quad-Rankings)
+ * - 🇪🇺 Erasmus Mundus (EMJM): 4 Programs (Audited with Quad-Rankings)
  * 
- * VERSION: 2027.4
+ * VERSION: 2027.5
  * ==============================================================================
  */
 
@@ -29,7 +29,7 @@
     const programs = [
   {
     "id": "uk-aku-muslim-cultures",
-    "rank": 1,
+    "rank": "Tier 2 • Specialist • King's Cross Cultural Hub",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "Aga Khan University – ISMC (London)",
@@ -99,11 +99,19 @@
       "p2_synergy": "AKU-ISMC's distinctive mission—to examine Muslim societies beyond parochial boundaries through interdisciplinary humanities—makes it the definitive academic home for my work. I am drawn to the Institute's emphasis on material culture, intellectual history, and legal anthropology. Access to the Aga Khan Centre's specialized collections in London and direct mentorship from faculty working across South Asian, Middle Eastern, and Central Asian civilisations will provide the rigorous interdisciplinary training necessary to contextualize my textual expertise.",
       "p3_research": "My proposed research at ISMC will investigate the comparative historical evolution of governance and ethical accountability in classical Islamic jurisprudence, contrasting normative textual ideals with administrative realities in late medieval South and Central Asia. Leveraging my ability to examine untranslated Arabic and Persian treatises directly, I intend to produce an interdisciplinary thesis demonstrating that Islamic political philosophy was fundamentally pluralistic and responsive to local customary institutions.",
       "p4_impact": "Following the MA, I plan to pursue doctoral research and return to Pakistan to contribute to tertiary curriculum reform and cultural policy. As an educator and researcher, I aim to establish courses bridging Islamic intellectual history with contemporary social sciences, fostering a nuanced understanding of Muslim pluralism, civic ethics, and institutional development in South Asia."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE Specialist",
+      "nationalRank": "UK Accredited Specialist Institute of Muslim Civilisations",
+      "subjectRank": "Premier Specialized Postgrad Academy for Muslim Cultures & Civilisations",
+      "badgeSummary": "Tier 2 • Specialist • King's Cross Cultural Hub"
     }
   },
   {
     "id": "uk-soas-middle-east",
-    "rank": 2,
+    "rank": "Tier 2 • Specialist (Est. 1916) • 🏆 #2 World Dev Studies",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "SOAS University of London",
@@ -185,11 +193,19 @@
       "p2_synergy": "SOAS is globally renowned for its critical approach to regional studies and its decolonial perspective. The Department of History and the Centre for Middle Eastern Studies offer unmatched scholarly depth. Access to the SOAS Library—one of the world's most important repositories of Middle Eastern manuscripts—and the opportunity to study with leading historians of the Islamic world will allow me to contextualize early modern Middle Eastern state-building within wider Mediterranean and Indian Ocean networks.",
       "p3_research": "My proposed research at SOAS will examine the relationship between Islamic jurisprudence, fiscal administration, and imperial sovereignty in the early modern Middle East. By examining primary Arabic chronicles and administrative decrees alongside secondary political theory, I seek to trace how religious scholars and ruling elites negotiated public finance and juridical autonomy. My philological training ensures direct access to source materials, eliminating interpretive distortions.",
       "p4_impact": "After completing the MA, I intend to pursue a PhD and return to Pakistan to contribute to higher education and foreign policy analysis. As an academic, my goal is to develop interdisciplinary Middle Eastern and South Asian studies curricula in Pakistani universities, providing future leaders and diplomats with rigorous, non-Eurocentric analytical perspectives on regional security, governance, and diplomatic history."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #351-400",
+      "nationalRank": "UK's Leading Specialist for Asia, Africa & Middle East",
+      "subjectRank": "🏆 #2 World in Development Studies | Top 15 World in Near Eastern Studies",
+      "badgeSummary": "Tier 2 • Specialist (Est. 1916) • 🏆 #2 World Dev Studies"
     }
   },
   {
     "id": "uk-edinburgh-islamic-studies",
-    "rank": 3,
+    "rank": "Tier 1 • QS #27 • THE #30",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Edinburgh",
@@ -271,11 +287,19 @@
       "p2_synergy": "The University of Edinburgh's Department of Islamic and Middle Eastern Studies, closely linked with the Prince Alwaleed Bin Talal Centre for the Study of Islam in the Contemporary World, provides an exceptional research environment. The University's historic strength in Arabic philology and Islamic history, coupled with its commitment to examining Islam's role in global modernity, directly matches my academic aspirations. I am eager to draw on the specialized archival holdings in the Edinburgh University Library.",
       "p3_research": "My proposed MSc dissertation will investigate the intersection of classical legal theory (Usul al-Fiqh) and political philosophy, focusing on how late antique and early medieval jurists conceptualized the common good (Maslaha) in response to socioeconomic governance challenges. By conducting close textual readings of Arabic primary sources, I aim to show how legal maxims functioned as adaptive political institutions rather than rigid dogmatic strictures.",
       "p4_impact": "Upon completion of the MSc, I intend to pursue doctoral research and return to Pakistan to advance academia and public intellectual life. My ambition is to establish interdisciplinary research programs connecting Islamic legal philosophy with contemporary public policy, mentoring future Pakistani scholars to engage critically and constructively with global intellectual currents."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #27",
+      "theGlobal": "THE #30",
+      "nationalRank": "Scotland #1 / UK Russell Group Flagship",
+      "subjectRank": "Top 20 Worldwide in Arts, Humanities & Islamic Studies",
+      "badgeSummary": "Tier 1 • QS #27 • THE #30"
     }
   },
   {
     "id": "uk-exeter-middle-east-studies",
-    "rank": 4,
+    "rank": "Tier 2 • QS #169 • THE #177",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Exeter",
@@ -357,11 +381,19 @@
       "p2_synergy": "The Institute of Arab and Islamic Studies (IAIS) at the University of Exeter represents one of Europe's most distinguished centers for Middle East research. The Institute's interdisciplinary ethos—bringing together politics, ethnography, and history—perfectly accommodates my academic background. I am eager to learn from Exeter's renowned faculty specializing in political Islam, Gulf security, and postcolonial state-building, while utilizing the extensive documentation at the Arab World Documentation Unit (AWDU).",
       "p3_research": "My proposed MA research investigates the ideological and institutional evolution of state legitimacy in the post-Ottoman Middle East, examining how regimes and opposition movements mobilize classical legal concepts alongside modern nationalist discourses. Leveraging my primary Arabic source comprehension, I intend to analyze state publications and legal declarations to demonstrate how political authority is contested and reconstructed through competing ethical frameworks.",
       "p4_impact": "Following the MA, I intend to pursue doctoral studies and contribute to foreign policy research and tertiary education in Pakistan. My long-term goal is to establish research centers in Pakistan dedicated to West Asian and Middle Eastern strategic affairs, providing policymakers and scholars with sophisticated, non-Western analytical frameworks on Middle Eastern politics, security, and diplomatic partnerships."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #169",
+      "theGlobal": "THE #177",
+      "nationalRank": "UK Russell Group (IAIS Arab & Islamic Studies Leader)",
+      "subjectRank": "UK Top 5 for Middle East & Islamic Studies",
+      "badgeSummary": "Tier 2 • QS #169 • THE #177"
     }
   },
   {
     "id": "uk-birmingham-islamic-studies",
-    "rank": 5,
+    "rank": "Tier 2 • QS #80 • THE #101",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Birmingham",
@@ -442,11 +474,19 @@
       "p2_synergy": "The Department of Philosophy and the Department of Theology and Religion at the University of Birmingham offer a uniquely rich environment for interdisciplinary inquiry. Birmingham's leadership in the global philosophy of religion and analytic theology aligns perfectly with my research interests. I am particularly drawn to faculty scholarship investigating problem of evil debates, cross-cultural concepts of divine justice, and contemporary moral epistemology.",
       "p3_research": "My proposed research at Birmingham will critically examine the epistemological foundations of divine command theory in Islamic classical theology (comparing Ash'ari voluntarism and Mu'tazili rationalism) against modern meta-ethical constructivism. By analyzing classical Arabic Kalam treatises alongside modern analytic philosophy, I aim to demonstrate that classical theological traditions offer robust frameworks for contemporary moral realism.",
       "p4_impact": "After completing the MA, I intend to pursue a PhD in philosophical theology and return to Pakistan to teach at the university level. My goal is to modernize the philosophy curriculum in Pakistani universities, establishing collaborative research initiatives that bring traditional seminary scholarship into constructive dialogue with modern analytic philosophy and applied ethics."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #80",
+      "theGlobal": "THE #101",
+      "nationalRank": "UK Russell Group Major Civic Hub",
+      "subjectRank": "Top 50 Worldwide in Theology & Religious Studies (Mingana Collection)",
+      "badgeSummary": "Tier 2 • QS #80 • THE #101"
     }
   },
   {
     "id": "uk-oxford-islamic-history",
-    "rank": 6,
+    "rank": "Tier 1 • QS #3 • THE #1",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Oxford",
@@ -553,11 +593,19 @@
       "p2_synergy": "The Faculty of Asian and Middle Eastern Studies at Oxford, in close synergy with the Oxford Centre for Islamic Studies (OCIS), represents the preeminent institutional locus for this research. I am specifically drawn to the faculty's groundbreaking work on late antique and early Islamic historiography. Access to the Bodleian Library's incomparable collection of Arabic and Persian manuscripts will allow me to examine how classical jurists conceptualized public interest (Maslaha) in early state-building, benefiting directly from Oxford's intensive tutorial seminars and interdisciplinary colloquia.",
       "p3_research": "My proposed MSt research examines the philosophical evolution of governance and public utility in classical Islamic jurisprudence, comparative to early modern European social contract theory. By utilizing primary texts by Al-Ghazali, Al-Shatibi, and Ibn Khaldun in their original Arabic, I aim to demonstrate that Islamic legal maxims operated not merely as theological injunctions, but as dynamic socioeconomic governance frameworks. My linguistic proficiency in Arabic and Persian positions me to conduct rigorous philological and conceptual analysis without reliance on secondary translations.",
       "p4_impact": "Following the MSt, I intend to pursue doctoral research and subsequently return to Pakistan to spearhead institutional reform in tertiary education and public policy. As a scholar-educator, my objective is to establish an interdisciplinary curriculum bridging Islamic humanities and modern political philosophy, advising national think tanks and international cultural bodies on ethical governance, legal pluralism, and intellectual decolonization in South Asia."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #3",
+      "theGlobal": "THE #1",
+      "nationalRank": "UK Top 1 (REF Gold / Russell Group)",
+      "subjectRank": "🏆 #1 in the World for Arts & Humanities, History & Theology",
+      "badgeSummary": "Tier 1 • QS #3 • THE #1"
     }
   },
   {
     "id": "uk-cambridge-asian-middle-east",
-    "rank": 7,
+    "rank": "Tier 1 • QS #2 • THE #5",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Cambridge",
@@ -652,11 +700,19 @@
       "p2_synergy": "The Faculty of Asian and Middle Eastern Studies (AMES) at Cambridge offers an unparalleled environment for philological rigor and conceptual history. The Faculty's historic tradition in Arabic and Islamic studies, in dialogue with the Cambridge Centre for Islamic Studies, provides an ideal institutional framework. Access to the Taylor-Schechter and oriental manuscript collections at the Cambridge University Library will allow me to examine primary legal manuscripts under the direct supervision of world-leading specialists.",
       "p3_research": "My proposed MPhil research focuses on the conceptual evolution of governance, political legitimacy, and legal justice in late medieval Islamic jurisprudence. Focusing on unedited Arabic and Persian treatises on governance (Ahkam al-Sultaniyya) and public utility (Maslaha), I intend to reconstruct how classical scholars articulated normative constraints on political authority. My philological training in classical Arabic and Persian guarantees direct textual analysis without reliance on translations.",
       "p4_impact": "Following the MPhil, I intend to pursue a PhD and return to Pakistan to spearhead institutional reform in higher education. My goal is to establish interdisciplinary research programs bridging classical Islamic humanities with modern political philosophy, training a new generation of South Asian scholars to articulate innovative, non-Eurocentric frameworks for governance, civic ethics, and legal pluralism."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #2",
+      "theGlobal": "THE #5",
+      "nationalRank": "UK Top 2 (REF Gold / Russell Group)",
+      "subjectRank": "Top 3 in the World for Arts & Humanities & Asian Studies",
+      "badgeSummary": "Tier 1 • QS #2 • THE #5"
     }
   },
   {
     "id": "uk-oxford-phil-theology",
-    "rank": 8,
+    "rank": "Tier 1 • QS #3 • THE #1",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Oxford",
@@ -750,11 +806,19 @@
       "p2_synergy": "The Faculty of Philosophy and Faculty of Theology and Religion at Oxford constitute the world's most formidable nexus for philosophical theology. Oxford's distinctive emphasis on analytic rigor, combined with the Ian Ramsey Centre for Science and Religion, provides an unmatched scholarly atmosphere. I am eager to participate in Oxford's renowned postgraduate seminars, testing arguments under the supervision of leading philosophers of religion.",
       "p3_research": "My proposed research at Oxford explores the problem of divine attributes and modality in classical Islamic thought, comparing Ash'ari and Avicennian modal ontology with modern possible-world semantics and divine simplicity debates (e.g., Alvin Plantinga and Brian Leftow). By conducting close analytic readings of classical Arabic Kalam texts, I seek to demonstrate that Islamic philosophical theology offers sophisticated resources for resolving contemporary paradoxes surrounding divine omniscience and human free will.",
       "p4_impact": "Upon completing the MSt, I plan to pursue a DPhil at Oxford and subsequently return to Pakistan to establish a pioneer center for analytic philosophy of religion. In Pakistan's higher education sector, where theology and secular philosophy remain deeply segregated, my goal is to cultivate an interdisciplinary curriculum that equips students to engage modern philosophical critiques of religion with analytic rigor, fostering intellectual pluralism and academic vibrancy."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #3",
+      "theGlobal": "THE #1",
+      "nationalRank": "UK Top 1 (REF Gold / Russell Group)",
+      "subjectRank": "🏆 #1 in the World for Arts & Humanities, History & Theology",
+      "badgeSummary": "Tier 1 • QS #3 • THE #1"
     }
   },
   {
     "id": "uk-oxford-hebrew-jewish",
-    "rank": 9,
+    "rank": "Tier 1 • QS #3 • THE #1",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Oxford",
@@ -848,11 +912,19 @@
       "p2_synergy": "The Oxford Centre for Hebrew and Jewish Studies (OCHJS), housed at the Clarendon Institute alongside the Leopold Muller Memorial Library, offers Europe's foremost environment for Jewish studies. Oxford's Bodleian Library preserves an extraordinary collection of Cairo Genizah fragments and medieval Hebrew/Judeo-Arabic manuscripts. The opportunity to learn Hebrew intensively while analyzing philosophical manuscripts with leading specialists in medieval Jewish thought makes Oxford the ideal institutional venue.",
       "p3_research": "My proposed research at Oxford explores the cross-pollination of Islamic Kalam and medieval Jewish rationalism, specifically investigating how Saadia Gaon's Kitab al-Amanat wa-al-I'tiqadat and Maimonides' Moreh Nevukhim (Dalalat al-Ha'irin) adapted Mu'tazili and Ash'ari epistemology. Utilizing my native reading command of classical Arabic, I aim to conduct direct textual comparisons between primary Islamic theological treatises and their Judeo-Arabic interlocutors, tracing shared conceptions of divine unity, justice, and biblical hermeneutics.",
       "p4_impact": "Following the MSt, I intend to pursue doctoral research in comparative Semitic philosophy and return to South Asia to pioneer comparative Abrahamic studies. In Pakistan, where tertiary education lacks dedicated scholarship on Jewish intellectual history and Judeo-Arabic thought, my goal is to introduce courses on medieval Mediterranean intellectual history, fostering scholarly literacy in interfaith philosophical traditions and dismantling civilisational insularity."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #3",
+      "theGlobal": "THE #1",
+      "nationalRank": "UK Top 1 (REF Gold / Russell Group)",
+      "subjectRank": "🏆 #1 in the World for Arts & Humanities, History & Theology",
+      "badgeSummary": "Tier 1 • QS #3 • THE #1"
     }
   },
   {
     "id": "uk-cambridge-phil-thought",
-    "rank": 10,
+    "rank": "Tier 1 • QS #2 • THE #5",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Cambridge",
@@ -947,11 +1019,19 @@
       "p2_synergy": "The Faculty of History at Cambridge is the global epicenter for the study of intellectual history. The foundational insights of the Cambridge School—emphasizing speech acts, rhetorical intentionality, and ideological context—provide the precise methodological framework needed to revolutionize Islamic political thought. Studying with Cambridge's distinguished intellectual historians will allow me to refine my contextualist methodology and participate in the Political Thought Seminar.",
       "p3_research": "My proposed MPhil research applies Cambridge School contextualism to the political treatises of early modern South and West Asia. By examining 16th and 17th-century Persian and Arabic 'Mirrors for Princes' (Nasihat al-Muluk) and jurisprudential debates on sovereignty produced in the Mughal and Safavid empires, I aim to show how authors strategically deployed classical Islamic idioms to legitimate imperial centralization. My primary language proficiencies in Persian and Arabic guarantee unmediated textual scrutiny.",
       "p4_impact": "Following the MPhil, I plan to pursue a PhD and return to Pakistan to help institutionalize intellectual history and normative political theory in public universities. My ambition is to train Pakistani students in rigorous historical contextualism, enabling them to de-mythologize ideological narratives and construct sophisticated, historically grounded frameworks for constitutionalism, rule of law, and democratic governance in South Asia."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #2",
+      "theGlobal": "THE #5",
+      "nationalRank": "UK Top 2 (REF Gold / Russell Group)",
+      "subjectRank": "Top 3 in the World for Arts & Humanities & Asian Studies",
+      "badgeSummary": "Tier 1 • QS #2 • THE #5"
     }
   },
   {
     "id": "uk-soas-islamic-studies",
-    "rank": 11,
+    "rank": "Tier 2 • Specialist (Est. 1916) • 🏆 #2 World Dev Studies",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "SOAS University of London",
@@ -1033,11 +1113,19 @@
       "p2_synergy": "SOAS has long stood as the global leader in critical Islamic studies, renowned for its linguistic rigor and decolonial ethos. The Department of the Religions and Philosophies offers unmatched intellectual depth. I am particularly drawn to faculty scholarship on classical Quranic hermeneutics, Islamic legal theory (Usul al-Fiqh), and modern reform movements. The incomparable holdings of the SOAS Library will serve as my primary laboratory for manuscript research.",
       "p3_research": "My proposed research at SOAS examines the hermeneutical evolution of public utility (Maslaha) in Islamic jurisprudence from the classical to the late medieval period. By conducting close textual analyses of Arabic treatises by Abu Ishaq al-Shatibi and Fakhr al-Din al-Razi, I seek to demonstrate how legal scholars developed sophisticated epistemological criteria to balance scriptural revelation with changing sociopolitical realities. My linguistic proficiencies in Arabic ensure rigorous, independent philological work.",
       "p4_impact": "Following the MA, I plan to pursue doctoral research and return to Pakistan to teach at the tertiary level. My objective is to reform Islamic Studies pedagogy in Pakistani universities by integrating critical hermeneutics and political economy into traditional curricula, mentoring students to engage classical religious heritage with intellectual sophistication and ethical relevance."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #351-400",
+      "nationalRank": "UK's Leading Specialist for Asia, Africa & Middle East",
+      "subjectRank": "🏆 #2 World in Development Studies | Top 15 World in Near Eastern Studies",
+      "badgeSummary": "Tier 2 • Specialist (Est. 1916) • 🏆 #2 World Dev Studies"
     }
   },
   {
     "id": "uk-soas-global-philosophy",
-    "rank": 12,
+    "rank": "Tier 2 • Specialist (Est. 1916) • 🏆 #2 World Dev Studies",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "SOAS University of London",
@@ -1119,11 +1207,19 @@
       "p2_synergy": "SOAS's MA Global Philosophy is pioneering the decolonization of philosophical education. Its unique curriculum—treating Islamic, Indian, Chinese, and African philosophies as equal dialogue partners with Western thought—matches my exact intellectual mission. I am eager to study with faculty who specialize in Islamic philosophy, comparative epistemology, and cross-cultural ethics, drawing on the SOAS Library's unmatched collection of non-Western texts.",
       "p3_research": "My proposed research will explore comparative epistemic justice and the metaphysics of knowledge, contrasting Ibn Sina's (Avicenna) theory of the Active Intellect and Suhrawardi's epistemic light with contemporary analytic epistemology and Standpoint Theory. Utilizing primary Arabic and Persian texts, I intend to show that classical Islamic philosophy developed sophisticated answers to contemporary questions of epistemic authority, objectivity, and pluralism.",
       "p4_impact": "Following the MA, I plan to pursue doctoral studies and return to Pakistan to help decolonize higher education philosophy programs. In Pakistani universities, philosophy departments frequently toggle between uncontextualized analytic philosophy and isolationist religious instruction. My objective is to build a vibrant curriculum in Global Philosophy, training students to articulate robust, culturally rooted philosophical positions that contribute meaningfully to global intellectual debates."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #351-400",
+      "nationalRank": "UK's Leading Specialist for Asia, Africa & Middle East",
+      "subjectRank": "🏆 #2 World in Development Studies | Top 15 World in Near Eastern Studies",
+      "badgeSummary": "Tier 2 • Specialist (Est. 1916) • 🏆 #2 World Dev Studies"
     }
   },
   {
     "id": "uk-soas-css-diplomacy",
-    "rank": 13,
+    "rank": "Tier 2 • Specialist (Est. 1916) • 🏆 #2 World Dev Studies",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "SOAS University of London",
@@ -1205,11 +1301,19 @@
       "p2_synergy": "The Centre for International Studies and Diplomacy (CISD) at SOAS offers an unmatched environment for combining diplomatic theory with practical policy craft. CISD's unique curriculum—integrating international law, diplomatic practice, global energy security, and conflict resolution—aligns precisely with my career ambitions. Studying in London, alongside seasoned practitioners and students from across the Commonwealth, will allow me to hone high-level negotiation and policy-drafting skills.",
       "p3_research": "My proposed research at CISD examines the diplomatic and economic architecture of regional integration between South Asia and the Middle East, specifically analyzing Pakistan's strategic positioning within regional trade corridors (such as CPEC) in dialogue with GCC economic diversification strategies. Utilizing primary regional documentation, I intend to develop actionable frameworks for multilateral dispute negotiation and energy transit security.",
       "p4_impact": "Under the terms of the Commonwealth Shared Scholarship, I am committed to returning to Pakistan immediately upon graduation to contribute to national development. My objective is to enter Pakistan's diplomatic or foreign policy research establishment, working with institutions such as the Institute of Strategic Studies Islamabad (ISSI) and the Ministry of Foreign Affairs. I aim to advise on multilateral diplomacy, regional trade connectivity, and international treaty negotiation, strengthening Pakistan's diplomatic capacity across South and West Asia."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #351-400",
+      "nationalRank": "UK's Leading Specialist for Asia, Africa & Middle East",
+      "subjectRank": "🏆 #2 World in Development Studies | Top 15 World in Near Eastern Studies",
+      "badgeSummary": "Tier 2 • Specialist (Est. 1916) • 🏆 #2 World Dev Studies"
     }
   },
   {
     "id": "uk-edinburgh-css-governance",
-    "rank": 14,
+    "rank": "Tier 1 • QS #27 • THE #30",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Edinburgh",
@@ -1291,11 +1395,19 @@
       "p2_synergy": "The Edinburgh Futures Institute (EFI) and the School of Social and Political Science at the University of Edinburgh represent a pioneering center for interdisciplinary policy research. EFI's focus on future governance—integrating data ethics, democratic innovation, and sustainable institutional design—aligns precisely with my vision. I am excited to engage with Edinburgh's world-leading faculty in public administration and participate in collaborative policy design labs.",
       "p3_research": "My proposed research at Edinburgh will investigate institutional design and fiscal decentralization in developing federations, focusing on Pakistan's civil service reform and public utility delivery under the 18th Constitutional Amendment. By applying comparative institutional analysis and contractarian ethics to provincial administrative data, I seek to identify institutional bottlenecks that hinder resource mobilization and propose data-informed governance mechanisms.",
       "p4_impact": "As a recipient of the Commonwealth Shared Scholarship, I am dedicated to returning to Pakistan upon completing my degree to drive public sector modernization. My long-term objective is to contribute to public policy think tanks and government reform bodies, such as the Pakistan Institute of Development Economics (PIDE) and the Planning Commission of Pakistan. I intend to lead policy initiatives that enhance institutional transparency, improve public resource allocation, and foster democratic resilience across South Asia."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #27",
+      "theGlobal": "THE #30",
+      "nationalRank": "Scotland #1 / UK Russell Group Flagship",
+      "subjectRank": "Top 20 Worldwide in Arts, Humanities & Islamic Studies",
+      "badgeSummary": "Tier 1 • QS #27 • THE #30"
     }
   },
   {
     "id": "uk-edinburgh-world-christianity",
-    "rank": 15,
+    "rank": "Tier 1 • QS #27 • THE #30",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Edinburgh",
@@ -1377,11 +1489,19 @@
       "p2_synergy": "The Centre for the Study of World Christianity (CSWC) at New College, University of Edinburgh, is the international cradle of this discipline. The Centre's historic emphasis on indigenous expressions of faith, oral histories, and cross-cultural encounters makes it the definitive institution for my research. I am eager to draw upon the incomparable archival holdings of New College Library and study under leading scholars of global Christian history and interreligious dialogue.",
       "p3_research": "My proposed MSc research investigates the historical and legal dynamics of Christian-Muslim interactions in pre-modern and colonial South Asia, examining how classical Islamic legal categories of minority protection (Dhimma) were reinterpreted under British colonial law and post-independence constitutional frameworks. By analyzing vernacular archival materials alongside colonial legal proceedings, I aim to illuminate the institutional factors that fostered intercommunal resilience and civic solidarity.",
       "p4_impact": "After completing the MSc, I intend to pursue doctoral research and return to Pakistan to foster interfaith scholarship and minority protection. In a context where religious communities often experience polarization, my objective is to establish academic initiatives in comparative religion and interfaith history, advising civil society organizations and public institutions on constitutional pluralism, social cohesion, and the protection of minority heritage in South Asia."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #27",
+      "theGlobal": "THE #30",
+      "nationalRank": "Scotland #1 / UK Russell Group Flagship",
+      "subjectRank": "Top 20 Worldwide in Arts, Humanities & Islamic Studies",
+      "badgeSummary": "Tier 1 • QS #27 • THE #30"
     }
   },
   {
     "id": "uk-exeter-css-conflict",
-    "rank": 16,
+    "rank": "Tier 2 • QS #169 • THE #177",
     "region": "UK",
     "country": "United Kingdom",
     "uni": "University of Exeter",
@@ -1463,11 +1583,19 @@
       "p2_synergy": "The Department of Politics and the Strategy and Security Institute (SSI) at the University of Exeter represent Europe's premier center for security and development analysis. Exeter's distinctive focus on the political economy of conflict, hybrid governance, and human security aligns directly with my career goals. I am eager to participate in policy simulations and learn from Exeter's leading faculty specializing in state fragility, post-conflict reconstruction, and civil wars.",
       "p3_research": "My proposed research at Exeter explores the political economy of state reconstruction and borderland governance, focusing on the security-development nexus along the Pakistan-Afghanistan frontier. By integrating institutional economics with field documentation, I seek to evaluate how local customary dispute mechanisms and formal state institutions can be reconciled to prevent violent extremism and foster sustainable socioeconomic development.",
       "p4_impact": "As a recipient of the Commonwealth Shared Scholarship, I am committed to returning to Pakistan immediately after graduation to support national security and developmental policymaking. My ambition is to join prominent research institutions and government bodies, such as the National Counter Terrorism Authority (NACTA) or the Planning Commission. I aim to design evidence-based peacebuilding strategies and economic development policies that enhance stability, rule of law, and human security across vulnerable regions in South and West Asia."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #169",
+      "theGlobal": "THE #177",
+      "nationalRank": "UK Russell Group (IAIS Arab & Islamic Studies Leader)",
+      "subjectRank": "UK Top 5 for Middle East & Islamic Studies",
+      "badgeSummary": "Tier 2 • QS #169 • THE #177"
     }
   },
   {
     "id": "cn-pku-yenching",
-    "rank": 1,
+    "rank": "Tier 1 • QS #14 • THE #14",
     "region": "China",
     "country": "China",
     "uni": "Peking University (PKU)",
@@ -1538,11 +1666,19 @@
       "p2_synergy": "Yenching Academy at Peking University represents the preeminent institutional locus for interdisciplinary China studies. The Philosophy and Religion research concentration, in close synergy with PKU's world-renowned Department of Philosophy and Institute of World Religions, provides an unparalleled environment. Mentorship from leading scholars of cross-cultural intellectual history will allow me to contextualize classical Islamic ethical thought in direct comparative dialogue with Confucian and Neo-Confucian moral metaphysics.",
       "p3_research": "My proposed research at Yenching examines the comparative conceptualisation of moral statecraft and public welfare in 17th and 18th-century Chinese Muslim (Han Kitab) scholarship, specifically focusing on how Chinese Muslim scholars such as Wang Daiyu and Liu Zhi synthesized classical Islamic jurisprudence (Shari'ah) with Neo-Confucian moral ontology (Daoxue). Utilizing primary Arabic and Persian treatises alongside Han Kitab texts, I aim to show that Islamic legal ethics functioned as an integrative, indigenous philosophical system within the Qing imperial order.",
       "p4_impact": "Following the Yenching Academy, I plan to pursue doctoral studies and contribute directly to Pakistan-China intellectual and academic connectivity. In Pakistan, where tertiary education often views China solely through infrastructural lens (CPEC), my objective is to establish academic programs in Chinese intellectual history and comparative civilisational philosophy, training scholars and policymakers to foster sophisticated, culturally rooted bilateral partnerships across South and East Asia."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #14",
+      "theGlobal": "THE #14",
+      "nationalRank": "China #1 (C9 League Flagship)",
+      "subjectRank": "Top 15 Worldwide in Arts & Humanities & Social Sciences",
+      "badgeSummary": "Tier 1 • QS #14 • THE #14"
     }
   },
   {
     "id": "cn-pku-mir",
-    "rank": 2,
+    "rank": "Tier 1 • QS #14 • THE #14",
     "region": "China",
     "country": "China",
     "uni": "Peking University (PKU)",
@@ -1625,11 +1761,19 @@
       "p2_synergy": "The School of International Studies (SIS) at Peking University represents the premier institution for the study of international relations and China's foreign policy in Asia. SIS's faculty expertise in major-country diplomacy, regional security, and Belt and Road political economy offers an unmatched research environment. Access to PKU's Institute of International and Strategic Studies will allow me to examine China-Pakistan-Middle East strategic connectivity under leading Chinese foreign policy theorists.",
       "p3_research": "My proposed research at PKU examines the geopolitical economy of South Asia-West Asia transit corridors, focusing on how China's Belt and Road Initiative intersects with Pakistan's regional geoeconomic pivot and GCC economic diversification strategies. Utilizing primary regional documentation, I intend to evaluate multilateral security frameworks and energy transit agreements, identifying institutional mechanisms to mitigate regional rivalries.",
       "p4_impact": "Upon completing the MIR, I intend to pursue foreign policy analysis and university lecturing in Pakistan. My objective is to contribute to research bodies such as the Islamabad Policy Research Institute (IPRI) and the Ministry of Foreign Affairs, providing evidence-based analysis on China-South Asia-Middle East trilateral diplomacy, regional security architecture, and multilateral institutional negotiation."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #14",
+      "theGlobal": "THE #14",
+      "nationalRank": "China #1 (C9 League Flagship)",
+      "subjectRank": "Top 15 Worldwide in Arts & Humanities & Social Sciences",
+      "badgeSummary": "Tier 1 • QS #14 • THE #14"
     }
   },
   {
     "id": "cn-tsinghua-schwarzman",
-    "rank": 3,
+    "rank": "Tier 1 • QS #20 • THE #12",
     "region": "China",
     "country": "China",
     "uni": "Tsinghua University",
@@ -1700,11 +1844,19 @@
       "p2_synergy": "Schwarzman College at Tsinghua University represents the premier institution for educating future global leaders. Tsinghua's world-leading faculty in public policy, international relations, and economic governance, combined with Schwarzman College's immersion curriculum, provides an incomparable leadership incubator. The opportunity to engage directly with Chinese policymakers, international dignitaries, and a diverse global cohort will sharpen my strategic decision-making capacity.",
       "p3_research": "At Schwarzman College, my academic focus will center on global governance and regional development corridors, specifically examining the institutional design of trans-regional energy and trade networks linking South Asia, China, and the Middle East. By evaluating infrastructure financing, regulatory harmonisation, and local socioeconomic impact, I seek to design policy frameworks that ensure major developmental initiatives foster inclusive economic growth and institutional resilience.",
       "p4_impact": "As a Schwarzman Scholar, my goal is to return to Pakistan to spearhead reform in public policy research and international diplomacy. In a South Asian context that requires nuanced, multilateral statecraft, I intend to bridge government institutions, multilateral development banks, and academic think tanks, advising on strategic partnerships, sustainable trade infrastructure, and cross-cultural dialogue between the Islamic world and East Asia."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #20",
+      "theGlobal": "THE #12",
+      "nationalRank": "China Top 2 (C9 League Flagship)",
+      "subjectRank": "Top 20 Worldwide in Global Affairs & Public Management",
+      "badgeSummary": "Tier 1 • QS #20 • THE #12"
     }
   },
   {
     "id": "cn-fudan-philosophy",
-    "rank": 4,
+    "rank": "Tier 1 • QS #39 • THE #44",
     "region": "China",
     "country": "China",
     "uni": "Fudan University",
@@ -1787,11 +1939,19 @@
       "p2_synergy": "The School of Philosophy at Fudan University represents the preeminent center for philosophical inquiry in China. Fudan's pioneering English Master's in Chinese Philosophy and Culture (EMA), combined with its world-leading faculty in classical Confucianism, Daoism, and Buddhist philosophy, provides an ideal research environment. I am eager to participate in Fudan's rigorous seminars, examining how classical Chinese concepts of cosmic harmony (Tian-Ren Heyi) and ritual propriety (Li) parallel Islamic legal and philosophical conceptions of divine order and justice.",
       "p3_research": "My proposed research at Fudan explores the comparative moral epistemology of Neo-Confucianism and Islamic rationalism, specifically contrasting Zhu Xi's conception of Principle (Li) and Mind (Xin) with Al-Ghazali's and Fakhr al-Din al-Razi's theories of intuitive reason and moral obligation. Utilizing primary Arabic texts alongside classical Chinese philosophical concepts, I intend to show that both traditions articulate non-reductive moral realism that grounds human political responsibility in transcendent ethical order.",
       "p4_impact": "After completing the Master's at Fudan, I plan to pursue doctoral research and return to Pakistan to pioneer courses in Comparative Asian Philosophy. In Pakistani universities, where philosophy curricula remain heavily divided between Eurocentric analytic thought and isolated theological study, my goal is to introduce East Asian philosophy and comparative ethics, mentoring a new generation of South Asian scholars to engage China's intellectual heritage with philosophical rigor and nuance."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #39",
+      "theGlobal": "THE #44",
+      "nationalRank": "C9 League (Top 3 in China)",
+      "subjectRank": "Top 30 Worldwide in Philosophy, Politics & International Studies",
+      "badgeSummary": "Tier 1 • QS #39 • THE #44"
     }
   },
   {
     "id": "cn-tsinghua-ir",
-    "rank": 5,
+    "rank": "Tier 1 • QS #20 • THE #12",
     "region": "China",
     "country": "China",
     "uni": "Tsinghua University",
@@ -1862,11 +2022,19 @@
       "p2_synergy": "The Department of International Relations at Tsinghua University stands at the forefront of research on China's foreign policy and global governance. Tsinghua's strategic location in Beijing and its leadership in international affairs research offer an unmatched intellectual environment. I am eager to learn under renowned scholars of Chinese diplomatic statecraft and regional security, participating in the Department's policy colloquia.",
       "p3_research": "My proposed research at Tsinghua explores the geoeconomic convergence between China's Belt and Road Initiative and South-West Asian energy corridors. Focusing on Pakistan's strategic position connecting CPEC with GCC trade infrastructure, I aim to analyze how multilateral institutions and bilateral investment treaties can be harmonised to foster sustainable regional security and dispute de-escalation.",
       "p4_impact": "Following the MIA, I plan to pursue a career in foreign policy analysis and academic diplomacy in Pakistan. My goal is to work with government research organizations and international think tanks, including the Ministry of Foreign Affairs and the Institute of Strategic Studies Islamabad (ISSI), advising on strategic economic corridors, multilateral treaty negotiations, and trilateral diplomacy connecting Pakistan, China, and West Asia."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #20",
+      "theGlobal": "THE #12",
+      "nationalRank": "China Top 2 (C9 League Flagship)",
+      "subjectRank": "Top 20 Worldwide in Global Affairs & Public Management",
+      "badgeSummary": "Tier 1 • QS #20 • THE #12"
     }
   },
   {
     "id": "cn-fudan-sirpa",
-    "rank": 6,
+    "rank": "Tier 1 • QS #39 • THE #44",
     "region": "China",
     "country": "China",
     "uni": "Fudan University",
@@ -1949,11 +2117,19 @@
       "p2_synergy": "The School of International Relations and Public Affairs (SIRPA) at Fudan University is globally recognized for its scholarship in comparative politics and diplomacy. Fudan's Shanghai location and its leading research on regional integration and the Belt and Road Initiative provide an unparalleled academic environment. I am eager to learn under SIRPA's distinguished faculty and examine China's evolving diplomatic role in South and West Asia.",
       "p3_research": "My proposed research at Fudan investigates the institutional mechanisms of bilateral diplomacy and conflict mediation under the Belt and Road Initiative, focusing on the China-Pakistan Economic Corridor (CPEC) in dialogue with regional security frameworks. Utilizing primary documentation, I aim to examine how institutional coordination can be strengthened between state bodies, regional organizations, and local administrative authorities.",
       "p4_impact": "After completing the CPD at Fudan, I intend to pursue a career in diplomatic research and public administration in Pakistan. My goal is to work with policy research bodies and government ministries, contributing evidence-based strategic analysis on bilateral trade, institutional reform, and regional diplomatic cooperation across Asia."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #39",
+      "theGlobal": "THE #44",
+      "nationalRank": "C9 League (Top 3 in China)",
+      "subjectRank": "Top 30 Worldwide in Philosophy, Politics & International Studies",
+      "badgeSummary": "Tier 1 • QS #39 • THE #44"
     }
   },
   {
     "id": "cn-ruc-silkroad",
-    "rank": 7,
+    "rank": "Tier 2 • China #1 Humanities • QS #356",
     "region": "China",
     "country": "China",
     "uni": "Renmin University of China (RUC)",
@@ -2024,11 +2200,19 @@
       "p2_synergy": "The Silk Road School at Renmin University of China represents the definitive institution for studying contemporary Chinese development and Belt and Road governance. RUC's Suzhou campus provides an ideal setting to study Chinese economic modernization, public policy, and institutional design under leading Chinese social scientists.",
       "p3_research": "My proposed research at the Silk Road School explores the socioeconomic impact of infrastructure corridors under CPEC, focusing on industrial park development, fiscal decentralization, and regional trade connectivity. Utilizing comparative case studies, I aim to evaluate policy interventions that maximize employment generation and technology transfer in developing economies.",
       "p4_impact": "After graduating from the Silk Road School, I intend to return to Pakistan to support developmental planning and economic policy research. My goal is to work with institutions such as the Planning Commission of Pakistan and regional development authorities, designing evidence-based policies that enhance cross-border economic connectivity and sustainable regional development."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #356",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "Double First-Class (China's Supreme Center for Humanities & PPE)",
+      "subjectRank": "China #1 in Philosophy, Political Science & Sociology",
+      "badgeSummary": "Tier 2 • China #1 Humanities • QS #356"
     }
   },
   {
     "id": "cn-ruc-philosophy",
-    "rank": 8,
+    "rank": "Tier 2 • China #1 Humanities • QS #356",
     "region": "China",
     "country": "China",
     "uni": "Renmin University of China (RUC)",
@@ -2099,11 +2283,19 @@
       "p2_synergy": "The School of Philosophy at Renmin University of China is renowned as China's premier center for philosophical scholarship. RUC's dedicated Master's in Chinese Philosophy and Culture provides an ideal institutional framework to study Confucian moral ontology, Daoist metaphysics, and Buddhist philosophy in direct comparative conversation with Near Eastern thought.",
       "p3_research": "My proposed research at RUC explores the comparative conception of the common good and moral duty, contrasting classical Confucian governance concepts with Islamic jurisprudence's doctrine of public utility (Maslaha). By examining primary classical concepts, I aim to demonstrate that both traditions developed sophisticated normative systems that ground political authority in moral accountability and public welfare.",
       "p4_impact": "Following the Master's at RUC, I intend to pursue doctoral studies and return to Pakistan to advance comparative philosophy in higher education. My goal is to establish academic courses in Asian intellectual history and comparative ethics, mentoring students to engage Chinese philosophical heritage with intellectual rigor and cross-cultural understanding."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #356",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "Double First-Class (China's Supreme Center for Humanities & PPE)",
+      "subjectRank": "China #1 in Philosophy, Political Science & Sociology",
+      "badgeSummary": "Tier 2 • China #1 Humanities • QS #356"
     }
   },
   {
     "id": "cn-sjtu-cpe",
-    "rank": 9,
+    "rank": "Tier 1 • QS #45 • THE #43",
     "region": "China",
     "country": "China",
     "uni": "Shanghai Jiao Tong University (SJTU)",
@@ -2186,11 +2378,19 @@
       "p2_synergy": "The School of International and Public Affairs (SIPA) at Shanghai Jiao Tong University offers a world-class environment for the study of China's political economy. SJTU's reputation for empirical rigor and its strategic location in Shanghai—China's commercial capital—provide unmatched research resources. I am eager to learn under SIPA's faculty specializing in industrial policy, comparative political institutions, and international trade.",
       "p3_research": "My proposed research at SJTU investigates the institutional mechanisms of special economic zones (SEZs) and industrial upgrading under China's development model, comparative to SEZ implementation along the China-Pakistan Economic Corridor (CPEC). Utilizing comparative institutional analysis, I aim to examine how regulatory efficiency and public infrastructure investment can stimulate private sector competitiveness in developing economies.",
       "p4_impact": "Upon completing the CPE at SJTU, I intend to return to Pakistan to contribute to economic policymaking and higher education. My goal is to work with government planning bodies, economic think tanks, and academic institutions, advising on trade policy, industrial zone management, and bilateral economic cooperation between Pakistan and China."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #45",
+      "theGlobal": "THE #43",
+      "nationalRank": "C9 League Elite Member",
+      "subjectRank": "Top 50 Worldwide in Social Sciences & Public Affairs",
+      "badgeSummary": "Tier 1 • QS #45 • THE #43"
     }
   },
   {
     "id": "cn-zju-chinastudies",
-    "rank": 10,
+    "rank": "Tier 1 • QS #47 • THE #55",
     "region": "China",
     "country": "China",
     "uni": "Zhejiang University (ZJU)",
@@ -2261,11 +2461,19 @@
       "p2_synergy": "Zhejiang University, located in Hangzhou—a global hub for digital economy and social governance—offers an exceptional environment for China Studies. ZJU's Institute of China Studies combines empirical social science with deep cultural immersion, providing access to leading scholars in digital governance and economic development.",
       "p3_research": "My proposed research at ZJU investigates the institutional dynamics of digital governance and e-commerce infrastructure in rural poverty alleviation, analyzing Zhejiang province's digital economy model. I aim to evaluate how public digital platforms can be adapted to enhance institutional transparency and market access in developing economies like Pakistan.",
       "p4_impact": "After graduating from ZJU, I plan to return to Pakistan to support institutional modernization and public policy research. My goal is to work with government innovation bodies and economic think tanks, advising on digital governance, regulatory frameworks, and bilateral socioeconomic cooperation with China."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #47",
+      "theGlobal": "THE #55",
+      "nationalRank": "C9 League Elite Member",
+      "subjectRank": "Top 50 Worldwide in Social Sciences & Cross-Cultural Studies",
+      "badgeSummary": "Tier 1 • QS #47 • THE #55"
     }
   },
   {
     "id": "cn-sisu-mideast",
-    "rank": 11,
+    "rank": "Tier 2 • Specialist • Silk Road & Middle East Leader",
     "region": "China",
     "country": "China",
     "uni": "Shanghai International Studies University (SISU)",
@@ -2336,11 +2544,19 @@
       "p2_synergy": "The Middle East Studies Institute (MESI) at Shanghai International Studies University represents China's preeminent center for research on the Middle East and the Islamic world. MESI's distinguished faculty and its focus on China-Middle East relations, regional security, and Islamic governance provide an ideal institutional home. I am eager to contribute my Arabic and Persian textual competencies to MESI's ongoing research projects.",
       "p3_research": "My proposed research at MESI investigates the geopolitical economy of China's Comprehensive Strategic Partnerships in the Middle East, specifically analyzing how China's diplomatic mediation (such as the Saudi-Iran rapprochement) interacts with regional security architectures and energy connectivity. Utilizing primary Arabic and Persian documentation, I aim to provide granular analysis on regional diplomatic discourses.",
       "p4_impact": "Following the Master's at SISU, I intend to pursue doctoral research and contribute to foreign policy think tanks and academic institutions in Pakistan. My goal is to work with diplomatic research bodies, advising on Middle Eastern affairs, trilateral diplomacy with China, and regional security cooperation across West and South Asia."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "China's Premier Center for Foreign Area & Middle East Studies",
+      "subjectRank": "National Leader in Arabic Studies, Diplomacy & Intercultural Communication",
+      "badgeSummary": "Tier 2 • Specialist • Silk Road & Middle East Leader"
     }
   },
   {
     "id": "cn-tsinghua-mid",
-    "rank": 12,
+    "rank": "Tier 1 • QS #20 • THE #12",
     "region": "China",
     "country": "China",
     "uni": "Tsinghua University (SPPM)",
@@ -2411,11 +2627,19 @@
       "p2_synergy": "The School of Public Policy and Management (SPPM) at Tsinghua University is globally recognized for its excellence in public administration and international development. SPPM's faculty expertise in sustainable governance, poverty alleviation, and developmental statecraft provides an unmatched research environment. I am eager to examine China's developmental experience and apply empirical policy evaluation techniques.",
       "p3_research": "My proposed research at SPPM investigates the institutional mechanisms of state-led infrastructure investment and rural industrialization, comparative to Pakistan's regional development challenges under CPEC. Utilizing comparative institutional analysis, I aim to examine policy interventions that enhance public finance management and project delivery in developing economies.",
       "p4_impact": "Upon completing the MID at Tsinghua, I intend to return to Pakistan to contribute to public administration reform and policy research. My goal is to work with government planning bodies and international development agencies, advising on development project governance, fiscal decentralization, and sustainable economic policy."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #20",
+      "theGlobal": "THE #12",
+      "nationalRank": "School of Public Policy and Management (C9 League)",
+      "subjectRank": "China #1 Public Administration & Global Governance",
+      "badgeSummary": "Tier 1 • QS #20 • THE #12"
     }
   },
   {
     "id": "cn-whu-philosophy",
-    "rank": 13,
+    "rank": "Tier 2 • QS #194 • THE #151",
     "region": "China",
     "country": "China",
     "uni": "Wuhan University",
@@ -2486,11 +2710,19 @@
       "p2_synergy": "The School of Philosophy at Wuhan University is recognized as one of China's most distinguished centers for philosophical scholarship. WHU's strength in comparative philosophy, Chinese philosophy, and religious studies provides an ideal research environment. I am eager to examine cross-cultural conceptions of the ultimate reality, moral obligation, and cosmic order under WHU's leading faculty.",
       "p3_research": "My proposed research at Wuhan University explores the comparative metaphysics of divine unity (Tawhid) and Daoist ontology, examining how classical Islamic thinkers and Daoist philosophers conceptualize the relationship between the transcendent source and empirical reality. Utilizing textual analysis, I aim to show how both traditions articulated non-dualistic frameworks for ethical action.",
       "p4_impact": "After completing the Master's at Wuhan University, I plan to pursue doctoral research and return to Pakistan to teach comparative philosophy and ethics. My goal is to enrich philosophy curricula in Pakistani universities, establishing collaborative research initiatives that foster deeper intellectual dialogue between the Islamic world and East Asia."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #194",
+      "theGlobal": "THE #151",
+      "nationalRank": "Double First-Class (Class A) National Key University",
+      "subjectRank": "Top 100 Worldwide in Philosophy & Comparative Law",
+      "badgeSummary": "Tier 2 • QS #194 • THE #151"
     }
   },
   {
     "id": "cn-nwu-imes",
-    "rank": 14,
+    "rank": "Tier 3 • QS #701-750 • THE #601-800",
     "region": "China",
     "country": "China",
     "uni": "Northwest University (NWU Xi'an)",
@@ -2561,11 +2793,19 @@
       "p2_synergy": "The Institute of Middle Eastern Studies (IMES) at Northwest University is China's oldest and most prestigious institution dedicated to Middle Eastern and Islamic civilisational history. Located in Xi'an, IMES provides access to invaluable historical archives and scholars specializing in Silk Road history, Islamic culture in China, and Middle Eastern geopolitical history.",
       "p3_research": "My proposed research at IMES explores the cultural and diplomatic exchanges between Persianate Islamic dynasties and Ming/Qing China along the Silk Road, focusing on the role of multilingual Muslim scholars and envoys in mediating bilateral trade and diplomatic protocols. Utilizing primary Arabic and Persian sources, I aim to reconstruct how cultural pluralism facilitated enduring diplomatic ties.",
       "p4_impact": "After graduating from NWU, I intend to pursue doctoral research and contribute to academic diplomacy and tertiary education in Pakistan. My goal is to work with historical research institutes and cultural diplomacy bodies, promoting deeper scholarly understanding of historical Silk Road connectivity and cultural dialogue between Pakistan and China."
+    },
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #701-750",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Silk Road Historic Capital (Double First-Class Discipline)",
+      "subjectRank": "China Top 3 in Silk Road Archaeology & Middle Eastern Studies",
+      "badgeSummary": "Tier 3 • QS #701-750 • THE #601-800"
     }
   },
   {
     "id": "cn-sdu-interreligious",
-    "rank": 15,
+    "rank": "Tier 3 • QS #316 • THE #301-350",
     "region": "China",
     "country": "China",
     "uni": "Shandong University (SDU)",
@@ -2636,11 +2876,19 @@
       "p2_synergy": "The Department of Philosophy and Social Development and the Center for Judaic and Interreligious Studies at Shandong University represent China's leading academic hub for the study of Abrahamic faiths. SDU's unique focus on comparative interreligious dialogue, combined with its strong philosophical traditions, provides an ideal environment for my research.",
       "p3_research": "My proposed research at SDU investigates the comparative theological frameworks of divine revelation and social justice in medieval Islamic and Jewish thought, examining how classical scholars articulated normative ethics to guide communal life. Utilizing primary texts, I seek to contribute to cross-cultural understanding of religious pluralism within contemporary Chinese academia.",
       "p4_impact": "After completing the Master's at SDU, I intend to pursue doctoral studies and contribute to higher education in Pakistan. My goal is to foster interfaith scholarship and comparative religious studies, establishing collaborative academic programs that promote intercultural literacy and mutual respect across diverse civilisations."
+    },
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #316",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "Double First-Class National Key University",
+      "subjectRank": "Top 150 Worldwide in History & Classical Literature",
+      "badgeSummary": "Tier 3 • QS #316 • THE #301-350"
     }
   },
   {
     "id": "cn-nju-globalaffairs",
-    "rank": 16,
+    "rank": "Tier 1 • QS #145 • THE #73",
     "region": "China",
     "country": "China",
     "uni": "Nanjing University (NJU)",
@@ -2711,11 +2959,19 @@
       "p2_synergy": "Nanjing University, as an elite C9 League institution, possesses a rich tradition in international politics and diplomacy. NJU's School of Government and its Institute for International Students provide an outstanding academic environment to examine China's foreign policy and global governance.",
       "p3_research": "My proposed research at NJU focuses on the diplomatic and institutional architecture of regional connectivity under the Belt and Road Initiative, analyzing multilateral cooperation between South Asia, China, and Central Asia. I aim to evaluate policy mechanisms that promote regional economic stability and trade facilitation.",
       "p4_impact": "After graduating from NJU, I intend to return to Pakistan to support foreign policy research and diplomatic analysis. My goal is to work with government research institutions and think tanks, contributing to strategic analysis on regional connectivity, trade diplomacy, and bilateral cooperation with China."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #145",
+      "theGlobal": "THE #73",
+      "nationalRank": "C9 League (Historic Imperial University, Est. 258 AD)",
+      "subjectRank": "Top 100 Worldwide in History & Asian Studies",
+      "badgeSummary": "Tier 1 • QS #145 • THE #73"
     }
   },
   {
     "id": "cn-bnu-beltandroad",
-    "rank": 17,
+    "rank": "Tier 2 • QS #271 • THE #177",
     "region": "China",
     "country": "China",
     "uni": "Beijing Normal University (BNU Zhuhai)",
@@ -2786,11 +3042,19 @@
       "p2_synergy": "The Belt and Road School at Beijing Normal University's Zhuhai campus offers a specialized curriculum tailored to the governance challenges of developing nations along the Silk Road. BNU's faculty expertise in developmental economics, public policy, and institutional capacity-building provides an ideal training ground.",
       "p3_research": "My proposed research at BNU explores the institutional coordination mechanisms in bilateral infrastructure governance, focusing on special economic zones and regulatory harmonization under CPEC. I aim to analyze policy strategies that enhance administrative efficiency and foster sustainable regional economic integration.",
       "p4_impact": "After graduating from BNU, I intend to return to Pakistan to contribute to public sector reform and development planning. My goal is to work with government agencies and policy research institutes, advising on infrastructure governance, public-private partnerships, and bilateral economic cooperation with China."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #271",
+      "theGlobal": "THE #177",
+      "nationalRank": "Double First-Class (Belt and Road School / BRICS Hub)",
+      "subjectRank": "Top 100 Worldwide in Education & Comparative Humanities",
+      "badgeSummary": "Tier 2 • QS #271 • THE #177"
     }
   },
   {
     "id": "cn-sysu-silkroad",
-    "rank": 18,
+    "rank": "Tier 2 • QS #228 • THE #150-200",
     "region": "China",
     "country": "China",
     "uni": "Sun Yat-sen University (SYSU)",
@@ -2861,11 +3125,19 @@
       "p2_synergy": "Sun Yat-sen University, located in Guangzhou—the historic starting point of the Maritime Silk Road—stands as a premier institution for the study of maritime trade, regional governance, and international affairs. SYSU's expertise in Indian Ocean trade corridors and Southeast/South Asian diplomacy offers an exceptional academic environment.",
       "p3_research": "My proposed research at SYSU investigates the political economy of maritime connectivity and port governance, focusing on the strategic integration between Gwadar Port and international shipping networks under the Maritime Silk Road. I aim to evaluate trade facilitation policies that enhance transit efficiency and economic spillover in littoral states.",
       "p4_impact": "Upon completing the Master's at SYSU, I intend to return to Pakistan to support trade policy research and port administration. My goal is to work with maritime authorities and economic research institutes, advising on port logistics, regional trade treaties, and bilateral maritime cooperation with China."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #228",
+      "theGlobal": "THE #150-200",
+      "nationalRank": "Southern China Flagship (Double First-Class)",
+      "subjectRank": "Top 150 Worldwide in Philosophy & International Studies",
+      "badgeSummary": "Tier 2 • QS #228 • THE #150-200"
     }
   },
   {
     "id": "cn-xmu-maritime",
-    "rank": 19,
+    "rank": "Tier 3 • QS #362 • THE #301-350",
     "region": "China",
     "country": "China",
     "uni": "Xiamen University (XMU)",
@@ -2936,11 +3208,19 @@
       "p2_synergy": "Xiamen University, located along China's southeastern coast, represents a premier institution for the study of international relations, maritime trade, and regional diplomacy. XMU's School of International Relations offers an outstanding academic environment to examine global governance and maritime economic corridors.",
       "p3_research": "My proposed research at XMU investigates international maritime governance and regional trade agreements under the Belt and Road Initiative, analyzing trade facilitation policies that connect South Asian ports with global shipping networks. I aim to evaluate institutional mechanisms that enhance maritime security and economic cooperation.",
       "p4_impact": "After graduating from XMU, I intend to return to Pakistan to support trade policy research and international diplomacy. My goal is to work with government research institutes and think tanks, advising on maritime trade policy, regional trade facilitation, and bilateral economic cooperation with China."
+    },
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #362",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "Maritime Silk Road National Key University",
+      "subjectRank": "Top 150 Worldwide in Southeast Asian & Maritime History",
+      "badgeSummary": "Tier 3 • QS #362 • THE #301-350"
     }
   },
   {
     "id": "cn-mofcom-isscad",
-    "rank": 20,
+    "rank": "Tier 1 • QS #14 • THE #14",
     "region": "China",
     "country": "China",
     "uni": "Peking University (ISSCAD) – MOFCOM Program",
@@ -3011,11 +3291,19 @@
       "p2_synergy": "The Institute of South-South Cooperation and Development (ISSCAD) at Peking University was established to share governance experiences and developmental strategies among developing nations. ISSCAD's world-leading faculty in economic development, public policy, and institutional reform provides an unmatched environment to study China's development experience.",
       "p3_research": "My proposed research at ISSCAD investigates the institutional mechanisms of special economic zones (SEZs) and industrial capacity-building under South-South cooperation frameworks, comparative to Pakistan's regional development challenges under CPEC. I aim to examine policy interventions that enhance public finance management and sustainable industrialization in developing economies.",
       "p4_impact": "After graduating from ISSCAD, I intend to return to Pakistan to support public sector reform and development planning. My goal is to work with government planning bodies and economic think tanks, advising on development project governance, fiscal decentralization, and South-South economic cooperation."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #14",
+      "theGlobal": "THE #14",
+      "nationalRank": "Institute of South-South Cooperation and Development (State Council backed)",
+      "subjectRank": "China Premier Academy for South-South Cooperation & Public Policy",
+      "badgeSummary": "Tier 1 • QS #14 • THE #14"
     }
   },
   {
     "id": "fi-helsinki-intercultural-encounters",
-    "rank": null,
+    "rank": "Tier 1 • QS #117 • THE #110",
     "region": "Nordics & Belgium",
     "country": "Finland",
     "uni": "University of Helsinki",
@@ -3071,11 +3359,19 @@
       "p2_synergy": "The Faculty of Arts at the University of Helsinki is globally recognized for its research in intercultural dialogue and religious studies. Helsinki's Centre of Excellence in Islamic and Jewish Studies and its leadership in Nordic social research create an exceptional environment for analyzing inter-religious encounters.",
       "p3_research": "My master's research will focus on the role of Islamic normative ethics in facilitating interfaith dialogue and civic integration. I will evaluate how classical concepts of civic coexistence can be operationalized to strengthen social trust and counteract religious polarization in multicultural societies.",
       "p4_impact": "Supported by the University of Helsinki Tuition Waiver, I will return to Pakistan to lead peacebuilding, interfaith dialogue, and policy initiatives that promote tolerance, minority rights, and inclusive civic engagement."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #117",
+      "theGlobal": "THE #110",
+      "nationalRank": "Finland #1 (Est. 1640)",
+      "subjectRank": "Top 40 Worldwide in Philosophy & Social Sciences",
+      "badgeSummary": "Tier 1 • QS #117 • THE #110"
     }
   },
   {
     "id": "be-kuleuven-philosophy",
-    "rank": null,
+    "rank": "Tier 1 • QS #63 • THE #45",
     "region": "Nordics & Belgium",
     "country": "Belgium",
     "uni": "KU Leuven",
@@ -3131,11 +3427,19 @@
       "p2_synergy": "The Institute of Philosophy (HIW) at KU Leuven is one of the world's most prestigious philosophical institutions. Its De Wulf-Mansion Centre for Ancient, Medieval and Renaissance Philosophy is globally renowned for its pioneering scholarship on the Latin translation and reception of Arabic philosophical works.",
       "p3_research": "Supported by the Flemish Master Mind Scholarship, my thesis will examine the metaphysical and epistemological debates between Avicenna (Ibn Sina) and classical Islamic theology (Kalam), tracing their subsequent impact on Latin medieval philosophy. This work will illuminate the shared intellectual roots of Islamic and Western thought.",
       "p4_impact": "This rigorous training will enable me to pursue doctoral studies and subsequently return to Pakistan as a university professor, establishing high-standard philosophy programs that foster analytical reasoning and intellectual openness."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #63",
+      "theGlobal": "THE #45",
+      "nationalRank": "Belgium #1 (Est. 1425, Europe's Most Innovative University)",
+      "subjectRank": "Top 25 Worldwide in Philosophy, Theology & Religious Studies",
+      "badgeSummary": "Tier 1 • QS #63 • THE #45"
     }
   },
   {
     "id": "se-lund-middle-east",
-    "rank": null,
+    "rank": "Tier 1 • QS #75 • THE #106",
     "region": "Nordics & Belgium",
     "country": "Sweden",
     "uni": "Lund University",
@@ -3191,11 +3495,19 @@
       "p2_synergy": "Lund University's Centre for Advanced Middle Eastern Studies (CMES) is a world-class research hub leading international research on Middle Eastern governance, political movements, and sustainability. Lund's interdisciplinary research clusters offer a premier platform for my scholarly work.",
       "p3_research": "My proposed research at Lund will analyze the ideological evolution of modern Islamic political movements in response to state fragility and economic modernization. Reading primary Arabic and Persian literature, I will trace how traditional concepts of authority have been re-articulated in contemporary political struggles.",
       "p4_impact": "Backed by the Lund Global Scholarship, this qualification will empower me to return to Pakistan as a Middle East geopolitical analyst, advising government bodies and think tanks on foreign policy and regional diplomacy."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #75",
+      "theGlobal": "THE #106",
+      "nationalRank": "Sweden Top 2 (Est. 1666, Royal Swedish Academy)",
+      "subjectRank": "Top 30 Worldwide in Development Studies & International Human Rights",
+      "badgeSummary": "Tier 1 • QS #75 • THE #106"
     }
   },
   {
     "id": "fi-tampere-peace-conflict",
-    "rank": null,
+    "rank": "Tier 3 • QS #436 • THE #301-350",
     "region": "Nordics & Belgium",
     "country": "Finland",
     "uni": "Tampere University",
@@ -3251,11 +3563,19 @@
       "p2_synergy": "The Faculty of Social Sciences at Tampere University and the Tampere Peace Research Institute (TAPRI) are globally celebrated for their critical contributions to mediation, peacebuilding, and human security. Tampere's collaborative research culture is ideally suited for my interdisciplinary goals.",
       "p3_research": "Funded by the Tampere Global Student Award, my thesis will examine the potential of indigenous and faith-based mediation mechanisms in de-escalating sectarian and communal conflict in South Asia, evaluating how traditional religious authorities can be mobilized for sustainable peacebuilding.",
       "p4_impact": "Upon completing my studies, I will return to Pakistan to contribute to national conflict resolution frameworks, working with government agencies and international NGOs to design culturally resonant mediation programs."
+    },
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #436",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "Finland's Premier Center for Social Research & Peace Studies",
+      "subjectRank": "Top 150 Worldwide in Peace & Conflict Research",
+      "badgeSummary": "Tier 3 • QS #436 • THE #301-350"
     }
   },
   {
     "id": "fr-sciencespo-international-security",
-    "rank": null,
+    "rank": "Tier 1 • Specialist • 🏆 #2 World Politics & IR",
     "region": "Western Europe",
     "country": "France",
     "uni": "Sciences Po Paris (PSIA)",
@@ -3311,11 +3631,19 @@
       "p2_synergy": "The Paris School of International Affairs (PSIA) at Sciences Po is Europe's premier school for international security. Its distinguished faculty—comprising leading scholars and world-class practitioners—offers an unmatched training ground in strategic intelligence, asymmetric warfare, and multilateral conflict management.",
       "p3_research": "Supported by the Émile Boutmy Scholarship, my research will investigate the transformation of non-state armed actors and asymmetric warfare doctrines in South Asia and the Middle East. Utilizing primary Arabic and Persian communications and doctrinal manuals, I will evaluate the ideological and financial resilience of hybrid security threats.",
       "p4_impact": "Following graduation, I will work with international security institutes and return to Pakistan to contribute to national counter-radicalization policy and strategic planning, helping build resilient security architectures based on governance integrity and the rule of law."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #40",
+      "nationalRank": "France's Supreme Grand Établissement for Political Science",
+      "subjectRank": "🏆 #2 Worldwide in Politics & International Studies (behind Harvard)",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 #2 World Politics & IR"
     }
   },
   {
     "id": "nl-leiden-middle-east",
-    "rank": null,
+    "rank": "Tier 1 • QS #141 • THE #77",
     "region": "Western Europe",
     "country": "Netherlands",
     "uni": "Leiden University",
@@ -3371,11 +3699,19 @@
       "p2_synergy": "Leiden University's Centre for the Study of Islam and Society (LUCIS) and its world-famous Scaliger Oriental Manuscript Collection make Leiden the historical heart of Middle Eastern philology in Europe. The university's centuries-old legacy of Arabic and Persian scholarship provides an irreplaceable environment for my academic growth.",
       "p3_research": "My master's thesis at Leiden will investigate the legal evolution of Islamic commercial partnerships in early modern Ottoman and Safavid legal compendiums, analyzing how Islamic jurists adapted legal theory to expanding global trade networks.",
       "p4_impact": "Funded through the Leiden University Excellence Scholarship (LExS), this degree will lay the groundwork for my doctoral studies. Eventually, I will return to Pakistan to lead university departments in Islamic intellectual history and international relations."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #141",
+      "theGlobal": "THE #77",
+      "nationalRank": "Netherlands Oldest University (Est. 1575, Royal Seat)",
+      "subjectRank": "Top 25 Worldwide in Arts, Humanities, History & Asian Studies",
+      "badgeSummary": "Tier 1 • QS #141 • THE #77"
     }
   },
   {
     "id": "be-ghent-conflict-development",
-    "rank": null,
+    "rank": "Tier 2 • QS #169 • THE #115",
     "region": "Western Europe",
     "country": "Belgium",
     "uni": "Ghent University (UGent)",
@@ -3431,11 +3767,19 @@
       "p2_synergy": "The Department of Conflict and Development Studies at Ghent University is globally celebrated for its critical, bottom-up approach to political economy and state-building. Ghent's Middle East and North Africa (MENA) research group provides an exceptional academic incubator.",
       "p3_research": "Supported by the Flemish Master Mind Scholarship, my research will analyze the political economy of agrarian reform and Islamic endowment (Waqf) land redistribution in post-colonial state formation, evaluating their long-term impact on rural poverty and social mobility.",
       "p4_impact": "Upon graduation, I will return to Pakistan to work with agrarian development organizations and policy think tanks, designing equitable rural development programs informed by historical and cultural realities."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #169",
+      "theGlobal": "THE #115",
+      "nationalRank": "Belgium Top 2 Research University",
+      "subjectRank": "Top 50 Worldwide in Social Sciences & Conflict Studies",
+      "badgeSummary": "Tier 2 • QS #169 • THE #115"
     }
   },
   {
     "id": "nl-radboud-philosophy",
-    "rank": null,
+    "rank": "Tier 2 • QS #246 • THE #140",
     "region": "Western Europe",
     "country": "Netherlands",
     "uni": "Radboud University (Nijmegen)",
@@ -3491,11 +3835,19 @@
       "p2_synergy": "Radboud University's Faculty of Philosophy, Theology and Religious Studies, particularly its Centre for Contemporary European Philosophy, is renowned for its depth in continental philosophy, metaphysics, and comparative intellectual history.",
       "p3_research": "Funded via the Radboud Scholarship Programme (RSP), my research master's thesis will investigate theories of epistemic justice and moral reasoning in Avicenna and Al-Ghazali, placing them in dialogue with modern epistemology and social philosophy.",
       "p4_impact": "This intensive research master will lead directly to doctoral studies, ultimately enabling me to return to Pakistani academia to lead departments of philosophy and train future scholars in comparative philosophy."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #246",
+      "theGlobal": "THE #140",
+      "nationalRank": "Dutch Research University (Top 150 Global)",
+      "subjectRank": "Top 75 Worldwide in Philosophy & Religious Studies",
+      "badgeSummary": "Tier 2 • QS #246 • THE #140"
     }
   },
   {
     "id": "eu-imsiss-security-intelligence",
-    "rank": null,
+    "rank": "Tier 1 • Elite Consortium • Glasgow/Trento/Charles",
     "region": "Erasmus Mundus",
     "country": "Multilateral Consortium",
     "uni": "IMSISS Consortium (Glasgow, DCU, Charles Prague, Trento)",
@@ -3551,11 +3903,19 @@
       "p2_synergy": "The Erasmus Mundus IMSISS program—uniting the University of Glasgow, Dublin City University, Charles University Prague, and the University of Trento—represents Europe's premier security and intelligence curriculum. Its unique mobility tracks and practitioner engagement offer an unparalleled educational journey.",
       "p3_research": "Supported by a 100% full Erasmus Mundus scholarship (€1,400/month living stipend), my master's dissertation will investigate intelligence-sharing frameworks and counter-radicalization doctrines in South and Central Asia, analyzing primary Arabic and Persian strategic literature.",
       "p4_impact": "This degree will position me to enter high-level strategic policy advisory in Pakistan, helping modernize national intelligence and foreign policy institutions while safeguarding human rights and constitutional governance."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "Joint Consortium",
+      "theGlobal": "Joint Consortium",
+      "nationalRank": "EU Flagship Joint Masters (EMJM Full Ride)",
+      "subjectRank": "Europe's Supreme Joint Degree in International Security & Intelligence",
+      "badgeSummary": "Tier 1 • Elite Consortium • Glasgow/Trento/Charles"
     }
   },
   {
     "id": "eu-mapp-public-policy",
-    "rank": null,
+    "rank": "Tier 1 • Elite Consortium • CEU/York/Rotterdam",
     "region": "Erasmus Mundus",
     "country": "Multilateral Consortium",
     "uni": "Mundus MAPP Consortium (CEU Vienna, IBEI, ISS Rotterdam, York)",
@@ -3610,11 +3970,19 @@
       "p2_synergy": "The Mundus MAPP consortium—spanning CEU Vienna, IBEI Barcelona, ISS of Erasmus University Rotterdam, and the University of York—offers an exceptional multi-institutional training in global governance and public management.",
       "p3_research": "Under the prestigious Erasmus Mundus scholarship, my master's thesis will evaluate anti-corruption mechanisms and public sector institutional reform in developing countries, analyzing how faith-based accountability norms can strengthen institutional resilience.",
       "p4_impact": "Upon completing the program, I will return to Pakistan to contribute to public sector administrative reform and think tank research, helping design evidence-based policies that promote transparent, accountable governance."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "Joint Consortium",
+      "theGlobal": "Joint Consortium",
+      "nationalRank": "EU Flagship Joint Masters (EMJM Full Ride)",
+      "subjectRank": "Europe's Supreme Joint Degree in Global Public Policy & Governance",
+      "badgeSummary": "Tier 1 • Elite Consortium • CEU/York/Rotterdam"
     }
   },
   {
     "id": "eu-eps-european-politics",
-    "rank": null,
+    "rank": "Tier 1 • Elite Consortium • Leiden/Charles/Jagiellonian",
     "region": "Erasmus Mundus",
     "country": "Multilateral Consortium",
     "uni": "EPS Consortium (Charles Prague, Jagiellonian, Leiden, UPF)",
@@ -3669,11 +4037,19 @@
       "p2_synergy": "The European Politics and Society (EPS) consortium—comprising Charles University Prague, Jagiellonian University Krakow, Leiden University, and Pompeu Fabra Barcelona—provides a deeply immersive comparative perspective on European integration and external diplomacy.",
       "p3_research": "Funded by a full Erasmus Mundus scholarship, my master's research will focus on EU foreign policy and diplomatic engagement with South Asia and the Middle East, examining how mutual historical ties and cultural diplomacy can foster stability and trade cooperation.",
       "p4_impact": "I intend to return to Pakistan to work with foreign policy institutes and diplomatic missions, working to strengthen bilateral and multilateral relations between Pakistan and the European Union."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "Joint Consortium",
+      "theGlobal": "Joint Consortium",
+      "nationalRank": "EU Flagship Joint Masters (EMJM Full Ride)",
+      "subjectRank": "Europe's Supreme Joint Degree in European Politics & Society",
+      "badgeSummary": "Tier 1 • Elite Consortium • Leiden/Charles/Jagiellonian"
     }
   },
   {
     "id": "eu-hips-history-public-sphere",
-    "rank": null,
+    "rank": "Tier 1 • Elite Consortium • CEU/Florence/NOVA",
     "region": "Erasmus Mundus",
     "country": "Multilateral Consortium",
     "uni": "HIPS Consortium (CEU Vienna, TUFS, Florence, NOVA Lisbon)",
@@ -3728,11 +4104,19 @@
       "p2_synergy": "The HIPS consortium—combining CEU Vienna, Tokyo University of Foreign Studies, University of Florence, and NOVA University Lisbon—is the global pioneer in public history and heritage studies.",
       "p3_research": "Under full Erasmus Mundus funding, my research will analyze the public memory of Islamic civilizations in European and Asian museum collections and national textbooks, exploring how shared heritage can bridge cultural divides.",
       "p4_impact": "Returning to Pakistan, I will work with cultural preservation institutes, museums, and educational boards to develop inclusive public history initiatives that celebrate South Asia's pluralistic cultural heritage."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "Joint Consortium",
+      "theGlobal": "Joint Consortium",
+      "nationalRank": "EU Flagship Joint Masters (EMJM Full Ride)",
+      "subjectRank": "Europe's Supreme Joint Degree in History in the Public Sphere",
+      "badgeSummary": "Tier 1 • Elite Consortium • CEU/Florence/NOVA"
     }
   },
   {
     "id": "lu-unilu-philosophy",
-    "rank": null,
+    "rank": "Tier 2 • QS #381 • THE #201-250",
     "region": "Western Europe",
     "country": "Luxembourg",
     "uni": "University of Luxembourg",
@@ -3788,11 +4172,19 @@
       "p2_synergy": "The Faculty of Humanities, Education and Social Sciences (FHSE) at Campus Belval offers a distinctly multilingual, pluralistic European intellectual environment. The LMPhil's rigorous focus on Kant, Husserl, Heidegger, and contemporary continental ethics directly complements my research interests in epistemological boundaries. Furthermore, Luxembourg's unique positioning as an intellectual crossroads—exemplified by collaborative platforms like the Luxembourg School of Religion & Society (LSRS)—offers an unparalleled vantage point for examining how modern philosophical frameworks navigate religious and secular plurality.",
       "p3_research": "My proposed Master's thesis will examine the phenomenological conception of intentionality and self-awareness in European phenomenology (Brentano, Husserl, Levinas) in comparative dialogue with classical Islamic theories of self-consciousness (ilm al-huduri) pioneered by Suhrawardi and Mulla Sadra. Utilizing primary Arabic and Persian metaphysical treatises alongside contemporary European continental texts, I intend to bridge the methodological divide between Anglo-European critical thought and Islamicate philosophical psychology, contributing to an inclusive, globalized history of philosophy.",
       "p4_impact": "Armed with the rigorous philosophical training of the University of Luxembourg, my aspiration is to advance into doctoral studies and establish an academic bridge between South Asian, Middle Eastern, and European philosophical institutions. By elucidating shared rationalist and ethical foundations across civilizational boundaries, I aim to enrich university curricula in Pakistan, fostering rigorous, de-radicalized intellectual inquiry and constructive intercultural dialogue between the European and Islamic worlds."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #381",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "Grand Duchy's Sole State University (EU Capital Hub)",
+      "subjectRank": "Top 100 Worldwide in European Law & Multilingual Governance",
+      "badgeSummary": "Tier 2 • QS #381 • THE #201-250"
     }
   },
   {
     "id": "lu-unilu-europeangov",
-    "rank": null,
+    "rank": "Tier 2 • QS #381 • THE #201-250",
     "region": "Western Europe",
     "country": "Luxembourg",
     "uni": "University of Luxembourg",
@@ -3848,11 +4240,19 @@
       "p2_synergy": "Studying European Governance in Luxembourg offers an unparalleled institutional laboratory. Being situated alongside the European Court of Justice, the European Investment Bank, and the European Parliament's Secretariat provides direct, practitioner-led insights unavailable in standard lecture halls. The program's core focus on public policy design, institutional analysis, and inter-regional external relations aligns seamlessly with my PPE training, while the optional dual-degree track with Central European University (CEU Vienna) offers expanded perspectives on transnational governance.",
       "p3_research": "My research focus within the Master's program will investigate the European Union's external governance policies and bilateral diplomatic engagement with South Asia and the broader Middle East, specifically analyzing EU-CPEC regional dynamics and energy transit corridors. Leveraging my Arabic and Persian language proficiencies alongside quantitative policy methods, I aim to analyze how multi-level governance mechanisms can enhance security dialogue, trade facilitation, and sustainable economic transitions across Eurasian borderlands.",
       "p4_impact": "Following graduation, I intend to apply the insights gained from Luxembourg's governance models to international policy research, multilateral organizations, and public service. By translating European frameworks of consensus-building and regulatory integration into the context of South Asian regional cooperation, I aspire to contribute to effective policy design, institutional reform, and constructive diplomatic partnerships between Pakistan, the European Union, and multilateral development banks."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #381",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "Grand Duchy's Sole State University (EU Capital Hub)",
+      "subjectRank": "Top 100 Worldwide in European Law & Multilingual Governance",
+      "badgeSummary": "Tier 2 • QS #381 • THE #201-250"
     }
   },
   {
     "id": "lu-unilu-masses",
-    "rank": null,
+    "rank": "Tier 2 • QS #381 • THE #201-250",
     "region": "Western Europe",
     "country": "Luxembourg",
     "uni": "University of Luxembourg",
@@ -3908,11 +4308,19 @@
       "p2_synergy": "The University of Luxembourg's Department of Social Sciences, in close partnership with the Luxembourg Institute of Socio-Economic Research (LISER), represents one of Europe's most dynamic environments for studying educational policy and social inequality. The MASSES program's rigorous integration of qualitative and quantitative sociological methodologies, comparative institutional analysis, and science studies directly aligns with my research ambitions, offering a supportive, international faculty community at Campus Belval.",
       "p3_research": "My Master's research will focus on the comparative sociology of higher education and institutional inequality, analyzing how curricular structures and socio-economic backgrounds influence social mobility among youth in developing countries, specifically in South Asia. By combining institutional theory with empirical policy analysis, I seek to evaluate how reform in higher education can address disparities in female participation and marginalization in post-colonial educational ecosystems.",
       "p4_impact": "Upon completing the MASSES degree at the University of Luxembourg, I plan to pursue doctoral research and engage with public policy think tanks and international organizations (such as UNESCO and the World Bank). My objective is to contribute to data-driven educational reforms in Pakistan, designing policies that enhance equity, social mobility, and institutional integrity across diverse communities."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #381",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "Grand Duchy's Sole State University (EU Capital Hub)",
+      "subjectRank": "Top 100 Worldwide in European Law & Multilingual Governance",
+      "badgeSummary": "Tier 2 • QS #381 • THE #201-250"
     }
   },
   {
     "id": "lu-unilu-digitalhistory",
-    "rank": null,
+    "rank": "Tier 2 • QS #381 • THE #201-250",
     "region": "Western Europe",
     "country": "Luxembourg",
     "uni": "University of Luxembourg",
@@ -3968,11 +4376,19 @@
       "p2_synergy": "The Luxembourg Centre for Contemporary and Digital History (C²DH) is globally recognized for its pioneering digital historiography and participatory public history platforms. MADiPH's dual focus on digital tool development (text mining, GIS, archival databases) and public history storytelling perfectly aligns with my intellectual goals. Studying at Campus Belval allows me to learn directly from leading digital humanists while participating in trans-European digital heritage initiatives.",
       "p3_research": "My proposed research project explores the digital archiving and algorithmic text analysis of classical Islamicate and Persian historical chronicles from the 12th–17th centuries. By combining optical character recognition (OCR) for Arabic/Persian scripts, semantic text tagging, and open-access public storytelling frameworks, I intend to demonstrate how digital humanities can bridge the accessibility gap between South Asian/Middle Eastern archival heritage and global public audiences.",
       "p4_impact": "Graduating from the MADiPH program will position me at the forefront of digital cultural preservation in South Asia. My career objective is to lead digital humanities initiatives at national research institutions, archives, and universities in Pakistan, building digital repositories that safeguard vulnerable historical manuscripts while fostering public historical consciousness and cultural literacy."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #381",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "Grand Duchy's Sole State University (EU Capital Hub)",
+      "subjectRank": "Top 100 Worldwide in European Law & Multilingual Governance",
+      "badgeSummary": "Tier 2 • QS #381 • THE #201-250"
     }
   },
   {
     "id": "lu-unilu-multilearn",
-    "rank": null,
+    "rank": "Tier 2 • QS #381 • THE #201-250",
     "region": "Western Europe",
     "country": "Luxembourg",
     "uni": "University of Luxembourg",
@@ -4028,11 +4444,19 @@
       "p2_synergy": "Situated in one of the most multilingual and cosmopolitan nations in the world, the Faculty of Humanities, Education and Social Sciences (FHSE) at Campus Belval is uniquely equipped to explore intercultural dynamics. The Multi-Learn program's focus on sociolinguistic diversity, language policy in supranational institutions, and digital communication ecosystems directly complements my PPE training. Furthermore, Luxembourg's multilingual societal model provides a living laboratory to examine how diverse cultural communities negotiate shared civic spaces.",
       "p3_research": "My Master's research will examine comparative discourse strategies and language policy in interreligious and intercultural diplomacy, specifically focusing on how European and Islamicate institutions articulate shared ethical norms in multilingual contexts. Utilizing qualitative discourse analysis and sociolinguistic frameworks, I aim to evaluate communicative friction and consensus-building in multicultural governance.",
       "p4_impact": "Armed with the specialized training of the Multi-Learn program, I intend to advise international organizations, academic bodies, and civil society institutions on cross-cultural communications and educational policy. In Pakistan and the broader Global South, I aim to lead intercultural dialogue initiatives and modern language education reforms, fostering nuanced, de-polarized communication across diverse linguistic and cultural communities."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #381",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "Grand Duchy's Sole State University (EU Capital Hub)",
+      "subjectRank": "Top 100 Worldwide in European Law & Multilingual Governance",
+      "badgeSummary": "Tier 2 • QS #381 • THE #201-250"
     }
   },
   {
     "id": "de-siegen-democracies",
-    "rank": 46,
+    "rank": "Tier 4 • QS #801-1000 • THE #601-800",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Siegen",
@@ -4090,11 +4514,19 @@
       "p4_impact": "Upon completing the degree at the University of Siegen, I intend to pursue doctoral research in comparative democratization and engage with international policy research institutes, such as the German Institute for Global and Area Studies (GIGA) and democratic governance NGOs in South Asia. My objective is to contribute to data-driven, culturally grounded democratic consolidation in Pakistan, designing institutional mechanisms that reconcile traditional ethical values with resilient constitutional governance."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 4",
+      "qsGlobal": "QS #801-1000",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Public Research University (Zulassungsfrei Anchor)",
+      "subjectRank": "Interdisciplinary Media Studies & Economic Governance",
+      "badgeSummary": "Tier 4 • QS #801-1000 • THE #601-800"
+    }
   },
   {
     "id": "de-bochum-hps",
-    "rank": 47,
+    "rank": "Tier 2 • QS #375 • THE #251-300",
     "region": "Germany",
     "country": "Germany",
     "uni": "Ruhr-Universität Bochum",
@@ -4152,11 +4584,19 @@
       "p4_impact": "Graduating from RUB's HPS+Logic program will provide the analytical bedrock required for doctoral research in formal epistemology and philosophical logic. Professionally, my goal is to foster advanced pedagogical frameworks in logic, critical methodology, and scientific epistemology in Pakistani academia, establishing interdisciplinary research seminars that bridge the gap between humanistic inquiry, formal logic, and technological advancement."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #375",
+      "theGlobal": "THE #251-300",
+      "nationalRank": "Major U15 Research Hub (CERES Religious Studies Center)",
+      "subjectRank": "Top 50 Worldwide in Religious Studies & Epistemology",
+      "badgeSummary": "Tier 2 • QS #375 • THE #251-300"
+    }
   },
   {
     "id": "de-hannover-philscience",
-    "rank": 48,
+    "rank": "Tier 2 • QS #471 • THE #351-400",
     "region": "Germany",
     "country": "Germany",
     "uni": "Leibniz Universität Hannover",
@@ -4214,11 +4654,19 @@
       "p4_impact": "Following completion of the Master's program at Leibniz Universität Hannover, I plan to pursue doctoral research in the philosophy of science and public policy. My long-term goal is to serve as an academic researcher and science-policy advisor in South Asia, establishing bioethics and scientific integrity councils that foster evidence-based, ethically accountable research governance."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #471",
+      "theGlobal": "THE #351-400",
+      "nationalRank": "TU9 Leading Technical & Social Sciences University",
+      "subjectRank": "Top 150 Worldwide in Philosophy of Science & Ethics",
+      "badgeSummary": "Tier 2 • QS #471 • THE #351-400"
+    }
   },
   {
     "id": "de-leipzig-religion",
-    "rank": 49,
+    "rank": "Tier 2 • QS #400 • THE #251-300",
     "region": "Germany",
     "country": "Germany",
     "uni": "Universität Leipzig",
@@ -4276,11 +4724,19 @@
       "p4_impact": "Graduating from Universität Leipzig will equip me with the theoretical apparatus to undertake doctoral research in the sociology and history of religion. In the long term, my objective is to lead academic research centers in Pakistan, advancing nuanced, non-polemical public discourse on religion, pluralism, and secular governance, directly informing educational and constitutional policy reform."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #400",
+      "theGlobal": "THE #251-300",
+      "nationalRank": "Est. 1409 (Germany's Second-Oldest Continuous University)",
+      "subjectRank": "Top 100 Worldwide in Oriental Studies, Arabic & Global History",
+      "badgeSummary": "Tier 2 • QS #400 • THE #251-300"
+    }
   },
   {
     "id": "de-bielefeld-sociology",
-    "rank": 50,
+    "rank": "Tier 3 • QS #401-450 • THE #301-350",
     "region": "Germany",
     "country": "Germany",
     "uni": "Bielefeld University",
@@ -4338,11 +4794,19 @@
       "p4_impact": "Upon graduating from Bielefeld University, I aim to pursue doctoral research in comparative sociology and institutional theory. My professional aspiration is to work with international governance organizations (such as the UNDP and OECD) and public policy institutes in Pakistan, designing institutional frameworks that enhance systemic resilience, social inclusion, and democratic accountability."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #401-450",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "Home of Luhmann Systems Theory & Historical Sociology",
+      "subjectRank": "Top 100 Worldwide in Sociology & Intellectual History",
+      "badgeSummary": "Tier 3 • QS #401-450 • THE #301-350"
+    }
   },
   {
     "id": "de-bamberg-politics",
-    "rank": 51,
+    "rank": "Tier 3 • QS #701-750 • THE #501-600",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Bamberg",
@@ -4400,11 +4864,19 @@
       "p4_impact": "Upon completing my Master's degree at Bamberg, I plan to pursue doctoral research in comparative politics and public administration. My long-term career ambition is to contribute to institutional capacity building in South Asia, working with international governance organizations (such as the UNDP and FES) to design transparent electoral mechanisms and robust public policy frameworks."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #701-750",
+      "theGlobal": "THE #501-600",
+      "nationalRank": "Bavarian Center for Middle Eastern Studies & Sociology",
+      "subjectRank": "Top 100 in Germany for Islamic Art & Oriental Philology",
+      "badgeSummary": "Tier 3 • QS #701-750 • THE #501-600"
+    }
   },
   {
     "id": "de-bamberg-sociology",
-    "rank": 52,
+    "rank": "Tier 3 • QS #701-750 • THE #501-600",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Bamberg",
@@ -4462,11 +4934,19 @@
       "p4_impact": "Graduating from Bamberg with an M.Sc. in Sociology and Social Research will prepare me for doctoral studies in quantitative sociology and careers within international statistical and development organizations (such as the World Bank, UNESCO, and ILO). My ultimate goal is to lead data-driven social policy research in Pakistan, establishing evidence-based evaluation frameworks to combat systemic inequality."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #701-750",
+      "theGlobal": "THE #501-600",
+      "nationalRank": "Bavarian Center for Middle Eastern Studies & Sociology",
+      "subjectRank": "Top 100 in Germany for Islamic Art & Oriental Philology",
+      "badgeSummary": "Tier 3 • QS #701-750 • THE #501-600"
+    }
   },
   {
     "id": "de-hamburg-southasia",
-    "rank": 53,
+    "rank": "Tier 2 • QS #205 • THE #136",
     "region": "Germany",
     "country": "Germany",
     "uni": "Universität Hamburg",
@@ -4524,11 +5004,19 @@
       "p4_impact": "Completing this Master's degree at Universität Hamburg will provide the linguistic and archival foundation for doctoral research in South Asian history. My professional objective is to return to academia and cultural heritage institutions in Pakistan, establishing research programs in classical manuscript preservation, digital humanities, and non-sectarian historiography to preserve South Asia's pluralistic cultural heritage."
     },
     "isTop10": true,
-    "tierTag": "Tier 1: 100% English & €0 Tuition"
+    "tierTag": "Tier 1: 100% English & €0 Tuition",
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #205",
+      "theGlobal": "THE #136",
+      "nationalRank": "German Excellence University / U15",
+      "subjectRank": "Top 50 Worldwide in Asian & African Studies (Asien-Afrika-Institut)",
+      "badgeSummary": "Tier 2 • QS #205 • THE #136"
+    }
   },
   {
     "id": "de-koeln-anthropology",
-    "rank": 54,
+    "rank": "Tier 2 • QS #268 • THE #160",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Cologne",
@@ -4586,11 +5074,19 @@
       "p4_impact": "Completing the M.A. at the University of Cologne will prepare me for doctoral fieldwork in cultural anthropology and ethnographic research. My long-term goal is to work with international development agencies and cultural organizations in Pakistan, utilizing ethnographic insights to ensure that public welfare and cultural preservation policies are grounded in community realities."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #268",
+      "theGlobal": "THE #160",
+      "nationalRank": "German U15 Flagship (Est. 1388)",
+      "subjectRank": "Top 100 Worldwide in Philosophy & Global History",
+      "badgeSummary": "Tier 2 • QS #268 • THE #160"
+    }
   },
   {
     "id": "de-mainz-miepp",
-    "rank": 55,
+    "rank": "Tier 2 • QS #464 • THE #201-250",
     "region": "Germany",
     "country": "Germany",
     "uni": "Johannes Gutenberg University Mainz",
@@ -4648,11 +5144,19 @@
       "p4_impact": "Graduating from JGU Mainz with an M.Sc. in International Economics and Public Policy will prepare me for careers within international financial institutions (such as the IMF and Asian Development Bank) and economic research think tanks in Pakistan. My long-term goal is to contribute to evidence-based fiscal and social policy formulation, designing equitable economic reform programs in South Asia."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #464",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "German U15 Member (Est. 1477)",
+      "subjectRank": "Top 150 Worldwide in History & Cultural Studies",
+      "badgeSummary": "Tier 2 • QS #464 • THE #201-250"
+    }
   },
   {
     "id": "de-fuberlin-islamic",
-    "rank": 56,
+    "rank": "Tier 1 • QS #97 • THE #102",
     "region": "Germany",
     "country": "Germany",
     "uni": "Freie Universität Berlin",
@@ -4710,11 +5214,19 @@
       "p4_impact": "Graduating from Freie Universität Berlin will provide the historiographical and methodological rigor required for doctoral studies in Islamic history. My long-term goal is to lead university faculties and research centers in Pakistan, revitalizing primary source humanities scholarship and promoting nuanced, historical understandings of Islamic civilization to counter reductive narratives."
     },
     "isTop10": true,
-    "tierTag": "Tier 1: 100% English & €0 Tuition"
+    "tierTag": "Tier 1: 100% English & €0 Tuition",
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #97",
+      "theGlobal": "THE #102",
+      "nationalRank": "Berlin Excellence University (Otto-Suhr-Institut for Political Science)",
+      "subjectRank": "Top 30 Worldwide in Politics, IR & Area Studies",
+      "badgeSummary": "Tier 1 • QS #97 • THE #102"
+    }
   },
   {
     "id": "de-potsdam-mania",
-    "rank": 57,
+    "rank": "Tier 3 • QS #460 • THE #201-250",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Potsdam",
@@ -4772,11 +5284,19 @@
       "p4_impact": "Graduating from the University of Potsdam will equip me with the analytical tools to pursue doctoral research in administrative sciences or hold leadership roles within international development organizations (such as the World Bank, UNDP, and GIZ). My career mission is to contribute to structural administrative reform in Pakistan, establishing professionalized, transparent civil service systems."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #460",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "Berlin-Brandenburg Premier Public Policy Academy",
+      "subjectRank": "Top 100 Worldwide in Public Policy & Global Governance",
+      "badgeSummary": "Tier 3 • QS #460 • THE #201-250"
+    }
   },
   {
     "id": "de-darmstadt-discourse",
-    "rank": 58,
+    "rank": "Tier 2 • QS #246 • THE #251-300",
     "region": "Germany",
     "country": "Germany",
     "uni": "TU Darmstadt",
@@ -4834,11 +5354,19 @@
       "p4_impact": "Graduating from TU Darmstadt will provide me with advanced methodological skills in discourse analysis and computational humanities. My long-term goal is to pursue doctoral research and lead digital humanities research initiatives in Pakistan, establishing computational text labs to analyze socio-political discourse, media framing, and legal records."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #246",
+      "theGlobal": "THE #251-300",
+      "nationalRank": "TU9 German Leading Research Institute",
+      "subjectRank": "Top 150 Worldwide in Philosophy of Technology & STS",
+      "badgeSummary": "Tier 2 • QS #246 • THE #251-300"
+    }
   },
   {
     "id": "de-bayreuth-maias",
-    "rank": 59,
+    "rank": "Tier 3 • QS #501-550 • THE #351-400",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Bayreuth",
@@ -4896,11 +5424,19 @@
       "p4_impact": "Graduating from the University of Bayreuth will prepare me for doctoral research in comparative literature and cultural studies. My long-term goal is to lead university departments and cultural institutes in Pakistan, promoting comparative post-colonial scholarship and fostering critical humanities education."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #501-550",
+      "theGlobal": "THE #351-400",
+      "nationalRank": "Top Center of African Studies in Germany",
+      "subjectRank": "Top 50 in African Studies & International Philosophy (P&E)",
+      "badgeSummary": "Tier 3 • QS #501-550 • THE #351-400"
+    }
   },
   {
     "id": "de-viadrina-cees",
-    "rank": 60,
+    "rank": "Tier 3 • Specialist • European Border Studies Hub",
     "region": "Germany",
     "country": "Germany",
     "uni": "Europa-Universität Viadrina",
@@ -4958,11 +5494,19 @@
       "p4_impact": "Upon completing the degree at Viadrina, I plan to pursue careers within international diplomacy, regional cooperation organizations (such as the OSCE and EU development agencies), and foreign policy think tanks. My career mission is to contribute to regional dialogue and institutional integration mechanisms in South Asia."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Germany-Poland Bilateral Diplomatic Flagship",
+      "subjectRank": "Premier Specialized Center for European & Migration Studies",
+      "badgeSummary": "Tier 3 • Specialist • European Border Studies Hub"
+    }
   },
   {
     "id": "de-viadrina-media",
-    "rank": 61,
+    "rank": "Tier 3 • Specialist • European Border Studies Hub",
     "region": "Germany",
     "country": "Germany",
     "uni": "Europa-Universität Viadrina",
@@ -5020,11 +5564,19 @@
       "p4_impact": "Graduating from Viadrina with an M.A. in Language and Media Studies will prepare me for doctoral research in communication studies and roles within digital governance, media literacy NGOs, and strategic communication policy. My mission is to advance ethical media literacy and transparent digital communication standards in South Asia."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Germany-Poland Bilateral Diplomatic Flagship",
+      "subjectRank": "Premier Specialized Center for European & Migration Studies",
+      "badgeSummary": "Tier 3 • Specialist • European Border Studies Hub"
+    }
   },
   {
     "id": "de-rheinwaal-dev",
-    "rank": 62,
+    "rank": "Tier 4 • Specialist (HFW) • 100% English Anchor",
     "region": "Germany",
     "country": "Germany",
     "uni": "Hochschule Rhein-Waal",
@@ -5082,11 +5634,19 @@
       "p4_impact": "Graduating from Hochschule Rhein-Waal will equip me with the project management and policy evaluation skills to lead initiatives within international development agencies (such as GIZ, UNDP, and the Asian Development Bank). My mission is to design and implement sustainable, community-centered development projects in South Asia."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 4",
+      "qsGlobal": "QS Applied Sciences",
+      "theGlobal": "THE Applied Sciences",
+      "nationalRank": "State University of Applied Sciences (0 Tuition / English)",
+      "subjectRank": "Applied International Taxation, Law & Development",
+      "badgeSummary": "Tier 4 • Specialist (HFW) • 100% English Anchor"
+    }
   },
   {
     "id": "de-tuebingen-islamic",
-    "rank": 63,
+    "rank": "Tier 1 • QS #213 • THE #106",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Tübingen",
@@ -5144,11 +5704,19 @@
       "p4_impact": "Graduating from the University of Tübingen will provide the scholarly foundation required for doctoral research in Islamic law and intellectual history. My professional mission is to lead university faculties in Pakistan, advancing nuanced, historically grounded Islamic scholarship that fosters legal reform, religious tolerance, and academic excellence."
     },
     "isTop10": true,
-    "tierTag": "Tier 2: 100% English (€1,500 State Fee)"
+    "tierTag": "Tier 2: 100% English (€1,500 State Fee)",
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #213",
+      "theGlobal": "THE #106",
+      "nationalRank": "German Excellence University (Est. 1477)",
+      "subjectRank": "Top 20 Worldwide in Theology & Islamic Theology Center (ZITH)",
+      "badgeSummary": "Tier 1 • QS #213 • THE #106"
+    }
   },
   {
     "id": "de-heidelberg-southasia",
-    "rank": 64,
+    "rank": "Tier 1 • QS #84 • THE #47",
     "region": "Germany",
     "country": "Germany",
     "uni": "Heidelberg University",
@@ -5206,11 +5774,19 @@
       "p4_impact": "Graduating from Heidelberg University's South Asia Institute will provide the academic pedigree and methodological rigor required for doctoral studies. My professional goal is to serve as a leading policy researcher and academic in South Asia, working with international governance bodies and public policy think tanks to foster institutional resilience, democratic consolidation, and regional cooperation."
     },
     "isTop10": true,
-    "tierTag": "Tier 2: 100% English (€1,500 State Fee)"
+    "tierTag": "Tier 2: 100% English (€1,500 State Fee)",
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #84",
+      "theGlobal": "THE #47",
+      "nationalRank": "German Excellence University (Germany's Oldest, Est. 1386)",
+      "subjectRank": "Top 20 Worldwide in Philosophy & Theology (U15 Founding Member)",
+      "badgeSummary": "Tier 1 • QS #84 • THE #47"
+    }
   },
   {
     "id": "de-konstanz-philosophy",
-    "rank": 65,
+    "rank": "Tier 2 • QS #500 • THE #201-250",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Konstanz",
@@ -5268,11 +5844,19 @@
       "p4_impact": "Graduating from the University of Konstanz will provide the analytical and conceptual rigor necessary for doctoral studies in philosophy. My professional ambition is to contribute to academic philosophy in Pakistan, establishing research programs in ethics, epistemology, and critical thinking that enrich university education and public discourse."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #500",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "Excellence Initiative Cluster 'Politics of Inequality'",
+      "subjectRank": "Top 100 Worldwide in Politics, Public Administration & PPE",
+      "badgeSummary": "Tier 2 • QS #500 • THE #201-250"
+    }
   },
   {
     "id": "de-freiburg-gsp",
-    "rank": 66,
+    "rank": "Tier 1 • QS #189 • THE #128",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Freiburg",
@@ -5330,11 +5914,19 @@
       "p4_impact": "Graduating with a joint Master's degree from the Global Studies Programme will position me for doctoral research in global sociology and leadership roles within international development organizations (such as the IOM, ILO, and UN-Habitat). My career aspiration is to serve as a bridge between South Asian civil society and multilateral policy networks, advancing equitable global governance."
     },
     "isTop10": false,
-    "tierTag": "Standard Public SoSe Track (€0 Tuition)"
+    "tierTag": "Standard Public SoSe Track (€0 Tuition)",
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #189",
+      "theGlobal": "THE #128",
+      "nationalRank": "German Excellence University (Est. 1457)",
+      "subjectRank": "Top 50 Worldwide in Philosophy & History (Husserl/Heidegger Archive)",
+      "badgeSummary": "Tier 1 • QS #189 • THE #128"
+    }
   },
   {
     "id": "de-fuberlin-semitic",
-    "rank": 67,
+    "rank": "Tier 1 • QS #97 • THE #102",
     "region": "Germany",
     "country": "Germany",
     "uni": "Freie Universität Berlin",
@@ -5392,11 +5984,19 @@
       "p2_synergy": "Institutional alignment: Reference FU Berlin's world-renowned research on Middle Eastern textual traditions and Semitic minority languages (Syriac, Aramaic, Classical Arabic). Frame your 3.7 GPA and primary source training as ideal foundations for advanced comparative Semitic syntax.",
       "p3_research": "Specific research project: Propose a research inquiry analyzing semantic shifts and loanword diffusion between Classical Arabic, Syriac theological lexicons, and Persian administrative records in late antiquity and early Islamic governance.",
       "p4_impact": "Post-graduate trajectory: Detail your aspiration to pursue doctoral research at the Berlin Graduate School Muslim Cultures and Societies, contributing to cross-cultural linguistic hermeneutics and international academic archives."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #97",
+      "theGlobal": "THE #102",
+      "nationalRank": "Berlin Excellence University (Otto-Suhr-Institut for Political Science)",
+      "subjectRank": "Top 30 Worldwide in Politics, IR & Area Studies",
+      "badgeSummary": "Tier 1 • QS #97 • THE #102"
     }
   },
   {
     "id": "de-tuebingen-american",
-    "rank": 68,
+    "rank": "Tier 1 • QS #213 • THE #106",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Tübingen",
@@ -5454,11 +6054,19 @@
       "p2_synergy": "Tübingen faculty alignment: Point out Tübingen's distinguished research chair in American political culture and transatlantic relations. Demonstrate how your multicultural academic perspective (Islamic intellectual traditions + Western political philosophy) enriches departmental seminars.",
       "p3_research": "Research specialization: Propose investigating the diplomatic and cultural paradigms of American foreign policy in the Middle East and South Asia, focusing on rhetorical framing of secular democracy versus religious authority.",
       "p4_impact": "Professional objective: Outline intentions to work in international diplomacy, geopolitical policy advisory institutes, or think tanks bridging Western and Global South perspectives."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #213",
+      "theGlobal": "THE #106",
+      "nationalRank": "German Excellence University (Est. 1477)",
+      "subjectRank": "Top 20 Worldwide in Theology & Islamic Theology Center (ZITH)",
+      "badgeSummary": "Tier 1 • QS #213 • THE #106"
     }
   },
   {
     "id": "de-tuebingen-english",
-    "rank": 69,
+    "rank": "Tier 1 • QS #213 • THE #106",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Tübingen",
@@ -5516,11 +6124,19 @@
       "p2_synergy": "Departmental expertise: Cite Tübingen's pioneering research in Anglophone world literatures, cultural ecology, and literary theory. Note how your multi-linguistic background brings unique comparative depth to postcolonial textual analysis.",
       "p3_research": "Proposed investigation: Outline research exploring representations of religious alterity and secularity in contemporary South Asian and Anglophone fiction, examining how narrative form mediates identity.",
       "p4_impact": "Career horizon: Aspire to doctoral research in comparative literature, academic publishing, and international cultural institutions."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #213",
+      "theGlobal": "THE #106",
+      "nationalRank": "German Excellence University (Est. 1477)",
+      "subjectRank": "Top 20 Worldwide in Theology & Islamic Theology Center (ZITH)",
+      "badgeSummary": "Tier 1 • QS #213 • THE #106"
     }
   },
   {
     "id": "de-rwth-empiricalenglish",
-    "rank": 70,
+    "rank": "Tier 2 • QS #99 • THE #90",
     "region": "Germany",
     "country": "Germany",
     "uni": "RWTH Aachen University",
@@ -5578,11 +6194,19 @@
       "p2_synergy": "RWTH tech-humanities synergy: Emphasize RWTH Aachen's pioneering leadership in blending quantitative data methods with linguistic inquiry. Frame your background in formal philosophical logic (from PPE) as preparation for cognitive modeling.",
       "p3_research": "Methodological project: Propose analyzing religious and political discourse in digital media using empirical corpus linguistics, examining sentiment polarity and cognitive framing in international debates.",
       "p4_impact": "Career objective: Aim for roles in digital humanities data science, cognitive discourse research, or communication analytics in international governance organizations."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #99",
+      "theGlobal": "THE #90",
+      "nationalRank": "German Excellence University / TU9",
+      "subjectRank": "Top 100 Worldwide in Governance & Technology Ethics",
+      "badgeSummary": "Tier 2 • QS #99 • THE #90"
     }
   },
   {
     "id": "de-bonn-english",
-    "rank": 71,
+    "rank": "Tier 1 • QS #91 • THE #91",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Bonn",
@@ -5640,11 +6264,19 @@
       "p2_synergy": "Bonn institutional prestige: Point out the University of Bonn's status as a German University of Excellence and its vibrant Department of English, American, and Celtic Studies (IAAK).",
       "p3_research": "Scholarly focus: Propose research exploring the intersection of religious symbolism and political resistance in postcolonial Anglophone writers from the Middle East and South Asia.",
       "p4_impact": "Future career: Target positions in cross-cultural academic exchange, university research, and international cultural foundations."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #91",
+      "theGlobal": "THE #91",
+      "nationalRank": "German Excellence University (6 Clusters of Excellence)",
+      "subjectRank": "Top 50 Worldwide in Economics, Philosophy & Asian Studies",
+      "badgeSummary": "Tier 1 • QS #91 • THE #91"
     }
   },
   {
     "id": "de-heidelberg-english",
-    "rank": 72,
+    "rank": "Tier 1 • QS #84 • THE #47",
     "region": "Germany",
     "country": "Germany",
     "uni": "Heidelberg University",
@@ -5701,11 +6333,19 @@
       "p2_synergy": "Coursework synergy: Highlight your dual academic background in analytical political thought (PPE) and classical textual interpretation (Islamic Studies), positioning you to contribute distinctive comparative perspectives.",
       "p3_research": "Track focus: Detail your interest in the Literary Studies track, proposing research on narrative representations of justice, authority, and ethical dilemmas in early modern and contemporary Anglophone writing.",
       "p4_impact": "Scholarly trajectory: Outline plans for doctoral research, academic publishing, and international higher education instruction."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #84",
+      "theGlobal": "THE #47",
+      "nationalRank": "German Excellence University (Germany's Oldest, Est. 1386)",
+      "subjectRank": "Top 20 Worldwide in Philosophy & Theology (U15 Founding Member)",
+      "badgeSummary": "Tier 1 • QS #84 • THE #47"
     }
   },
   {
     "id": "de-heidelberg-politics",
-    "rank": 73,
+    "rank": "Tier 1 • QS #84 • THE #47",
     "region": "Germany",
     "country": "Germany",
     "uni": "Heidelberg University",
@@ -5762,11 +6402,19 @@
       "p2_synergy": "Heidelberg IPW synergy: Highlight Heidelberg's world-renowned Institute for Political Science (IPW) and its focus on comparative political institutions and conflict dynamics.",
       "p3_research": "Research question: Propose investigating the comparative governance structures of hybrid regimes, focusing on the dynamic between religious constitutional frameworks and secular democratic institutions.",
       "p4_impact": "Career path: Aim for high-impact advisory positions in international diplomacy, political risk consulting, and multilateral governance bodies (UN, EU-Asia partnerships)."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #84",
+      "theGlobal": "THE #47",
+      "nationalRank": "German Excellence University (Germany's Oldest, Est. 1386)",
+      "subjectRank": "Top 20 Worldwide in Philosophy & Theology (U15 Founding Member)",
+      "badgeSummary": "Tier 1 • QS #84 • THE #47"
     }
   },
   {
     "id": "de-tuebingen-philosophy",
-    "rank": 74,
+    "rank": "Tier 1 • QS #213 • THE #106",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Tübingen",
@@ -5822,11 +6470,19 @@
       "p2_synergy": "Tübingen's historic legacy: Reference Tübingen's foundational role in European intellectual history, emphasizing your readiness to engage in rigorous philosophical seminars.",
       "p3_research": "Research specialization: Propose investigating the epistemological boundaries of rationalism and revelation in comparative medieval philosophy and modern ethics.",
       "p4_impact": "Academic trajectory: Prepare for doctoral research in comparative philosophy and academic teaching."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #213",
+      "theGlobal": "THE #106",
+      "nationalRank": "German Excellence University (Est. 1477)",
+      "subjectRank": "Top 20 Worldwide in Theology & Islamic Theology Center (ZITH)",
+      "badgeSummary": "Tier 1 • QS #213 • THE #106"
     }
   },
   {
     "id": "de-hamburg-buddhist",
-    "rank": 75,
+    "rank": "Tier 2 • QS #205 • THE #136",
     "region": "Germany",
     "country": "Germany",
     "uni": "Universität Hamburg",
@@ -5883,11 +6539,19 @@
       "p2_synergy": "Hamburg's Numata Center synergy: Cite Hamburg's world-leading Numata Center for Buddhist Studies and its faculty expertise in Indian and Tibetan philology.",
       "p3_research": "Textual inquiry: Propose studying cross-cultural philosophical exchanges along historical trade routes, examining conceptual parallels in ethical theory and textual transmission.",
       "p4_impact": "Academic contribution: Aspire to contribute to cross-religious philological dialogue, manuscript preservation, and international academic teaching."
+    },
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #205",
+      "theGlobal": "THE #136",
+      "nationalRank": "German Excellence University / U15",
+      "subjectRank": "Top 50 Worldwide in Asian & African Studies (Asien-Afrika-Institut)",
+      "badgeSummary": "Tier 2 • QS #205 • THE #136"
     }
   },
   {
     "id": "de-huberlin-islamictheol",
-    "rank": 76,
+    "rank": "Tier 1 • QS #126 • THE #87",
     "region": "Germany",
     "country": "Germany",
     "uni": "Humboldt-Universität zu Berlin",
@@ -5945,11 +6609,19 @@
       "p2_synergy": "BIT institutional alignment: Reference the Berliner Institut für Islamische Theologie (BIT) and its pioneering interdisciplinary research linking traditional Kalam with contemporary European ethical debates.",
       "p3_research": "Theological research project: Propose examining contextual hermeneutical methodologies in Islamic jurisprudence (*Usul al-Fiqh*) and their application to modern bioethics and pluralistic social governance.",
       "p4_impact": "Institutional contribution: Outline ambitions to contribute to academic Islamic theology in Europe, interfaith scholarship, and doctoral research funded by Avicenna Studienwerk."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #126",
+      "theGlobal": "THE #87",
+      "nationalRank": "Berlin Excellence University (Mother of Modern Research Universities)",
+      "subjectRank": "Top 25 Worldwide in Arts & Humanities & Philosophy",
+      "badgeSummary": "Tier 1 • QS #126 • THE #87"
     }
   },
   {
     "id": "de-fuberlin-arabic",
-    "rank": 77,
+    "rank": "Tier 1 • QS #97 • THE #102",
     "region": "Germany",
     "country": "Germany",
     "uni": "Freie Universität Berlin",
@@ -6007,11 +6679,19 @@
       "p2_synergy": "FU Berlin Arabistik prestige: Cite FU Berlin's renowned scholars in classical Arabic poetry, prose, and philosophy, emphasizing how your dual Arabic-Persian literacy enriches comparative Near Eastern textual studies.",
       "p3_research": "Textual research project: Propose analyzing the transmission and translation of philosophical and administrative texts between Classical Arabic and Persian in Abbasid intellectual circles.",
       "p4_impact": "Scholarly horizon: Aim for doctoral research, academic curation of Middle Eastern manuscripts, and translation scholarship."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #97",
+      "theGlobal": "THE #102",
+      "nationalRank": "Berlin Excellence University (Otto-Suhr-Institut for Political Science)",
+      "subjectRank": "Top 30 Worldwide in Politics, IR & Area Studies",
+      "badgeSummary": "Tier 1 • QS #97 • THE #102"
     }
   },
   {
     "id": "de-fuberlin-history",
-    "rank": 78,
+    "rank": "Tier 1 • QS #97 • THE #102",
     "region": "Germany",
     "country": "Germany",
     "uni": "Freie Universität Berlin",
@@ -6069,11 +6749,19 @@
       "p2_synergy": "Friedrich-Meinecke-Institut synergy: Cite the esteemed Friedrich-Meinecke-Institut at FU Berlin and its pioneering approaches to global intellectual history and cross-cultural encounters.",
       "p3_research": "Research specialization: Propose investigating diplomatic and cultural exchanges between the Islamic world and early modern European states, utilizing multi-archival Arabic and European records.",
       "p4_impact": "Career path: Aspire to doctoral historical research, archival curation, and international historical consultancy."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #97",
+      "theGlobal": "THE #102",
+      "nationalRank": "Berlin Excellence University (Otto-Suhr-Institut for Political Science)",
+      "subjectRank": "Top 30 Worldwide in Politics, IR & Area Studies",
+      "badgeSummary": "Tier 1 • QS #97 • THE #102"
     }
   },
   {
     "id": "de-bonn-philosophy",
-    "rank": 79,
+    "rank": "Tier 1 • QS #91 • THE #91",
     "region": "Germany",
     "country": "Germany",
     "uni": "University of Bonn",
@@ -6130,11 +6818,19 @@
       "p2_synergy": "Bonn's philosophical prestige: Reference Bonn's world-leading faculty in Kantian epistemology, practical philosophy, and international ethics (Center for Science and Thought).",
       "p3_research": "Scholarly focus: Propose research examining the ethical foundations of justice and moral obligation, comparing Kantian categorical ethics with virtue ethics and classical scholastic theories.",
       "p4_impact": "Academic vision: Prepare for doctoral studies in theoretical ethics and international philosophical consultancy."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #91",
+      "theGlobal": "THE #91",
+      "nationalRank": "German Excellence University (6 Clusters of Excellence)",
+      "subjectRank": "Top 50 Worldwide in Economics, Philosophy & Asian Studies",
+      "badgeSummary": "Tier 1 • QS #91 • THE #91"
     }
   },
   {
     "id": "de-tum-datasociety",
-    "rank": 80,
+    "rank": "Tier 1 • QS #28 • THE #30",
     "region": "Germany",
     "country": "Germany",
     "uni": "Technical University of Munich (TUM)",
@@ -6192,11 +6888,19 @@
       "p2_synergy": "TUM School of Social Sciences & Technology: Reference TUM's leadership in integrating technological innovation with political philosophy and sociological inquiry.",
       "p3_research": "Research specialization: Propose investigating the ethical regulation of algorithmic surveillance and data privacy in developing nations, analyzing how policy frameworks balance security and rights.",
       "p4_impact": "Career path: Target senior advisory roles in technology governance, AI ethics auditing, and digital policy regulation in international organizations."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #28",
+      "theGlobal": "THE #30",
+      "nationalRank": "Germany #1 Overall (Excellence University)",
+      "subjectRank": "Top 30 Worldwide in Public Policy & Technology Governance",
+      "badgeSummary": "Tier 1 • QS #28 • THE #30"
     }
   },
   {
     "id": "de-fuberlin-ottoman",
-    "rank": 81,
+    "rank": "Tier 1 • QS #97 • THE #102",
     "region": "Germany",
     "country": "Germany",
     "uni": "Freie Universität Berlin",
@@ -6254,11 +6958,19 @@
       "p2_synergy": "FU Berlin Ottoman studies prestige: Reference FU Berlin's distinguished faculty in Ottoman archival research and cultural transfer across the Mediterranean world.",
       "p3_research": "Archival inquiry: Propose studying trilingual diplomatic correspondence (Arabic, Persian, Ottoman Turkish) in early modern courtly governance and cross-border treaties.",
       "p4_impact": "Scholarly horizon: Target doctoral research in Ottoman archival history, academic curation, and international historical scholarship."
+    },
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #97",
+      "theGlobal": "THE #102",
+      "nationalRank": "Berlin Excellence University (Otto-Suhr-Institut for Political Science)",
+      "subjectRank": "Top 30 Worldwide in Politics, IR & Area Studies",
+      "badgeSummary": "Tier 1 • QS #97 • THE #102"
     }
   },
   {
     "id": "hu-elte-philosophy-ma",
-    "rank": 1,
+    "rank": "Tier 2 • QS #564 • THE #601-800",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Eötvös Loránd University (ELTE Budapest)",
@@ -6340,11 +7052,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #564",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Hungary #1 State University (Est. 1635)",
+      "subjectRank": "Top 150 Worldwide in Philosophy, History & Oriental Studies",
+      "badgeSummary": "Tier 2 • QS #564 • THE #601-800"
+    }
   },
   {
     "id": "hu-corvinus-international-relations-ma",
-    "rank": 2,
+    "rank": "Tier 2 • Hungary #1 Econ & IR • Top CEE Hub",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Corvinus University of Budapest",
@@ -6426,11 +7146,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #1001-1200",
+      "theGlobal": "THE #1001-1200",
+      "nationalRank": "Hungary's Supreme Academy for Economics, IR & Public Policy",
+      "subjectRank": "Top Central European Academy for International Relations & Diplomacy",
+      "badgeSummary": "Tier 2 • Hungary #1 Econ & IR • Top CEE Hub"
+    }
   },
   {
     "id": "hu-elte-logic-philosophy-science-ma",
-    "rank": 3,
+    "rank": "Tier 2 • QS #564 • THE #601-800",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Eötvös Loránd University (ELTE Budapest)",
@@ -6512,11 +7240,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #564",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Hungary #1 State University (Est. 1635)",
+      "subjectRank": "Top 150 Worldwide in Philosophy, History & Oriental Studies",
+      "badgeSummary": "Tier 2 • QS #564 • THE #601-800"
+    }
   },
   {
     "id": "hu-corvinus-public-policy-ma",
-    "rank": 4,
+    "rank": "Tier 2 • Hungary #1 Econ & IR • Top CEE Hub",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Corvinus University of Budapest",
@@ -6598,11 +7334,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #1001-1200",
+      "theGlobal": "THE #1001-1200",
+      "nationalRank": "Hungary's Supreme Academy for Economics, IR & Public Policy",
+      "subjectRank": "Top Central European Academy for International Relations & Diplomacy",
+      "badgeSummary": "Tier 2 • Hungary #1 Econ & IR • Top CEE Hub"
+    }
   },
   {
     "id": "hu-ludovika-international-relations-ma",
-    "rank": 5,
+    "rank": "Tier 3 • Specialist • Hungarian Civil Service Academy",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Ludovika University of Public Service (LUPS / NKE)",
@@ -6684,11 +7428,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE Specialist",
+      "nationalRank": "Hungary's National Academy for Civil Service, Diplomacy & Defense",
+      "subjectRank": "National Center for Strategic Security Studies & Public Governance",
+      "badgeSummary": "Tier 3 • Specialist • Hungarian Civil Service Academy"
+    }
   },
   {
     "id": "hu-ludovika-mipus-ma",
-    "rank": 6,
+    "rank": "Tier 3 • Specialist • Hungarian Civil Service Academy",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Ludovika University of Public Service (LUPS / NKE)",
@@ -6770,11 +7522,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE Specialist",
+      "nationalRank": "Hungary's National Academy for Civil Service, Diplomacy & Defense",
+      "subjectRank": "National Center for Strategic Security Studies & Public Governance",
+      "badgeSummary": "Tier 3 • Specialist • Hungarian Civil Service Academy"
+    }
   },
   {
     "id": "hu-elte-cultural-heritage-ma",
-    "rank": 7,
+    "rank": "Tier 2 • QS #564 • THE #601-800",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Eötvös Loránd University (ELTE Budapest)",
@@ -6856,11 +7616,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #564",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Hungary #1 State University (Est. 1635)",
+      "subjectRank": "Top 150 Worldwide in Philosophy, History & Oriental Studies",
+      "badgeSummary": "Tier 2 • QS #564 • THE #601-800"
+    }
   },
   {
     "id": "hu-elte-social-international-relations-ma",
-    "rank": 8,
+    "rank": "Tier 2 • QS #564 • THE #601-800",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Eötvös Loránd University (ELTE Budapest)",
@@ -6942,11 +7710,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #564",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Hungary #1 State University (Est. 1635)",
+      "subjectRank": "Top 150 Worldwide in Philosophy, History & Oriental Studies",
+      "badgeSummary": "Tier 2 • QS #564 • THE #601-800"
+    }
   },
   {
     "id": "hu-elte-ethnic-minority-policy-ma",
-    "rank": 9,
+    "rank": "Tier 2 • QS #564 • THE #601-800",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Eötvös Loránd University (ELTE Budapest)",
@@ -7028,11 +7804,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #564",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Hungary #1 State University (Est. 1635)",
+      "subjectRank": "Top 150 Worldwide in Philosophy, History & Oriental Studies",
+      "badgeSummary": "Tier 2 • QS #564 • THE #601-800"
+    }
   },
   {
     "id": "hu-elte-human-rights-ma",
-    "rank": 10,
+    "rank": "Tier 2 • QS #564 • THE #601-800",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Eötvös Loránd University (ELTE Budapest)",
@@ -7114,11 +7898,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #564",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Hungary #1 State University (Est. 1635)",
+      "subjectRank": "Top 150 Worldwide in Philosophy, History & Oriental Studies",
+      "badgeSummary": "Tier 2 • QS #564 • THE #601-800"
+    }
   },
   {
     "id": "hu-szeged-international-relations-ma",
-    "rank": 11,
+    "rank": "Tier 3 • QS #570 • THE #801-1000",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "University of Szeged (SZTE)",
@@ -7200,11 +7992,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #570",
+      "theGlobal": "THE #801-1000",
+      "nationalRank": "Hungary Top 2 Research Center (Nobel Laureate Albert Szent-Györgyi)",
+      "subjectRank": "Top 200 in Central Europe for Humanities & Law",
+      "badgeSummary": "Tier 3 • QS #570 • THE #801-1000"
+    }
   },
   {
     "id": "hu-szeged-philosophy-ma",
-    "rank": 12,
+    "rank": "Tier 3 • QS #570 • THE #801-1000",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "University of Szeged (SZTE)",
@@ -7286,11 +8086,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #570",
+      "theGlobal": "THE #801-1000",
+      "nationalRank": "Hungary Top 2 Research Center (Nobel Laureate Albert Szent-Györgyi)",
+      "subjectRank": "Top 200 in Central Europe for Humanities & Law",
+      "badgeSummary": "Tier 3 • QS #570 • THE #801-1000"
+    }
   },
   {
     "id": "hu-szeged-study-of-religion-ma",
-    "rank": 13,
+    "rank": "Tier 3 • QS #570 • THE #801-1000",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "University of Szeged (SZTE)",
@@ -7372,11 +8180,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #570",
+      "theGlobal": "THE #801-1000",
+      "nationalRank": "Hungary Top 2 Research Center (Nobel Laureate Albert Szent-Györgyi)",
+      "subjectRank": "Top 200 in Central Europe for Humanities & Law",
+      "badgeSummary": "Tier 3 • QS #570 • THE #801-1000"
+    }
   },
   {
     "id": "hu-debrecen-international-relations-ma",
-    "rank": 14,
+    "rank": "Tier 3 • QS #671-680 • THE #801-1000",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "University of Debrecen (DE)",
@@ -7458,11 +8274,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #671-680",
+      "theGlobal": "THE #801-1000",
+      "nationalRank": "Hungary's Largest Regional University (Est. 1538)",
+      "subjectRank": "Top 250 in European Studies & Public Health Governance",
+      "badgeSummary": "Tier 3 • QS #671-680 • THE #801-1000"
+    }
   },
   {
     "id": "hu-debrecen-intercultural-studies-ma",
-    "rank": 15,
+    "rank": "Tier 3 • QS #671-680 • THE #801-1000",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "University of Debrecen (DE)",
@@ -7544,11 +8368,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #671-680",
+      "theGlobal": "THE #801-1000",
+      "nationalRank": "Hungary's Largest Regional University (Est. 1538)",
+      "subjectRank": "Top 250 in European Studies & Public Health Governance",
+      "badgeSummary": "Tier 3 • QS #671-680 • THE #801-1000"
+    }
   },
   {
     "id": "hu-pecs-international-relations-ma",
-    "rank": 16,
+    "rank": "Tier 3 • QS #771-780 • THE #1001-1200",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "University of Pécs (PTE)",
@@ -7630,11 +8462,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #771-780",
+      "theGlobal": "THE #1001-1200",
+      "nationalRank": "Hungary's Oldest University (Est. 1367 by King Louis the Great)",
+      "subjectRank": "Top 300 in Regional Development & Intercultural Studies",
+      "badgeSummary": "Tier 3 • QS #771-780 • THE #1001-1200"
+    }
   },
   {
     "id": "hu-pecs-social-inclusion-policy-ma",
-    "rank": 17,
+    "rank": "Tier 3 • QS #771-780 • THE #1001-1200",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "University of Pécs (PTE)",
@@ -7716,11 +8556,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #771-780",
+      "theGlobal": "THE #1001-1200",
+      "nationalRank": "Hungary's Oldest University (Est. 1367 by King Louis the Great)",
+      "subjectRank": "Top 300 in Regional Development & Intercultural Studies",
+      "badgeSummary": "Tier 3 • QS #771-780 • THE #1001-1200"
+    }
   },
   {
     "id": "hu-ppke-international-studies-ma",
-    "rank": 18,
+    "rank": "Tier 3 • QS #1001-1200 • Top Catholic Academy",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Pázmány Péter Catholic University (PPKE Budapest)",
@@ -7802,11 +8650,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #1001-1200",
+      "theGlobal": "THE #1001-1200",
+      "nationalRank": "Historic Catholic University (Est. 1635)",
+      "subjectRank": "Top National Center for Classical Philology, Arabic & Islamic Studies",
+      "badgeSummary": "Tier 3 • QS #1001-1200 • Top Catholic Academy"
+    }
   },
   {
     "id": "hu-kre-central-european-religious-culture-ma",
-    "rank": 19,
+    "rank": "Tier 4 • Specialist • 100% Full-Ride Anchor",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Károli Gáspár University (KRE Budapest)",
@@ -7888,11 +8744,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 4",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE Specialist",
+      "nationalRank": "Historic Reformed Church University (Est. 1855)",
+      "subjectRank": "Top Center for Central European Studies & Religious Philology",
+      "badgeSummary": "Tier 4 • Specialist • 100% Full-Ride Anchor"
+    }
   },
   {
     "id": "hu-corvinus-international-economy-business-ma",
-    "rank": 20,
+    "rank": "Tier 2 • Hungary #1 Econ & IR • Top CEE Hub",
     "region": "Central Europe",
     "country": "Hungary",
     "uni": "Corvinus University of Budapest",
@@ -7974,11 +8838,19 @@
         "stacking": "100% stackable with Stipendium Hungaricum monthly stipend and dorm benefits",
         "criteria": "Valid Hungarian D-visa / Residence permit for study purposes"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #1001-1200",
+      "theGlobal": "THE #1001-1200",
+      "nationalRank": "Hungary's Supreme Academy for Economics, IR & Public Policy",
+      "subjectRank": "Top Central European Academy for International Relations & Diplomacy",
+      "badgeSummary": "Tier 2 • Hungary #1 Econ & IR • Top CEE Hub"
+    }
   },
   {
     "id": "at-ceu-philosophy-ma-2yr",
-    "rank": 21,
+    "rank": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "Central European University (Vienna)",
@@ -8060,11 +8932,19 @@
         "stacking": "Stackable with CEU Master's Excellence cash stipend up to Austrian social insurance limits",
         "criteria": "Academic standing + Faculty recommendation"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "US/Austrian Dual Accredited Elite Graduate School",
+      "subjectRank": "🏆 #33 World in Politics & International Studies | #30 in Philosophy",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil"
+    }
   },
   {
     "id": "at-ceu-political-science-ma-2yr",
-    "rank": 22,
+    "rank": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "Central European University (Vienna)",
@@ -8146,11 +9026,19 @@
         "stacking": "Stackable with CEU Master's Excellence cash stipend up to Austrian social insurance limits",
         "criteria": "Academic standing + Faculty recommendation"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "US/Austrian Dual Accredited Elite Graduate School",
+      "subjectRank": "🏆 #33 World in Politics & International Studies | #30 in Philosophy",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil"
+    }
   },
   {
     "id": "at-ceu-international-relations-ma-2yr",
-    "rank": 23,
+    "rank": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "Central European University (Vienna)",
@@ -8232,11 +9120,19 @@
         "stacking": "Stackable with CEU Master's Excellence cash stipend up to Austrian social insurance limits",
         "criteria": "Academic standing + Faculty recommendation"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "US/Austrian Dual Accredited Elite Graduate School",
+      "subjectRank": "🏆 #33 World in Politics & International Studies | #30 in Philosophy",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil"
+    }
   },
   {
     "id": "at-ceu-public-policy-mpa-2yr",
-    "rank": 24,
+    "rank": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "Central European University (Vienna)",
@@ -8318,11 +9214,19 @@
         "stacking": "Stackable with CEU Master's Excellence cash stipend up to Austrian social insurance limits",
         "criteria": "Academic standing + Faculty recommendation"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "US/Austrian Dual Accredited Elite Graduate School",
+      "subjectRank": "🏆 #33 World in Politics & International Studies | #30 in Philosophy",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil"
+    }
   },
   {
     "id": "at-ceu-historical-studies-ma-2yr",
-    "rank": 25,
+    "rank": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "Central European University (Vienna)",
@@ -8404,11 +9308,19 @@
         "stacking": "Stackable with CEU Master's Excellence cash stipend up to Austrian social insurance limits",
         "criteria": "Academic standing + Faculty recommendation"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "US/Austrian Dual Accredited Elite Graduate School",
+      "subjectRank": "🏆 #33 World in Politics & International Studies | #30 in Philosophy",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil"
+    }
   },
   {
     "id": "at-ceu-nationalism-studies-ma-2yr",
-    "rank": 26,
+    "rank": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "Central European University (Vienna)",
@@ -8490,11 +9402,19 @@
         "stacking": "Stackable with CEU Master's Excellence cash stipend up to Austrian social insurance limits",
         "criteria": "Academic standing + Faculty recommendation"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #301-350",
+      "nationalRank": "US/Austrian Dual Accredited Elite Graduate School",
+      "subjectRank": "🏆 #33 World in Politics & International Studies | #30 in Philosophy",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 Top 35 World Politics & Phil"
+    }
   },
   {
     "id": "at-uni-graz-pelp-ma",
-    "rank": 27,
+    "rank": "Tier 2 • QS #651-700 • THE #501-600",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Graz (Karl-Franzens-Universität)",
@@ -8576,11 +9496,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #651-700",
+      "theGlobal": "THE #501-600",
+      "nationalRank": "Est. 1585 (Austria's Second-Oldest University)",
+      "subjectRank": "Top 100 in Philosophy & Southeast European Studies",
+      "badgeSummary": "Tier 2 • QS #651-700 • THE #501-600"
+    }
   },
   {
     "id": "at-uni-graz-global-studies-ma",
-    "rank": 28,
+    "rank": "Tier 2 • QS #651-700 • THE #501-600",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Graz (Karl-Franzens-Universität)",
@@ -8662,11 +9590,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #651-700",
+      "theGlobal": "THE #501-600",
+      "nationalRank": "Est. 1585 (Austria's Second-Oldest University)",
+      "subjectRank": "Top 100 in Philosophy & Southeast European Studies",
+      "badgeSummary": "Tier 2 • QS #651-700 • THE #501-600"
+    }
   },
   {
     "id": "at-uni-graz-southeast-european-studies-ma",
-    "rank": 29,
+    "rank": "Tier 2 • QS #651-700 • THE #501-600",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Graz (Karl-Franzens-Universität)",
@@ -8748,11 +9684,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #651-700",
+      "theGlobal": "THE #501-600",
+      "nationalRank": "Est. 1585 (Austria's Second-Oldest University)",
+      "subjectRank": "Top 100 in Philosophy & Southeast European Studies",
+      "badgeSummary": "Tier 2 • QS #651-700 • THE #501-600"
+    }
   },
   {
     "id": "at-uni-wien-sts-ma",
-    "rank": 30,
+    "rank": "Tier 1 • QS #130 • THE #119",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Vienna (Universität Wien)",
@@ -8834,11 +9778,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #130",
+      "theGlobal": "THE #119",
+      "nationalRank": "Austria #1 (Alma Mater Rudolphina, Est. 1365)",
+      "subjectRank": "Top 30 Worldwide in Arts, Humanities & Philosophy",
+      "badgeSummary": "Tier 1 • QS #130 • THE #119"
+    }
   },
   {
     "id": "at-uni-wien-pe-ma",
-    "rank": 31,
+    "rank": "Tier 1 • QS #130 • THE #119",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Vienna (Universität Wien)",
@@ -8920,11 +9872,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #130",
+      "theGlobal": "THE #119",
+      "nationalRank": "Austria #1 (Alma Mater Rudolphina, Est. 1365)",
+      "subjectRank": "Top 30 Worldwide in Arts, Humanities & Philosophy",
+      "badgeSummary": "Tier 1 • QS #130 • THE #119"
+    }
   },
   {
     "id": "at-uni-wien-global-history-ma",
-    "rank": 32,
+    "rank": "Tier 1 • QS #130 • THE #119",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Vienna (Universität Wien)",
@@ -9006,11 +9966,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #130",
+      "theGlobal": "THE #119",
+      "nationalRank": "Austria #1 (Alma Mater Rudolphina, Est. 1365)",
+      "subjectRank": "Top 30 Worldwide in Arts, Humanities & Philosophy",
+      "badgeSummary": "Tier 1 • QS #130 • THE #119"
+    }
   },
   {
     "id": "at-uni-wien-creole-ma",
-    "rank": 33,
+    "rank": "Tier 1 • QS #130 • THE #119",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Vienna (Universität Wien)",
@@ -9092,11 +10060,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #130",
+      "theGlobal": "THE #119",
+      "nationalRank": "Austria #1 (Alma Mater Rudolphina, Est. 1365)",
+      "subjectRank": "Top 30 Worldwide in Arts, Humanities & Philosophy",
+      "badgeSummary": "Tier 1 • QS #130 • THE #119"
+    }
   },
   {
     "id": "at-uni-wien-epistemology-mind-ma",
-    "rank": 34,
+    "rank": "Tier 1 • QS #130 • THE #119",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Vienna (Universität Wien)",
@@ -9178,11 +10154,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #130",
+      "theGlobal": "THE #119",
+      "nationalRank": "Austria #1 (Alma Mater Rudolphina, Est. 1365)",
+      "subjectRank": "Top 30 Worldwide in Arts, Humanities & Philosophy",
+      "badgeSummary": "Tier 1 • QS #130 • THE #119"
+    }
   },
   {
     "id": "at-uni-wien-middle-eastern-studies-ma",
-    "rank": 35,
+    "rank": "Tier 1 • QS #130 • THE #119",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Vienna (Universität Wien)",
@@ -9264,11 +10248,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #130",
+      "theGlobal": "THE #119",
+      "nationalRank": "Austria #1 (Alma Mater Rudolphina, Est. 1365)",
+      "subjectRank": "Top 30 Worldwide in Arts, Humanities & Philosophy",
+      "badgeSummary": "Tier 1 • QS #130 • THE #119"
+    }
   },
   {
     "id": "at-wu-vienna-seep-msc",
-    "rank": 36,
+    "rank": "Tier 2 • Specialist • Top 40 World Business & Law",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "Vienna University of Economics and Business (WU Vienna)",
@@ -9350,11 +10342,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE #201-250",
+      "nationalRank": "Europe's Largest Business & Economic Policy Academy",
+      "subjectRank": "Top 40 Worldwide in Economics, Business Law & Tax Policy",
+      "badgeSummary": "Tier 2 • Specialist • Top 40 World Business & Law"
+    }
   },
   {
     "id": "at-uni-innsbruck-peace-conflict-ma",
-    "rank": 37,
+    "rank": "Tier 2 • QS #362 • THE #351-400",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Innsbruck (Leopold-Franzens-Universität)",
@@ -9436,11 +10436,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #362",
+      "theGlobal": "THE #351-400",
+      "nationalRank": "Tyrolean State University (Est. 1669)",
+      "subjectRank": "Top 100 Worldwide in Peace & Conflict Studies & Theology",
+      "badgeSummary": "Tier 2 • QS #362 • THE #351-400"
+    }
   },
   {
     "id": "at-plus-salzburg-european-governance-ma",
-    "rank": 38,
+    "rank": "Tier 3 • QS #681-700 • THE #601-800",
     "region": "Central Europe",
     "country": "Austria",
     "uni": "University of Salzburg (Paris Lodron Universität Salzburg)",
@@ -9522,11 +10530,19 @@
         "stacking": "Directly offsets living expenses in Vienna, Graz, Linz, or Salzburg",
         "criteria": "Valid Austrian student residence permit + maintaining 16 ECTS academic progress per academic year"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 3",
+      "qsGlobal": "QS #681-700",
+      "theGlobal": "THE #601-800",
+      "nationalRank": "Est. 1622 (Salzburg Centre of European Union Studies)",
+      "subjectRank": "Top 150 Worldwide in European Law & Political Science",
+      "badgeSummary": "Tier 3 • QS #681-700 • THE #601-800"
+    }
   },
   {
     "id": "ch-iheid-international-development-mint",
-    "rank": 39,
+    "rank": "Tier 1 • Specialist • 🏆 Top 30 World Int'l Affairs",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "Geneva Graduate Institute (IHEID)",
@@ -9608,11 +10624,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE Specialist",
+      "nationalRank": "World's First Graduate School of International Relations (Est. 1927)",
+      "subjectRank": "🏆 Top 30 Worldwide in International Studies & Development Policy",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 Top 30 World Int'l Affairs"
+    }
   },
   {
     "id": "ch-iheid-international-relations-polsci-ma",
-    "rank": 40,
+    "rank": "Tier 1 • Specialist • 🏆 Top 30 World Int'l Affairs",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "Geneva Graduate Institute (IHEID)",
@@ -9694,11 +10718,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS Specialist",
+      "theGlobal": "THE Specialist",
+      "nationalRank": "World's First Graduate School of International Relations (Est. 1927)",
+      "subjectRank": "🏆 Top 30 Worldwide in International Studies & Development Policy",
+      "badgeSummary": "Tier 1 • Specialist • 🏆 Top 30 World Int'l Affairs"
+    }
   },
   {
     "id": "ch-unibe-plep-ma",
-    "rank": 41,
+    "rank": "Tier 1 • QS #161 • THE #116",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Bern",
@@ -9780,11 +10812,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #161",
+      "theGlobal": "THE #116",
+      "nationalRank": "Swiss Federal Capital Flagship",
+      "subjectRank": "Top 100 Worldwide in Public Administration & Climate Governance",
+      "badgeSummary": "Tier 1 • QS #161 • THE #116"
+    }
   },
   {
     "id": "ch-usi-philosophy-map",
-    "rank": 42,
+    "rank": "Tier 2 • QS #385 • THE #251-300",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "Università della Svizzera italiana (USI Lugano)",
@@ -9866,11 +10906,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #385",
+      "theGlobal": "THE #251-300",
+      "nationalRank": "Switzerland's Italian-language University Flagship",
+      "subjectRank": "Top 100 Worldwide in Public Economics & Communication Studies",
+      "badgeSummary": "Tier 2 • QS #385 • THE #251-300"
+    }
   },
   {
     "id": "ch-unibas-critical-urbanisms-ma",
-    "rank": 43,
+    "rank": "Tier 1 • QS #131 • THE #123",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Basel",
@@ -9952,11 +11000,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #131",
+      "theGlobal": "THE #123",
+      "nationalRank": "Switzerland Oldest University (Est. 1460, Erasmus Legacy)",
+      "subjectRank": "Top 40 Worldwide in Theology, European Global Studies & History",
+      "badgeSummary": "Tier 1 • QS #131 • THE #123"
+    }
   },
   {
     "id": "ch-unibas-african-studies-ma",
-    "rank": 44,
+    "rank": "Tier 1 • QS #131 • THE #123",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Basel",
@@ -10038,11 +11094,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #131",
+      "theGlobal": "THE #123",
+      "nationalRank": "Switzerland Oldest University (Est. 1460, Erasmus Legacy)",
+      "subjectRank": "Top 40 Worldwide in Theology, European Global Studies & History",
+      "badgeSummary": "Tier 1 • QS #131 • THE #123"
+    }
   },
   {
     "id": "ch-unibas-european-global-studies-ma",
-    "rank": 45,
+    "rank": "Tier 1 • QS #131 • THE #123",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Basel",
@@ -10124,11 +11188,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #131",
+      "theGlobal": "THE #123",
+      "nationalRank": "Switzerland Oldest University (Est. 1460, Erasmus Legacy)",
+      "subjectRank": "Top 40 Worldwide in Theology, European Global Studies & History",
+      "badgeSummary": "Tier 1 • QS #131 • THE #123"
+    }
   },
   {
     "id": "ch-eth-uzh-macis-ma",
-    "rank": 46,
+    "rank": "Tier 1 • QS #7 / #91 • THE #11 / #80",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "ETH Zurich & University of Zurich (Joint)",
@@ -10210,11 +11282,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #7 / #91",
+      "theGlobal": "THE #11 / #80",
+      "nationalRank": "Switzerland Elite Federal & Cantonal Joint Program",
+      "subjectRank": "Top 10 in the World for Global Governance & Comparative Politics",
+      "badgeSummary": "Tier 1 • QS #7 / #91 • THE #11 / #80"
+    }
   },
   {
     "id": "ch-eth-science-technology-policy-mstp",
-    "rank": 47,
+    "rank": "Tier 1 • QS #7 • THE #11",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "ETH Zurich (D-GESS)",
@@ -10296,11 +11376,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #7",
+      "theGlobal": "THE #11",
+      "nationalRank": "Department of Humanities, Social and Political Sciences",
+      "subjectRank": "Top 15 in the World for Science, Technology & Public Policy",
+      "badgeSummary": "Tier 1 • QS #7 • THE #11"
+    }
   },
   {
     "id": "ch-uzh-middle-eastern-studies-ma",
-    "rank": 48,
+    "rank": "Tier 1 • QS #91 • THE #80",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Zurich (UZH)",
@@ -10382,11 +11470,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #91",
+      "theGlobal": "THE #80",
+      "nationalRank": "Switzerland Largest Comprehensive State University",
+      "subjectRank": "Top 50 Worldwide in Philosophy, Ethics & Area Studies",
+      "badgeSummary": "Tier 1 • QS #91 • THE #80"
+    }
   },
   {
     "id": "ch-uzh-political-science-ma",
-    "rank": 49,
+    "rank": "Tier 1 • QS #91 • THE #80",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Zurich (UZH)",
@@ -10468,11 +11564,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #91",
+      "theGlobal": "THE #80",
+      "nationalRank": "Switzerland Largest Comprehensive State University",
+      "subjectRank": "Top 50 Worldwide in Philosophy, Ethics & Area Studies",
+      "badgeSummary": "Tier 1 • QS #91 • THE #80"
+    }
   },
   {
     "id": "ch-unibe-middle-eastern-studies-ma",
-    "rank": 50,
+    "rank": "Tier 1 • QS #161 • THE #116",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Bern",
@@ -10554,11 +11658,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #161",
+      "theGlobal": "THE #116",
+      "nationalRank": "Swiss Federal Capital Flagship",
+      "subjectRank": "Top 100 Worldwide in Public Administration & Climate Governance",
+      "badgeSummary": "Tier 1 • QS #161 • THE #116"
+    }
   },
   {
     "id": "ch-unil-public-opinion-survey-ma",
-    "rank": 51,
+    "rank": "Tier 2 • QS #224 • THE #143",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Lausanne (UNIL)",
@@ -10640,11 +11752,19 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 2",
+      "qsGlobal": "QS #224",
+      "theGlobal": "THE #143",
+      "nationalRank": "Lake Geneva Research Hub (Est. 1537)",
+      "subjectRank": "Top 100 Worldwide in Public Governance & Comparative Religion",
+      "badgeSummary": "Tier 2 • QS #224 • THE #143"
+    }
   },
   {
     "id": "ch-unige-global-studies-ma",
-    "rank": 52,
+    "rank": "Tier 1 • QS #155 • THE #183",
     "region": "Central Europe",
     "country": "Switzerland",
     "uni": "University of Geneva (UNIGE)",
@@ -10726,7 +11846,15 @@
         "stacking": "Exclusive; replaces all cantonal and institutional funding",
         "criteria": "Candidate under 35 years; confirmed host professor or unconditional university admission; IELTS 7.5 exceeds required English standard"
       }
-    ]
+    ],
+    "rankings": {
+      "tier": "Tier 1",
+      "qsGlobal": "QS #155",
+      "theGlobal": "THE #183",
+      "nationalRank": "Geneva Cantonal University (Est. 1559 by John Calvin)",
+      "subjectRank": "Top 50 Worldwide in International Law, Multilateralism & Global Health",
+      "badgeSummary": "Tier 1 • QS #155 • THE #183"
+    }
   },
   {
     "id": "it-milan-pppa",
@@ -14721,7 +15849,7 @@
 ];
 
     const ScholarshipHub = Object.freeze({
-        version: "2027.4",
+        version: "2027.5",
         programs: Object.freeze(programs)
     });
 

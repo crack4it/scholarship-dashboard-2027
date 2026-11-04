@@ -911,7 +911,7 @@
     }
     
 </style>
-    <script src="data.js?v=2027.4" onerror="window.__dataLoadError = true;"></script>
+    <script src="data.js?v=2027.5" onerror="window.__dataLoadError = true;"></script>
 </head>
 <body>
 
@@ -2797,7 +2797,7 @@ function renderProgramGrid(data) {
             ? `<span class="tag tag-zero-cost">🎯 $0 Net Cost Target</span>`
             : `<span class="tag tag-paid">${p.netCost}</span>`;
 
-        let rankBadge = p.rank ? `<div class="card-rank">#${p.rank} UK</div>` : '';
+        let rankBadge = p.rank ? `<div class="card-rank" style="font-size: 7.2pt; padding: 2px 8px; border-radius: 4px; background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-weight: 600;">${p.rank}</div>` : '';
 
         let probClass = 'prob-medium';
         if (p.probabilityScore.toLowerCase().includes('high')) probClass = 'prob-high';
@@ -2925,7 +2925,7 @@ function renderChinaTable() {
 
     chinaProgs.sort((a,b) => (a.rank || 99) - (b.rank || 99));
 
-    chinaProgs.forEach(p => {
+    chinaProgs.forEach((p, idx) => {
         const tr = document.createElement('tr');
         tr.setAttribute('data-program-id', p.id);
         tr.onclick = () => openModal(p.id);
@@ -2970,7 +2970,7 @@ function renderChinaTable() {
         }
 
         tr.innerHTML = `
-            <td class="rank-cell">#${p.rank || '-'}</td>
+            <td class="rank-cell">#${idx + 1}</td>
             <td>
                 ${tierBadge}
                 <strong>${p.uni}</strong><br>
@@ -3079,7 +3079,7 @@ function renderUkTable() {
 
     ukProgs.sort((a,b) => (a.rank || 99) - (b.rank || 99));
 
-    ukProgs.forEach(p => {
+    ukProgs.forEach((p, idx) => {
         const tr = document.createElement('tr');
         tr.setAttribute('data-program-id', p.id);
         tr.onclick = () => openModal(p.id);
@@ -3121,7 +3121,7 @@ function renderUkTable() {
         }
 
         tr.innerHTML = `
-            <td class="rank-cell">#${p.rank}</td>
+            <td class="rank-cell">#${idx + 1}</td>
             <td>
                 ${tierBadge}
                 <strong>${p.uni}</strong><br>
@@ -3408,7 +3408,7 @@ function renderCentralTable() {
         const currentStage = AppStore.getStage(p.id);
 
         tr.innerHTML = `
-            <td class="rank-cell">#${p.rank || (idx + 1)}</td>
+            <td class="rank-cell">#${idx + 1}</td>
             <td>
                 ${tierBadge}
                 <strong>${p.uni}</strong><br>
