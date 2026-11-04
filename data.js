@@ -6731,7 +6731,7 @@
 ];
 
 const ScholarshipHub = Object.freeze({
-        version: "2027.1",
+        version: "2027.2",
         programs: Object.freeze(programs)
     });
 

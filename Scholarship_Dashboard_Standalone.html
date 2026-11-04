@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Global Master's & European Scholarship Strategic Hub (2027/28 Intake)</title>
 <style>
     :root {
@@ -908,7 +911,7 @@
     }
     
 </style>
-    <script src="data.js" onerror="window.__dataLoadError = true;"></script>
+    <script src="data.js?v=2027.2" onerror="window.__dataLoadError = true;"></script>
 </head>
 <body>
 
@@ -966,7 +969,7 @@
 
     <div class="kpi-strip">
         <div class="kpi-card">
-            <div class="kpi-num" id="kpi-total">45</div>
+            <div class="kpi-num" id="kpi-total">97</div>
             <div class="kpi-label">Master's Programs</div>
         </div>
         <div class="kpi-card">
@@ -995,10 +998,10 @@
 <div class="nav-container">
     <div class="nav-tabs">
         <div class="nav-tab active" data-tab="global" onclick="switchMainTab('global')">
-            🌍 Global Master Directory <span class="nav-badge" id="global-nav-count">45</span>
+            🌍 Global Master Directory <span class="nav-badge" id="global-nav-count">97</span>
         </div>
         <div class="nav-tab" data-tab="pipeline" onclick="switchMainTab('pipeline')">
-            📋 Pipeline Tracker <span class="nav-badge" id="pipeline-nav-count">45</span>
+            📋 Pipeline Tracker <span class="nav-badge" id="pipeline-nav-count">97</span>
         </div>
         <div class="nav-tab" data-tab="china" onclick="switchMainTab('china')">
             🇨🇳 China Strategic Hub <span class="nav-badge" id="china-nav-count">20</span>
@@ -1007,22 +1010,22 @@
             🇬🇧 UK Decision Center <span class="nav-badge" id="uk-nav-count">16</span>
         </div>
         <div class="nav-tab" data-tab="italy" onclick="switchMainTab('italy')">
-            🇮🇹 Italy Tuition-Free Center <span class="nav-badge">4</span>
+            🇮🇹 Italy Tuition-Free Center <span class="nav-badge" id="italy-nav-count">4</span>
         </div>
         <div class="nav-tab" data-tab="central" onclick="switchMainTab('central')">
-            🏛️ Central Europe Hub <span class="nav-badge">4</span>
+            🏛️ Central Europe Hub <span class="nav-badge" id="central-nav-count">4</span>
         </div>
         <div class="nav-tab" data-tab="nordics" onclick="switchMainTab('nordics')">
-            ❄️ Nordic Hub <span class="nav-badge">4</span>
+            ❄️ Nordic Hub <span class="nav-badge" id="nordics-nav-count">4</span>
         </div>
         <div class="nav-tab" data-tab="west" onclick="switchMainTab('west')">
-            🏰 Western Europe Hub <span class="nav-badge" id="west-nav-count">7</span>
+            🏰 Western Europe Hub <span class="nav-badge" id="west-nav-count">9</span>
         </div>
                 <div class="nav-tab" data-tab="germany" onclick="switchMainTab('germany')">
-            🇩🇪 Germany Special Edition <span class="nav-badge" id="germany-nav-count">21</span>
+            🇩🇪 Germany Special Edition <span class="nav-badge" id="germany-nav-count">36</span>
         </div>
         <div class="nav-tab" data-tab="emjm" onclick="switchMainTab('emjm')">
-            🇪🇺 Erasmus Mundus (EMJM) <span class="nav-badge">4</span>
+            🇪🇺 Erasmus Mundus (EMJM) <span class="nav-badge" id="emjm-nav-count">4</span>
         </div>
         <div class="nav-tab" data-tab="roadmap" onclick="switchMainTab('roadmap')">
             🗺️ Master Roadmap & Calendar
@@ -1037,7 +1040,7 @@
         <div class="filter-hub">
             <div class="filter-presets">
                 <span style="font-size: 8pt; font-weight: 700; color: var(--text-muted); align-self: center; margin-right: 4px;">⚡ STRATEGIC PRESETS:</span>
-                <button class="preset-btn active" onclick="setPresetFilter('all', this)">All Programs (45)</button>
+                <button class="preset-btn active" id="btn-preset-all" onclick="setPresetFilter('all', this)">All Programs (97)</button>
                 <button class="preset-btn preset-btn-accent" onclick="setPresetFilter('quick-wins', this)">⚡ Quick Wins (Low Effort / High Reward) (11)</button>
                 <button class="preset-btn" style="border-color: #fca5a5; color: #991b1b; background: #fff1f2;" onclick="setPresetFilter('prestige', this)">🏆 Prestige Heavyweights (8)</button>
                 <button class="preset-btn" onclick="setPresetFilter('open-now', this)">🟢 Open Portals Now (13)</button>
@@ -1102,7 +1105,7 @@
             </div>
 
             <div style="margin-top: 14px; font-size: 8pt; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
-                <div>Showing <strong id="displayedCount" style="color: var(--primary);">45</strong> of 45 verified programs</div>
+                <div>Showing <strong id="displayedCount" style="color: var(--primary);">97</strong> of <span id="totalCountStatic">97</span> verified programs</div>
                 <div style="font-style: italic;">Click any card to open the complete Level 3 strategic dossier, AI SOP blueprint & document checklist</div>
             </div>
         </div>
@@ -2316,20 +2319,41 @@ function updatePipelineCounters() {
     const elKpiTotal = document.getElementById('kpi-total');
     if (elKpiTotal) elKpiTotal.innerText = progsList.length;
 
+    const elTotalStatic = document.getElementById('totalCountStatic');
+    if (elTotalStatic) elTotalStatic.innerText = progsList.length;
+
+    const elBtnPresetAll = document.getElementById('btn-preset-all');
+    if (elBtnPresetAll) elBtnPresetAll.innerText = `All Programs (${progsList.length})`;
+
+    const elGlobalNav = document.getElementById('global-nav-count');
+    if (elGlobalNav) elGlobalNav.innerText = progsList.length;
+
+    const elPipelineNav = document.getElementById('pipeline-nav-count');
+    if (elPipelineNav) elPipelineNav.innerText = progsList.length;
+
     const elGermanyNav = document.getElementById('germany-nav-count');
-    if (elGermanyNav) elGermanyNav.innerText = progsList.filter(p => p.country === 'Germany').length;
+    if (elGermanyNav) elGermanyNav.innerText = progsList.filter(p => p.country === 'Germany' || p.region === 'Germany').length;
 
     const elChinaNav = document.getElementById('china-nav-count');
-    if (elChinaNav) elChinaNav.innerText = progsList.filter(p => p.region === 'China').length;
-
-    const elWestNav = document.getElementById('west-nav-count');
-    if (elWestNav) elWestNav.innerText = progsList.filter(p => p.region === 'Western Europe').length;
+    if (elChinaNav) elChinaNav.innerText = progsList.filter(p => p.region === 'China' || p.country === 'China').length;
 
     const elUkNav = document.getElementById('uk-nav-count');
     if (elUkNav) elUkNav.innerText = progsList.filter(p => p.region === 'UK' || p.country === 'United Kingdom').length;
 
-    const elPipelineNav = document.getElementById('pipeline-nav-count');
-    if (elPipelineNav) elPipelineNav.innerText = progsList.length;
+    const elWestNav = document.getElementById('west-nav-count');
+    if (elWestNav) elWestNav.innerText = progsList.filter(p => p.region === 'Western Europe').length;
+
+    const elItalyNav = document.getElementById('italy-nav-count');
+    if (elItalyNav) elItalyNav.innerText = progsList.filter(p => p.region === 'Italy' || p.country === 'Italy').length;
+
+    const elCentralNav = document.getElementById('central-nav-count');
+    if (elCentralNav) elCentralNav.innerText = progsList.filter(p => p.region === 'Central Europe').length;
+
+    const elNordicsNav = document.getElementById('nordics-nav-count');
+    if (elNordicsNav) elNordicsNav.innerText = progsList.filter(p => p.region === 'Nordics & Belgium').length;
+
+    const elEmjmNav = document.getElementById('emjm-nav-count');
+    if (elEmjmNav) elEmjmNav.innerText = progsList.filter(p => p.region === 'Erasmus Mundus').length;
 }
 
 // -------------------------------------------------------------
