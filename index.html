@@ -910,6 +910,264 @@
         border-color: #1e3a8a !important;
     }
     
+
+    /* ============================================================= */
+    /* MODERN PROFESSIONAL UI/UX TOKENS & PROGRESSIVE DISCLOSURE     */
+    /* ============================================================= */
+    .card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 16px 18px 14px 18px;
+        box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 6px -2px rgba(15, 23, 42, 0.02);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 24px -4px rgba(15, 23, 42, 0.09), 0 6px 12px -4px rgba(15, 23, 42, 0.03);
+        border-color: #94a3b8;
+    }
+    .card.is-shortlisted {
+        border-left: 4px solid #f59e0b;
+    }
+
+    /* Shortlist Star Button */
+    .card-shortlist-btn {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        color: #64748b;
+        border-radius: 20px;
+        padding: 3px 9px;
+        font-size: 7.5pt;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        transition: all 0.15s ease;
+        white-space: nowrap;
+    }
+    .card-shortlist-btn:hover {
+        background: #fef3c7;
+        border-color: #f59e0b;
+        color: #b45309;
+        transform: scale(1.05);
+    }
+    .card-shortlist-btn.active {
+        background: #fef3c7;
+        border-color: #f59e0b;
+        color: #b45309;
+        box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
+    }
+    .card-shortlist-btn .star-icon {
+        font-size: 9.5pt;
+        line-height: 1;
+    }
+
+    /* Quick-Peek Floating Drawer */
+    .quick-peek-drawer {
+        margin-top: 10px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 9px;
+        padding: 9px 11px;
+        font-size: 7.6pt;
+        line-height: 1.45;
+        transition: all 0.2s ease;
+    }
+    .quick-peek-drawer:hover {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+    }
+    .quick-peek-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 6px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    .quick-peek-pill {
+        font-size: 6.8pt;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        color: #4338ca;
+        background: #e0e7ff;
+        padding: 2px 6px;
+        border-radius: 4px;
+    }
+    .peek-row {
+        margin-bottom: 4px;
+    }
+    .peek-row:last-child { margin-bottom: 0; }
+    .peek-label {
+        font-weight: 700;
+        color: #334155;
+    }
+    .peek-val-hook {
+        color: #047857;
+        font-weight: 600;
+    }
+    .peek-val-trap {
+        color: #b91c1c;
+        font-weight: 600;
+    }
+
+    /* Personal Notes Bar */
+    .card-note-bar {
+        margin-top: 9px;
+        padding: 5px 9px;
+        border-radius: 6px;
+        font-size: 7.5pt;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+    }
+    .card-note-bar.empty-note {
+        background: #f8fafc;
+        border: 1px dashed #cbd5e1;
+        color: #64748b;
+    }
+    .card-note-bar.empty-note:hover {
+        background: #eff6ff;
+        border-color: #93c5fd;
+        color: #1d4ed8;
+    }
+    .card-note-bar.has-note {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        color: #1e40af;
+        font-weight: 600;
+    }
+    .card-note-bar .note-preview {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-style: italic;
+    }
+    .card-note-bar .note-edit-pill {
+        font-size: 6.8pt;
+        padding: 1px 5px;
+        background: #dbeafe;
+        border-radius: 3px;
+        color: #1d4ed8;
+        font-weight: 700;
+    }
+
+    /* Inline Note Editor */
+    .card-note-editor {
+        margin-top: 8px;
+        padding: 8px;
+        background: #ffffff;
+        border: 1px solid #93c5fd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+    }
+    .card-note-textarea {
+        width: 100%;
+        min-height: 48px;
+        font-family: inherit;
+        font-size: 8pt;
+        padding: 6px;
+        border: 1px solid #cbd5e1;
+        border-radius: 4px;
+        resize: vertical;
+        box-sizing: border-box;
+    }
+    .note-editor-btns {
+        display: flex;
+        justify-content: flex-end;
+        gap: 6px;
+        margin-top: 6px;
+    }
+    .note-save-btn {
+        background: #2563eb;
+        color: #ffffff;
+        border: none;
+        padding: 3px 10px;
+        border-radius: 4px;
+        font-size: 7.5pt;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .note-cancel-btn {
+        background: #f1f5f9;
+        color: #475569;
+        border: 1px solid #cbd5e1;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 7.5pt;
+        cursor: pointer;
+    }
+
+    /* Acronym Guide Modal */
+    .acronym-modal-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+    }
+    .acronym-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .acronym-card:hover {
+        transform: translateY(-2px);
+        border-color: #6366f1;
+    }
+    .acronym-card h4 {
+        margin: 0 0 4px 0;
+        color: #1e3a8a;
+        font-size: 10.5pt;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .acronym-card .acronym-sub {
+        font-size: 7.5pt;
+        color: #64748b;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    .acronym-card p {
+        margin: 0 0 6px 0;
+        font-size: 8pt;
+        line-height: 1.45;
+        color: #334155;
+    }
+    .acronym-impact {
+        background: #fef2f2;
+        border-left: 3px solid #ef4444;
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 7.3pt;
+        color: #991b1b;
+        margin-top: 6px;
+    }
+    .acronym-timeline {
+        background: #ecfdf5;
+        border-left: 3px solid #10b981;
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 7.3pt;
+        color: #065f46;
+        margin-top: 5px;
+    }
+
 </style>
     <script src="data.js?v=2027.6" onerror="window.__dataLoadError = true;"></script>
 </head>
@@ -948,12 +1206,16 @@
             <div class="counter-chip" style="color: #99f6e4; border-color: rgba(153, 246, 228, 0.3);">
                 ⏳ Under Review <span class="num" id="hdr-cnt-review">0</span>
             </div>
+            <div class="counter-chip" id="hdr-chip-shortlist" style="color: #fcd34d; border-color: rgba(252, 211, 77, 0.4); cursor: pointer;" onclick="setPresetFilter('shortlist', document.getElementById('btn-preset-shortlist'))" title="Click to view shortlisted programs">
+                ⭐ Shortlisted <span class="num" id="hdr-cnt-shortlist">0</span>
+            </div>
             <div class="counter-chip" style="color: #86efac; border-color: rgba(134, 239, 172, 0.3);">
                 🏆 Offers <span class="num" id="hdr-cnt-offer">0</span>
             </div>
         </div>
 
         <div class="header-btn-group">
+            <button class="hdr-btn" onclick="openAcronymGuideModal()" title="View quick definitions of APS, DSU, Uni-Assist, ECTS, Blocked Accounts" style="color: #a5b4fc; border-color: rgba(165, 180, 252, 0.3);">📚 Acronym Cheat Sheet</button>
             <button class="hdr-btn" onclick="UrlState.copyActiveView()" title="Copy shareable link to this view">🔗 Share View</button>
         <button class="hdr-btn" onclick="exportDashboardState()" title="Export pipeline progress and document checklists as JSON">
                 💾 Export State (JSON)
@@ -1041,6 +1303,7 @@
         <div class="filter-hub">
             <div class="filter-presets">
                 <span style="font-size: 8pt; font-weight: 700; color: var(--text-muted); align-self: center; margin-right: 4px;">⚡ STRATEGIC PRESETS:</span>
+                <button class="preset-btn" id="btn-preset-shortlist" style="border-color: #f59e0b; color: #b45309; background: #fffbeb; font-weight: 700;" onclick="setPresetFilter('shortlist', this)">⭐ My Shortlist (<span id="shortlist-count-badge">0</span>)</button>
                 <button class="preset-btn active" id="btn-preset-all" onclick="setPresetFilter('all', this)">All Programs (145)</button>
                 <button class="preset-btn preset-btn-accent" onclick="setPresetFilter('quick-wins', this)">⚡ Quick Wins (Low Effort / High Reward) (11)</button>
                 <button class="preset-btn" style="border-color: #fca5a5; color: #991b1b; background: #fff1f2;" onclick="setPresetFilter('prestige', this)">🏆 Prestige Heavyweights (8)</button>
@@ -2102,6 +2365,7 @@ const STAGES = [
 const KANBAN_STORAGE_KEY = 'kanban_state';
 const CHECKLIST_STORAGE_KEY = 'checklist_state';
 const NOTES_STORAGE_KEY = 'notes_state';
+const SHORTLIST_STORAGE_KEY = 'shortlist_state';
 
 // Global Filter State
 let currentFilter = {
@@ -2121,6 +2385,7 @@ const AppStore = {
     pipeline: {},   // e.g., { "uk-soas-middle-east": "applied" }
     checklists: {}, // e.g., { "uk-soas-middle-east": { 0: true, 1: true } }
     notes: {},      // e.g., { "uk-soas-middle-east": "Discussed with department chair..." }
+    shortlist: {},  // e.g., { "de-tum-msc-informatics": true }
 
     // Initialize and hydrate store on page load
     init() {
@@ -2136,7 +2401,6 @@ const AppStore = {
                 const parsed = JSON.parse(rawKanban);
                 const sanitizedPipeline = {};
                 for (const key in parsed) {
-                    // Fallback sanitization: reject legacy numeric keys or non-string keys
                     if (key && typeof key === 'string' && !/^\d+$/.test(key)) {
                         sanitizedPipeline[key] = parsed[key];
                     }
@@ -2178,14 +2442,34 @@ const AppStore = {
             } else {
                 this.notes = {};
             }
+
+            // 4. Hydrate shortlist
+            const rawShortlist = localStorage.getItem(SHORTLIST_STORAGE_KEY);
+            if (rawShortlist) {
+                const parsed = JSON.parse(rawShortlist);
+                const sanitizedShortlist = {};
+                for (const key in parsed) {
+                    if (key && typeof key === 'string' && parsed[key]) {
+                        sanitizedShortlist[key] = true;
+                    }
+                }
+                this.shortlist = sanitizedShortlist;
+                localStorage.setItem(SHORTLIST_STORAGE_KEY, JSON.stringify(this.shortlist));
+            } else {
+                this.shortlist = {};
+            }
+            this.updateShortlistBadges();
         } catch (e) {
             console.warn('[AppStore] Corrupted localStorage state detected. Resetting to clean state.', e);
             this.pipeline = {};
             this.checklists = {};
             this.notes = {};
+            this.shortlist = {};
             localStorage.removeItem(KANBAN_STORAGE_KEY);
             localStorage.removeItem(CHECKLIST_STORAGE_KEY);
             localStorage.removeItem(NOTES_STORAGE_KEY);
+            localStorage.removeItem(SHORTLIST_STORAGE_KEY);
+            this.updateShortlistBadges();
         }
     },
 
@@ -2194,30 +2478,59 @@ const AppStore = {
         return this.pipeline[slug] || 'interested';
     },
 
-    // =============================================================
-    // 2. REACTIVE DISPATCHER (Pub/Sub)
-    // =============================================================
+    // Shortlist accessors
+    isShortlisted(slug) {
+        return !!this.shortlist[slug];
+    },
+
+    toggleShortlist(slug) {
+        if (!slug) return;
+        if (this.shortlist[slug]) {
+            delete this.shortlist[slug];
+        } else {
+            this.shortlist[slug] = true;
+        }
+        try {
+            localStorage.setItem(SHORTLIST_STORAGE_KEY, JSON.stringify(this.shortlist));
+        } catch (e) {
+            console.error('[AppStore] Failed to persist shortlist', e);
+        }
+        this.updateShortlistBadges();
+        window.dispatchEvent(new CustomEvent('program-shortlist-changed', {
+            detail: { slug, shortlisted: !!this.shortlist[slug] }
+        }));
+    },
+
+    getShortlistCount() {
+        return Object.keys(this.shortlist).filter(k => this.shortlist[k]).length;
+    },
+
+    updateShortlistBadges() {
+        const count = this.getShortlistCount();
+        const hdrBadge = document.getElementById('hdr-cnt-shortlist');
+        if (hdrBadge) hdrBadge.innerText = count;
+        const filterBadge = document.getElementById('shortlist-count-badge');
+        if (filterBadge) filterBadge.innerText = count;
+    },
+
+    // Reactive stage update
     updateStage(slug, newStage) {
         if (!slug || !newStage) return;
 
-        // Ensure target stage is valid
         const validStages = ['interested', 'preparing', 'applied', 'review', 'offer'];
         if (!validStages.includes(newStage)) {
             console.warn(`[AppStore] Unrecognized stage identifier: ${newStage}`);
             return;
         }
 
-        // a) Update in-memory state
         this.pipeline[slug] = newStage;
 
-        // b) Persist changes to localStorage
         try {
             localStorage.setItem(KANBAN_STORAGE_KEY, JSON.stringify(this.pipeline));
         } catch (e) {
             console.error('[AppStore] Failed to persist pipeline state to localStorage', e);
         }
 
-        // c) Dispatch window event for instant view synchronization
         window.dispatchEvent(new CustomEvent('program-state-changed', {
             detail: { slug, newStage }
         }));
@@ -2263,9 +2576,12 @@ const AppStore = {
         this.pipeline = {};
         this.checklists = {};
         this.notes = {};
+        this.shortlist = {};
         localStorage.removeItem(KANBAN_STORAGE_KEY);
         localStorage.removeItem(CHECKLIST_STORAGE_KEY);
         localStorage.removeItem(NOTES_STORAGE_KEY);
+        localStorage.removeItem(SHORTLIST_STORAGE_KEY);
+        this.updateShortlistBadges();
     }
 };
 
@@ -3234,7 +3550,8 @@ let currentGridData = [];
 
 function createProgramCard(p) {
     const card = document.createElement('div');
-    card.className = 'card';
+    const isShortlisted = AppStore.isShortlisted(p.id);
+    card.className = 'card' + (isShortlisted ? ' is-shortlisted' : '');
     card.setAttribute('data-program-id', p.id);
     card.onclick = () => openModal(p.id);
 
@@ -3243,14 +3560,14 @@ function createProgramCard(p) {
     let effortBadge = getEffortBadge(p.effortScore, p.effortTag);
 
     let feeTagHtml = p.isFreeTicket 
-        ? `<span class="tag tag-free">🎟️ ${p.appFeeText}</span>`
-        : (p.feeCategory === 'nominal' ? `<span class="tag tag-nominal">⚡ ${p.appFeeText}</span>` : `<span class="tag tag-paid">💼 ${p.appFeeText}</span>`);
+        ? '<span class="tag tag-free">🟢 €0 Portal Fee</span>'
+        : (p.feeCategory === 'nominal' ? `<span class="tag tag-nominal">🟡 ${p.appFeeText}</span>` : `<span class="tag tag-paid">🔴 ${p.appFeeText}</span>`);
 
     let zeroCostTag = p.netCost.includes('$0') 
-        ? `<span class="tag tag-zero-cost">🎯 $0 Net Cost Target</span>`
+        ? '<span class="tag tag-zero-cost">✨ €0 Net Cost Target</span>'
         : `<span class="tag tag-paid">${p.netCost}</span>`;
 
-    let rankBadge = p.rank ? `<div class="card-rank" style="font-size: 7.2pt; padding: 2px 8px; border-radius: 4px; background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-weight: 600;">${p.rank}</div>` : '';
+    let rankBadge = p.rank ? `<div class="card-rank" style="font-size: 7.2pt; padding: 2px 8px; border-radius: 4px; background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-weight: 700;">${p.rank}</div>` : '';
 
     let probClass = 'prob-medium';
     if (String(p.probabilityScore || '').toLowerCase().includes('high')) probClass = 'prob-high';
@@ -3261,17 +3578,35 @@ function createProgramCard(p) {
     const currentStageObj = STAGES.find(s => s.id === currentStage) || STAGES[0];
     const audit = p.forensicAudit || {};
     const theme = getAuditTheme(audit);
+    const userNote = AppStore.getNote(p.id);
+
+    // Progressive Disclosure: Extract quick context
+    const hookVal = p.verdict?.summary || p.shortVerdict || 'High-reputation curriculum with funding pathways.';
+    const trapVal = p.verdict?.keyRisk || p.statutoryAudit?.clawbackTerms || 'Check credit prerequisites & blocked account early.';
+    const livingCost = p.costs?.livingEUR || 9500;
+    const postStudy = p.statutoryAudit?.workPermitYears || '18-24 Mo Post-Study Visa';
 
     card.innerHTML = `
         <div>
+            <!-- Tier 1: At-a-Glance Header -->
             <div class="card-header">
                 <div class="card-title">
                     <h3>${p.uni}</h3>
                     <div class="uni-name">${p.prog}</div>
                 </div>
-                ${rankBadge}
+                <div style="display: flex; align-items: center; gap: 6px;" onclick="event.stopPropagation();">
+                    <button class="card-shortlist-btn ${isShortlisted ? 'active' : ''}" 
+                            data-program-id="${p.id}"
+                            onclick="AppStore.toggleShortlist('${p.id}'); event.stopPropagation();" 
+                            title="${isShortlisted ? 'Remove from My Shortlist' : 'Add to My Shortlist'}">
+                        <span class="star-icon">${isShortlisted ? '★' : '☆'}</span>
+                        <span class="star-label">${isShortlisted ? 'Target' : 'Save'}</span>
+                    </button>
+                    ${rankBadge}
+                </div>
             </div>
 
+            <!-- Badges Row -->
             <div class="tags-container">
                 ${statusBadge}
                 ${effortBadge}
@@ -3281,10 +3616,11 @@ function createProgramCard(p) {
                 <span class="tag tag-disc">📍 ${p.country} &bull; ${p.region}</span>
             </div>
 
+            <!-- Key Metrics Grid -->
             <div class="card-meta">
                 <div class="meta-row">
-                    <span class="meta-label">💰 Full Tuition Fee:</span>
-                    <span class="meta-val" style="color: #166534;">${p.totalTuitionFee}</span>
+                    <span class="meta-label">💶 Full Tuition Fee:</span>
+                    <span class="meta-val" style="color: #166534; font-weight: 700;">${p.totalTuitionFee}</span>
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">⚡ Effort Rating:</span>
@@ -3296,35 +3632,74 @@ function createProgramCard(p) {
                 </div>
                 <div class="meta-row">
                     <span class="meta-label">⏳ Scholarship Cutoff:</span>
-                    <span class="meta-val" style="color: #9b2c2c;">${p.deadlineDate}</span>
+                    <span class="meta-val" style="color: #9b2c2c; font-weight: 700;">${p.deadlineDate}</span>
                 </div>
                 <div class="meta-row">
-                    <span class="meta-label">🏆 Dedicated Quotas:</span>
+                    <span class="meta-label">🎯 Dedicated Quotas:</span>
                     <span class="meta-val">${p.quotas}</span>
                 </div>
                 <div class="meta-row">
-                    <span class="meta-label">🎯 Win Probability:</span>
+                    <span class="meta-label">📊 Win Probability:</span>
                     <span class="meta-val"><span class="prob-indicator ${probClass}">${p.probabilityScore}</span></span>
                 </div>
             </div>
 
+            <!-- 1-Sentence High-Signal Verdict -->
             <div class="card-verdict">
                 "${p.shortVerdict}"
             </div>
 
-            <!-- SECTION 9 FORENSIC AUDIT BANNER -->
-            <div class="card-audit-banner" style="margin-top: 10px; padding: 7px 10px; border-radius: 6px; font-size: 7.5pt; line-height: 1.4; background: ${theme.bg}; border: 1px solid ${theme.border}; color: ${theme.color};">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px;">
-                    <strong style="font-size: 7.8pt;">${audit.riskLabel || p.netVerdict}</strong>
+            <!-- Tier 2: Interactive Quick-Peek Context Drawer -->
+            <div class="quick-peek-drawer" onclick="event.stopPropagation();">
+                <div class="quick-peek-top">
+                    <span class="quick-peek-pill">💡 5-Sec Context Peek</span>
+                    <span style="font-size: 6.8pt; color: #64748b;">Post-Study: <strong>${postStudy}</strong></span>
+                </div>
+                <div class="peek-row">
+                    <span class="peek-label">🎯 Why Care:</span>
+                    <span class="peek-val-hook">${hookVal}</span>
+                </div>
+                <div class="peek-row">
+                    <span class="peek-label">⚠️ The Catch:</span>
+                    <span class="peek-val-trap">${trapVal}</span>
+                </div>
+                <div style="font-size: 7.2pt; color: #475569; margin-top: 4px; padding-top: 4px; border-top: 1px dashed #e2e8f0; display: flex; justify-content: space-between;">
+                    <span>Est. Living: <strong>~€${livingCost}/yr</strong></span>
+                    <span>GRE/APS: <strong>${p.statutoryAudit?.greGmatRequirement || 'Check Dept'}</strong></span>
+                </div>
+            </div>
+
+            <!-- Personal Notes Bar & Quick Editor -->
+            <div class="card-note-bar ${userNote ? 'has-note' : 'empty-note'}" 
+                 onclick="toggleCardNoteEditor('${p.id}', event);" 
+                 title="Click to write or edit your private strategy notes">
+                <span class="note-icon">📝</span>
+                <span class="note-preview">${userNote ? '"' + escapeHtml(userNote.length > 55 ? userNote.slice(0, 55) + '...' : userNote) + '"' : '+ Add Private Note / Strategy'}</span>
+                ${userNote ? '<span class="note-edit-pill">Edit</span>' : ''}
+            </div>
+
+            <!-- Inline Note Editor (Hidden until clicked) -->
+            <div class="card-note-editor" id="note-editor-${p.id}" style="display: none;" onclick="event.stopPropagation();">
+                <textarea class="card-note-textarea" id="note-input-${p.id}" placeholder="e.g. Contact Prof on LinkedIn; syllabus ECTS mapping required before Jan 15...">${escapeHtml(userNote)}</textarea>
+                <div class="note-editor-btns">
+                    <button class="note-save-btn" onclick="saveCardNote('${p.id}', event);">Save Note</button>
+                    <button class="note-cancel-btn" onclick="toggleCardNoteEditor('${p.id}', event);">Cancel</button>
+                </div>
+            </div>
+
+            <!-- Section 9 Statutory Audit Banner -->
+            <div class="card-audit-banner" style="margin-top: 9px; padding: 6px 10px; border-radius: 6px; font-size: 7.4pt; line-height: 1.4; background: ${theme.bg}; border: 1px solid ${theme.border}; color: ${theme.color};">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                    <strong style="font-size: 7.6pt;">${audit.riskLabel || p.netVerdict}</strong>
                     <span style="font-size: 6.5pt; font-weight: 800; text-transform: uppercase; padding: 1px 5px; border-radius: 3px; background: rgba(0,0,0,0.06);">SECTION 9 AUDIT</span>
                 </div>
-                <div style="font-size: 7.2pt; opacity: 0.95;">
+                <div style="font-size: 7.1pt; opacity: 0.95;">
                     <strong>Statute:</strong> ${(audit.statutoryLaw || '').split(':')[0]} &bull; <strong>Visa Floor:</strong> ${(audit.visaCashFloor || '').split(':')[0]}
                 </div>
             </div>
         </div>
 
-        <!-- Pipeline Stage & Document Checklist Footer -->
+        <!-- Pipeline Stage & Document Progress Footer -->
         <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); display: flex; justify-content: space-between; align-items: center; gap: 8px;">
             <div style="display: flex; align-items: center; gap: 6px;" onclick="event.stopPropagation();">
                 <span style="font-size: 7.5pt; font-weight: 700; color: #4a5568;">Pipeline:</span>
@@ -3337,7 +3712,7 @@ function createProgramCard(p) {
             </div>
             
             <div class="card-doc-progress" style="font-size: 7.5pt; font-weight: 700; color: ${progProgress.percent === 100 ? '#15803d' : '#2b6cb0'};" title="Document readiness">
-                📋 Docs: ${progProgress.done}/${progProgress.total} (${progProgress.percent}%)
+                📄 Docs: ${progProgress.done}/${progProgress.total} (${progProgress.percent}%)
             </div>
         </div>
     `;
@@ -4252,6 +4627,9 @@ function getFilteredData() {
         }
 
         let matchesPreset = true;
+        if (currentFilter.preset === 'shortlist') {
+            matchesPreset = AppStore.isShortlisted(p.id);
+        } else 
         if (currentFilter.preset === 'quick-wins') {
             matchesPreset = p.effortScore <= 2;
         } else if (currentFilter.preset === 'prestige') {
@@ -4885,5 +5263,214 @@ function showDataMissingNotice() {
 }
 </script>
 
+<script>
+
+// =============================================================
+// UI/UX PROGRESSIVE DISCLOSURE & ANTI-AMNESIA HELPERS
+// =============================================================
+function toggleCardNoteEditor(progId, e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    const editor = document.getElementById(`note-editor-${progId}`);
+    if (!editor) return;
+    const isShowing = editor.style.display !== 'none';
+    editor.style.display = isShowing ? 'none' : 'block';
+    if (!isShowing) {
+        const textarea = document.getElementById(`note-input-${progId}`);
+        if (textarea) textarea.focus();
+    }
+}
+
+function saveCardNote(progId, e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    const textarea = document.getElementById(`note-input-${progId}`);
+    if (!textarea) return;
+    const text = textarea.value.trim();
+    AppStore.setNote(progId, text);
+    
+    // update preview on card
+    const card = document.querySelector(`.card[data-program-id="${progId}"]`);
+    if (card) {
+        const noteBar = card.querySelector('.card-note-bar');
+        if (noteBar) {
+            if (text) {
+                noteBar.className = 'card-note-bar has-note';
+                noteBar.innerHTML = `<span class="note-icon">📝</span> <span class="note-preview">"${escapeHtml(text.length > 55 ? text.slice(0, 55) + '...' : text)}"</span> <span class="note-edit-pill">Edit</span>`;
+            } else {
+                noteBar.className = 'card-note-bar empty-note';
+                noteBar.innerHTML = `<span class="note-icon">📝</span> <span class="note-add-text">+ Add Private Note / Strategy</span>`;
+            }
+        }
+    }
+    const editor = document.getElementById(`note-editor-${progId}`);
+    if (editor) editor.style.display = 'none';
+}
+
+// Acronym Glossary Database
+const GLOSSARY_TERMS = {
+    'APS': {
+        title: 'APS (Akademische Prüfstelle)',
+        subtitle: 'Degree Authenticity Certificate (Germany)',
+        desc: 'Mandatory verification issued by the German Embassy for applicants from India, China, and Vietnam. Verifies that your school and university degrees are authentic.',
+        impact: 'You CANNOT receive a German student visa or enroll in most German universities without it.',
+        timeline: 'Takes 6 to 12 weeks. Apply immediately before submitting university portals!',
+        actionUrl: 'https://www.aps-india.info/'
+    },
+    'DSU': {
+        title: 'DSU (Diritto allo Studio Universitario)',
+        subtitle: 'Regional Need-Based Scholarship (Italy)',
+        desc: 'Italian regional government scholarship based on household financial income (ISEE Equivalent under €25,000/year). Available at universities like PoliMi, Bologna, Sapienza, Padova.',
+        impact: 'Provides 100% tuition waiver + up to €8,000/year in direct living cash + free or subsidized cafeteria meals.',
+        timeline: 'Application windows open in June/July and close late August/September.',
+        actionUrl: 'https://www.dsu.toscana.it/'
+    },
+    'Uni-Assist': {
+        title: 'Uni-Assist e.V.',
+        subtitle: 'Centralized German Application Portal',
+        desc: 'Central certification office run by German universities. It converts your foreign grading scale (e.g. GPA 3.5/4.0) into the German inverted grade system (1.0 = best, 4.0 = pass).',
+        impact: 'Required by ~180 German universities. Fee: €75 for the first university, €30 for each additional.',
+        timeline: 'Processing takes 4 to 6 weeks. Submit at least 1 month before deadlines.',
+        actionUrl: 'https://www.uni-assist.de/'
+    },
+    'ECTS': {
+        title: 'ECTS Credits',
+        subtitle: 'European Credit Transfer System',
+        desc: 'Standard measure of academic study volume in Europe. 1 ECTS equals 25–30 hours of total workload. A standard Bachelor is 180 or 240 ECTS; a Master is 120 ECTS.',
+        impact: 'Strict Prerequisite Rule: German universities (e.g. TUM, RWTH Aachen) strictly disqualify applicants who lack minimum prerequisite ECTS credits in theoretical CS or higher mathematics.',
+        timeline: 'Map your undergraduate syllabus subjects and contact hours to ECTS before applying.',
+        actionUrl: null
+    },
+    'Blocked Account': {
+        title: 'Sperrkonto (Blocked Account)',
+        subtitle: 'German Student Visa Living Escrow',
+        desc: 'Special bank account where you must deposit one year of living expenses to prove to the German consulate that you can support yourself without working full-time.',
+        impact: 'Statutory minimum amount for 2025/2026 intake is €11,904 (~€992/month). The bank releases exactly €992 into your German checking account each month.',
+        timeline: 'Open via digital providers (Expatrio, Fintiba, or Coracle) 4 weeks before your visa interview.',
+        actionUrl: 'https://www.expatrio.com/'
+    },
+    'VPD': {
+        title: 'VPD (Vorprüfungsdokumentation)',
+        subtitle: 'Preliminary Review Documentation (Uni-Assist)',
+        desc: 'A certificate issued by Uni-Assist confirming your eligibility for a specific German university (like TUM or LMU) without Uni-Assist actually submitting your application.',
+        impact: 'You must upload the VPD certificate directly into the university\'s own portal before their deadline.',
+        timeline: 'Request VPD on Uni-Assist 6 to 8 weeks before the university cutoff date.',
+        actionUrl: 'https://www.uni-assist.de/en/how-to-apply/plan-your-application/vpd/'
+    },
+    'CIMEA': {
+        title: 'CIMEA Verification & Comparability',
+        subtitle: 'Italian Academic Credential Centre',
+        desc: 'Italian official body issuing Statements of Comparability and Statements of Verification for foreign university degrees.',
+        impact: 'Often accepted or required by Italian universities and embassies in lieu of the traditional "Dichiarazione di Valore" (DoV).',
+        timeline: 'Diplome digital certificates take 15 to 30 days.',
+        actionUrl: 'https://www.cimea.it/en/'
+    },
+    'DAAD EPOS': {
+        title: 'DAAD EPOS Scholarship',
+        subtitle: 'Development-Related Postgraduate Full-Ride',
+        desc: 'Prestigious German government scholarship aimed at future leaders from developing countries studying development-related and engineering master programs.',
+        impact: 'Full ride: €934/month living stipend + health insurance + round-trip airfare + German language course.',
+        timeline: 'Requires minimum 2 years of professional work experience after your bachelor degree.',
+        actionUrl: 'https://www.daad.de/en/'
+    }
+};
+
+function openAcronymGuideModal() {
+    let modal = document.getElementById('acronymModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'acronymModal';
+        modal.className = 'modal-backdrop';
+        modal.onclick = (e) => { if (e.target === modal) closeAcronymGuideModal(); };
+        document.body.appendChild(modal);
+    }
+
+    const cardsHtml = Object.keys(GLOSSARY_TERMS).map(key => {
+        const item = GLOSSARY_TERMS[key];
+        return `
+            <div class="acronym-card">
+                <h4>
+                    <span>${item.title}</span>
+                    <span style="font-size: 7pt; font-weight: 800; background: #e0e7ff; color: #3730a3; padding: 2px 6px; border-radius: 4px;">${key}</span>
+                </h4>
+                <div class="acronym-sub">${item.subtitle}</div>
+                <p>${item.desc}</p>
+                <div class="acronym-impact"><strong>⚠️ Impact:</strong> ${item.impact}</div>
+                <div class="acronym-timeline"><strong>⏳ Action Timeline:</strong> ${item.timeline}</div>
+                ${item.actionUrl ? `<div style="margin-top: 8px; text-align: right;"><a href="${item.actionUrl}" target="_blank" style="font-size: 7.5pt; font-weight: 700; color: #2563eb; text-decoration: none;">Official Portal ↗</a></div>` : ''}
+            </div>
+        `;
+    }).join('');
+
+    modal.innerHTML = `
+        <div class="modal-content" style="max-width: 900px; max-height: 85vh; overflow-y: auto;">
+            <div class="modal-header">
+                <div>
+                    <h2>📚 European Admissions & Scholarship Acronym Guide</h2>
+                    <p style="margin: 4px 0 0 0; color: #64748b; font-size: 8.5pt;">Never Google an acronym again. Essential terms for 2027 international applicants.</p>
+                </div>
+                <button class="close-btn" onclick="closeAcronymGuideModal()">&times;</button>
+            </div>
+            <div style="padding: 16px 20px;">
+                <input type="text" id="acronymSearchInput" placeholder="Filter terms (e.g. APS, DSU, Blocked Account, ECTS)..." 
+                       style="width: 100%; padding: 8px 12px; font-size: 9pt; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 12px;"
+                       oninput="filterAcronymCards(this.value)">
+                <div class="acronym-modal-grid" id="acronymCardsGrid">
+                    ${cardsHtml}
+                </div>
+            </div>
+            <div class="modal-footer" style="padding: 12px 20px; border-top: 1px solid #e2e8f0; text-align: right; background: #f8fafc;">
+                <button class="hdr-btn" onclick="closeAcronymGuideModal()" style="background: #1e3a8a; color: #ffffff; border: none; padding: 6px 14px; border-radius: 6px;">Close Guide</button>
+            </div>
+        </div>
+    `;
+    modal.style.display = 'flex';
+}
+
+function closeAcronymGuideModal() {
+    const modal = document.getElementById('acronymModal');
+    if (modal) modal.style.display = 'none';
+}
+
+function filterAcronymCards(query) {
+    const grid = document.getElementById('acronymCardsGrid');
+    if (!grid) return;
+    const cards = grid.getElementsByClassName('acronym-card');
+    const q = (query || '').toLowerCase().trim();
+    for (let card of cards) {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(q) ? 'block' : 'none';
+    }
+}
+
+// React to shortlist changes across open views
+window.addEventListener('program-shortlist-changed', (e) => {
+    const { slug, shortlisted } = e.detail;
+    document.querySelectorAll(`.card-shortlist-btn[data-program-id="${slug}"]`).forEach(btn => {
+        if (shortlisted) {
+            btn.classList.add('active');
+            btn.querySelector('.star-icon').innerText = '★';
+            btn.querySelector('.star-label').innerText = 'Target';
+            btn.title = 'Remove from My Shortlist';
+        } else {
+            btn.classList.remove('active');
+            btn.querySelector('.star-icon').innerText = '☆';
+            btn.querySelector('.star-label').innerText = 'Save';
+            btn.title = 'Add to My Shortlist';
+        }
+    });
+
+    document.querySelectorAll(`.card[data-program-id="${slug}"]`).forEach(card => {
+        if (shortlisted) {
+            card.classList.add('is-shortlisted');
+        } else {
+            card.classList.remove('is-shortlisted');
+        }
+    });
+
+    if (currentFilter.preset === 'shortlist') {
+        renderProgramGrid(getFilteredData());
+    }
+});
+
+</script>
 </body>
 </html>
