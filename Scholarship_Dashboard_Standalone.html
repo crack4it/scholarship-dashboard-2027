@@ -1168,6 +1168,52 @@
         margin-top: 5px;
     }
 
+
+    /* ============================================================= */
+    /* SCHOLARSHIP DATE TRACKER & EARLY FUNDING ALERT STYLING        */
+    /* ============================================================= */
+    .tag-funding-alert {
+        background: #fee2e2;
+        color: #991b1b;
+        border: 1px solid #f87171;
+        font-weight: 800;
+        animation: pulseFunding 2.5s infinite;
+    }
+    @keyframes pulseFunding {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+        50% { box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15); }
+    }
+    .date-tracker-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 12px;
+        margin-top: 14px;
+    }
+    .date-tracker-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 12px 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .date-tracker-card:hover {
+        transform: translateY(-2px);
+        border-color: #6366f1;
+    }
+    .date-tracker-card.has-early-gap {
+        border-left: 4px solid #ef4444;
+    }
+    .date-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 7.8pt;
+        margin-bottom: 3px;
+    }
+    .date-label { color: #64748b; font-weight: 600; }
+    .date-val-sch { color: #b91c1c; font-weight: 800; }
+    .date-val-adm { color: #334155; font-weight: 600; }
+    
 </style>
     <script>
 /**
@@ -20487,6 +20533,7 @@
         </div>
 
         <div class="header-btn-group">
+            <button class="hdr-btn" onclick="openScholarshipDateTrackerModal()" title="View Complete Chronological Scholarship Cutoff Calendar" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">📅 Scholarship Date Tracker</button>
             <button class="hdr-btn" onclick="openAcronymGuideModal()" title="View quick definitions of APS, DSU, Uni-Assist, ECTS, Blocked Accounts" style="color: #a5b4fc; border-color: rgba(165, 180, 252, 0.3);">📚 Acronym Cheat Sheet</button>
             <button class="hdr-btn" onclick="UrlState.copyActiveView()" title="Copy shareable link to this view">🔗 Share View</button>
         <button class="hdr-btn" onclick="exportDashboardState()" title="Export pipeline progress and document checklists as JSON">
@@ -20575,6 +20622,8 @@
         <div class="filter-hub">
             <div class="filter-presets">
                 <span style="font-size: 8pt; font-weight: 700; color: var(--text-muted); align-self: center; margin-right: 4px;">⚡ STRATEGIC PRESETS:</span>
+                <button class="preset-btn" id="btn-preset-funding-priority" style="border-color: #ef4444; color: #b91c1c; background: #fff1f2; font-weight: 700;" onclick="setPresetFilter('funding-priority', this)" title="Programs where scholarship cutoff is significantly earlier than admissions">⚡ Early Funding Traps (<span id="early-funding-count">14</span>)</button>
+                <button class="preset-btn" id="btn-preset-sch-closing" style="border-color: #f97316; color: #c2410c; background: #fff7ed; font-weight: 700;" onclick="setPresetFilter('sch-closing', this)" title="Scholarship deadlines within the next 60 days">⏳ Scholarship Cutoffs &lt; 60 Days (<span id="sch-closing-count">16</span>)</button>
                 <button class="preset-btn" id="btn-preset-shortlist" style="border-color: #f59e0b; color: #b45309; background: #fffbeb; font-weight: 700;" onclick="setPresetFilter('shortlist', this)">⭐ My Shortlist (<span id="shortlist-count-badge">0</span>)</button>
                 <button class="preset-btn active" id="btn-preset-all" onclick="setPresetFilter('all', this)">All Programs (145)</button>
                 <button class="preset-btn preset-btn-accent" onclick="setPresetFilter('quick-wins', this)">⚡ Quick Wins (Low Effort / High Reward) (11)</button>
@@ -21980,7 +22029,67 @@ function sanitizeProgram(raw, idx) {
     const rawSchols = Array.isArray(raw.scholarships) ? raw.scholarships : [];
     const scholarships = rawSchols.map((s, sIdx) => {
         if (!s || typeof s !== 'object') return null;
-        return {
+        
+    // DUAL DEADLINE ARCHITECTURE (Scholarship Funding Cutoff vs General Admissions)
+    function parseDateToIso(str) {
+        if (!str) return null;
+        str = str.trim();
+        if (/^\d{4}-\d{2}-\d{2}$/.test(str)) return str;
+        const months = {
+            jan: '01', january: '01', feb: '02', february: '02', mar: '03', march: '03',
+            apr: '04', april: '04', may: '05', june: '06', jun: '06',
+            jul: '07', july: '07', aug: '08', august: '08', sep: '09', september: '09',
+            oct: '10', october: '10', nov: '11', november: '11', dec: '12', december: '12'
+        };
+        const m = str.match(/(?:[A-Za-z]+,?\s+)?(?:(\d{1,2})\s+([A-Za-z]+)|([A-Za-z]+)\s+(\d{1,2})),?\s+(\d{4})/);
+        if (m) {
+            const dayStr = m[1] || m[4];
+            const monthStr = (m[2] || m[3]).toLowerCase();
+            const year = m[5];
+            const mon = months[monthStr];
+            if (mon && dayStr) {
+                return year + '-' + mon + '-' + dayStr.padStart(2, '0');
+            }
+        }
+        return null;
+    }
+
+    const rawDeadlinesText = str(raw.deadlines, '');
+    let schDate = null;
+    let admDate = null;
+
+    const schMatch = rawDeadlinesText.match(/(?:scholarship|funding|early\s*priority|priority|felix|iais|epos|csc|claren|rhodes).*?(?:deadline|cutoff|closes)?[:\s]+(?:Friday|Thursday|Monday|Tuesday|Wednesday|Saturday|Sunday)?,?\s*([A-Za-z0-9,\s]+?\d{4})/i);
+    if (schMatch) schDate = parseDateToIso(schMatch[1]);
+
+    const admMatch = rawDeadlinesText.match(/(?:general|rolling|final|admission|euclid|degree).*?(?:deadline|cutoff|admissions)?[:\s]+(?:Friday|Thursday|Monday|Tuesday|Wednesday|Saturday|Sunday)?,?\s*([A-Za-z0-9,\s]+?\d{4})/i);
+    if (admMatch) admDate = parseDateToIso(admMatch[1]);
+
+    if (!schDate) schDate = str(raw.deadlineDate, '2027-01-15');
+    if (!admDate) admDate = str(raw.deadlineDate, schDate);
+
+    let isEarlyScholarship = false;
+    let earlyGapDays = 0;
+    if (schDate && admDate && schDate !== admDate) {
+        const tSch = new Date(schDate).getTime();
+        const tAdm = new Date(admDate).getTime();
+        if (tSch < tAdm) {
+            isEarlyScholarship = true;
+            earlyGapDays = Math.round((tAdm - tSch) / (1000 * 60 * 60 * 24));
+        }
+    }
+
+    const nowD = new Date();
+    const todayUtcD = Date.UTC(nowD.getFullYear(), nowD.getMonth(), nowD.getDate());
+    let schDaysRemaining = null;
+    if (schDate) {
+        const [sy, sm, sd] = schDate.split('-').map(Number);
+        if (sy && sm && sd) {
+            const schUtc = Date.UTC(sy, sm - 1, sd);
+            schDaysRemaining = Math.round((schUtc - todayUtcD) / (1000 * 60 * 60 * 24));
+        }
+    }
+
+    return {
             name: str(s.name, `Scholarship Option ${sIdx + 1}`),
             shortBadge: str(s.shortBadge || s.shortName, 'Merit Award'),
             coverage: str(s.coverage, 'Tuition and living support details verified with institution.'),
@@ -22017,6 +22126,11 @@ function sanitizeProgram(raw, idx) {
 
     return {
         ...raw,
+        scholarshipDeadline: schDate,
+        admissionDeadline: admDate,
+        isEarlyScholarship,
+        earlyGapDays,
+        schDaysRemaining,
         id,
         uni: str(raw.uni, 'University'),
         prog: str(raw.prog, 'Master Degree Programme'),
@@ -23871,7 +23985,7 @@ function matchesSearchQuery(p, query) {
 }
 
 function getFilteredData() {
-    return getScholarshipPrograms().filter(p => {
+    let data = getScholarshipPrograms().filter(p => {
         const matchesSearch = matchesSearchQuery(p, currentFilter.search);
 
         const matchesDiscipline = currentFilter.discipline === 'all' || 
@@ -23899,7 +24013,11 @@ function getFilteredData() {
         }
 
         let matchesPreset = true;
-        if (currentFilter.preset === 'shortlist') {
+        if (currentFilter.preset === 'funding-priority') {
+            matchesPreset = p.isEarlyScholarship === true;
+        } else if (currentFilter.preset === 'sch-closing') {
+            matchesPreset = p.schDaysRemaining !== null && p.schDaysRemaining > 0 && p.schDaysRemaining <= 60;
+        } else if (currentFilter.preset === 'shortlist') {
             matchesPreset = AppStore.isShortlisted(p.id);
         } else 
         if (currentFilter.preset === 'quick-wins') {
@@ -23930,6 +24048,16 @@ function getFilteredData() {
 
         return matchesSearch && matchesDiscipline && matchesFee && matchesStatus && matchesEffort && matchesPreset;
     });
+
+    if (currentFilter.preset === 'funding-priority' || currentFilter.preset === 'sch-closing') {
+        data.sort((a, b) => {
+            const da = a.schDaysRemaining !== null ? a.schDaysRemaining : 999;
+            const db = b.schDaysRemaining !== null ? b.schDaysRemaining : 999;
+            return da - db;
+        });
+    }
+
+    return data;
 }
 
 function setPresetFilter(presetKey, btnElement) {
@@ -24265,8 +24393,13 @@ function openModal(progId, updateUrl = true) {
             <h4>⏳ Live Intake Calendar & Non-EU Applicant Deadlines</h4>
             <p><strong>Portal Status:</strong> <strong>${dynStatus.icon} ${dynStatus.label}</strong> (${dynStatus.text})</p>
             <p><strong>Portal Opening Date:</strong> <strong>${p.portalOpenDate}</strong></p>
-            <p><strong>Official Scholarship Cutoff:</strong> <strong style="color: ${dynStatus.daysRemaining !== null && dynStatus.daysRemaining <= 30 ? '#9b2c2c' : '#1e3a8a'};">${p.deadlineDate} (${dynStatus.daysRemaining !== null ? dynStatus.daysRemaining + ' days remaining' : dynStatus.text})</strong></p>
-            <p><strong>General Admissions Timeline:</strong> ${p.deadlines}</p>
+            <p><strong>🎓 Official Scholarship / Funding Cutoff:</strong> <strong style="color: ${p.schDaysRemaining !== null && p.schDaysRemaining <= 45 ? '#b91c1c' : '#1e3a8a'}; font-size: 10pt;">${p.scholarshipDeadline} (${p.schDaysRemaining !== null ? (p.schDaysRemaining > 0 ? p.schDaysRemaining + ' days remaining' : 'Closed') : 'Active'})</strong></p>
+            <p><strong>🏛️ General Admissions Portal Cutoff:</strong> <strong style="color: #334155;">${p.admissionDeadline}</strong></p>
+            <p><strong>Detailed Admissions & Scholarship Notes:</strong> ${p.deadlines}</p>
+            ${p.isEarlyScholarship ? `
+            <div style="margin-top: 10px; padding: 10px 14px; background: #fef2f2; border: 1.5px solid #f87171; border-radius: 8px; color: #991b1b; font-size: 8pt; line-height: 1.5;">
+                🚨 <strong>CRITICAL FUNDING SAFEGUARD:</strong> The scholarship cutoff is <strong>${p.earlyGapDays} days EARLIER</strong> than the general university admission deadline. If you submit your application after <strong>${p.scholarshipDeadline}</strong>, you may still receive an admission letter, but you will be <strong>100% ineligible for university scholarships, tuition waivers, and stipends</strong>. Treat <strong>${p.scholarshipDeadline}</strong> as your absolute final submission date!
+            </div>` : ''}
         </div>
 
         <div class="dossier-section">
@@ -24742,6 +24875,117 @@ window.addEventListener('program-shortlist-changed', (e) => {
         renderProgramGrid(getFilteredData());
     }
 });
+
+</script>
+<script>
+
+// =============================================================
+// SCHOLARSHIP DATE TRACKER & TIMELINE CALENDAR MODAL
+// =============================================================
+function openScholarshipDateTrackerModal() {
+    let modal = document.getElementById('scholarshipDateTrackerModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'scholarshipDateTrackerModal';
+        modal.className = 'modal-backdrop';
+        modal.onclick = (e) => { if (e.target === modal) closeScholarshipDateTrackerModal(); };
+        document.body.appendChild(modal);
+    }
+
+    const programs = getScholarshipPrograms();
+    // Sort programs strictly by scholarship deadline
+    const sorted = [...programs].sort((a, b) => {
+        const da = a.schDaysRemaining !== null ? a.schDaysRemaining : 999;
+        const db = b.schDaysRemaining !== null ? b.schDaysRemaining : 999;
+        return da - db;
+    });
+
+    const earlyCount = programs.filter(p => p.isEarlyScholarship).length;
+    const urgentCount = programs.filter(p => p.schDaysRemaining !== null && p.schDaysRemaining > 0 && p.schDaysRemaining <= 60).length;
+
+    const cardsHtml = sorted.map(p => {
+        const daysText = p.schDaysRemaining !== null 
+            ? (p.schDaysRemaining > 0 ? `${p.schDaysRemaining}d remaining` : 'Closed') 
+            : 'Active';
+
+        return `
+            <div class="date-tracker-card ${p.isEarlyScholarship ? 'has-early-gap' : ''}">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px;">
+                    <div style="font-weight: 800; font-size: 8.5pt; color: #0f172a; line-height: 1.3;">${p.uni}</div>
+                    ${p.isEarlyScholarship ? `<span style="font-size: 6.8pt; font-weight: 800; background: #fee2e2; color: #991b1b; padding: 2px 5px; border-radius: 4px;">${p.earlyGapDays}d Gap!</span>` : ''}
+                </div>
+                <div style="font-size: 7.5pt; color: #475569; margin-bottom: 8px;">${p.prog} &bull; ${p.country}</div>
+                
+                <div class="date-row">
+                    <span class="date-label">🎓 Funding Cutoff:</span>
+                    <span class="date-val-sch">${p.scholarshipDeadline} (${daysText})</span>
+                </div>
+                <div class="date-row">
+                    <span class="date-label">🏛️ General Admission:</span>
+                    <span class="date-val-adm">${p.admissionDeadline}</span>
+                </div>
+                
+                <div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 7.2pt; color: #64748b;">${p.primaryScholarship || 'Scholarship Available'}</span>
+                    <button onclick="closeScholarshipDateTrackerModal(); openModal('${p.id}');" style="background: #2563eb; color: #ffffff; border: none; padding: 3px 8px; border-radius: 4px; font-size: 7pt; font-weight: 700; cursor: pointer;">Inspect Dossier ↗</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    modal.innerHTML = `
+        <div class="modal-content" style="max-width: 950px; max-height: 85vh; overflow-y: auto;">
+            <div class="modal-header" style="background: #0f172a; color: #ffffff; padding: 18px 24px;">
+                <div>
+                    <h2 style="color: #ffffff; margin: 0; font-size: 14pt;">📅 Master Scholarship Deadline & Funding Calendar</h2>
+                    <p style="margin: 4px 0 0 0; color: #94a3b8; font-size: 8.5pt;">
+                        Chronological tracking of strict funding cutoffs vs. general rolling admissions across 183 programs.
+                    </p>
+                </div>
+                <button class="close-btn" onclick="closeScholarshipDateTrackerModal()" style="color: #ffffff;">&times;</button>
+            </div>
+            
+            <div style="padding: 16px 22px; background: #f8fafc; border-bottom: 1px solid #e2e8f0; display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+                <div style="background: #fee2e2; border: 1px solid #fca5a5; padding: 6px 12px; border-radius: 6px; font-size: 8pt; color: #991b1b;">
+                    ⚡ <strong>${earlyCount} Early Funding Traps:</strong> Programs where funding closes up to 150 days before admission!
+                </div>
+                <div style="background: #fff7ed; border: 1px solid #fdba74; padding: 6px 12px; border-radius: 6px; font-size: 8pt; color: #c2410c;">
+                    ⏳ <strong>${urgentCount} Imminent Deadlines:</strong> Funding cutoffs within the next 60 days.
+                </div>
+            </div>
+
+            <div style="padding: 16px 22px;">
+                <input type="text" placeholder="Filter calendar by university, country, or scholarship..." 
+                       style="width: 100%; padding: 8px 12px; font-size: 9pt; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 14px;"
+                       oninput="filterDateTrackerCards(this.value)">
+                
+                <div class="date-tracker-grid" id="dateTrackerCardsGrid">
+                    ${cardsHtml}
+                </div>
+            </div>
+
+            <div class="modal-footer" style="padding: 12px 22px; border-top: 1px solid #e2e8f0; text-align: right; background: #f8fafc;">
+                <button class="hdr-btn" onclick="closeScholarshipDateTrackerModal()" style="background: #1e3a8a; color: #ffffff; border: none; padding: 6px 14px; border-radius: 6px;">Close Calendar</button>
+            </div>
+        </div>
+    `;
+    modal.style.display = 'flex';
+}
+
+function closeScholarshipDateTrackerModal() {
+    const modal = document.getElementById('scholarshipDateTrackerModal');
+    if (modal) modal.style.display = 'none';
+}
+
+function filterDateTrackerCards(query) {
+    const grid = document.getElementById('dateTrackerCardsGrid');
+    if (!grid) return;
+    const cards = grid.getElementsByClassName('date-tracker-card');
+    const q = (query || '').toLowerCase().trim();
+    for (let card of cards) {
+        card.style.display = card.innerText.toLowerCase().includes(q) ? 'block' : 'none';
+    }
+}
 
 </script>
 </body>
