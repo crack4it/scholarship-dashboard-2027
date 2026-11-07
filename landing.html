@@ -342,32 +342,121 @@
 
     <!-- ========================================================================= -->
     <!-- SECTION 3: PROOF & PRESTIGE METRICS STRIP (A2 & B2 Spacing Tokens)        -->
+    <!-- Rule B4: 360-degree borders (no single-sided borders). Rule B3: Nested radii -->
     <!-- ========================================================================= -->
-    <section class="border-y border-white/10 bg-surface-base/50 py-12 px-4 sm:px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
+    <section class="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             
-            <div class="flex flex-col sm:border-r sm:border-white/10 sm:pr-6">
-                <span class="text-3xl sm:text-4xl font-mono font-semibold text-white tracking-tight">183</span>
-                <span class="text-sm font-medium text-zinc-300 mt-1">Graduate Programs Audited</span>
-                <span class="text-xs text-zinc-500 font-mono mt-0.5">Across 11 Sovereign Nations</span>
+            <!-- Metric Card 1: Audited Programs -->
+            <div class="p-6 bg-surface-base/80 hover:bg-surface-elevated/70 border border-white/10 hover:border-white/20 rounded-2xl transition-all duration-300 ease-base flex flex-col justify-between group relative shadow-sm">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-zinc-400">
+                            11 Sovereign Nations
+                        </span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-mono font-semibold text-white tracking-tight block">183</span>
+                    <h3 class="text-sm font-medium text-zinc-200 mt-2">Audited Master Programs</h3>
+                    <p class="text-xs text-zinc-400 font-normal mt-1 leading-relaxed">
+                        Statutory tuition laws and admission standards verified directly from university registries.
+                    </p>
+                </div>
+                <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-zinc-400">
+                    <span class="flex items-center gap-1.5 text-zinc-400">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                        36 DE · 42 IT · 16 UK · 20 CN
+                    </span>
+                    <span class="text-zinc-600 font-sans text-[11px]">Active</span>
+                </div>
             </div>
 
-            <div class="flex flex-col lg:border-r lg:border-white/10 lg:pr-6">
-                <span class="text-3xl sm:text-4xl font-mono font-semibold text-gold tracking-tight">€0 / £0 / $0</span>
-                <span class="text-sm font-medium text-zinc-300 mt-1">Tuition-Free & Funded</span>
-                <span class="text-xs text-zinc-500 font-mono mt-0.5">Zero Net Tuition Barrier</span>
+            <!-- Metric Card 2: Tuition Free & Funded -->
+            <div class="p-6 bg-surface-base/80 hover:bg-surface-elevated/70 border border-white/10 hover:border-white/20 rounded-2xl transition-all duration-300 ease-base flex flex-col justify-between group relative shadow-sm">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center text-gold group-hover:scale-105 transition-transform duration-300">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-full bg-gold/10 border border-gold/20 text-gold">
+                            Statutory €0
+                        </span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-mono font-semibold text-gold tracking-tight block">€0 / £0 / $0</span>
+                    <h3 class="text-sm font-medium text-zinc-200 mt-2">Tuition Free and Funded</h3>
+                    <p class="text-xs text-zinc-400 font-normal mt-1 leading-relaxed">
+                        Zero net tuition barrier with direct access to regional grants and living stipends.
+                    </p>
+                </div>
+                <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-zinc-400">
+                    <span class="flex items-center gap-1.5 text-gold/90">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                        56 Zero Fee Portals · 84 Stipends
+                    </span>
+                    <span class="text-zinc-600 font-sans text-[11px]">Verified</span>
+                </div>
             </div>
 
-            <div class="flex flex-col sm:border-r sm:border-white/10 sm:pr-6">
-                <span class="text-3xl sm:text-4xl font-mono font-semibold text-amber-400 tracking-tight">14 Traps</span>
-                <span class="text-sm font-medium text-zinc-300 mt-1">Early Cutoffs Flagged</span>
-                <span class="text-xs text-zinc-500 font-mono mt-0.5">Pre-Admission Safeguards</span>
+            <!-- Metric Card 3: Early Funding Traps -->
+            <div class="p-6 bg-surface-base/80 hover:bg-surface-elevated/70 border border-white/10 hover:border-white/20 rounded-2xl transition-all duration-300 ease-base flex flex-col justify-between group relative shadow-sm">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform duration-300">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300">
+                            Dual Cutoff Guard
+                        </span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-mono font-semibold text-amber-400 tracking-tight block">14 Traps</span>
+                    <h3 class="text-sm font-medium text-zinc-200 mt-2">Early Cutoffs Flagged</h3>
+                    <p class="text-xs text-zinc-400 font-normal mt-1 leading-relaxed">
+                        Critical funding deadlines that close up to 150 days before university admission cutoffs.
+                    </p>
+                </div>
+                <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-zinc-400">
+                    <span class="flex items-center gap-1.5 text-amber-300/90">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        Safeguards 60 to 150 Days Early
+                    </span>
+                    <span class="text-zinc-600 font-sans text-[11px]">Audited</span>
+                </div>
             </div>
 
-            <div class="flex flex-col">
-                <span class="text-3xl sm:text-4xl font-mono font-semibold text-emerald-400 tracking-tight">100% Offline</span>
-                <span class="text-sm font-medium text-zinc-300 mt-1">Standalone Architecture</span>
-                <span class="text-xs text-zinc-500 font-mono mt-0.5">Zero Tracking · Local Storage</span>
+            <!-- Metric Card 4: Standalone Offline Architecture -->
+            <div class="p-6 bg-surface-base/80 hover:bg-surface-elevated/70 border border-white/10 hover:border-white/20 rounded-2xl transition-all duration-300 ease-base flex flex-col justify-between group relative shadow-sm">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform duration-300">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
+                            Zero Telemetry
+                        </span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-mono font-semibold text-emerald-400 tracking-tight block">100% Offline</span>
+                    <h3 class="text-sm font-medium text-zinc-200 mt-2">Standalone Architecture</h3>
+                    <p class="text-xs text-zinc-400 font-normal mt-1 leading-relaxed">
+                        Entire scholarship directory and audit engine runs locally in a single file without cloud dependencies.
+                    </p>
+                </div>
+                <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-xs font-mono text-zinc-400">
+                    <span class="flex items-center gap-1.5 text-emerald-300/90">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                        Single File · Zero Cloud · 122KB
+                    </span>
+                    <span class="text-zinc-600 font-sans text-[11px]">Portable</span>
+                </div>
             </div>
 
         </div>
@@ -375,16 +464,27 @@
 
     <!-- ========================================================================= -->
     <!-- SECTION 4: MANDATORY B11 TAGLINE REVEAL (Word-by-Word Scroll Interaction)  -->
+    <!-- Rule B11: Minimum two lines, Heading 1/2 scale step, word-by-word reveal    -->
     <!-- ========================================================================= -->
     <section id="tagline-reveal-section" class="py-24 sm:py-36 px-4 sm:px-6 max-w-5xl mx-auto flex flex-col items-center text-center">
-        <span class="text-xs font-mono uppercase tracking-widest text-gold mb-6 px-3 py-1 bg-gold/10 rounded-full border border-gold/20">
+        
+        <!-- Section Kicker Badge -->
+        <span class="text-xs font-mono uppercase tracking-widest text-gold mb-6 px-3 py-1 bg-gold/10 rounded-full border border-gold/20 inline-flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
             The Admissions Thesis
         </span>
         
-        <h2 id="tagline-container" class="text-3xl sm:text-5xl font-semibold leading-tight tracking-tight max-w-[760px]">
-            <!-- Script will split words and animate opacity via IntersectionObserver -->
-            Great applications do not start with statements of purpose. They start with forensic statutory intelligence.
+        <!-- Two-line Tagline Heading (Heading 2 scale: text-4xl sm:text-5xl lg:text-6xl, leading tight, text-balance) -->
+        <h2 id="tagline-container" class="text-3xl sm:text-5xl lg:text-6xl font-semibold leading-[1.14] tracking-tight max-w-[760px] text-balance">
+            <span class="tagline-line block">Great applications do not begin with generic personal essays.</span>
+            <span class="tagline-line block mt-2 sm:mt-3">They begin with forensic statutory intelligence before portals close.</span>
         </h2>
+
+        <!-- Contextual Subtitle (A5 & B1 Rule: Body 3 style, no hyphens, clear value) -->
+        <p class="text-sm sm:text-base text-zinc-400 max-w-[620px] mx-auto mt-8 font-normal leading-relaxed text-pretty">
+            Every admission cycle, exceptionally qualified candidates are disqualified not by merit, but by hidden statutory cutoffs and missing credit prerequisites. We built this strategic hub to make institutional criteria transparent.
+        </p>
+
     </section>
 
     <!-- ========================================================================= -->
@@ -540,6 +640,9 @@
                     APS · DSU · VPD · CIMEA · ECTS
                 </div>
             </div>
+
+        </div>
+    </section>
 
     <!-- ========================================================================= -->
     <!-- SECTION 7: HOW IT WORKS (A2 Three Concrete Steps)                        -->
@@ -731,47 +834,70 @@
 
         // =========================================================================
         // B11 MANDATORY TAGLINE REVEAL: WORD-BY-WORD SCROLL ANIMATION
+        // Respects Rule B7 (ease-base curve) and prefers-reduced-motion
         // =========================================================================
         const taglineEl = document.getElementById('tagline-container');
         if (taglineEl) {
-            const rawText = taglineEl.innerText.trim();
-            const words = rawText.split(/\s+/);
-            taglineEl.innerHTML = '';
-            
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            
-            words.forEach((word, idx) => {
-                const span = document.createElement('span');
-                span.innerText = word + ' ';
-                span.className = 'inline-block transition-all duration-500 ease-base';
-                if (prefersReducedMotion) {
-                    span.style.opacity = '1';
-                    span.style.color = '#FFFFFF';
-                } else {
-                    span.style.opacity = '0.25';
-                    span.style.color = '#9B9B9B';
-                    span.style.transform = 'translateY(4px)';
-                    span.dataset.wordIndex = idx;
-                }
-                taglineEl.appendChild(span);
-            });
+            const lines = taglineEl.querySelectorAll('.tagline-line');
+            const allWordSpans = [];
 
-            if (!prefersReducedMotion) {
-                const wordSpans = taglineEl.querySelectorAll('span');
+            if (lines.length > 0) {
+                lines.forEach((line) => {
+                    const text = line.innerText.trim();
+                    const words = text.split(/\s+/);
+                    line.innerHTML = '';
+                    words.forEach((word) => {
+                        const span = document.createElement('span');
+                        span.innerText = word + ' ';
+                        span.className = 'inline-block transition-all duration-500 ease-base';
+                        if (prefersReducedMotion) {
+                            span.style.opacity = '1';
+                            span.style.color = '#FFFFFF';
+                        } else {
+                            span.style.opacity = '0.28';
+                            span.style.color = '#71717A';
+                            span.style.transform = 'translateY(3px)';
+                        }
+                        line.appendChild(span);
+                        allWordSpans.push(span);
+                    });
+                });
+            } else {
+                const words = taglineEl.innerText.trim().split(/\s+/);
+                taglineEl.innerHTML = '';
+                words.forEach((word) => {
+                    const span = document.createElement('span');
+                    span.innerText = word + ' ';
+                    span.className = 'inline-block transition-all duration-500 ease-base';
+                    if (prefersReducedMotion) {
+                        span.style.opacity = '1';
+                        span.style.color = '#FFFFFF';
+                    } else {
+                        span.style.opacity = '0.28';
+                        span.style.color = '#71717A';
+                        span.style.transform = 'translateY(3px)';
+                    }
+                    taglineEl.appendChild(span);
+                    allWordSpans.push(span);
+                });
+            }
+
+            if (!prefersReducedMotion && allWordSpans.length > 0) {
                 const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
+                    entries.forEach((entry) => {
                         if (entry.isIntersecting) {
-                            wordSpans.forEach((span, i) => {
+                            allWordSpans.forEach((span, i) => {
                                 setTimeout(() => {
                                     span.style.opacity = '1';
                                     span.style.color = '#FFFFFF';
                                     span.style.transform = 'translateY(0)';
-                                }, i * 65); // 65ms per-word activation cadence
+                                }, i * 50); // 50ms per-word activation cadence on ease-base curve
                             });
                             observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.35 });
+                }, { threshold: 0.25 });
 
                 observer.observe(taglineEl);
             }
