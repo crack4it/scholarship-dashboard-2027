@@ -874,42 +874,108 @@
 
     <!-- ========================================================================= -->
     <!-- SECTION 7: HOW IT WORKS (A2 Three Concrete Steps)                        -->
+    <!-- Rules: B1 Zero Hyphens, B2 Spacing Tokens, B3 Nested Radii, B4 360 Borders -->
     <!-- ========================================================================= -->
-    <section class="py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-white/5">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2 block">Application Cadence</span>
-            <h2 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+    <section class="py-20 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto border-t border-white/5">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2.5 block">
+                05 / Application Cadence
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight text-balance">
                 Three Steps from Research to Offer
             </h2>
-            <p class="text-sm text-zinc-400 mt-3">
-                How to navigate 183 programs systematically without getting overwhelmed or missing deadlines.
+            <p class="text-sm sm:text-base text-zinc-400 mt-3 leading-relaxed max-w-[620px] mx-auto text-pretty">
+                How to navigate 183 sovereign programs systematically without administrative friction or missed deadlines.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Three Architectural Cadence Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             
-            <div class="p-6 bg-surface-base border border-white/10 rounded-2xl relative">
-                <span class="text-3xl font-mono font-semibold text-gold mb-4 block">01</span>
-                <h3 class="text-base font-semibold text-white mb-2">Filter & Shortlist in Seconds</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                    Filter by zero-fee applications, discipline prerequisites, or country. Isolate your top 8 targets using the built-in target bookmarking tool.
-                </p>
+            <!-- Step 1: Discovery & Shortlist -->
+            <div class="p-6 sm:p-8 bg-surface-base border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 ease-base flex flex-col justify-between group shadow-sm">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-[11px] font-mono uppercase px-2.5 py-0.5 rounded-full bg-gold/10 border border-gold/20 text-gold font-medium">
+                            Phase 01
+                        </span>
+                        <span class="text-4xl sm:text-5xl font-mono font-semibold text-gold/80 group-hover:text-gold transition-colors duration-300">
+                            01
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white tracking-tight mb-2.5">
+                        Filter and Shortlist in Seconds
+                    </h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed font-normal mb-6">
+                        Filter by verified zero fee application portals, discipline prerequisites, and sovereign country criteria. Isolate your target programs using the native in browser bookmarking engine.
+                    </p>
+                </div>
+
+                <!-- Step Telemetry Inset (Nested B3 Radii: rounded-xl inside rounded-2xl) -->
+                <div class="p-4 bg-surface-elevated/60 rounded-xl border border-white/5 font-mono text-xs text-zinc-400 space-y-1">
+                    <span class="text-[10px] text-zinc-500 uppercase tracking-wider block">Phase Output</span>
+                    <span class="text-white font-medium block">8 Target Master Programs Selected</span>
+                    <span class="text-gold text-[11px] block">Zero fee portal routes verified</span>
+                </div>
             </div>
 
-            <div class="p-6 bg-surface-base border border-white/10 rounded-2xl relative">
-                <span class="text-3xl font-mono font-semibold text-amber-400 mb-4 block">02</span>
-                <h3 class="text-base font-semibold text-white mb-2">Verify Dual Deadlines</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                    Check whether your program has an early funding cutoff. Identify if the scholarship closes 60 days before general admissions to protect your funding.
-                </p>
+            <!-- Step 2: Timeline Synchronization -->
+            <div class="p-6 sm:p-8 bg-surface-base border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 ease-base flex flex-col justify-between group shadow-sm">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-[11px] font-mono uppercase px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 font-medium">
+                            Phase 02
+                        </span>
+                        <span class="text-4xl sm:text-5xl font-mono font-semibold text-amber-400/80 group-hover:text-amber-400 transition-colors duration-300">
+                            02
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white tracking-tight mb-2.5">
+                        Synchronize Dual Deadlines
+                    </h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed font-normal mb-6">
+                        Cross examine each selected program against external scholarship cutoffs. Flag the early funding traps that close up to 150 days before general course admissions to guarantee financial coverage.
+                    </p>
+                </div>
+
+                <!-- Step Telemetry Inset (Nested B3 Radii: rounded-xl inside rounded-2xl) -->
+                <div class="p-4 bg-surface-elevated/60 rounded-xl border border-white/5 font-mono text-xs text-zinc-400 space-y-1">
+                    <span class="text-[10px] text-zinc-500 uppercase tracking-wider block">Phase Output</span>
+                    <span class="text-white font-medium block">14 Early Cutoff Alerts Active</span>
+                    <span class="text-amber-300 text-[11px] block">Dual calendar timeline secured</span>
+                </div>
             </div>
 
-            <div class="p-6 bg-surface-base border border-white/10 rounded-2xl relative">
-                <span class="text-3xl font-mono font-semibold text-emerald-400 mb-4 block">03</span>
-                <h3 class="text-base font-semibold text-white mb-2">Deploy Pre-Vetted SOPs</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
-                    Draft high-impact Statements of Purpose using Section 9 blueprints pre-calibrated to each university faculty, research center, and curriculum requirement.
-                </p>
+            <!-- Step 3: Deployment -->
+            <div class="p-6 sm:p-8 bg-surface-base border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 ease-base flex flex-col justify-between group shadow-sm">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-[11px] font-mono uppercase px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-medium">
+                            Phase 03
+                        </span>
+                        <span class="text-4xl sm:text-5xl font-mono font-semibold text-emerald-400/80 group-hover:text-emerald-400 transition-colors duration-300">
+                            03
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white tracking-tight mb-2.5">
+                        Deploy Calibrated SOP Blueprints
+                    </h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed font-normal mb-6">
+                        Synthesize compelling Statements of Purpose using Section 9 blueprints calibrated in advance to host faculty members, departmental research centers, and degree requirements.
+                    </p>
+                </div>
+
+                <!-- Step Telemetry Inset (Nested B3 Radii: rounded-xl inside rounded-2xl) -->
+                <div class="p-4 bg-surface-elevated/60 rounded-xl border border-white/5 font-mono text-xs text-zinc-400 space-y-1">
+                    <span class="text-[10px] text-zinc-500 uppercase tracking-wider block">Phase Output</span>
+                    <span class="text-white font-medium block">Verified Academic Proposal Ready</span>
+                    <span class="text-emerald-400 text-[11px] block">Ready for immediate portal submission</span>
+                </div>
             </div>
 
         </div>
