@@ -464,23 +464,23 @@
 
     <!-- ========================================================================= -->
     <!-- SECTION 4: MANDATORY B11 TAGLINE REVEAL (Word-by-Word Scroll Interaction)  -->
-    <!-- Rule B11: Minimum two lines, Heading 1/2 scale step, word-by-word reveal    -->
+    <!-- Rule B11: Minimum two lines, Heading 1/2 scale, 680px cap, Spacing-800/900 -->
     <!-- ========================================================================= -->
-    <section id="tagline-reveal-section" class="py-24 sm:py-36 px-4 sm:px-6 max-w-5xl mx-auto flex flex-col items-center text-center">
+    <section id="tagline-reveal-section" class="py-20 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto flex flex-col items-center text-center">
         
-        <!-- Section Kicker Badge -->
+        <!-- Section Kicker Badge (Title 5: text-xs font-mono font-medium, Spacing-300: mb-6) -->
         <span class="text-xs font-mono uppercase tracking-widest text-gold mb-6 px-3 py-1 bg-gold/10 rounded-full border border-gold/20 inline-flex items-center gap-1.5">
             <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
             The Admissions Thesis
         </span>
         
-        <!-- Two-line Tagline Heading (Heading 2 scale: text-4xl sm:text-5xl lg:text-6xl, leading tight, text-balance) -->
-        <h2 id="tagline-container" class="text-3xl sm:text-5xl lg:text-6xl font-semibold leading-[1.14] tracking-tight max-w-[760px] text-balance">
+        <!-- Two-line Tagline Heading (Heading 2 scale: text-3xl sm:text-5xl lg:text-6xl, max-w-[680px] per B5/B11) -->
+        <h2 id="tagline-container" class="text-3xl sm:text-5xl lg:text-6xl font-semibold leading-[1.14] tracking-tight max-w-[680px] text-balance">
             <span class="tagline-line block">Great applications do not begin with generic personal essays.</span>
             <span class="tagline-line block mt-2 sm:mt-3">They begin with forensic statutory intelligence before portals close.</span>
         </h2>
 
-        <!-- Contextual Subtitle (A5 & B1 Rule: Body 3 style, no hyphens, clear value) -->
+        <!-- Contextual Subtitle (Body 3 style: text-base, max-w-[680px], Spacing-400: mt-8, zero hyphens) -->
         <p class="text-sm sm:text-base text-zinc-400 max-w-[620px] mx-auto mt-8 font-normal leading-relaxed text-pretty">
             Every admission cycle, exceptionally qualified candidates are disqualified not by merit, but by hidden statutory cutoffs and missing credit prerequisites. We built this strategic hub to make institutional criteria transparent.
         </p>
@@ -884,22 +884,29 @@
             }
 
             if (!prefersReducedMotion && allWordSpans.length > 0) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            allWordSpans.forEach((span, i) => {
-                                setTimeout(() => {
-                                    span.style.opacity = '1';
-                                    span.style.color = '#FFFFFF';
-                                    span.style.transform = 'translateY(0)';
-                                }, i * 50); // 50ms per-word activation cadence on ease-base curve
-                            });
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.25 });
+                // Rule B11: IntersectionObserver per word with trigger line at -12% bottom
+                const wordObserver = new IntersectionObserver((entries) => {
+                    const intersecting = entries.filter(e => e.isIntersecting);
+                    if (intersecting.length > 0) {
+                        intersecting.forEach((entry, idx) => {
+                            const span = entry.target;
+                            wordObserver.unobserve(span);
+                            setTimeout(() => {
+                                span.style.opacity = '1';
+                                span.style.color = '#FFFFFF';
+                                span.style.transform = 'translateY(0)';
+                            }, idx * 45); // 45ms sequential activation cadence on ease-base curve
+                        });
+                    }
+                }, {
+                    root: null,
+                    rootMargin: '0px 0px -12% 0px',
+                    threshold: 0.1
+                });
 
-                observer.observe(taglineEl);
+                allWordSpans.forEach((span) => {
+                    wordObserver.observe(span);
+                });
             }
         }
     </script>
