@@ -1636,7 +1636,7 @@
         outline-offset: 2px !important;
     }
 </style>
-    <script src="data.js?v=2027.11" onerror="window.__dataLoadError = true;"></script>
+    <script src="data.js?v=2027.12" onerror="window.__dataLoadError = true;"></script>
 </head>
 <body>
 
@@ -3307,11 +3307,17 @@ function sanitizeProgram(raw, idx) {
     };
 
     const rawSop = (raw.sopBlueprint && typeof raw.sopBlueprint === 'object') ? raw.sopBlueprint : {};
+    const p2Val = rawSop.p2_synergy || rawSop.p2_faculty || ('Leveraging faculty research and departmental collections at ' + str(raw.uni, 'the host institution'));
+    const p3Val = rawSop.p3_research || rawSop.p3_methodology || 'Conducting rigorous comparative analysis and primary textual hermeneutics.';
+    const titleVal = rawSop.title || (str(raw.uni, 'University') + ' — ' + str(raw.prog, 'Master Statement of Purpose'));
     const sopBlueprint = {
+        title: str(titleVal),
         p1_hook: str(rawSop.p1_hook, 'Investigating critical developments in ' + str(raw.discipline, 'interdisciplinary studies')),
-        p2_faculty: str(rawSop.p2_faculty, 'Leveraging faculty research at ' + str(raw.uni, 'the host institution')),
-        p3_methodology: str(rawSop.p3_methodology, 'Combining philological textual hermeneutics with empirical analysis.'),
-        p4_impact: str(rawSop.p4_impact, 'Contributing to cross-cultural scholarly exchange.')
+        p2_synergy: str(p2Val),
+        p2_faculty: str(p2Val),
+        p3_research: str(p3Val),
+        p3_methodology: str(p3Val),
+        p4_impact: str(rawSop.p4_impact, 'Contributing to cross-cultural scholarly exchange, pedagogy, and institutional leadership.')
     };
 
     return {
@@ -5464,6 +5470,11 @@ function toggleSopBlueprint(progId) {
         alert('SOP blueprint for this program is being prepared.');
         return;
     }
+    const sopTitle = (sop && sop.title) || (p ? (p.uni + ' — ' + p.prog) : 'Master Program Statement of Purpose');
+    const p1Text = (sop && sop.p1_hook) || 'Examining key methodological paradigms.';
+    const p2Text = (sop && (sop.p2_synergy || sop.p2_faculty)) || ('Leveraging faculty expertise and archival resources at ' + (p ? p.uni : 'the university') + '.');
+    const p3Text = (sop && (sop.p3_research || sop.p3_methodology)) || 'Conducting rigorous philological and interdisciplinary textual investigation.';
+    const p4Text = (sop && sop.p4_impact) || 'Fostering cross-regional academic leadership and institutional development.';
 
     const contentDiv = document.getElementById('sopBlueprintText');
     const rawTextarea = document.getElementById('sopBlueprintRaw');

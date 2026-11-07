@@ -19003,9 +19003,12 @@
             "Submit Bonn Deutschlandstipendium application between April 15 and May 18, 2027"
         ],
         "sopBlueprint": {
+            "title": "University of Bonn — MA in Asian and Islamic Studies",
             "p1_hook": "Synthesizing classical Islamic textual hermeneutics with Western comparative theological discourse.",
-            "p2_faculty": "Leveraging the Department of Islamic Studies and Faculty of Theology at Bonn.",
-            "p3_methodology": "Philological analysis of Quranic commentaries paired with contemporary interfaith ethics.",
+            "p2_synergy": "Leveraging the Department of Islamic Studies and Faculty of Theology at Bonn, specifically utilizing the specialized Oriental manuscript holdings and interfaith archives.",
+            "p2_faculty": "Leveraging the Department of Islamic Studies and Faculty of Theology at Bonn, specifically utilizing the specialized Oriental manuscript holdings and interfaith archives.",
+            "p3_research": "Philological analysis of Quranic commentaries paired with contemporary interfaith ethics, examining historical Islamic hermeneutics within German comparative theology.",
+            "p3_methodology": "Philological analysis of Quranic commentaries paired with contemporary interfaith ethics, examining historical Islamic hermeneutics within German comparative theology.",
             "p4_impact": "Bridging academic dialogue between European and South Asian theological frameworks."
         },
         "isTop10": true,
@@ -19104,9 +19107,12 @@
             "Apply for RUB Deutschlandstipendium between late April and mid-May 2027"
         ],
         "sopBlueprint": {
+            "title": "Ruhr-Universität Bochum — MA in Religious Studies (CERES)",
             "p1_hook": "Investigating the intra-faith and inter-faith transfer of religious traditions along historical Eurasian networks.",
-            "p2_faculty": "Direct alignment with the Center for Religious Studies (CERES) at Ruhr-Universität Bochum.",
-            "p3_methodology": "Integrating Islamic intellectual history with comparative cross-cultural religious typologies.",
+            "p2_synergy": "Direct alignment with the Center for Religious Studies (CERES) at Ruhr-Universität Bochum, participating in research on religious dynamics and Eurasian intellectual transfer.",
+            "p2_faculty": "Direct alignment with the Center for Religious Studies (CERES) at Ruhr-Universität Bochum, participating in research on religious dynamics and Eurasian intellectual transfer.",
+            "p3_research": "Integrating Islamic intellectual history with comparative cross-cultural religious typologies, examining the transmission of legal and ethical texts across Eurasian trade networks.",
+            "p3_methodology": "Integrating Islamic intellectual history with comparative cross-cultural religious typologies, examining the transmission of legal and ethical texts across Eurasian trade networks.",
             "p4_impact": "Contributing to academic scholarship on contemporary religious pluralism in Europe and South Asia."
         },
         "isTop10": true,
@@ -19205,9 +19211,12 @@
             "Apply for Erfurt Deutschlandstipendium during the summer cycle (June/July 2027)"
         ],
         "sopBlueprint": {
+            "title": "University of Erfurt — MA in Religious Studies",
             "p1_hook": "Analyzing religious transformation and secularization from a cross-cultural sociological perspective.",
-            "p2_faculty": "Leveraging the Max Weber Centre for Advanced Cultural and Social Studies at Erfurt.",
-            "p3_methodology": "Comparative hermeneutics combining Islamic legal theory with Weberian sociology of religion.",
+            "p2_synergy": "Leveraging the Max Weber Centre for Advanced Cultural and Social Studies at Erfurt, engaging with faculty working on secularity, religious pluralism, and institutional norms.",
+            "p2_faculty": "Leveraging the Max Weber Centre for Advanced Cultural and Social Studies at Erfurt, engaging with faculty working on secularity, religious pluralism, and institutional norms.",
+            "p3_research": "Comparative hermeneutics combining Islamic legal theory with Weberian sociology of religion, investigating institutional accountability and religious ethics.",
+            "p3_methodology": "Comparative hermeneutics combining Islamic legal theory with Weberian sociology of religion, investigating institutional accountability and religious ethics.",
             "p4_impact": "Fostering academic understanding of religious traditions in modern pluralistic societies."
         },
         "isTop10": true,
