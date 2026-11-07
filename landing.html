@@ -489,80 +489,190 @@
 
     <!-- ========================================================================= -->
     <!-- SECTION 5: THE PROBLEM-TO-SOLUTION SPLIT (A2 Narrative Architecture)      -->
+    <!-- Rules: B1 Zero Hyphens, B2 Spacing Tokens, B3 Nested Radii, B4 360 Borders -->
     <!-- ========================================================================= -->
-    <section class="py-20 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2 block">The Strategic Shift</span>
-            <h2 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight">
-                Why Strong Candidates Get Rejected
+    <section class="py-20 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+        
+        <!-- Section Architectural Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2.5 block">
+                03 / The Strategic Shift
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight text-balance">
+                Why Exceptional Candidates Get Rejected
             </h2>
-            <p class="text-sm text-zinc-400 mt-3">
-                Most international applicants lose scholarships weeks before admission committees even read their transcripts.
+            <p class="text-sm sm:text-base text-zinc-400 mt-3 leading-relaxed max-w-[620px] mx-auto text-pretty">
+                Most international applicants lose scholarship funding months before admissions committees ever read their academic papers. Strategic admission begins with institutional mechanics.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- The Architectural Split (2 Monoliths) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             
-            <!-- Left: The Conventional Route (The Broken Way) -->
-            <div class="p-6 sm:p-8 bg-surface-base border border-red-500/20 rounded-2xl relative overflow-hidden">
-                <div class="flex items-center gap-2 mb-6">
-                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
-                    <span class="text-xs font-mono text-red-400 uppercase tracking-wider font-semibold">The Conventional Route</span>
+            <!-- Monolith 1: The Conventional Route (Administrative Deficit) -->
+            <div class="p-6 sm:p-8 bg-surface-base border border-red-500/25 rounded-2xl relative overflow-hidden flex flex-col justify-between transition-all duration-300 ease-base hover:border-red-500/40">
+                <div>
+                    <!-- Monolith Header -->
+                    <div class="flex items-center justify-between pb-5 border-b border-white/5 mb-6">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
+                            <span class="text-xs font-mono text-red-400 uppercase tracking-wider font-semibold">
+                                The Conventional Route
+                            </span>
+                        </div>
+                        <span class="text-[11px] font-mono text-zinc-500 uppercase">
+                            Administrative Deficit
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white tracking-tight mb-2">
+                        Fragile Assumptions and Blind Submissions
+                    </h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-6 font-normal">
+                        Relying on commercial agencies and superficial blogs introduces systematic failure points at every stage of the European admissions pipeline.
+                    </p>
+
+                    <!-- Three Anatomical Deficit Rows (Nested B3 Radii: rounded-xl inside rounded-2xl) -->
+                    <div class="space-y-3.5">
+                        
+                        <!-- Row 1: Early Cutoff Trap -->
+                        <div class="p-4 sm:p-5 bg-surface-elevated/40 border border-white/5 rounded-xl">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-medium text-white flex items-center gap-2">
+                                    <span class="text-red-400 font-mono text-xs">✕</span>
+                                    Missed Early Funding Cutoffs
+                                </span>
+                                <span class="text-[10px] font-mono text-red-400/90 tracking-wider uppercase px-2 py-0.5 rounded bg-red-500/10 border border-red-500/20">
+                                    Timing Mismatch
+                                </span>
+                            </div>
+                            <p class="text-xs text-zinc-400 leading-relaxed font-normal">
+                                Major external scholarships routinely close 60 to 150 days before general course admissions, leaving applicants with an academic offer but zero financial support.
+                            </p>
+                        </div>
+
+                        <!-- Row 2: Blocked Account Surprise -->
+                        <div class="p-4 sm:p-5 bg-surface-elevated/40 border border-white/5 rounded-xl">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-medium text-white flex items-center gap-2">
+                                    <span class="text-red-400 font-mono text-xs">✕</span>
+                                    Surprise Blocked Accounts
+                                </span>
+                                <span class="text-[10px] font-mono text-red-400/90 tracking-wider uppercase px-2 py-0.5 rounded bg-red-500/10 border border-red-500/20">
+                                    Liquidity Shock
+                                </span>
+                            </div>
+                            <p class="text-xs text-zinc-400 leading-relaxed font-normal">
+                                Discovering too late that Germany mandates an 11,904 euro Sperrkonto or the United Kingdom requires 12,000 pounds cash held in bank for entry visa issuance.
+                            </p>
+                        </div>
+
+                        <!-- Row 3: Credit Disqualification -->
+                        <div class="p-4 sm:p-5 bg-surface-elevated/40 border border-white/5 rounded-xl">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-medium text-white flex items-center gap-2">
+                                    <span class="text-red-400 font-mono text-xs">✕</span>
+                                    Credit Disqualification
+                                </span>
+                                <span class="text-[10px] font-mono text-red-400/90 tracking-wider uppercase px-2 py-0.5 rounded bg-red-500/10 border border-red-500/20">
+                                    Desk Rejection
+                                </span>
+                            </div>
+                            <p class="text-xs text-zinc-400 leading-relaxed font-normal">
+                                Paying 75 euro nonrefundable application fees only to be rejected immediately because undergraduate transcripts lacked ten credits in specific methodology.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
-                <ul class="space-y-5 text-sm text-zinc-300">
-                    <li class="flex items-start gap-3">
-                        <span class="text-red-400 font-mono font-bold mt-0.5">✕</span>
-                        <div>
-                            <strong class="text-white block font-medium">Missed Early Funding Cutoffs</strong>
-                            Scholarships often close 60 to 150 days before course admission deadlines, leaving candidates with an offer but €0 funding.
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-red-400 font-mono font-bold mt-0.5">✕</span>
-                        <div>
-                            <strong class="text-white block font-medium">Surprise Visa Blocked Accounts</strong>
-                            Discovering too late that Germany mandates a €11,904 Sperrkonto or the UK requires £12,000 cash in bank for visa issuance.
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-red-400 font-mono font-bold mt-0.5">✕</span>
-                        <div>
-                            <strong class="text-white block font-medium">ECTS Credit Disqualification</strong>
-                            Spending €75 per application only to get desk-rejected because the undergraduate transcript lacked 10 ECTS in specific methodology.
-                        </div>
-                    </li>
-                </ul>
+
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-zinc-500">
+                    <span>Outcome: Offer with Zero Funding</span>
+                    <span class="text-red-400">High Risk</span>
+                </div>
             </div>
 
-            <!-- Right: The Strategic Hub Standard -->
-            <div class="p-6 sm:p-8 bg-surface-base border border-emerald-500/30 rounded-2xl relative overflow-hidden shadow-xl shadow-emerald-950/10">
-                <div class="flex items-center gap-2 mb-6">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">The Strategic Hub Standard</span>
+            <!-- Monolith 2: The Strategic Hub Standard (Sovereign Forensic Architecture) -->
+            <div class="p-6 sm:p-8 bg-surface-base border border-emerald-500/35 rounded-2xl relative overflow-hidden flex flex-col justify-between shadow-2xl shadow-emerald-950/20 transition-all duration-300 ease-base hover:border-emerald-500/50">
+                <div>
+                    <!-- Monolith Header -->
+                    <div class="flex items-center justify-between pb-5 border-b border-white/5 mb-6">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">
+                                The Strategic Hub Standard
+                            </span>
+                        </div>
+                        <span class="text-[11px] font-mono text-emerald-400/80 uppercase">
+                            Forensic Architecture
+                        </span>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white tracking-tight mb-2">
+                        Statutory Precision and Safeguarded Portals
+                    </h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-6 font-normal">
+                        Every single program is stress tested against sovereign education statutes, ministerial funding decrees, and synchronized dual calendars.
+                    </p>
+
+                    <!-- Three Anatomical Precision Rows (Nested B3 Radii: rounded-xl inside rounded-2xl) -->
+                    <div class="space-y-3.5">
+                        
+                        <!-- Row 1: Dual Track Synchronization -->
+                        <div class="p-4 sm:p-5 bg-surface-elevated/40 border border-emerald-500/15 rounded-xl">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-medium text-white flex items-center gap-2">
+                                    <span class="text-emerald-400 font-mono text-xs">✓</span>
+                                    Dual Track Synchronization
+                                </span>
+                                <span class="text-[10px] font-mono text-emerald-400/90 tracking-wider uppercase px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
+                                    Timeline Guard
+                                </span>
+                            </div>
+                            <p class="text-xs text-zinc-400 leading-relaxed font-normal">
+                                Independent tracking of scholarship cutoffs distinct from university admissions, providing active alerts for 14 critical early application traps.
+                            </p>
+                        </div>
+
+                        <!-- Row 2: Statutory Living Cost Grants -->
+                        <div class="p-4 sm:p-5 bg-surface-elevated/40 border border-emerald-500/15 rounded-xl">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-medium text-white flex items-center gap-2">
+                                    <span class="text-emerald-400 font-mono text-xs">✓</span>
+                                    Statutory Living Cost Grants
+                                </span>
+                                <span class="text-[10px] font-mono text-emerald-400/90 tracking-wider uppercase px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
+                                    Sovereign Funding
+                                </span>
+                            </div>
+                            <p class="text-xs text-zinc-400 leading-relaxed font-normal">
+                                Immediate unlocking of Italian regional DSU grants delivering 8,000 euro annual stipends, Chinese C9 government awards, and tuition exemptions.
+                            </p>
+                        </div>
+
+                        <!-- Row 3: Section 9 Academic Blueprints -->
+                        <div class="p-4 sm:p-5 bg-surface-elevated/40 border border-emerald-500/15 rounded-xl">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-medium text-white flex items-center gap-2">
+                                    <span class="text-emerald-400 font-mono text-xs">✓</span>
+                                    Section 9 Academic Blueprints
+                                </span>
+                                <span class="text-[10px] font-mono text-emerald-400/90 tracking-wider uppercase px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
+                                    Verified Fit
+                                </span>
+                            </div>
+                            <p class="text-xs text-zinc-400 leading-relaxed font-normal">
+                                Faculty synergy mappings, thesis proposal hooks, and prerequisite evaluations verified before spending a single euro on portal application fees.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
-                <ul class="space-y-5 text-sm text-zinc-300">
-                    <li class="flex items-start gap-3">
-                        <span class="text-emerald-400 font-mono font-bold mt-0.5">✓</span>
-                        <div>
-                            <strong class="text-white block font-medium">Dual-Track Deadline Synchronization</strong>
-                            Every single program tracks the exact funding cutoff separately from the academic deadline, alerting you to 14 critical early traps.
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-emerald-400 font-mono font-bold mt-0.5">✓</span>
-                        <div>
-                            <strong class="text-white block font-medium">Statutory Living Cost Solutions</strong>
-                            Immediate identification of Italian DSU means-tested €8,000 grants, Chinese C9 government stipends, and Baden-Württemberg waivers.
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-emerald-400 font-mono font-bold mt-0.5">✓</span>
-                        <div>
-                            <strong class="text-white block font-medium">Forensic Section 9 SOP Blueprints</strong>
-                            Tailored academic hooks, faculty synergy mappings, and prerequisite cross-checks pre-computed before you spend a single euro on fees.
-                        </div>
-                    </li>
-                </ul>
+
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-zinc-400">
+                    <span>Outcome: Fully Funded Admission</span>
+                    <span class="text-emerald-400 font-medium">100% Zero Tuition</span>
+                </div>
             </div>
 
         </div>
