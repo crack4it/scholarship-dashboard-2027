@@ -1406,7 +1406,7 @@
             🇬🇧 UK Decision Center <span class="nav-badge" id="uk-nav-count">16</span>
         </div>
         <div class="nav-tab" data-tab="italy" onclick="switchMainTab('italy')">
-            🇮🇹 Italy Tuition-Free Center <span class="nav-badge" id="italy-nav-count">4</span>
+            🇮🇹 Italy Tuition-Free Center <span class="nav-badge" id="italy-nav-count">42</span>
         </div>
         <div class="nav-tab" data-tab="central" onclick="switchMainTab('central')">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="5 6 12 3 19 6"/><line x1="4" y1="10" x2="4" y2="21"/><line x1="20" y1="10" x2="20" y2="21"/></svg> Central Europe Hub <span class="nav-badge" id="central-nav-count">52</span>
@@ -1504,8 +1504,8 @@
             </div>
 
             <div style="margin-top: 14px; font-size: 8pt; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
-                <div>Showing <strong id="displayedCount" style="color: var(--primary);">97</strong> of <span id="totalCountStatic">97</span> verified programs</div>
-                <div style="font-style: italic;">Click any card to open the complete Level 3 strategic dossier, AI SOP blueprint & document checklist</div>
+                <div>Showing <strong id="displayedCount">183</strong> of <span id="totalCountStatic">183</span> verified programs</div>
+                <div style="">Click any card to open the complete Level 3 strategic dossier, AI SOP blueprint & document checklist</div>
             </div>
         </div>
 
@@ -3974,6 +3974,8 @@ function renderProgramGrid(data, isAppend = false) {
 
     document.getElementById('displayedCount').innerText = currentGridData.length;
     document.getElementById('global-nav-count').innerText = getScholarshipPrograms().length;
+    const totalElem = document.getElementById('totalCountStatic');
+    if (totalElem) totalElem.innerText = getScholarshipPrograms().length;
 
     if (currentGridData.length === 0) {
         grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #a0aec0; font-size: 11pt;">No programs match the selected filter criteria. Try resetting filters.</div>';
