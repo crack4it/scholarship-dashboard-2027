@@ -6,47 +6,87 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Global Master's & European Scholarship Strategic Hub (2027/28 Intake)</title>
+
+    <!-- Geist & Geist Mono Type System -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Global Master's & European Scholarship Strategic Hub (2027/28 Intake)</title>
 <style>
+    /* ==============================================================================
+     * OBSIDIAN LUXURY ARCHITECTURAL DESIGN SYSTEM (2027/28 INTAKE)
+     * Typography: Geist Sans & Geist Mono (Tailwind Strict Type Scale)
+     * Theme: Flat Dark Obsidian / Zaha Hadid Precision / Pure Monochrome + Gold Accent
+     * Compliance: Zero Background Gradients · 360° Hairline Borders · Motion Curves
+     * ============================================================================== */
+
     :root {
-        --primary: #1a365d;
-        --primary-light: #2b6cb0;
-        --secondary: #2c5282;
-        --accent: #d69e2e;
-        --accent-light: #fefcbf;
-        --bg: #f7fafc;
-        --card-bg: #ffffff;
-        --text-main: #2d3748;
-        --text-muted: #718096;
-        --border: #e2e8f0;
-        --success-bg: #c6f6d5;
-        --success-text: #22543d;
-        --warning-bg: #feebc8;
-        --warning-text: #744210;
-        --purple-bg: #e9d8fd;
-        --purple-text: #44337a;
-        --blue-bg: #ebf8ff;
-        --blue-text: #2b6cb0;
-        --danger-bg: #fed7d7;
-        --danger-text: #9b2c2c;
+        --bg: #000000;
+        --surface-nav: #121214;
+        --card-bg: #181818;
+        --card-well: #1F1F1F;
+        --card-well-border: rgba(255, 255, 255, 0.06);
+        --border: rgba(255, 255, 255, 0.08);
+        --border-hover: rgba(255, 255, 255, 0.22);
+        --text-main: #EDEDED;
+        --text-muted: #8E8E93;
+        --text-subtle: #636366;
+        --accent: #E5A93C;
+        --accent-soft: rgba(229, 169, 60, 0.12);
+        --primary: #EDEDED;
+        --primary-light: #A1A1AA;
+        --secondary: #272727;
+        --success-bg: rgba(16, 185, 129, 0.12);
+        --success-text: #34D399;
+        --success-border: rgba(16, 185, 129, 0.28);
+        --warning-bg: rgba(245, 158, 11, 0.12);
+        --warning-text: #FBBF24;
+        --warning-border: rgba(245, 158, 11, 0.28);
+        --danger-bg: rgba(244, 63, 94, 0.12);
+        --danger-text: #FB7185;
+        --danger-border: rgba(244, 63, 94, 0.28);
+        --blue-bg: rgba(56, 189, 248, 0.12);
+        --blue-text: #38BDF8;
+        --blue-border: rgba(56, 189, 248, 0.28);
+        --purple-bg: rgba(129, 140, 248, 0.12);
+        --purple-text: #A5B4FC;
+        --purple-border: rgba(129, 140, 248, 0.28);
     }
 
-    * { box-sizing: border-box; }
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-family: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         background-color: var(--bg);
         color: var(--text-main);
         margin: 0;
         padding: 0;
-        font-size: 9.5pt;
-        line-height: 1.45;
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
+    h1, h2, h3, h4, h5, h6 {
+        text-wrap: balance;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+    }
+
+    p, span, div {
+        text-wrap: pretty;
+    }
+
+    /* -------------------------------------------------------------------------
+     * HEADER SECTION (FLAT OBSIDIAN · HAIRLINE BORDER · GEIST TYPOGRAPHY)
+     * ------------------------------------------------------------------------- */
     header {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1a365d 100%);
-        color: #ffffff;
-        padding: 24px 32px 20px 32px;
-        border-bottom: 3px solid var(--accent);
+        background: var(--surface-nav) !important;
+        color: #FFFFFF;
+        padding: 28px 32px 24px 32px;
+        border-bottom: 1px solid var(--border) !important;
     }
     .header-top {
         display: flex;
@@ -56,46 +96,61 @@
         gap: 16px;
     }
     .header-title h1 {
-        margin: 0 0 6px 0;
-        font-size: 19pt;
-        font-weight: 800;
-        letter-spacing: -0.5px;
+        margin: 0 0 8px 0;
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        background: linear-gradient(90deg, #FFFFFF 0%, #9B9B9B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .header-title p {
         margin: 0;
-        color: #cbd5e1;
-        font-size: 10pt;
+        color: var(--text-muted);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
     }
 
+    /* Candidate Pills */
     .candidate-pills {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-top: 14px;
+        margin-top: 18px;
         align-items: center;
     }
     .pill {
-        background: rgba(255,255,255,0.12);
-        backdrop-filter: blur(4px);
-        padding: 4px 10px;
-        border-radius: 20px;
-        font-size: 8pt;
+        background: #181818;
+        border: 1px solid var(--border);
+        padding: 5px 12px;
+        border-radius: 9999px;
+        font-size: 12px;
+        line-height: 16px;
         font-weight: 500;
-        color: #f1f5f9;
-        border: 1px solid rgba(255,255,255,0.18);
+        color: #D1D5DB;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .pill:hover {
+        border-color: var(--border-hover);
+        background: #1F1F1F;
     }
     .pill-accent {
-        background: rgba(214, 158, 46, 0.25);
-        border-color: var(--accent);
-        color: #fef08a;
-        font-weight: 700;
+        background: var(--accent-soft);
+        border-color: rgba(229, 169, 60, 0.4);
+        color: var(--accent);
+        font-weight: 600;
     }
 
-    /* Pipeline Action Bar in Header */
+    /* Pipeline Action Bar */
     .header-action-bar {
-        margin-top: 16px;
-        padding-top: 14px;
-        border-top: 1px solid rgba(255,255,255,0.12);
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -109,21 +164,28 @@
         align-items: center;
     }
     .counter-chip {
-        padding: 4px 10px;
-        border-radius: 14px;
-        font-size: 8pt;
-        font-weight: 700;
+        padding: 5px 12px;
+        border-radius: 9999px;
+        font-size: 12px;
+        font-weight: 600;
         display: inline-flex;
         align-items: center;
-        gap: 5px;
-        background: rgba(255,255,255,0.1);
-        border: 1px solid rgba(255,255,255,0.15);
+        gap: 6px;
+        background: #181818;
+        border: 1px solid var(--border);
+        font-family: 'Geist Mono', monospace;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .counter-chip:hover {
+        border-color: var(--border-hover);
+        background: #1F1F1F;
     }
     .counter-chip span.num {
-        background: rgba(255,255,255,0.25);
-        padding: 1px 6px;
-        border-radius: 10px;
-        font-size: 7.5pt;
+        background: #272727;
+        color: #EDEDED;
+        padding: 1px 7px;
+        border-radius: 9999px;
+        font-size: 11px;
     }
 
     .header-btn-group {
@@ -132,126 +194,161 @@
         align-items: center;
     }
     .hdr-btn {
-        background: rgba(255,255,255,0.15);
-        border: 1px solid rgba(255,255,255,0.25);
-        color: #ffffff;
-        padding: 6px 12px;
-        border-radius: 6px;
-        font-size: 8pt;
+        background: #181818;
+        border: 1px solid var(--border);
+        color: var(--text-main);
+        padding: 7px 14px;
+        border-radius: 8px;
+        font-size: 12px;
         font-weight: 600;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
         display: inline-flex;
         align-items: center;
         gap: 6px;
+        user-select: none;
     }
     .hdr-btn:hover {
-        background: rgba(255,255,255,0.25);
-        border-color: rgba(255,255,255,0.4);
+        background: #272727;
+        border-color: var(--border-hover);
         transform: translateY(-1px);
     }
+    .hdr-btn:active {
+        transform: scale(0.98);
+    }
     .hdr-btn-primary {
-        background: var(--accent);
-        border-color: var(--accent);
-        color: #1a202c;
-        font-weight: 700;
+        background: #EDEDED;
+        border-color: #EDEDED;
+        color: #000000;
+        font-weight: 600;
     }
     .hdr-btn-primary:hover {
-        background: #ecc94b;
+        background: #FFFFFF;
+        border-color: #FFFFFF;
+        color: #000000;
     }
 
+    /* KPI Summary Strip */
     .kpi-strip {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 10px;
-        margin-top: 14px;
+        gap: 12px;
+        margin-top: 18px;
     }
     .kpi-card {
-        background: rgba(255,255,255,0.07);
-        border: 1px solid rgba(255,255,255,0.12);
-        padding: 10px 14px;
-        border-radius: 8px;
+        background: #181818;
+        border: 1px solid var(--border);
+        padding: 12px 16px;
+        border-radius: 12px;
         text-align: center;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .kpi-card:hover {
+        border-color: var(--border-hover);
+        background: #1F1F1F;
+        transform: translateY(-1px);
     }
     .kpi-num {
-        font-size: 15pt;
-        font-weight: 800;
-        line-height: 1.1;
+        font-family: 'Geist Mono', monospace;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
     }
     .kpi-label {
-        font-size: 7.5pt;
-        color: #cbd5e1;
-        margin-top: 2px;
+        font-family: 'Geist', sans-serif;
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-top: 4px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
     }
 
-    /* Nav Bar */
+    /* -------------------------------------------------------------------------
+     * NAVIGATION CONTAINER & PILL TABS
+     * ------------------------------------------------------------------------- */
     .nav-container {
-        background: #ffffff;
-        border-bottom: 1px solid var(--border);
+        background: rgba(18, 18, 20, 0.92) !important;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border) !important;
         position: sticky;
         top: 0;
         z-index: 100;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
     .nav-tabs {
         display: flex;
         overflow-x: auto;
         padding: 0 32px;
-        gap: 4px;
+        gap: 6px;
+        scrollbar-width: none;
+    }
+    .nav-tabs::-webkit-scrollbar {
+        display: none;
     }
     .nav-tab {
         padding: 14px 18px;
         cursor: pointer;
-        font-weight: 600;
-        font-size: 9pt;
+        font-weight: 500;
+        font-size: 14px;
         color: var(--text-muted);
-        border-bottom: 3px solid transparent;
+        border: 1px solid transparent;
+        border-radius: 8px;
         white-space: nowrap;
-        transition: all 0.2s ease;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
         display: flex;
         align-items: center;
         gap: 8px;
+        margin: 6px 0;
+        user-select: none;
     }
     .nav-tab:hover {
-        color: var(--primary);
-        background: #f8fafc;
+        color: #FFFFFF;
+        background: rgba(255, 255, 255, 0.05);
     }
     .nav-tab.active {
-        color: var(--primary);
-        border-bottom-color: var(--primary);
-        font-weight: 700;
-        background: #f1f5f9;
+        color: #FFFFFF;
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.16);
+        font-weight: 600;
     }
     .nav-badge {
-        background: #edf2f7;
-        color: #4a5568;
+        background: #272727;
+        color: #A1A1AA;
         padding: 2px 7px;
-        border-radius: 12px;
-        font-size: 7.5pt;
-        font-weight: 700;
+        border-radius: 9999px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 11px;
+        font-weight: 600;
+        transition: all 0.2s ease;
     }
     .nav-tab.active .nav-badge {
-        background: var(--primary);
-        color: #ffffff;
+        background: #EDEDED;
+        color: #000000;
     }
 
     .container {
-        padding: 24px 32px;
+        padding: 24px 32px 48px 32px;
         max-width: 1720px;
         margin: 0 auto;
     }
 
-    /* Filters Hub */
+    /* -------------------------------------------------------------------------
+     * FILTER HUB & PRESET CONTROLS
+     * ------------------------------------------------------------------------- */
     .filter-hub {
-        background: #ffffff;
+        background: var(--card-bg) !important;
         border-radius: 12px;
         padding: 20px 24px;
         margin-bottom: 24px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        border: 1px solid var(--border);
+        box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.4);
+        border: 1px solid var(--border) !important;
     }
     .filter-presets {
         display: flex;
@@ -259,41 +356,47 @@
         gap: 8px;
         margin-bottom: 16px;
         padding-bottom: 14px;
-        border-bottom: 1px dashed var(--border);
+        border-bottom: 1px solid var(--border);
     }
     .preset-btn {
-        background: #f1f5f9;
-        border: 1px solid #e2e8f0;
+        background: #1F1F1F !important;
+        border: 1px solid var(--border) !important;
         padding: 6px 12px;
         border-radius: 6px;
-        font-size: 8pt;
-        font-weight: 600;
-        color: var(--text-main);
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text-main) !important;
         cursor: pointer;
-        transition: all 0.15s ease;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+        user-select: none;
     }
     .preset-btn:hover {
-        background: #e2e8f0;
-        border-color: #cbd5e1;
+        background: #272727 !important;
+        border-color: var(--border-hover) !important;
+        transform: translateY(-1px);
+    }
+    .preset-btn:active {
+        transform: scale(0.98);
     }
     .preset-btn.active {
-        background: var(--primary);
-        color: #ffffff;
-        border-color: var(--primary);
+        background: #EDEDED !important;
+        color: #000000 !important;
+        border-color: #EDEDED !important;
+        font-weight: 600;
     }
     .preset-btn-accent {
-        background: #ecfdf5;
-        border-color: #a7f3d0;
-        color: #065f46;
-        font-weight: 700;
+        background: var(--success-bg) !important;
+        border-color: var(--success-border) !important;
+        color: var(--success-text) !important;
+        font-weight: 600;
     }
     .preset-btn-accent:hover {
-        background: #d1fae5;
+        background: rgba(16, 185, 129, 0.2) !important;
     }
     .preset-btn-accent.active {
-        background: #059669;
-        border-color: #059669;
-        color: #ffffff;
+        background: var(--success-text) !important;
+        color: #000000 !important;
+        border-color: var(--success-text) !important;
     }
 
     .filter-inputs-grid {
@@ -303,202 +406,401 @@
     }
     .filter-group label {
         display: block;
-        font-size: 7.5pt;
-        font-weight: 700;
+        font-family: 'Geist Mono', monospace;
+        font-size: 11px;
+        font-weight: 600;
         text-transform: uppercase;
         color: var(--text-muted);
-        margin-bottom: 4px;
+        margin-bottom: 6px;
         letter-spacing: 0.5px;
     }
     .filter-group input, .filter-group select {
         width: 100%;
-        padding: 8px 12px;
+        padding: 9px 12px;
         border: 1px solid var(--border);
-        border-radius: 6px;
-        font-size: 8.5pt;
+        border-radius: 8px;
+        font-family: 'Geist', sans-serif;
+        font-size: 13px;
         color: var(--text-main);
-        background: #ffffff;
+        background: #121214;
         outline: none;
-        transition: border 0.15s ease;
+        transition: border 0.2s ease, box-shadow 0.2s ease;
     }
     .filter-group input:focus, .filter-group select:focus {
-        border-color: var(--primary-light);
-        box-shadow: 0 0 0 2px rgba(43, 108, 176, 0.15);
+        border-color: var(--accent);
+        box-shadow: 0 0 0 1px var(--accent);
     }
 
-    /* Program Cards Grid */
+    /* -------------------------------------------------------------------------
+     * PROGRAM CARDS & GRID ARCHITECTURE (OBSIDIAN LUXURY)
+     * ------------------------------------------------------------------------- */
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-        gap: 18px;
+        gap: 20px;
     }
     .card {
-        background: var(--card-bg);
-        border: 1px solid var(--border);
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border) !important;
         border-radius: 12px;
-        padding: 18px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        padding: 18px 20px 16px 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: relative;
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                    border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                    box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         cursor: pointer;
     }
     .card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 16px -2px rgba(0,0,0,0.08);
-        border-color: #cbd5e0;
+        border-color: var(--border-hover) !important;
+        box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.6) !important;
     }
+    .card.is-shortlisted {
+        border: 1px solid var(--accent) !important;
+        background: #1C1A14 !important;
+        box-shadow: 0 0 20px -5px rgba(229, 169, 60, 0.2) !important;
+    }
+
     .card-header {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 10px;
-        gap: 8px;
+        margin-bottom: 12px;
+        gap: 10px;
     }
     .card-title h3 {
         margin: 0;
-        font-size: 11pt;
-        font-weight: 700;
-        color: var(--primary);
-        line-height: 1.3;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        color: #FFFFFF;
     }
     .card-title .uni-name {
-        font-size: 8.5pt;
+        font-size: 13px;
+        line-height: 18px;
         color: var(--text-muted);
-        font-weight: 600;
-        margin-top: 2px;
+        font-weight: 400;
+        margin-top: 3px;
     }
     .card-rank {
-        background: var(--accent-light);
-        color: #744210;
-        font-size: 7.5pt;
-        font-weight: 800;
+        font-family: 'Geist Mono', monospace;
+        background: rgba(56, 189, 248, 0.12);
+        color: #38BDF8;
+        font-size: 11px;
+        font-weight: 600;
         padding: 3px 8px;
         border-radius: 6px;
-        border: 1px solid rgba(214, 158, 46, 0.4);
+        border: 1px solid rgba(56, 189, 248, 0.28);
         white-space: nowrap;
     }
+
+    /* Shortlist Button */
+    .card-shortlist-btn {
+        background: #1F1F1F !important;
+        border: 1px solid var(--border) !important;
+        color: var(--text-muted) !important;
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+        user-select: none;
+    }
+    .card-shortlist-btn:hover {
+        background: #272727 !important;
+        border-color: var(--border-hover) !important;
+        color: #FFFFFF !important;
+        transform: translateY(-1px);
+    }
+    .card-shortlist-btn:active {
+        transform: scale(0.98);
+    }
+    .card-shortlist-btn.active {
+        background: rgba(229, 169, 60, 0.15) !important;
+        border-color: var(--accent) !important;
+        color: var(--accent) !important;
+    }
+
+    /* Tags Architecture */
     .tags-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 5px;
-        margin: 10px 0;
+        gap: 6px;
+        margin: 12px 0 10px 0;
     }
     .tag {
-        font-size: 7pt;
-        font-weight: 700;
-        padding: 3px 7px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 3px 8px;
         border-radius: 4px;
         display: inline-flex;
         align-items: center;
-        gap: 4px;
+        gap: 5px;
         text-transform: uppercase;
         letter-spacing: 0.3px;
+        line-height: 1.4;
     }
-    .tag-free { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
-    .tag-nominal { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-    .tag-paid { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
-    .tag-zero-cost { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
-    .tag-status-open { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
-    .tag-status-urgent { background: #ffe4e6; color: #9f1239; border: 1px solid #fecdd3; }
-    .tag-status-upcoming { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
-    .tag-disc { background: #f1f5f9; color: #475569; }
+    .tag-free { background: var(--success-bg) !important; color: var(--success-text) !important; border: 1px solid var(--success-border) !important; }
+    .tag-nominal { background: var(--warning-bg) !important; color: var(--warning-text) !important; border: 1px solid var(--warning-border) !important; }
+    .tag-paid { background: var(--danger-bg) !important; color: var(--danger-text) !important; border: 1px solid var(--danger-border) !important; }
+    .tag-zero-cost { background: var(--purple-bg) !important; color: var(--purple-text) !important; border: 1px solid var(--purple-border) !important; }
+    .tag-funding-alert { background: var(--danger-bg) !important; color: var(--danger-text) !important; border: 1px solid var(--danger-border) !important; }
+    .tag-status-open { background: var(--success-bg) !important; color: var(--success-text) !important; border: 1px solid var(--success-border) !important; }
+    .tag-status-urgent { background: var(--danger-bg) !important; color: var(--danger-text) !important; border: 1px solid var(--danger-border) !important; }
+    .tag-status-upcoming { background: var(--warning-bg) !important; color: var(--warning-text) !important; border: 1px solid var(--warning-border) !important; }
+    .tag-disc { background: #272727 !important; color: #A1A1AA !important; border: 1px solid rgba(255, 255, 255, 0.08) !important; }
 
-    /* Effort & Reward Tags */
-    .tag-quick-win { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
-    .tag-moderate { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
-    .tag-heavyweight { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
-    .tag-reward { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
-
+    /* Card Meta */
     .card-meta {
-        font-size: 8.5pt;
-        margin: 10px 0;
-        background: #f8fafc;
-        padding: 10px;
-        border-radius: 6px;
-        border: 1px solid #edf2f7;
+        background: var(--card-well) !important;
+        border: 1px solid var(--card-well-border) !important;
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin: 12px 0;
+        font-size: 12px;
     }
     .meta-row {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 4px;
+        align-items: center;
+        margin-bottom: 6px;
     }
-    .meta-row:last-child { margin-bottom: 0; }
-    .meta-label { color: var(--text-muted); font-size: 7.5pt; }
-    .meta-val { font-weight: 600; text-align: right; }
+    .meta-row:last-child {
+        margin-bottom: 0;
+    }
+    .meta-label {
+        color: var(--text-muted);
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .meta-val {
+        font-family: 'Geist Mono', monospace;
+        font-weight: 500;
+        color: var(--text-main);
+        text-align: right;
+        font-size: 12px;
+    }
 
+    /* Card Verdict */
     .card-verdict {
-        font-size: 8pt;
-        font-weight: 600;
-        color: var(--primary);
-        background: #ebf8ff;
-        padding: 8px 10px;
-        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 8px;
+        padding: 10px 12px;
         margin-top: 10px;
-        border-left: 3px solid var(--primary-light);
+        font-size: 13px;
+        line-height: 1.45;
+        color: #D1D5DB;
     }
     .prob-indicator {
         display: inline-block;
-        padding: 2px 6px;
+        padding: 2px 7px;
         border-radius: 4px;
-        font-weight: 700;
-        font-size: 7.5pt;
+        font-weight: 600;
+        font-size: 11px;
+        font-family: 'Geist Mono', monospace;
     }
-    .prob-high { background: var(--success-bg); color: var(--success-text); }
-    .prob-medium { background: var(--warning-bg); color: var(--warning-text); }
-    .prob-low { background: var(--danger-bg); color: var(--danger-text); }
+    .prob-high { background: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); }
+    .prob-medium { background: var(--warning-bg); color: var(--warning-text); border: 1px solid var(--warning-border); }
+    .prob-low { background: var(--danger-bg); color: var(--danger-text); border: 1px solid var(--danger-border); }
 
-    /* Tables */
-    .table-container {
-        background: #ffffff;
-        border-radius: 12px;
+    /* Quick Peek Drawer */
+    .quick-peek-drawer {
+        margin-top: 10px;
+        background: #141416 !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 12px;
+        line-height: 1.45;
+    }
+    .quick-peek-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--border);
+    }
+    .quick-peek-pill {
+        font-family: 'Geist Mono', monospace;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #38BDF8;
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.28);
+        padding: 2px 8px;
+        border-radius: 4px;
+    }
+    .peek-row { margin-bottom: 4px; }
+    .peek-row:last-child { margin-bottom: 0; }
+    .peek-label { font-weight: 600; color: #A1A1AA; font-size: 11px; }
+    .peek-val-hook { color: #34D399; font-weight: 500; font-size: 12px; }
+    .peek-val-trap { color: #FB7185; font-weight: 500; font-size: 12px; }
+
+    /* Personal Notes */
+    .card-note-bar {
+        margin-top: 8px;
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .card-note-bar.empty-note {
+        background: #181818;
+        border: 1px dashed var(--border);
+        color: var(--text-muted);
+    }
+    .card-note-bar.empty-note:hover {
+        background: #1F1F1F;
+        border-color: var(--border-hover);
+        color: #EDEDED;
+    }
+    .card-note-bar.has-note {
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        color: #38BDF8;
+        font-weight: 500;
+    }
+    .card-note-bar .note-preview {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .card-note-bar .note-edit-pill {
+        font-family: 'Geist Mono', monospace;
+        font-size: 11px;
+        padding: 2px 6px;
+        background: rgba(56, 189, 248, 0.2);
+        border-radius: 4px;
+        color: #38BDF8;
+        font-weight: 600;
+    }
+
+    .card-note-editor {
+        margin-top: 8px;
+        padding: 10px;
+        background: #1F1F1F;
         border: 1px solid var(--border);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+    }
+    .card-note-textarea {
+        width: 100%;
+        min-height: 52px;
+        font-family: 'Geist', sans-serif;
+        font-size: 13px;
+        padding: 8px;
+        border: 1px solid var(--border);
+        background: #121214;
+        color: #EDEDED;
+        border-radius: 6px;
+        resize: vertical;
+        box-sizing: border-box;
+        outline: none;
+    }
+    .card-note-textarea:focus {
+        border-color: var(--accent);
+    }
+    .note-editor-btns {
+        display: flex;
+        justify-content: flex-end;
+        gap: 6px;
+        margin-top: 8px;
+    }
+    .note-save-btn {
+        background: #EDEDED;
+        color: #000000;
+        border: none;
+        padding: 5px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .note-cancel-btn {
+        background: #181818;
+        color: var(--text-muted);
+        border: 1px solid var(--border);
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    /* -------------------------------------------------------------------------
+     * TABLES (OBSIDIAN ARCHITECTURE)
+     * ------------------------------------------------------------------------- */
+    .table-container {
+        background: var(--card-bg) !important;
+        border-radius: 12px;
+        border: 1px solid var(--border) !important;
         overflow-x: auto;
         margin-bottom: 30px;
+        box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.4);
     }
     table {
         width: 100%;
         border-collapse: collapse;
         text-align: left;
-        font-size: 8.5pt;
+        font-size: 13px;
     }
     th {
-        background: #f8fafc;
-        color: var(--primary);
-        font-weight: 700;
-        padding: 12px 14px;
-        border-bottom: 2px solid var(--border);
-        font-size: 8pt;
+        background: #1F1F1F !important;
+        color: var(--text-muted) !important;
+        font-family: 'Geist Mono', monospace;
+        font-weight: 600;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border) !important;
+        font-size: 11px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         white-space: nowrap;
     }
     td {
-        padding: 12px 14px;
-        border-bottom: 1px solid var(--border);
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         vertical-align: middle;
+        color: var(--text-main);
     }
     tr:hover td {
-        background: #f8fafc;
+        background: rgba(255, 255, 255, 0.03) !important;
         cursor: pointer;
     }
     .rank-cell {
-        font-weight: 800;
-        color: #744210;
-        background: var(--accent-light);
+        font-family: 'Geist Mono', monospace;
+        font-weight: 700;
+        color: var(--accent) !important;
+        background: rgba(229, 169, 60, 0.12) !important;
         text-align: center;
-        width: 45px;
+        width: 50px;
     }
 
-    /* Modal */
+    /* -------------------------------------------------------------------------
+     * DETAIL MODAL DIALOG (OBSIDIAN ARCHITECTURE)
+     * ------------------------------------------------------------------------- */
     .modal-overlay {
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(15, 23, 42, 0.7);
-        backdrop-filter: blur(4px);
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         display: none;
         justify-content: center;
         align-items: center;
@@ -506,19 +808,20 @@
         padding: 20px;
     }
     .modal-content {
-        background: #ffffff;
-        border-radius: 14px;
+        background: var(--card-bg) !important;
+        border-radius: 16px;
         max-width: 880px;
         width: 100%;
         max-height: 90vh;
         overflow-y: auto;
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
-        border: 1px solid var(--border);
+        box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.14) !important;
         position: relative;
+        color: var(--text-main);
     }
     .modal-header {
-        background: linear-gradient(135deg, #1e293b, #0f172a);
-        color: #ffffff;
+        background: #121214 !important;
+        color: #FFFFFF !important;
         padding: 20px 24px;
         position: sticky;
         top: 0;
@@ -526,28 +829,34 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        border-bottom: 1px solid var(--border);
     }
     .modal-header h2 {
         margin: 0;
-        font-size: 13pt;
-        font-weight: 700;
-        line-height: 1.3;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #FFFFFF;
     }
     .modal-close {
-        background: rgba(255,255,255,0.2);
-        border: none;
-        color: #ffffff;
-        font-size: 14pt;
+        background: #1F1F1F;
+        border: 1px solid var(--border);
+        color: var(--text-muted);
+        font-size: 16px;
         cursor: pointer;
-        border-radius: 50%;
+        border-radius: 8px;
         width: 32px;
         height: 32px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background 0.15s ease;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .modal-close:hover { background: rgba(255,255,255,0.35); }
+    .modal-close:hover {
+        background: #272727;
+        color: #FFFFFF;
+        border-color: var(--border-hover);
+    }
     .modal-body {
         padding: 24px;
     }
@@ -563,27 +872,29 @@
     }
     .dossier-section h4 {
         margin: 0 0 8px 0;
-        color: var(--primary);
-        font-size: 9.5pt;
-        font-weight: 700;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        font-family: 'Geist Mono', monospace;
     }
     .dossier-section p {
         margin: 0;
-        font-size: 9pt;
-        color: #4a5568;
-        line-height: 1.55;
+        font-size: 14px;
+        color: #D1D5DB;
+        line-height: 1.6;
     }
 
-    /* Kanban Pipeline Styles */
+    /* -------------------------------------------------------------------------
+     * KANBAN BOARD & PIPELINE
+     * ------------------------------------------------------------------------- */
     .pipeline-header {
-        background: #ffffff;
+        background: var(--card-bg) !important;
         border-radius: 12px;
         padding: 18px 24px;
         margin-bottom: 20px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        border: 1px solid var(--border);
+        border: 1px solid var(--border) !important;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -598,13 +909,14 @@
     }
     .pipeline-stat-pill {
         padding: 6px 12px;
-        border-radius: 16px;
-        font-size: 8.5pt;
-        font-weight: 700;
+        border-radius: 9999px;
+        font-size: 12px;
+        font-weight: 600;
         display: flex;
         align-items: center;
         gap: 6px;
         border: 1px solid;
+        font-family: 'Geist Mono', monospace;
     }
     .pipeline-actions {
         display: flex;
@@ -613,33 +925,37 @@
         flex-wrap: wrap;
     }
     .btn-action {
-        background: #ffffff;
+        background: #1F1F1F;
         border: 1px solid var(--border);
-        padding: 7px 12px;
-        border-radius: 6px;
-        font-size: 8pt;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 12px;
         font-weight: 600;
         color: var(--text-main);
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        transition: all 0.15s ease;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+        user-select: none;
     }
     .btn-action:hover {
-        background: #f8fafc;
-        border-color: var(--primary-light);
-        color: var(--primary);
+        background: #272727;
+        border-color: var(--border-hover);
         transform: translateY(-1px);
     }
+    .btn-action:active {
+        transform: scale(0.98);
+    }
     .btn-action-primary {
-        background: var(--primary);
-        color: #ffffff;
-        border-color: var(--primary);
+        background: #EDEDED;
+        color: #000000;
+        border-color: #EDEDED;
     }
     .btn-action-primary:hover {
-        background: var(--primary-light);
-        color: #ffffff;
+        background: #FFFFFF;
+        border-color: #FFFFFF;
+        color: #000000;
     }
 
     .kanban-board {
@@ -651,30 +967,33 @@
         align-items: flex-start;
     }
     .kanban-col {
-        background: #f8fafc;
-        border-radius: 10px;
-        border: 1px solid #e2e8f0;
+        background: #121214 !important;
+        border-radius: 12px;
+        border: 1px solid var(--border) !important;
         display: flex;
         flex-direction: column;
         min-height: 600px;
     }
     .kanban-col-header {
         padding: 14px 16px;
-        border-top-left-radius: 9px;
-        border-top-right-radius: 9px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-weight: 700;
-        font-size: 9pt;
-        border-bottom: 2px solid;
+        font-weight: 600;
+        font-size: 13px;
+        border-bottom: 1px solid var(--border) !important;
+        background: #181818;
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
     }
     .kanban-col-count {
-        background: rgba(0,0,0,0.08);
+        background: #272727 !important;
+        color: var(--text-main);
         padding: 2px 8px;
-        border-radius: 12px;
-        font-size: 8pt;
-        font-weight: 800;
+        border-radius: 9999px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 11px;
+        font-weight: 600;
     }
     .kanban-cards-container {
         padding: 12px;
@@ -683,30 +1002,24 @@
         gap: 12px;
         flex: 1;
         min-height: 250px;
-        transition: background 0.15s ease;
-    }
-    .kanban-dropzone-active {
-        background: #ebf8ff;
-        border: 2px dashed #3182ce;
-        border-radius: 8px;
     }
     .kanban-card {
-        background: #ffffff;
+        background: var(--card-bg) !important;
         border-radius: 8px;
-        border: 1px solid var(--border);
+        border: 1px solid var(--border) !important;
         padding: 14px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         cursor: grab;
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.2s ease;
         display: flex;
         flex-direction: column;
         gap: 8px;
         user-select: none;
+        color: var(--text-main);
     }
     .kanban-card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-        border-color: #cbd5e0;
+        border-color: var(--border-hover) !important;
     }
     .kanban-card.dragging {
         opacity: 0.4;
@@ -714,53 +1027,35 @@
     }
     .kanban-empty {
         text-align: center;
-        color: #a0aec0;
-        font-size: 8.5pt;
+        color: var(--text-muted);
+        font-size: 13px;
         padding: 40px 10px;
-        font-style: italic;
     }
 
-    /* Stage selector dropdown */
-    .stage-select {
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 8pt;
-        font-weight: 600;
-        border: 1px solid var(--border);
-        background-color: #ffffff;
-        cursor: pointer;
-        color: var(--text-main);
-    }
-    .stage-select:focus {
-        outline: none;
-        border-color: var(--primary-light);
-    }
-
-    /* Interactive Document Checklist Styles */
+    /* Checklist & SOP Blueprints */
     .checklist-card {
-        background: #ffffff;
-        border: 1px solid var(--border);
+        background: #121214 !important;
+        border: 1px solid var(--border) !important;
         border-radius: 10px;
         padding: 16px;
-        margin-top: 12px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        margin-top: 14px;
     }
     .checklist-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
     .checklist-progress-bar-wrap {
-        height: 8px;
-        background: #edf2f7;
-        border-radius: 4px;
+        height: 6px;
+        background: #272727;
+        border-radius: 9999px;
         overflow: hidden;
         margin-bottom: 14px;
     }
     .checklist-progress-fill {
         height: 100%;
-        background: #38a169;
+        background: #10B981;
         transition: width 0.3s ease;
     }
     .checklist-list {
@@ -772,408 +1067,241 @@
         display: flex;
         align-items: flex-start;
         gap: 10px;
-        padding: 8px 10px;
+        padding: 8px 12px;
         border-radius: 6px;
-        background: #f8fafc;
-        border: 1px solid #edf2f7;
+        background: #181818;
+        border: 1px solid var(--border);
         cursor: pointer;
-        transition: background 0.15s ease, border-color 0.15s ease;
-        user-select: none;
+        transition: all 0.2s ease;
     }
     .checklist-item:hover {
-        background: #edf2f7;
+        background: #1F1F1F;
+        border-color: var(--border-hover);
     }
     .checklist-item.checked {
-        background: #f0fff4;
-        border-color: #bbf7d0;
+        background: rgba(16, 185, 129, 0.08);
+        border-color: rgba(16, 185, 129, 0.25);
     }
     .checklist-item.checked span.item-text {
         text-decoration: line-through;
-        color: #718096;
+        color: var(--text-muted);
     }
     .checklist-item input[type="checkbox"] {
-        width: 17px;
-        height: 17px;
+        width: 16px;
+        height: 16px;
         margin-top: 2px;
-        accent-color: #16a34a;
+        accent-color: #10B981;
         cursor: pointer;
     }
 
-    /* SOP Generator Box Styles */
     .sop-box {
         margin-top: 14px;
         padding: 16px;
-        background: #0f172a;
-        color: #e2e8f0;
+        background: #121214 !important;
+        color: var(--text-main);
         border-radius: 10px;
-        border: 1px solid #334155;
-        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+        border: 1px solid var(--border) !important;
     }
     .sop-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #334155;
+        border-bottom: 1px solid var(--border);
         padding-bottom: 10px;
         margin-bottom: 12px;
     }
     .sop-p-box {
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.08);
+        background: #181818;
+        border: 1px solid var(--border);
         border-radius: 6px;
-        padding: 10px 12px;
+        padding: 10px 14px;
         margin-bottom: 10px;
     }
     .sop-p-box:last-child { margin-bottom: 0; }
     .sop-p-title {
-        color: #facc15;
-        font-weight: 700;
-        font-size: 8pt;
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 11px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         margin-bottom: 4px;
+        font-family: 'Geist Mono', monospace;
     }
     .sop-p-content {
-        font-size: 8.5pt;
+        font-size: 13px;
         line-height: 1.6;
-        color: #cbd5e1;
+        color: #D1D5DB;
         margin: 0;
     }
 
     .tab-content { display: none; }
     .tab-content.active { display: block; }
 
+    /* Icons harmonization */
+    .ico3d {
+        display: inline-block;
+        vertical-align: -2px;
+        filter: none !important;
+        opacity: 0.95;
+        transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* -------------------------------------------------------------------------
+     * SURGICAL REGIONAL TAB COLOR HARMONIZATION (CHINA, UK, ITALY, GERMANY, ETC.)
+     * ------------------------------------------------------------------------- */
+    .tab-content > div[style*="background: #ffffff"],
+    .tab-content > div[style*="background:#ffffff"] {
+        background: var(--card-bg) !important;
+        border-color: var(--border) !important;
+        color: var(--text-main) !important;
+        box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.4) !important;
+    }
+    .tab-content h3 {
+        color: #FFFFFF !important;
+    }
+    .tab-content h4 {
+        color: var(--accent) !important;
+    }
+    .tab-content p {
+        color: var(--text-muted) !important;
+    }
+    .tab-content div[style*="background: #eff6ff"],
+    .tab-content div[style*="background:#eff6ff"],
+    .tab-content div[style*="background: #ebf8ff"],
+    .tab-content div[style*="background:#ebf8ff"] {
+        background: rgba(56, 189, 248, 0.08) !important;
+        border-color: rgba(56, 189, 248, 0.2) !important;
+    }
+    .tab-content div[style*="background: #f0fdf4"],
+    .tab-content div[style*="background:#f0fdf4"],
+    .tab-content div[style*="background: #f0fff4"],
+    .tab-content div[style*="background:#f0fff4"],
+    .tab-content div[style*="background: #dcfce7"],
+    .tab-content div[style*="background:#dcfce7"] {
+        background: rgba(16, 185, 129, 0.08) !important;
+        border-color: rgba(16, 185, 129, 0.2) !important;
+    }
+    .tab-content div[style*="background: #fef3c7"],
+    .tab-content div[style*="background:#fef3c7"],
+    .tab-content div[style*="background: #fef9c3"],
+    .tab-content div[style*="background:#fef9c3"],
+    .tab-content div[style*="background: #feebc8"],
+    .tab-content div[style*="background:#feebc8"] {
+        background: rgba(245, 158, 11, 0.08) !important;
+        border-color: rgba(245, 158, 11, 0.2) !important;
+    }
+    .tab-content div[style*="background: #fee2e2"],
+    .tab-content div[style*="background:#fee2e2"],
+    .tab-content div[style*="background: #fed7d7"],
+    .tab-content div[style*="background:#fed7d7"],
+    .tab-content div[style*="background: #fff1f2"],
+    .tab-content div[style*="background:#fff1f2"] {
+        background: rgba(244, 63, 94, 0.08) !important;
+        border-color: rgba(244, 63, 94, 0.2) !important;
+    }
+    .tab-content div[style*="background: #e0e7ff"],
+    .tab-content div[style*="background:#e0e7ff"],
+    .tab-content div[style*="background: #e9d8fd"],
+    .tab-content div[style*="background:#e9d8fd"] {
+        background: rgba(129, 140, 248, 0.08) !important;
+        border-color: rgba(129, 140, 248, 0.2) !important;
+    }
+    .tab-content div[style*="background: #f8fafc"],
+    .tab-content div[style*="background:#f8fafc"],
+    .tab-content div[style*="background: #f1f5f9"],
+    .tab-content div[style*="background:#f1f5f9"] {
+        background: var(--card-well) !important;
+        border-color: var(--card-well-border) !important;
+    }
+    .tab-content strong {
+        color: #FFFFFF !important;
+    }
+    .tab-content span[style*="color: #1e40af"],
+    .tab-content span[style*="color: #2b6cb0"],
+    .tab-content span[style*="color: #1d4ed8"],
+    .tab-content strong[style*="color: #1e40af"] {
+        color: #38BDF8 !important;
+    }
+    .tab-content span[style*="color: #166534"],
+    .tab-content span[style*="color: #065f46"],
+    .tab-content strong[style*="color: #166534"] {
+        color: #34D399 !important;
+    }
+    .tab-content span[style*="color: #92400e"],
+    .tab-content span[style*="color: #744210"],
+    .tab-content strong[style*="color: #92400e"] {
+        color: #FBBF24 !important;
+    }
+    .tab-content span[style*="color: #991b1b"],
+    .tab-content span[style*="color: #b91c1c"],
+    .tab-content strong[style*="color: #b91c1c"] {
+        color: #FB7185 !important;
+    }
+
+    /* Filter buttons in regional tabs */
+    .china-filter-btn, .uk-filter-btn, .germany-filter-btn, .italy-filter-btn, .central-filter-btn {
+        background: #1F1F1F !important;
+        border: 1px solid var(--border) !important;
+        color: var(--text-main) !important;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .china-filter-btn:hover, .uk-filter-btn:hover, .germany-filter-btn:hover, .italy-filter-btn:hover, .central-filter-btn:hover {
+        background: #272727 !important;
+        border-color: var(--border-hover) !important;
+    }
+    .china-filter-btn.active, .uk-filter-btn.active, .germany-filter-btn.active, .italy-filter-btn.active, .central-filter-btn.active {
+        background: #EDEDED !important;
+        color: #000000 !important;
+        border-color: #EDEDED !important;
+        font-weight: 600;
+    }
+
     @media (max-width: 900px) {
         .filter-inputs-grid { grid-template-columns: 1fr; }
         .grid { grid-template-columns: 1fr; }
-        header { padding: 18px 20px; }
+        header { padding: 20px 20px; }
         .container { padding: 16px 20px; }
         .kanban-board { grid-template-columns: repeat(5, 290px); }
     }
 
-    /* UK SCHOLARSHIPS & FORENSIC AUDIT STYLES */
-    .schol-pill {
-        display: inline-block;
-        padding: 2px 7px;
-        margin: 2px 3px 2px 0;
-        font-size: 7.5pt;
-        font-weight: 700;
-        border-radius: 10px;
-        background: #eff6ff;
-        color: #1d4ed8;
-        border: 1px solid #bfdbfe;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        line-height: 1.3;
+    /* Table cells fine-tuning */
+    table td small {
+        color: var(--text-muted) !important;
+        font-family: 'Geist Mono', monospace;
     }
-    .schol-pill:hover {
-        background: #1d4ed8;
-        color: #ffffff;
-        border-color: #1d4ed8;
-        transform: translateY(-1px);
-        box-shadow: 0 2px 4px rgba(29, 78, 216, 0.25);
+    table td strong {
+        color: #FFFFFF;
     }
-    .schol-deep-card {
-        background: #ffffff;
-        border: 1px solid #bbf7d0;
-        border-radius: 8px;
-        padding: 12px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        transition: all 0.3s ease;
+    table td strong[style*="276749"],
+    table td strong[style*="166534"],
+    table td strong[style*="16a34a"],
+    table td strong[style*="15803d"] {
+        color: #34D399 !important;
     }
-    .schol-deep-card:hover {
-        border-color: #3b82f6;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    table td strong[style*="9b2c2c"],
+    table td strong[style*="991b1b"],
+    table td strong[style*="b91c1c"] {
+        color: #FB7185 !important;
     }
-    .uk-filter-btn {
-        transition: all 0.2s ease;
+    table td strong[style*="1e40af"],
+    table td strong[style*="2b6cb0"] {
+        color: #38BDF8 !important;
     }
-    .uk-filter-btn:hover {
-        background: #f1f5f9;
+    table td strong[style*="92400e"],
+    table td strong[style*="744210"] {
+        color: #FBBF24 !important;
     }
-    .uk-filter-btn.active {
-        background: #1e3a8a !important;
-        color: #ffffff !important;
-        border-color: #1e3a8a !important;
+    :focus-visible {
+        outline: 2px solid var(--accent) !important;
+        outline-offset: 2px !important;
     }
-    
-
-    .china-filter-btn {
-        transition: all 0.2s ease;
-    }
-    .china-filter-btn:hover {
-        background: #f1f5f9;
-    }
-    .china-filter-btn.active {
-        background: #1e3a8a !important;
-        color: #ffffff !important;
-        border-color: #1e3a8a !important;
-    }
-    
-
-    
-    /* ============================================================= */
-    /* EXECUTIVE MIDNIGHT NAVY & WARM GOLD PALETTE (RESTORED & PRO)  */
-    /* ============================================================= */
-    :root {
-        --primary: #1a365d;
-        --primary-light: #2b6cb0;
-        --secondary: #2c5282;
-        --accent: #d69e2e;
-        --accent-light: #fefcbf;
-        --bg: #f8fafc;
-        --card-bg: #ffffff;
-        --text-main: #1e293b;
-        --text-muted: #64748b;
-        --border: #e2e8f0;
-        --success-bg: #dcfce7;
-        --success-text: #166534;
-        --warning-bg: #fef3c7;
-        --warning-text: #92400e;
-        --danger-bg: #fee2e2;
-        --danger-text: #991b1b;
-        --info-bg: #eff6ff;
-        --info-text: #1e40af;
-    }
-
-    /* 3D Modern Vector Micro-Icons */
-    .ico3d {
-        display: inline-block;
-        vertical-align: -2px;
-        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15));
-        transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .card:hover .ico3d {
-        transform: scale(1.1);
-    }
-
-    header {
-        background: linear-gradient(135deg, #091322 0%, #13243f 45%, #1a365d 100%) !important;
-        border-bottom: 3px solid #d69e2e !important;
-        color: #ffffff;
-    }
-
-    .card {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        padding: 16px 18px 14px 18px;
-        box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-        cursor: pointer;
-    }
-    .card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 20px -4px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
-        border-color: #cbd5e1;
-    }
-    .card.is-shortlisted {
-        border-left: 4px solid #d69e2e !important;
-        background: #fffdfa;
-    }
-
-    /* Shortlist Star Button */
-    .card-shortlist-btn {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        color: #64748b;
-        border-radius: 20px;
-        padding: 3px 9px;
-        font-size: 7.5pt;
-        font-weight: 700;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        transition: all 0.15s ease;
-    }
-    .card-shortlist-btn:hover {
-        background: #fef3c7;
-        border-color: #d69e2e;
-        color: #92400e;
-        transform: scale(1.05);
-    }
-    .card-shortlist-btn.active {
-        background: #fef3c7;
-        border-color: #d69e2e;
-        color: #92400e;
-        box-shadow: 0 2px 4px rgba(214, 158, 46, 0.25);
-    }
-
-    /* Tags */
-    .tag {
-        font-size: 7.2pt;
-        font-weight: 700;
-        padding: 3px 7px;
-        border-radius: 4px;
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        letter-spacing: 0.2px;
-    }
-    .tag-free { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
-    .tag-nominal { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-    .tag-paid { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
-    .tag-zero-cost { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-weight: 800; }
-    .tag-funding-alert { background: #fff1f2; color: #9f1239; border: 1px solid #fecdd3; font-weight: 700; }
-    .tag-status-open { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
-    .tag-status-urgent { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
-    .tag-status-upcoming { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
-    .tag-disc { background: #f1f5f9; color: #475569; }
-
-    /* Quick Peek Drawer */
-    .quick-peek-drawer {
-        margin-top: 10px;
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 9px 11px;
-        font-size: 7.6pt;
-        line-height: 1.45;
-    }
-    .quick-peek-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 6px;
-        padding-bottom: 4px;
-        border-bottom: 1px solid #e2e8f0;
-    }
-    .quick-peek-pill {
-        font-size: 6.8pt;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-        color: #1e3a8a;
-        background: #e0e7ff;
-        padding: 2px 6px;
-        border-radius: 3px;
-    }
-    .peek-row { margin-bottom: 4px; }
-    .peek-row:last-child { margin-bottom: 0; }
-    .peek-label { font-weight: 700; color: #334155; }
-    .peek-val-hook { color: #15803d; font-weight: 600; }
-    .peek-val-trap { color: #b91c1c; font-weight: 600; }
-
-    /* Personal Notes */
-    .card-note-bar {
-        margin-top: 8px;
-        padding: 5px 8px;
-        border-radius: 5px;
-        font-size: 7.4pt;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        cursor: pointer;
-    }
-    .card-note-bar.empty-note {
-        background: #f8fafc;
-        border: 1px dashed #cbd5e1;
-        color: #64748b;
-    }
-    .card-note-bar.empty-note:hover {
-        background: #eff6ff;
-        border-color: #93c5fd;
-        color: #1d4ed8;
-    }
-    .card-note-bar.has-note {
-        background: #eff6ff;
-        border: 1px solid #bfdbfe;
-        color: #1e40af;
-        font-weight: 600;
-    }
-    .card-note-bar .note-preview {
-        flex: 1;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-style: italic;
-    }
-    .card-note-bar .note-edit-pill {
-        font-size: 6.8pt;
-        padding: 1px 5px;
-        background: #dbeafe;
-        border-radius: 3px;
-        color: #1d4ed8;
-        font-weight: 700;
-    }
-
-    .card-note-editor {
-        margin-top: 8px;
-        padding: 8px;
-        background: #ffffff;
-        border: 1px solid #93c5fd;
-        border-radius: 6px;
-    }
-    .card-note-textarea {
-        width: 100%;
-        min-height: 48px;
-        font-family: inherit;
-        font-size: 8pt;
-        padding: 6px;
-        border: 1px solid #cbd5e1;
-        border-radius: 4px;
-        resize: vertical;
-        box-sizing: border-box;
-    }
-    .note-editor-btns {
-        display: flex;
-        justify-content: flex-end;
-        gap: 6px;
-        margin-top: 6px;
-    }
-    .note-save-btn {
-        background: #1e3a8a;
-        color: #ffffff;
-        border: none;
-        padding: 3px 10px;
-        border-radius: 4px;
-        font-size: 7.5pt;
-        font-weight: 700;
-        cursor: pointer;
-    }
-    .note-cancel-btn {
-        background: #f1f5f9;
-        color: #475569;
-        border: 1px solid #cbd5e1;
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 7.5pt;
-        cursor: pointer;
-    }
-
-    .date-tracker-grid, .acronym-modal-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-        gap: 12px;
-        margin-top: 14px;
-    }
-    .date-tracker-card, .acronym-card {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 12px 14px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-    }
-    .date-tracker-card.has-early-gap {
-        border-left: 4px solid #ef4444;
-    }
-    .date-row {
-        display: flex;
-        justify-content: space-between;
-        font-size: 7.8pt;
-        margin-bottom: 3px;
-    }
-    .date-label { color: #64748b; font-weight: 600; }
-    .date-val-sch { color: #b91c1c; font-weight: 800; }
-    .date-val-adm { color: #334155; font-weight: 600; }
-
 </style>
-    <script src="data.js?v=2027.10" onerror="window.__dataLoadError = true;"></script>
+    <script src="data.js?v=2027.11" onerror="window.__dataLoadError = true;"></script>
 </head>
 <body>
 
@@ -1186,79 +1314,79 @@
     </div>
 
     <div class="candidate-pills">
-        <div class="pill pill-accent"><svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="tgtGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#b91c1c"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="none" stroke="url(#tgtGrad)" stroke-width="2"/><circle cx="12" cy="12" r="6" fill="none" stroke="url(#tgtGrad)" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="url(#tgtGrad)"/></svg> Candidate Profile</div>
+        <div class="pill pill-accent"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg> Candidate Profile</div>
         <div class="pill">🇵🇰 Pakistani National (Fresh Graduate / &lt;2 yrs exp)</div>
-        <div class="pill"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="scrlGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#ca8a04"/></linearGradient></defs><path fill="url(#scrlGrad)" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z"/></svg> Primary: BA Islamic Studies (GPA: 3.7 / 4.0)</div>
-        <div class="pill"><svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="balGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient></defs><path fill="url(#balGrad)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> Secondary: 2-Year Associate Degree in Arts (PPE: Politics, Philosophy, Economics)</div>
-        <div class="pill"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="spkGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient></defs><path fill="url(#spkGrad)" d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-4 4.77l-4 4H2v4h4l4 4V8z"/></svg> Languages: IELTS 7.5 Academic (CEFR C1) | Classical & Modern Arabic & Persian</div>
-        <div class="pill"><svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="tgtGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#b91c1c"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="none" stroke="url(#tgtGrad)" stroke-width="2"/><circle cx="12" cy="12" r="6" fill="none" stroke="url(#tgtGrad)" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="url(#tgtGrad)"/></svg> Target: Resulting Out-of-Pocket Tuition & Living Cost = $0</div>
+        <div class="pill"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg> BA Islamic Studies (GPA: 3.7 / 4.0 ≈ Bavarian 1.45 Sehr Gut)</div>
+        <div class="pill"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Associate Degree in Arts (PPE: Politics, Philosophy, Economics)</div>
+        <div class="pill"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg> IELTS 7.5 Academic (CEFR C1) · Arabic & Persian Primary Sources</div>
+        <div class="pill"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8m4-10v2m0 8v2"/></svg> Resulting Net Out-of-Pocket Target = €0 / $0</div>
     </div>
 
     <!-- Pipeline Quick Tracker Action Bar -->
     <div class="header-action-bar">
         <div class="header-pipeline-counters">
-            <span style="font-size: 8pt; font-weight: 700; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.5px;">Live Application Pipeline:</span>
+            <span style="font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Geist Mono', monospace;">Live Pipeline:</span>
             <div class="counter-chip" style="color: #93c5fd; border-color: rgba(147, 197, 253, 0.3);">
-                <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="pinGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#dc2626"/></linearGradient></defs><path fill="url(#pinGrad)" d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"/></svg> Interested <span class="num" id="hdr-cnt-interested">27</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Interested <span class="num" id="hdr-cnt-interested">27</span>
             </div>
             <div class="counter-chip" style="color: #fbd38d; border-color: rgba(251, 211, 141, 0.3);">
-                <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="notGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs><path fill="url(#notGrad)" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Preparing <span class="num" id="hdr-cnt-preparing">0</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBD38D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Preparing <span class="num" id="hdr-cnt-preparing">0</span>
             </div>
             <div class="counter-chip" style="color: #d6bcfa; border-color: rgba(214, 188, 250, 0.3);">
-                <svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="rktGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fb7185"/><stop offset="100%" stop-color="#e11d48"/></linearGradient></defs><path fill="url(#rktGrad)" d="M13.13 2.88c-1.42-.42-2.84-.42-4.26 0-3.32.99-5.93 3.6-6.92 6.92-.42 1.42-.42 2.84 0 4.26l2.12-2.12c.16-1.5.75-2.92 1.72-4.08l7.34-5.98z"/><circle cx="12" cy="9" r="2" fill="#ffffff"/></svg> Applied <span class="num" id="hdr-cnt-applied">0</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#D6BCFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Applied <span class="num" id="hdr-cnt-applied">0</span>
             </div>
             <div class="counter-chip" style="color: #99f6e4; border-color: rgba(153, 246, 228, 0.3);">
-                <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="hgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient></defs><path fill="url(#hgGrad)" d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zM10 6L8 4h8l-2 2H10z"/></svg> Under Review <span class="num" id="hdr-cnt-review">0</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#99F6E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Under Review <span class="num" id="hdr-cnt-review">0</span>
             </div>
             <div class="counter-chip" id="hdr-chip-shortlist" style="color: #fcd34d; border-color: rgba(252, 211, 77, 0.4); cursor: pointer;" onclick="setPresetFilter('shortlist', document.getElementById('btn-preset-shortlist'))" title="Click to view shortlisted programs">
-                <svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="goldStar" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient></defs><path fill="url(#goldStar)" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Shortlisted <span class="num" id="hdr-cnt-shortlist">0</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="#E5A93C" stroke="#E5A93C" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Shortlisted <span class="num" id="hdr-cnt-shortlist">0</span>
             </div>
             <div class="counter-chip" style="color: #86efac; border-color: rgba(134, 239, 172, 0.3);">
-                <svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="trphGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#eab308"/><stop offset="100%" stop-color="#a16207"/></linearGradient></defs><path fill="url(#trphGrad)" d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.71 2.76 3.11 3.56V19H8v2h8v-2h-2.5v-2.5c1.4-.8 2.48-2.06 3.11-3.56C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg> Offers <span class="num" id="hdr-cnt-offer">0</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Offers <span class="num" id="hdr-cnt-offer">0</span>
             </div>
         </div>
 
         <div class="header-btn-group">
-            <button class="hdr-btn" onclick="openScholarshipDateTrackerModal()" title="View Complete Chronological Scholarship Cutoff Calendar" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="calGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#dc2626"/></linearGradient></defs><path fill="url(#calGrad)" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg> Scholarship Date Tracker</button>
-            <button class="hdr-btn" onclick="openAcronymGuideModal()" title="View quick definitions of APS, DSU, Uni-Assist, ECTS, Blocked Accounts" style="color: #a5b4fc; border-color: rgba(165, 180, 252, 0.3);"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="bkGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#4f46e5"/></linearGradient></defs><path fill="url(#bkGrad)" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg> Acronym Cheat Sheet</button>
-            <button class="hdr-btn" onclick="UrlState.copyActiveView()" title="Copy shareable link to this view"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="lnkGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#4f46e5"/></linearGradient></defs><path fill="url(#lnkGrad)" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg> Share View</button>
-        <button class="hdr-btn" onclick="exportDashboardState()" title="Export pipeline progress and document checklists as JSON">
-                <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="dwnGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><path fill="url(#dwnGrad)" d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg> Export State (JSON)
+            <button class="hdr-btn" onclick="openScholarshipDateTrackerModal()" title="View Complete Chronological Scholarship Cutoff Calendar" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Date Tracker</button>
+            <button class="hdr-btn" onclick="openAcronymGuideModal()" title="View quick definitions of APS, DSU, Uni-Assist, ECTS, Blocked Accounts" style="color: #a5b4fc; border-color: rgba(165, 180, 252, 0.3);"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg> Acronym Guide</button>
+            <button class="hdr-btn" onclick="UrlState.copyActiveView()" title="Copy shareable link to this view"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share View</button>
+            <button class="hdr-btn" onclick="exportDashboardState()" title="Export pipeline progress and document checklists as JSON">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export State
             </button>
             <button class="hdr-btn" onclick="triggerImportState()" title="Import saved pipeline progress and document checklists">
-                <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="uplGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs><path fill="url(#uplGrad)" d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg> Import Backup
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Import
             </button>
             <input type="file" id="stateImportInput" accept=".json,application/json" onchange="handleBackupImport(event)" style="display:none;">
             <button class="hdr-btn" onclick="resetPipeline()" title="Reset all pipeline tracking to default state" style="color: #fca5a5;">
-                <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="rstGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#dc2626"/></linearGradient></defs><path fill="url(#rstGrad)" d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg> Reset
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg> Reset
             </button>
         </div>
     </div>
 
     <div class="kpi-strip">
         <div class="kpi-card">
-            <div class="kpi-num" id="kpi-total">145</div>
-            <div class="kpi-label">Master's Programs</div>
+            <div class="kpi-num" id="kpi-total">183</div>
+            <div class="kpi-label"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></svg> Verified Master's</div>
         </div>
         <div class="kpi-card">
-            <div class="kpi-num" style="color: #68d391;" id="kpi-open">13</div>
-            <div class="kpi-label"><svg class="ico3d" viewBox="0 0 24 24" width="12" height="12"><defs><linearGradient id="grnGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#16a34a"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#grnGrad)"/></svg> Open Now (Active)</div>
+            <div class="kpi-num" style="color: #34D399;" id="kpi-open">13</div>
+            <div class="kpi-label"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Open Now (Active)</div>
         </div>
         <div class="kpi-card">
-            <div class="kpi-num" style="color: #fc8181;" id="kpi-urgent">4</div>
-            <div class="kpi-label"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="alrtGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#dc2626"/></linearGradient></defs><path fill="url(#alrtGrad)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> Closing Soon (&lt;45 Days)</div>
+            <div class="kpi-num" style="color: #FB7185;" id="kpi-urgent">4</div>
+            <div class="kpi-label"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Urgent (&lt;45d Left)</div>
         </div>
         <div class="kpi-card">
-            <div class="kpi-num" style="color: #f6e05e;" id="kpi-upcoming">10</div>
-            <div class="kpi-label"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="hgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient></defs><path fill="url(#hgGrad)" d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zM10 6L8 4h8l-2 2H10z"/></svg> Upcoming (Opens Soon)</div>
+            <div class="kpi-num" style="color: #FBBF24;" id="kpi-upcoming">10</div>
+            <div class="kpi-label"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14M5 2h14M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg> Upcoming Windows</div>
         </div>
         <div class="kpi-card">
-            <div class="kpi-num" style="color: #4fd1c5;" id="kpi-free">11</div>
-            <div class="kpi-label"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="tktGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></linearGradient></defs><path fill="url(#tktGrad)" d="M22 10V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-9 7.5h-2v-2h2v2zm0-4.5h-2v-2h2v2zm0-4.5h-2v-2h2v2z"/></svg> Free Tickets (£0 / €0)</div>
+            <div class="kpi-num" style="color: #22D3EE;" id="kpi-free">11</div>
+            <div class="kpi-label"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg> €0 Portal Fee</div>
         </div>
         <div class="kpi-card">
-            <div class="kpi-num" style="color: #63b3ed;" id="kpi-zero">25</div>
-            <div class="kpi-label"><svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="tgtGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#b91c1c"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="none" stroke="url(#tgtGrad)" stroke-width="2"/><circle cx="12" cy="12" r="6" fill="none" stroke="url(#tgtGrad)" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="url(#tgtGrad)"/></svg> $0 Net Cost Target</div>
+            <div class="kpi-num" style="color: #A5B4FC;" id="kpi-zero">25</div>
+            <div class="kpi-label"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#A5B4FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8m4-10v2m0 8v2"/></svg> €0 Net Cost Target</div>
         </div>
     </div>
 </header>
@@ -1266,10 +1394,10 @@
 <div class="nav-container">
     <div class="nav-tabs">
         <div class="nav-tab active" data-tab="global" onclick="switchMainTab('global')">
-            <svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="glbGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs><path fill="url(#glbGrad)" d="M12 2a10 10 0 100 20 10 10 0 000-20zm7.93 9h-3.18a15.7 15.7 0 00-1.37-5.06A8.02 8.02 0 0119.93 11zM12 4.07c1.01 1.44 1.8 3.56 2.02 5.93H9.98c.22-2.37 1.01-4.49 2.02-5.93zM4.07 13h3.18c.16 1.83.65 3.58 1.37 5.06A8.02 8.02 0 014.07 13zm3.18-2H4.07a8.02 8.02 0 014.56-5.06A15.7 15.7 0 007.25 11zM12 19.93c-1.01-1.44-1.8-3.56-2.02-5.93h4.04c-.22 2.37-1.01 4.49-2.02 5.93zm3.38-1.87c.72-1.48 1.21-3.23 1.37-5.06h3.18a8.02 8.02 0 01-4.55 5.06z"/></svg> Global Master Directory <span class="nav-badge" id="global-nav-count">145</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Global Master Directory <span class="nav-badge" id="global-nav-count">183</span>
         </div>
         <div class="nav-tab" data-tab="pipeline" onclick="switchMainTab('pipeline')">
-            <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="clpGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient></defs><path fill="url(#clpGrad)" d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg> Pipeline Tracker <span class="nav-badge" id="pipeline-nav-count">145</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 7v10M12 7v6M16 7v8"/></svg> Pipeline Tracker <span class="nav-badge" id="pipeline-nav-count">183</span>
         </div>
         <div class="nav-tab" data-tab="china" onclick="switchMainTab('china')">
             🇨🇳 China Strategic Hub <span class="nav-badge" id="china-nav-count">20</span>
@@ -1281,22 +1409,22 @@
             🇮🇹 Italy Tuition-Free Center <span class="nav-badge" id="italy-nav-count">4</span>
         </div>
         <div class="nav-tab" data-tab="central" onclick="switchMainTab('central')">
-            <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="bnkGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#475569"/></linearGradient></defs><path fill="url(#bnkGrad)" d="M12 1L2 6v2h20V6L12 1zm-7 8h3v9H5V9zm6 0h3v9h-3V9zm6 0h3v9h-3V9zM2 20v2h20v-2H2z"/></svg> Central Europe Hub <span class="nav-badge" id="central-nav-count">52</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="5 6 12 3 19 6"/><line x1="4" y1="10" x2="4" y2="21"/><line x1="20" y1="10" x2="20" y2="21"/></svg> Central Europe Hub <span class="nav-badge" id="central-nav-count">52</span>
         </div>
         <div class="nav-tab" data-tab="nordics" onclick="switchMainTab('nordics')">
-            <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="snwGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#0284c7"/></linearGradient></defs><path fill="url(#snwGrad)" d="M22 11h-4.17l2.58-2.59L19 7l-5 5 5 5 1.41-1.41L17.83 13H22v-2zM2 13h4.17L3.59 15.59 5 17l5-5-5-5-1.41 1.41L6.17 11H2v2zm9-11v4.17L8.41 3.59 7 5l5 5 5-5-1.41-1.41L13 6.17V2h-2zm0 20v-4.17l2.59 2.58L15 19l-5-5-5 5 1.41 1.41L11 17.83V22h2z"/></svg> Nordic Hub <span class="nav-badge" id="nordics-nav-count">4</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07 19.07 4.93"/></svg> Nordic Hub <span class="nav-badge" id="nordics-nav-count">4</span>
         </div>
         <div class="nav-tab" data-tab="west" onclick="switchMainTab('west')">
-            <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="cstGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6d28d9"/></linearGradient></defs><path fill="url(#cstGrad)" d="M2 4v4l2 1v11h16V9l2-1V4l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1L2 4zm10 9c1.66 0 3 1.34 3 3v4H9v-4c0-1.66 1.34-3 3-3z"/></svg> Western Europe Hub <span class="nav-badge" id="west-nav-count">9</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> Western Europe Hub <span class="nav-badge" id="west-nav-count">9</span>
         </div>
-                <div class="nav-tab" data-tab="germany" onclick="switchMainTab('germany')">
+        <div class="nav-tab" data-tab="germany" onclick="switchMainTab('germany')">
             🇩🇪 Germany Special Edition <span class="nav-badge" id="germany-nav-count">36</span>
         </div>
         <div class="nav-tab" data-tab="emjm" onclick="switchMainTab('emjm')">
             🇪🇺 Erasmus Mundus (EMJM) <span class="nav-badge" id="emjm-nav-count">4</span>
         </div>
         <div class="nav-tab" data-tab="roadmap" onclick="switchMainTab('roadmap')">
-            <svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><path fill="url(#mapGrad)" d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg> Master Roadmap & Calendar
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg> Master Roadmap & Calendar
         </div>
     </div>
 </div>
@@ -1307,21 +1435,21 @@
     <div id="tab-global" class="tab-content active">
         <div class="filter-hub">
             <div class="filter-presets">
-                <span style="font-size: 8pt; font-weight: 700; color: var(--text-muted); align-self: center; margin-right: 4px;"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="bltGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fde047"/><stop offset="100%" stop-color="#eab308"/></linearGradient></defs><path fill="url(#bltGrad)" d="M7 2v11h3v9l7-12h-4l4-8z"/></svg> STRATEGIC PRESETS:</span>
-                <button class="preset-btn" id="btn-preset-funding-priority" style="border-color: #ef4444; color: #b91c1c; background: #fff1f2; font-weight: 700;" onclick="setPresetFilter('funding-priority', this)" title="Programs where scholarship cutoff is significantly earlier than admissions"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="bltGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fde047"/><stop offset="100%" stop-color="#eab308"/></linearGradient></defs><path fill="url(#bltGrad)" d="M7 2v11h3v9l7-12h-4l4-8z"/></svg> Early Funding Traps (<span id="early-funding-count">14</span>)</button>
-                <button class="preset-btn" id="btn-preset-sch-closing" style="border-color: #f97316; color: #c2410c; background: #fff7ed; font-weight: 700;" onclick="setPresetFilter('sch-closing', this)" title="Scholarship deadlines within the next 60 days"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="hgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient></defs><path fill="url(#hgGrad)" d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zM10 6L8 4h8l-2 2H10z"/></svg> Scholarship Cutoffs &lt; 60 Days (<span id="sch-closing-count">16</span>)</button>
-                <button class="preset-btn" id="btn-preset-shortlist" style="border-color: #f59e0b; color: #b45309; background: #fffbeb; font-weight: 700;" onclick="setPresetFilter('shortlist', this)"><svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="goldStar" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient></defs><path fill="url(#goldStar)" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> My Shortlist (<span id="shortlist-count-badge">0</span>)</button>
+                <span style="font-size: 11px; font-weight: 600; color: var(--text-muted); align-self: center; margin-right: 6px; font-family: 'Geist Mono', monospace; text-transform: uppercase; letter-spacing: 0.5px;"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Strategic Presets:</span>
+                <button class="preset-btn" id="btn-preset-funding-priority" style="border-color: rgba(244, 63, 94, 0.4); color: #FB7185; background: rgba(244, 63, 94, 0.1);" onclick="setPresetFilter('funding-priority', this)" title="Programs where scholarship cutoff is significantly earlier than admissions"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Early Funding Traps (<span id="early-funding-count">14</span>)</button>
+                <button class="preset-btn" id="btn-preset-sch-closing" style="border-color: rgba(245, 158, 11, 0.4); color: #FBBF24; background: rgba(245, 158, 11, 0.1);" onclick="setPresetFilter('sch-closing', this)" title="Scholarship deadlines within the next 60 days"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="M5 22h14M5 2h14M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg> Cutoffs &lt; 60 Days (<span id="sch-closing-count">16</span>)</button>
+                <button class="preset-btn" id="btn-preset-shortlist" style="border-color: rgba(229, 169, 60, 0.4); color: #E5A93C; background: rgba(229, 169, 60, 0.1);" onclick="setPresetFilter('shortlist', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="#E5A93C" stroke="#E5A93C" stroke-width="1.5" style="vertical-align: -2px; margin-right: 4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> My Shortlist (<span id="shortlist-count-badge">0</span>)</button>
                 <button class="preset-btn active" id="btn-preset-all" onclick="setPresetFilter('all', this)">All Programs (183)</button>
-                <button class="preset-btn preset-btn-accent" onclick="setPresetFilter('quick-wins', this)"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="bltGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fde047"/><stop offset="100%" stop-color="#eab308"/></linearGradient></defs><path fill="url(#bltGrad)" d="M7 2v11h3v9l7-12h-4l4-8z"/></svg> Quick Wins (Low Effort / High Reward) (11)</button>
-                <button class="preset-btn" style="border-color: #fca5a5; color: #991b1b; background: #fff1f2;" onclick="setPresetFilter('prestige', this)"><svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="trphGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#eab308"/><stop offset="100%" stop-color="#a16207"/></linearGradient></defs><path fill="url(#trphGrad)" d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.71 2.76 3.11 3.56V19H8v2h8v-2h-2.5v-2.5c1.4-.8 2.48-2.06 3.11-3.56C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg> Prestige Heavyweights (8)</button>
-                <button class="preset-btn" onclick="setPresetFilter('open-now', this)"><svg class="ico3d" viewBox="0 0 24 24" width="12" height="12"><defs><linearGradient id="grnGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#16a34a"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#grnGrad)"/></svg> Open Portals Now (13)</button>
-                <button class="preset-btn" onclick="setPresetFilter('closing-soon', this)"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="alrtGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#dc2626"/></linearGradient></defs><path fill="url(#alrtGrad)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> Closing Soon / Urgent (4)</button>
-                <button class="preset-btn" onclick="setPresetFilter('free-ticket', this)"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="tktGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></linearGradient></defs><path fill="url(#tktGrad)" d="M22 10V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-9 7.5h-2v-2h2v2zm0-4.5h-2v-2h2v2zm0-4.5h-2v-2h2v2z"/></svg> £0 / €0 Free Tickets (11)</button>
-                <button class="preset-btn" onclick="setPresetFilter('zero-cost', this)"><svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="tgtGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#b91c1c"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="none" stroke="url(#tgtGrad)" stroke-width="2"/><circle cx="12" cy="12" r="6" fill="none" stroke="url(#tgtGrad)" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="url(#tgtGrad)"/></svg> $0 Net Cost Guarantee</button>
-                <button class="preset-btn" style="border-color: #fed7aa; color: #9a3412; background: #fff7ed;" onclick="setPresetFilter('china', this)">🇨🇳 China (CSC & C9 Fellowships)</button>
-                <button class="preset-btn" onclick="setPresetFilter('high-prob', this)"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="firGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fb7185"/><stop offset="100%" stop-color="#e11d48"/></linearGradient></defs><path fill="url(#firGrad)" d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM12 20c-3.31 0-6-2.69-6-6 0-1.53.58-2.92 1.53-3.98.05.69.29 1.34.69 1.88 1.15 1.55 3.25 2.1 4.78 1.1.28-.18.52-.41.72-.67.75 1.19 1.28 2.58 1.28 4.07 0 1.99-.97 3.75-2.47 4.86-.18-.09-.36-.18-.53-.26z"/></svg> High Win Probability (11)</button>
-                <button class="preset-btn" onclick="setPresetFilter('islamic-studies', this)"><svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="scrlGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#ca8a04"/></linearGradient></defs><path fill="url(#scrlGrad)" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z"/></svg> Core Islamic Studies (7)</button>
-                <button class="preset-btn" onclick="setPresetFilter('philosophy-ppe', this)"><svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="balGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient></defs><path fill="url(#balGrad)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> Philosophy & PPE (6)</button>
+                <button class="preset-btn preset-btn-accent" onclick="setPresetFilter('quick-wins', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6.05 11a22.35 22.35 0 0 1-3.95 2zm-3-3l-2.5 2.5m8.5-8.5l.01.01"/></svg> Quick Wins (11)</button>
+                <button class="preset-btn" style="border-color: rgba(165, 180, 252, 0.4); color: #A5B4FC; background: rgba(165, 180, 252, 0.1);" onclick="setPresetFilter('prestige', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#A5B4FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Prestige Heavyweights (8)</button>
+                <button class="preset-btn" onclick="setPresetFilter('open-now', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Open Portals Now (13)</button>
+                <button class="preset-btn" onclick="setPresetFilter('closing-soon', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Closing Soon (4)</button>
+                <button class="preset-btn" onclick="setPresetFilter('free-ticket', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg> €0 Free Tickets (11)</button>
+                <button class="preset-btn" onclick="setPresetFilter('zero-cost', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#818CF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8m4-10v2m0 8v2"/></svg> €0 Net Cost Guarantee</button>
+                <button class="preset-btn" style="border-color: rgba(239, 68, 68, 0.4); color: #F87171; background: rgba(239, 68, 68, 0.1);" onclick="setPresetFilter('china', this)">🇨🇳 China (CSC & C9)</button>
+                <button class="preset-btn" onclick="setPresetFilter('high-prob', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> High Probability (11)</button>
+                <button class="preset-btn" onclick="setPresetFilter('islamic-studies', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg> Core Islamic Studies (7)</button>
+                <button class="preset-btn" onclick="setPresetFilter('philosophy-ppe', this)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Philosophy & PPE (6)</button>
             </div>
 
             <div class="filter-inputs-grid">
@@ -2361,11 +2489,11 @@
 <script>
 // Pipeline Stages Definition
 const STAGES = [
-    { id: 'interested', label: '1. Interested / Shortlisted', icon: '<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="pinGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#dc2626"/></linearGradient></defs><path fill="url(#pinGrad)" d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"/></svg>', color: '#2b6cb0', bg: '#ebf8ff', border: '#bee3f8' },
-    { id: 'preparing',  label: '2. Preparing Documents',     icon: '<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="notGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs><path fill="url(#notGrad)" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>', color: '#c05621', bg: '#feebc8', border: '#fbd38d' },
-    { id: 'applied',    label: '3. Applied / Submitted',        icon: '<svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="rktGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fb7185"/><stop offset="100%" stop-color="#e11d48"/></linearGradient></defs><path fill="url(#rktGrad)" d="M13.13 2.88c-1.42-.42-2.84-.42-4.26 0-3.32.99-5.93 3.6-6.92 6.92-.42 1.42-.42 2.84 0 4.26l2.12-2.12c.16-1.5.75-2.92 1.72-4.08l7.34-5.98z"/><circle cx="12" cy="9" r="2" fill="#ffffff"/></svg>', color: '#6b46c1', bg: '#e9d8fd', border: '#d6bcfa' },
-    { id: 'review',     label: '4. Under Review',               icon: '<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="hgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient></defs><path fill="url(#hgGrad)" d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zM10 6L8 4h8l-2 2H10z"/></svg>', color: '#234e52', bg: '#e6fffa', border: '#b2f5ea' },
-    { id: 'offer',      label: '5. Offer Received <svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="celGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient></defs><path fill="url(#celGrad)" d="M2 22l14-5-9-9-5 14zm15.5-13.5l1.41-1.41L17.5 5.67 18.91 4.26 17.5 2.85 16.09 4.26 14.67 2.85l-1.41 1.41 1.41 1.41-1.41 1.41 1.41 1.41 1.42-1.41 1.41 1.42z"/></svg>',          icon: '<svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="trphGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#eab308"/><stop offset="100%" stop-color="#a16207"/></linearGradient></defs><path fill="url(#trphGrad)" d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.71 2.76 3.11 3.56V19H8v2h8v-2h-2.5v-2.5c1.4-.8 2.48-2.06 3.11-3.56C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>', color: '#22543d', bg: '#c6f6d5', border: '#9ae6b4' }
+    { id: 'interested', label: '1. Interested / Target', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>', color: '#93C5FD', bg: 'rgba(56, 189, 248, 0.1)', border: 'rgba(56, 189, 248, 0.28)' },
+    { id: 'preparing',  label: '2. Preparing Documents', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBD38D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>', color: '#FBD38D', bg: 'rgba(245, 158, 11, 0.1)', border: 'rgba(245, 158, 11, 0.28)' },
+    { id: 'applied',    label: '3. Applied / Submitted', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#D6BCFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>', color: '#D6BCFA', bg: 'rgba(129, 140, 248, 0.1)', border: 'rgba(129, 140, 248, 0.28)' },
+    { id: 'review',     label: '4. Under Review', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#99F6E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>', color: '#99F6E4', bg: 'rgba(20, 184, 166, 0.1)', border: 'rgba(20, 184, 166, 0.28)' },
+    { id: 'offer',      label: '5. Offer Received', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', color: '#86EFAC', bg: 'rgba(16, 185, 129, 0.1)', border: 'rgba(16, 185, 129, 0.28)' }
 ];
 
 // LocalStorage Keys
@@ -2738,30 +2866,30 @@ function escapeHtml(str) {
 
 const Icon3D = {
     star: (active = false) => active 
-        ? `<svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="goldStar" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient></defs><path fill="url(#goldStar)" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`
-        : `<svg class="ico3d" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#64748b" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
+        ? `<svg viewBox="0 0 24 24" width="14" height="14" fill="#E5A93C" stroke="#E5A93C" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
+        : `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
     
-    hourglass: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="hgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient></defs><path fill="url(#hgGrad)" d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zM10 6L8 4h8l-2 2H10z"/></svg>`,
+    hourglass: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14M5 2h14M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>`,
     
-    rocket: `<svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="rktGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fb7185"/><stop offset="100%" stop-color="#e11d48"/></linearGradient></defs><path fill="url(#rktGrad)" d="M13.13 2.88c-1.42-.42-2.84-.42-4.26 0-3.32.99-5.93 3.6-6.92 6.92-.42 1.42-.42 2.84 0 4.26l2.12-2.12c.16-1.5.75-2.92 1.72-4.08l7.34-5.98z"/><circle cx="12" cy="9" r="2" fill="#ffffff"/></svg>`,
+    rocket: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#FB7185" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6.05 11a22.35 22.35 0 0 1-3.95 2zm-3-3l-2.5 2.5m8.5-8.5l.01.01"/></svg>`,
     
-    pin: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="pinGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#dc2626"/></linearGradient></defs><path fill="url(#pinGrad)" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>`,
+    pin: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#F87171" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
     
-    bank: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="bnkGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#475569"/></linearGradient></defs><path fill="url(#bnkGrad)" d="M12 1L2 6v2h20V6L12 1zm-7 8h3v9H5V9zm6 0h3v9h-3V9zm6 0h3v9h-3V9zM2 20v2h20v-2H2z"/></svg>`,
+    bank: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="5 6 12 3 19 6"/><line x1="4" y1="10" x2="4" y2="21"/><line x1="20" y1="10" x2="20" y2="21"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="12" y1="14" x2="12" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/></svg>`,
     
-    gradCap: `<svg class="ico3d" viewBox="0 0 24 24" width="14" height="14"><defs><linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#4f46e5"/></linearGradient></defs><path fill="url(#capGrad)" d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>`,
+    gradCap: `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#818CF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
     
-    money: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="mnyGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><path fill="url(#mnyGrad)" d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>`,
+    money: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#34D399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8m4-10v2m0 8v2"/></svg>`,
     
-    bolt: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="bltGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fde047"/><stop offset="100%" stop-color="#eab308"/></linearGradient></defs><path fill="url(#bltGrad)" d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>`,
+    bolt: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBBF24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
     
-    note: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="notGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs><path fill="url(#notGrad)" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>`,
+    note: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
     
-    alert: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="altGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f87171"/><stop offset="100%" stop-color="#dc2626"/></linearGradient></defs><path fill="url(#altGrad)" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>`,
+    alert: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#F87171" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
     
-    check: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="chkGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><path fill="url(#chkGrad)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>`,
+    check: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`,
     
-    bulb: `<svg class="ico3d" viewBox="0 0 24 24" width="13" height="13"><defs><linearGradient id="blbGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient></defs><path fill="url(#blbGrad)" d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg>`
+    bulb: `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#FBBF24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>`
 };
 
 function sanitizeProgram(raw, idx) {
@@ -3499,45 +3627,45 @@ function getEffortBadge(score, tag) {
 function getAuditTheme(audit) {
     if (!audit) {
         return {
-            bg: '#f8fafc',
-            border: '#cbd5e1',
-            color: '#334155',
-            badgeBg: '#f1f5f9',
-            badgeColor: '#475569'
+            bg: 'rgba(255, 255, 255, 0.04)',
+            border: 'rgba(255, 255, 255, 0.08)',
+            color: '#D1D5DB',
+            badgeBg: '#1F1F1F',
+            badgeColor: '#A1A1AA'
         };
     }
     const sev = audit.riskSeverity || 'safe';
     if (sev === 'guaranteed') {
         return {
-            bg: '#f0fdf4',
-            border: '#86efac',
-            color: '#15803d',
-            badgeBg: '#dcfce7',
-            badgeColor: '#166534'
+            bg: 'rgba(16, 185, 129, 0.1)',
+            border: 'rgba(16, 185, 129, 0.28)',
+            color: '#34D399',
+            badgeBg: 'rgba(16, 185, 129, 0.2)',
+            badgeColor: '#34D399'
         };
     } else if (sev === 'fatal') {
         return {
-            bg: '#fef2f2',
-            border: '#fca5a5',
-            color: '#991b1b',
-            badgeBg: '#fee2e2',
-            badgeColor: '#b91c1c'
+            bg: 'rgba(244, 63, 94, 0.1)',
+            border: 'rgba(244, 63, 94, 0.28)',
+            color: '#FB7185',
+            badgeBg: 'rgba(244, 63, 94, 0.2)',
+            badgeColor: '#FB7185'
         };
     } else if (sev === 'warning') {
         return {
-            bg: '#fffbeb',
-            border: '#fde68a',
-            color: '#92400e',
-            badgeBg: '#fef3c7',
-            badgeColor: '#b45309'
+            bg: 'rgba(245, 158, 11, 0.1)',
+            border: 'rgba(245, 158, 11, 0.28)',
+            color: '#FBBF24',
+            badgeBg: 'rgba(245, 158, 11, 0.2)',
+            badgeColor: '#FBBF24'
         };
     } else {
         return {
-            bg: '#eff6ff',
-            border: '#bfdbfe',
-            color: '#1e40af',
-            badgeBg: '#dbeafe',
-            badgeColor: '#1d4ed8'
+            bg: 'rgba(56, 189, 248, 0.1)',
+            border: 'rgba(56, 189, 248, 0.28)',
+            color: '#38BDF8',
+            badgeBg: 'rgba(56, 189, 248, 0.2)',
+            badgeColor: '#38BDF8'
         };
     }
 }
