@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
@@ -1261,12 +1261,347 @@
         font-weight: 600;
     }
 
-    @media (max-width: 900px) {
-        .filter-inputs-grid { grid-template-columns: 1fr; }
-        .grid { grid-template-columns: 1fr; }
-        header { padding: 20px 20px; }
-        .container { padding: 16px 20px; }
-        .kanban-board { grid-template-columns: repeat(5, 290px); }
+    
+    /* ==============================================================================
+     * MOBILE RESPONSIVENESS & TOUCH ERGONOMICS (360px - 768px - 1024px)
+     * ============================================================================== */
+    
+    html {
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+    }
+    
+    .nav-tabs,
+    .table-container,
+    .kanban-board,
+    .modal-content,
+    .modal-body {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Modal Backdrop definition */
+    .modal-backdrop {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    /* Floating Scroll to Top button for mobile */
+    .mobile-back-to-top {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 18px;
+        background: #EDEDED;
+        color: #000000;
+        border: none;
+        border-radius: 9999px;
+        padding: 10px 14px;
+        font-family: 'Geist Mono', monospace;
+        font-size: 11px;
+        font-weight: 700;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        z-index: 99;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        align-items: center;
+        gap: 6px;
+    }
+    .mobile-back-to-top:active {
+        transform: scale(0.95);
+    }
+
+    /* Medium Tablets / Small Laptops (max-width: 1024px) */
+    @media (max-width: 1024px) {
+        .container {
+            padding: 20px 24px 40px 24px;
+        }
+        header {
+            padding: 24px 24px 20px 24px;
+        }
+        .nav-tabs {
+            padding: 0 24px;
+        }
+        .grid {
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+    }
+
+    /* Small Tablets & Large Phones (max-width: 768px) */
+    @media (max-width: 768px) {
+        .header-title h1 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        .header-action-bar {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .header-pipeline-counters {
+            width: 100%;
+        }
+        .header-btn-group {
+            width: 100%;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: none;
+        }
+        .header-btn-group::-webkit-scrollbar {
+            display: none;
+        }
+        .kpi-strip {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        .filter-inputs-grid {
+            grid-template-columns: 1fr;
+        }
+        .kanban-board {
+            grid-template-columns: repeat(5, 280px);
+        }
+        .date-tracker-grid,
+        .acronym-modal-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Mobile Phones (max-width: 640px) - iPhone, Pixel, Galaxy (360px - 430px) */
+    @media (max-width: 640px) {
+        body {
+            font-size: 13px;
+        }
+        
+        /* Inputs: MUST be >= 16px on mobile to avoid iOS Safari automatic zoom */
+        .filter-group input,
+        .filter-group select,
+        .card-note-textarea,
+        .stage-select {
+            font-size: 16px !important;
+        }
+
+        /* Header compact ergonomics */
+        header {
+            padding: 18px 16px 16px 16px !important;
+        }
+        .header-title h1 {
+            font-size: 20px !important;
+            line-height: 26px !important;
+            letter-spacing: -0.015em !important;
+        }
+        .header-title p {
+            font-size: 12px !important;
+            line-height: 17px !important;
+        }
+        .candidate-pills {
+            margin-top: 12px;
+            gap: 6px;
+        }
+        .pill {
+            padding: 4px 9px !important;
+            font-size: 11px !important;
+            line-height: 15px !important;
+        }
+
+        /* Action Bar */
+        .header-action-bar {
+            margin-top: 14px;
+            padding-top: 12px;
+            gap: 10px;
+        }
+        .counter-chip {
+            padding: 4px 9px !important;
+            font-size: 11px !important;
+        }
+        .hdr-btn {
+            padding: 6px 10px !important;
+            font-size: 11px !important;
+            white-space: nowrap;
+        }
+
+        /* 2-Column KPI Grid on Phones */
+        .kpi-strip {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 8px !important;
+            margin-top: 14px !important;
+        }
+        .kpi-card {
+            padding: 10px 10px !important;
+            border-radius: 10px !important;
+        }
+        .kpi-num {
+            font-size: 20px !important;
+            line-height: 24px !important;
+        }
+        .kpi-label {
+            font-size: 10px !important;
+        }
+
+        /* Sticky Navigation Bar */
+        .nav-container {
+            top: 0;
+        }
+        .nav-tabs {
+            padding: 0 12px !important;
+            gap: 4px !important;
+        }
+        .nav-tab {
+            padding: 11px 12px !important;
+            font-size: 13px !important;
+            margin: 4px 0 !important;
+        }
+        .nav-badge {
+            font-size: 10px !important;
+            padding: 1px 6px !important;
+        }
+
+        /* Content Container */
+        .container {
+            padding: 14px 14px 40px 14px !important;
+        }
+
+        /* Filter Hub */
+        .filter-hub {
+            padding: 14px 14px !important;
+            border-radius: 10px !important;
+            margin-bottom: 16px !important;
+        }
+        .filter-presets {
+            gap: 6px !important;
+            margin-bottom: 12px !important;
+            padding-bottom: 12px !important;
+        }
+        .preset-btn {
+            padding: 6px 9px !important;
+            font-size: 11px !important;
+            border-radius: 6px !important;
+        }
+        .filter-inputs-grid {
+            gap: 10px !important;
+        }
+
+        /* Program Cards */
+        .grid {
+            grid-template-columns: 1fr !important;
+            gap: 14px !important;
+        }
+        .card {
+            padding: 14px 14px 12px 14px !important;
+            border-radius: 10px !important;
+        }
+        .card-header {
+            margin-bottom: 10px !important;
+        }
+        .card-title h3 {
+            font-size: 15px !important;
+            line-height: 20px !important;
+        }
+        .card-title .uni-name {
+            font-size: 12px !important;
+            line-height: 16px !important;
+        }
+        .tags-container {
+            gap: 5px !important;
+            margin: 10px 0 8px 0 !important;
+        }
+        .tag {
+            font-size: 10px !important;
+            padding: 2px 7px !important;
+        }
+        .card-meta {
+            padding: 10px 12px !important;
+            margin: 10px 0 !important;
+            font-size: 11px !important;
+        }
+        .meta-row {
+            margin-bottom: 5px !important;
+        }
+        .meta-label, .meta-val {
+            font-size: 11px !important;
+        }
+        .card-verdict {
+            font-size: 12px !important;
+            padding: 8px 10px !important;
+            line-height: 1.4 !important;
+        }
+        .quick-peek-drawer {
+            padding: 8px 10px !important;
+            font-size: 11px !important;
+        }
+
+        /* Tables horizontal swipe container */
+        .table-container {
+            border-radius: 10px !important;
+            margin-bottom: 20px !important;
+        }
+        table {
+            font-size: 12px !important;
+        }
+        th {
+            padding: 10px 12px !important;
+            font-size: 10px !important;
+        }
+        td {
+            padding: 10px 12px !important;
+            font-size: 12px !important;
+        }
+
+        /* Kanban board native app card swipe feel */
+        .kanban-board {
+            grid-template-columns: repeat(5, 84vw) !important;
+            gap: 12px !important;
+            scroll-snap-type: x mandatory !important;
+            padding-bottom: 16px !important;
+        }
+        .kanban-col {
+            scroll-snap-align: center !important;
+            min-height: 480px !important;
+            border-radius: 10px !important;
+        }
+
+        /* Modals on Mobile */
+        .modal-overlay,
+        .modal-backdrop {
+            padding: 8px !important;
+        }
+        .modal-content {
+            max-height: 94vh !important;
+            width: 100% !important;
+            border-radius: 12px !important;
+        }
+        .modal-header {
+            padding: 14px 16px !important;
+        }
+        .modal-header h2 {
+            font-size: 16px !important;
+            line-height: 22px !important;
+        }
+        .modal-body {
+            padding: 16px 14px 24px 14px !important;
+        }
+        .dossier-section h4 {
+            font-size: 12px !important;
+        }
+        .dossier-section p {
+            font-size: 13px !important;
+            line-height: 1.55 !important;
+        }
+
+        /* Show mobile back to top button */
+        .mobile-back-to-top {
+            display: inline-flex;
+        }
     }
 
     /* Table cells fine-tuning */
@@ -5852,5 +6187,10 @@ function filterDateTrackerCards(query) {
 }
 
 </script>
+
+    <!-- Mobile Quick Back-to-Top Floating Trigger -->
+    <button class="mobile-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg> Top
+    </button>
 </body>
 </html>
